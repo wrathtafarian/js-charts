@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-column.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-column.js"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: transparent; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #333333;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+
+        <p>Nulla convallis, ipsum vitae ultricies dapibus, orci est varius libero, sit amet egestas elit lorem ac nunc. Mauris et turpis eget enim cursus pharetra at vitae mauris. Etiam volutpat ac elit quis pellentesque. Morbi vel urna luctus, blandit nibh et, aliquet sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat tortor a massa venenatis molestie. Nullam leo nisl, molestie in gravida sit amet, maximus ac enim. Ut ante enim, molestie sed ante ac, laoreet fermentum orci. Morbi consequat, erat vel egestas facilisis, diam arcu vestibulum erat, in iaculis mi ex eget lectus. Nam tempor hendrerit eros nec egestas. Duis euismod feugiat urna, a hendrerit turpis ultricies eu. Suspendisse rhoncus dui lorem, et pharetra nisl sollicitudin vitae. Nunc a leo odio.</p>
+
+        <!--
+        <div class="js-chart" type="100% stacked lollipop column" title="Incidents: Past 30 days" width="500px" height="400px" showlegend="off" showlines="on">
+            <div class="js-labels">1 Dec, 2 Dec, 3 Dec, 4 Dec, 5 Dec, 6 Dec, 7 Dec, 8 Dec, 9 Dec, 10 Dec, 11 Dec, 12 Dec, 13 Dec, 14 Dec, 15 Dec, 16 Dec, 17 Dec, 18 Dec, 19 Dec, 20 Dec, 21 Dec, 22 Dec, 23 Dec, 24 Dec, 25 Dec, 26 Dec, 27 Dec, 28 Dec, 29 Dec, 30 Dec</div>
+            <div class="js-values" title="This period">0, 8, 12, 19, 21, 8, 21, 23, 18, 3, 15, 11, 1, 17, 2, 15, 12, 17, 15, 9, 10, 19, 8, 4, 5, 1, 20, 4, 17, 13</div>
+            <div class="js-values" title="Prev. period">38, 22, 47, 39, 22, 34, 29, 4, 33, 10, 7, 12, 16, 27, 18, 20, 17, 15, 23, 10, 31, 5, 37, 33, 32, 29, 22, 36, 2, 44</div>
+            <div class="js-values" title="Prev. period x2">27, 8, 35, 17, 2, 7, 36, 5, 8, 5, 39, 8, 28, 20, 33, 31, 9, 44, 44, 42, 42, 10, 39, 9, 0, 6, 16, 24, 46, 35</div>
+
+            <div class="js-color-palette">teal; orange; silver</div>
+            <div class="js-datalabel-width">45px</div>
+            <div class="js-chart-bg-color">LightCyan</div>
+            <div class="js-control-button-bg-color">teal</div>
+            <div class="js-chart-border">0.5px solid teal</div>
+            <div class="js-scale-border">0.5px solid teal</div>
+            <div class="js-scale-text-color">teal</div>
+            <div class="js-title-text-color">teal</div>
+            <div class="js-legend-text-color">teal</div>
+            <div class="js-footer-text-color">teal</div>
+            <div class="js-options-menu-text-color">teal</div>
+            <div class="js-options-menu-title-bg-color">teal</div>
+            <div class="js-value-bar-min-height">2px</div>
+            <div class="js-value-line-thickness">5px</div>
+        </div>
+        <br><br>
+
+        <div class="js-chart" type="100% stacked lollipop column" title="Incidents: Past 30 days" width="1200px" height="400px" style="margin: 10px 0px 0px 0px;" showlegend="off">
+            <div class="js-labels">1 Dec, 2 Dec, 3 Dec</div>
+            <div class="js-values" title="This period">0, 8, 12</div>
+
+            <div class="js-color-palette">teal; orange; silver</div>
+            <div class="js-datalabel-width">45px</div>
+            <div class="js-chart-bg-color">LightCyan</div>
+            <div class="js-control-button-bg-color">teal</div>
+            <div class="js-chart-border">0.5px solid teal</div>
+            <div class="js-scale-border">0.5px solid teal</div>
+            <div class="js-scale-text-color">teal</div>
+            <div class="js-title-text-color">teal</div>
+            <div class="js-legend-text-color">teal</div>
+            <div class="js-footer-text-color">teal</div>
+            <div class="js-options-menu-text-color">teal</div>
+            <div class="js-options-menu-title-bg-color">teal</div>
+            <div class="js-value-bar-min-height">2px</div>
+            <div class="js-value-line-thickness">5px</div>
+        </div>
+
+        <p>Nulla convallis, ipsum vitae ultricies dapibus, orci est varius libero, sit amet egestas elit lorem ac nunc. Mauris et turpis eget enim cursus pharetra at vitae mauris. Etiam volutpat ac elit quis pellentesque. Morbi vel urna luctus, blandit nibh et, aliquet sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat tortor a massa venenatis molestie. Nullam leo nisl, molestie in gravida sit amet, maximus ac enim. Ut ante enim, molestie sed ante ac, laoreet fermentum orci. Morbi consequat, erat vel egestas facilisis, diam arcu vestibulum erat, in iaculis mi ex eget lectus. Nam tempor hendrerit eros nec egestas. Duis euismod feugiat urna, a hendrerit turpis ultricies eu. Suspendisse rhoncus dui lorem, et pharetra nisl sollicitudin vitae. Nunc a leo odio.</p>
+
+        <div class="js-chart" type="stacked lollipop column" title="Incidents: Past 30 days" width="auto" height="400px" showlegend="off" showlines="on">
+            <div class="js-labels">1 Dec, 2 Dec, 3 Dec, 4 Dec, 5 Dec, 6 Dec, 7 Dec, 8 Dec, 9 Dec, 10 Dec, 11 Dec, 12 Dec, 13 Dec, 14 Dec, 15 Dec, 16 Dec, 17 Dec, 18 Dec, 19 Dec, 20 Dec, 21 Dec, 22 Dec, 23 Dec, 24 Dec, 25 Dec, 26 Dec, 27 Dec, 28 Dec, 29 Dec, 30 Dec</div>
+            <div class="js-values" title="This period">0, 8, 12, 19, 21, 8, 21, 23, 18, 3, 15, 11, 1, 17, 2, 15, 12, 17, 15, 9, 10, 19, 8, 4, 5, 1, 20, 4, 17, 13</div>
+            <div class="js-values" title="Prev. period">38, 22, 47, 39, 22, 34, 29, 4, 33, 10, 7, 12, 16, 27, 18, 20, 17, 15, 23, 10, 31, 5, 37, 33, 32, 29, 22, 36, 2, 44</div>
+            <div class="js-values" title="Prev. period x2">27, 8, 35, 17, 2, 7, 36, 5, 8, 5, 39, 8, 28, 20, 33, 31, 9, 44, 44, 42, 42, 10, 39, 9, 0, 6, 16, 24, 46, 35</div>
+
+            <div class="js-color-palette">teal; orange; silver</div>
+            <div class="js-datalabel-width">45px</div>
+            <div class="js-chart-bg-color">LightCyan</div>
+            <div class="js-control-button-bg-color">teal</div>
+            <div class="js-chart-border">0.5px solid teal</div>
+            <div class="js-scale-border">0.5px solid teal</div>
+            <div class="js-scale-text-color">teal</div>
+            <div class="js-title-text-color">teal</div>
+            <div class="js-legend-text-color">teal</div>
+            <div class="js-footer-text-color">teal</div>
+            <div class="js-options-menu-text-color">teal</div>
+            <div class="js-options-menu-title-bg-color">teal</div>
+            <div class="js-value-bar-min-height">2px</div>
+            <div class="js-value-line-thickness">5px</div>
+        </div>
+        <br><br>
+
+        <div class="js-chart" type="stacked lollipop column" title="Incidents: Past 30 days" width="1200px" height="400px" style="margin: 10px 0px 0px 0px;" showlegend="off">
+            <div class="js-labels">1 Dec, 2 Dec, 3 Dec</div>
+            <div class="js-values" title="This period">0, 8, 12</div>
+
+            <div class="js-color-palette">teal; orange; silver</div>
+            <div class="js-datalabel-width">auto</div>
+            <div class="js-chart-bg-color">LightCyan</div>
+            <div class="js-control-button-bg-color">teal</div>
+            <div class="js-chart-border">0.5px solid teal</div>
+            <div class="js-scale-border">0.5px solid teal</div>
+            <div class="js-scale-text-color">teal</div>
+            <div class="js-title-text-color">teal</div>
+            <div class="js-legend-text-color">teal</div>
+            <div class="js-footer-text-color">teal</div>
+            <div class="js-options-menu-text-color">teal</div>
+            <div class="js-options-menu-title-bg-color">teal</div>
+            <div class="js-value-bar-min-height">2px</div>
+            <div class="js-value-line-thickness">5px</div>
+        </div>
+        -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ornare dui, ut sollicitudin tortor consequat in. Fusce bibendum dui lectus, maximus laoreet metus tincidunt eget. Quisque in mi ac orci venenatis laoreet. Maecenas ultrices arcu ex, ac commodo lorem vulputate sed. Phasellus pharetra quam nisl, quis vestibulum lorem vestibulum fringilla. Praesent posuere auctor turpis, sed aliquam velit pretium a. Aliquam vitae erat dui. Aenean ut velit mi. Donec eu est lectus. Donec tortor nisl, accumsan ut mauris non, venenatis consequat ipsum. Suspendisse aliquet nisi quis auctor molestie.</p>
+
+        <table width="100%">
+        <thead>
+        <tr>
+            <td width="35%" align="center" valign="top">
+                <div class="js-chart" type="lollipop column" title="Monthly Income" ytitle="Income EUR" xtitle="Year of month 2024" width="auto" showlabels="on" showlines="on">
+                    <div class="js-labels">Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec, ODN</div>
+                    <div class="js-values" title="Income and Expenses">48000,40000,35000,25000,15000,10000,5000,0,-5000,-15000,-35000,-45000,17500</div>
+
+                    <div class="js-datalabel-width">auto</div>
+                    <div class="js-value-line-thickness">5px</div>
+                </div>
+            </td>
+            <td width="65%" align="center" valign="top">
+                <div class="js-chart" type="lollipop column" title="Class count 1995 - 2005" ytitle="Vote count" xtitle="Class" showlabels="on" showlegend="bottom" width="auto" showlines="on">
+                    <div class="js-labels">1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005</div>
+                    <div class="js-values" title="Male students">114,98,99,105,122,128,136,148,142,132,125</div>
+                    <div class="js-values" title="Female students">56,42,47,52,56,58,69,89,102,125,118</div>
+
+                    <div class="js-datalabel-width">auto</div>
+                    <div class="js-value-line-thickness">3px</div>
+                </div>
+            </td>
+        </tr>
+        </thead>
+        </table>
+
+        <p>Nam in lectus vitae diam vestibulum placerat eget eu elit. Mauris sapien magna, fringilla sit amet tincidunt aliquam, ultrices nec ipsum. Nam a dolor sed velit tincidunt pharetra. Pellentesque nisl nibh, congue id dui eget, ultricies ullamcorper purus. Maecenas sed facilisis justo. Nulla facilisi. Sed gravida rhoncus turpis et ullamcorper. Praesent congue dolor sem, pharetra congue lacus malesuada faucibus. Nunc vehicula tristique dui eu feugiat. Aliquam diam est, tempus quis interdum id, facilisis a purus. Integer eget fringilla lacus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend ornare dui, ut sollicitudin tortor consequat in. Fusce bibendum dui lectus, maximus laoreet metus tincidunt eget. Quisque in mi ac orci venenatis laoreet. Maecenas ultrices arcu ex, ac commodo lorem vulputate sed. Phasellus pharetra quam nisl, quis vestibulum lorem vestibulum fringilla. Praesent posuere auctor turpis, sed aliquam velit pretium a. Aliquam vitae erat dui. Aenean ut velit mi. Donec eu est lectus. Donec tortor nisl, accumsan ut mauris non, venenatis consequat ipsum. Suspendisse aliquet nisi quis auctor molestie.</p>
+
+        <table width="100%">
+        <thead>
+        <tr>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="stacked column" title="Monthly Income" ytitle="Income EUR" xtitle="Year of month 2024">
+                    <div class="js-labels">Jan, Feb, Mar, Apr, May, Jun, ODN</div>
+                    <div class="js-values" title="Online">45,38,36,35,37,42,0</div>
+                    <div class="js-values" title="Mail order">21,18,15,17,19,22,0</div>
+                    <div class="js-values" title="Pick up">18,16,15,16,13,11,12</div>
+
+                    <div class="js-value-bar-series-margin">0px</div>
+                </div>
+            </td>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="100% stacked column" title="Class Vote" ytitle="Vote count" xtitle="Class" showlegend="bottom">
+                    <div class="js-labels">Grade 6, Grade 7, Grade 8</div>
+                    <div class="js-values" title="Yes">24,27,18</div>
+                    <div class="js-values" title="No">14,11,20</div>
+
+                    <div class="js-value-bar-series-margin">0px</div>
+                </div>
+            </td>
+        </tr>
+        </thead>
+        </table>
+
+        <p>Nam in lectus vitae diam vestibulum placerat eget eu elit. Mauris sapien magna, fringilla sit amet tincidunt aliquam, ultrices nec ipsum. Nam a dolor sed velit tincidunt pharetra. Pellentesque nisl nibh, congue id dui eget, ultricies ullamcorper purus. Maecenas sed facilisis justo. Nulla facilisi. Sed gravida rhoncus turpis et ullamcorper. Praesent congue dolor sem, pharetra congue lacus malesuada faucibus. Nunc vehicula tristique dui eu feugiat. Aliquam diam est, tempus quis interdum id, facilisis a purus. Integer eget fringilla lacus.</p>
+
+        <table width="100%">
+        <thead>
+        <tr>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="stacked column" title="Monthly Income" ytitle="Income EUR" xtitle="Year of month 2024" showlegend="side" showdatatable="yes">
+                    <div class="js-labels">Jan, Feb, Mar, Apr, May, Jun</div>
+                    <div class="js-values" title="Online">12,8,55,67,78,95</div>
+                    <div class="js-values" title="Mail order">24,34,35,33,45,59</div>
+                    <div class="js-values" title="In person">44,65,68,51,78,98</div>
+
+                    <div class="js-value-bar-series-margin">2px</div>
+                    <div class="js-value-bar-data-margin">0px</div>
+                    <div class="js-value-bar-min-width">5px</div>
+                </div>
+            </td>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="column" title="Monthly Income" ytitle="Income EUR" xtitle="Year of month 2024" showlegend="bottom" showdatatable="yes">
+                    <div class="js-labels">Jan, Feb, Mar, Apr, May, Jun</div>
+                    <div class="js-values" title="Online">74,69,55,67,78,95</div>
+                    <div class="js-values" title="Mail order">24,34,35,33,45,59</div>
+                </div>
+            </td>
+        </tr>
+        </thead>
+        </table>
+        <p>Aliquam rhoncus tellus nec urna tristique, vel dignissim nisi luctus. Nulla convallis laoreet libero maximus rutrum. Quisque in magna non ligula tincidunt aliquet at ac nulla. Suspendisse rhoncus ultrices sem, ac gravida nibh sodales nec. Nullam blandit dolor rhoncus, elementum ipsum vel, iaculis arcu. Vivamus faucibus vestibulum lacinia. Mauris dictum lorem sit amet lectus congue, eget commodo diam imperdiet. Aenean facilisis pellentesque mattis. Phasellus interdum, urna ut sollicitudin pellentesque, ipsum dolor vestibulum orci, non congue odio nulla id erat. Praesent euismod cursus dolor vel interdum. Nulla tempor sollicitudin odio, ac varius urna tincidunt quis. Fusce elit ipsum, sagittis ac rhoncus et, lobortis eu metus.</p>
+
+        <table width="100%">
+        <thead>
+        <tr>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="stacked column" title="Stock levels (as 6 Nov 2024)" scalemin="0" scalemax="250" template="darkweb">
+                    <div class="js-labels">PR223, PR233, PR243, PR253, PR263, PR273</div>
+                    <div class="js-values" title="Alberton">45,25,16,46,28,28</div>
+                    <div class="js-values" title="Cape Town">45,75,16,48,15,9</div>
+                    <div class="js-values" title="Doornfontein">50,55,16,25,36,25</div>
+                    <div class="js-values" title="Silverton">60,45,16,8,14,25</div>
+                </div>
+            </td>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="100% stacked column" title="Stock levels (as 6 Nov 2024)" scalemin="0" scalemax="250" template="darkweb">
+                    <div class="js-labels">PR223, PR233, PR243, PR253, PR263, PR273</div>
+                    <div class="js-values" title="Alberton">45,25,16,46,28,28</div>
+                    <div class="js-values" title="Cape Town">45,75,16,48,15,9</div>
+                    <div class="js-values" title="Doornfontein">50,55,16,25,36,25</div>
+                    <div class="js-values" title="Silverton">60,45,16,8,14,25</div>
+                </div>
+            </td>
+        </tr>
+        </thead>
+        </table>
+        <p>Aliquam rhoncus tellus nec urna tristique, vel dignissim nisi luctus. Nulla convallis laoreet libero maximus rutrum. Quisque in magna non ligula tincidunt aliquet at ac nulla. Suspendisse rhoncus ultrices sem, ac gravida nibh sodales nec. Nullam blandit dolor rhoncus, elementum ipsum vel, iaculis arcu. Vivamus faucibus vestibulum lacinia. Mauris dictum lorem sit amet lectus congue, eget commodo diam imperdiet. Aenean facilisis pellentesque mattis. Phasellus interdum, urna ut sollicitudin pellentesque, ipsum dolor vestibulum orci, non congue odio nulla id erat. Praesent euismod cursus dolor vel interdum. Nulla tempor sollicitudin odio, ac varius urna tincidunt quis. Fusce elit ipsum, sagittis ac rhoncus et, lobortis eu metus.</p>
+
+        <table width="100%">
+        <thead>
+        <tr>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="stacked column" title="Stock levels (as 6 Nov 2024)" scalemin="0" scalemax="250" template="darkweb" swapaxis="yes">
+                    <div class="js-labels">PR223, PR233, PR243, PR253, PR263, PR273</div>
+                    <div class="js-values" title="Alberton">45,25,16,46,28,28</div>
+                    <div class="js-values" title="Cape Town">45,75,16,48,15,9</div>
+                    <div class="js-values" title="Doornfontein">50,55,16,25,36,25</div>
+                    <div class="js-values" title="Silverton">60,45,16,8,14,25</div>
+                </div>
+            </td>
+            <td width="50%" align="center" valign="top">
+                <div class="js-chart" type="100% stacked column" title="Stock levels (as 6 Nov 2024)" scalemin="0" scalemax="250" template="darkweb" swapaxis="yes">
+                    <div class="js-labels">PR223, PR233, PR243, PR253, PR263, PR273</div>
+                    <div class="js-values" title="Alberton">45,25,16,46,28,28</div>
+                    <div class="js-values" title="Cape Town">45,75,16,48,15,9</div>
+                    <div class="js-values" title="Doornfontein">50,55,16,25,36,25</div>
+                    <div class="js-values" title="Silverton">60,45,16,8,14,25</div>
+                </div>
+            </td>
+        </tr>
+        </thead>
+        </table>
+
+        <p>Nulla convallis, ipsum vitae ultricies dapibus, orci est varius libero, sit amet egestas elit lorem ac nunc. Mauris et turpis eget enim cursus pharetra at vitae mauris. Etiam volutpat ac elit quis pellentesque. Morbi vel urna luctus, blandit nibh et, aliquet sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat tortor a massa venenatis molestie. Nullam leo nisl, molestie in gravida sit amet, maximus ac enim. Ut ante enim, molestie sed ante ac, laoreet fermentum orci. Morbi consequat, erat vel egestas facilisis, diam arcu vestibulum erat, in iaculis mi ex eget lectus. Nam tempor hendrerit eros nec egestas. Duis euismod feugiat urna, a hendrerit turpis ultricies eu. Suspendisse rhoncus dui lorem, et pharetra nisl sollicitudin vitae. Nunc a leo odio.</p>
+
+        <div class="js-chart" type="lollipop column" title="Incidents: Past 30 days" width="auto" height="250px" scalemin="0" scalemax="25" showlegend="off">
+            <div class="js-labels">1 Dec, 2 Dec, 3 Dec, 4 Dec, 5 Dec, 6 Dec, 7 Dec, 8 Dec, 9 Dec, 10 Dec, 11 Dec, 12 Dec, 13 Dec, 14 Dec, 15 Dec, 16 Dec, 17 Dec, 18 Dec, 19 Dec, 20 Dec, 21 Dec, 22 Dec, 23 Dec, 24 Dec, 25 Dec, 26 Dec, 27 Dec, 28 Dec, 29 Dec, 30 Dec</div>
+            <div class="js-values" title="This period">0, 8, 12, 19, 21, 8, 21, 23, 18, 3, 15, 11, 1, 17, 2, 15, 12, 17, 15, 9, 10, 19, 8, 4, 5, 1, 20, 4, 17, 13</div>
+
+            <div class="js-color-palette">teal</div>
+            <div class="js-chart-bg-color">LightCyan</div>
+            <div class="js-control-button-bg-color">teal</div>
+            <div class="js-chart-border">0.5px solid teal</div>
+            <div class="js-scale-border">0.5px solid teal</div>
+            <div class="js-scale-text-color">teal</div>
+            <div class="js-title-text-color">teal</div>
+            <div class="js-legend-text-color">teal</div>
+            <div class="js-footer-text-color">teal</div>
+            <div class="js-options-menu-text-color">teal</div>
+            <div class="js-options-menu-title-bg-color">teal</div>
+        </div>
+        <div class="js-chart" type="column" title="Incidents: Past 30 days" width="auto" height="250px" scalemin="0" scalemax="25" style="margin: 10px 0px 0px 0px;" showlegend="off">
+            <div class="js-labels">1 Dec, 2 Dec, 3 Dec, 4 Dec, 5 Dec, 6 Dec, 7 Dec, 8 Dec, 9 Dec, 10 Dec, 11 Dec, 12 Dec, 13 Dec, 14 Dec, 15 Dec, 16 Dec, 17 Dec, 18 Dec, 19 Dec, 20 Dec, 21 Dec, 22 Dec, 23 Dec, 24 Dec, 25 Dec, 26 Dec, 27 Dec, 28 Dec, 29 Dec, 30 Dec</div>
+            <div class="js-values" title="This period">0, 8, 12, 19, 21, 8, 21, 23, 18, 3, 15, 11, 1, 17, 2, 15, 12, 17, 15, 9, 10, 19, 8, 4, 5, 1, 20, 4, 17, 13</div>
+
+            <div class="js-color-palette">teal</div>
+            <div class="js-chart-bg-color">LightCyan</div>
+            <div class="js-control-button-bg-color">teal</div>
+            <div class="js-chart-border">0.5px solid teal</div>
+            <div class="js-scale-border">0.5px solid teal</div>
+            <div class="js-scale-text-color">teal</div>
+            <div class="js-title-text-color">teal</div>
+            <div class="js-legend-text-color">teal</div>
+            <div class="js-footer-text-color">teal</div>
+            <div class="js-options-menu-text-color">teal</div>
+            <div class="js-options-menu-title-bg-color">teal</div>
+            <div class="js-value-bar-data-margin">1px</div>
+        </div>
+        <p>Nulla convallis, ipsum vitae ultricies dapibus, orci est varius libero, sit amet egestas elit lorem ac nunc. Mauris et turpis eget enim cursus pharetra at vitae mauris. Etiam volutpat ac elit quis pellentesque. Morbi vel urna luctus, blandit nibh et, aliquet sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat tortor a massa venenatis molestie. Nullam leo nisl, molestie in gravida sit amet, maximus ac enim. Ut ante enim, molestie sed ante ac, laoreet fermentum orci. Morbi consequat, erat vel egestas facilisis, diam arcu vestibulum erat, in iaculis mi ex eget lectus. Nam tempor hendrerit eros nec egestas. Duis euismod feugiat urna, a hendrerit turpis ultricies eu. Suspendisse rhoncus dui lorem, et pharetra nisl sollicitudin vitae. Nunc a leo odio.</p>
+        <p>Nulla convallis, ipsum vitae ultricies dapibus, orci est varius libero, sit amet egestas elit lorem ac nunc. Mauris et turpis eget enim cursus pharetra at vitae mauris. Etiam volutpat ac elit quis pellentesque. Morbi vel urna luctus, blandit nibh et, aliquet sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat tortor a massa venenatis molestie. Nullam leo nisl, molestie in gravida sit amet, maximus ac enim. Ut ante enim, molestie sed ante ac, laoreet fermentum orci. Morbi consequat, erat vel egestas facilisis, diam arcu vestibulum erat, in iaculis mi ex eget lectus. Nam tempor hendrerit eros nec egestas. Duis euismod feugiat urna, a hendrerit turpis ultricies eu. Suspendisse rhoncus dui lorem, et pharetra nisl sollicitudin vitae. Nunc a leo odio.</p>
+    </body>
+</html>

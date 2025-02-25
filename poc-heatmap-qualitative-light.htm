@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-heatmap.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-heatmap.js"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: transparent; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #333333;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+
+        <div style="text-align: center;"><h1>Heatmap - Qualitative color palette</h1></div>
+
+        <table width="100%">
+        <thead>
+            <tr>
+                <td width="50%" align="center">
+                    <div class="js-chart" type="heatmap" title="SD - data (categorical) - position (qualitative)" ytitle="y-axis title" xtitle="x-axis title">
+                        <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+                        <div class="js-keys">N/D, Negligible, Minor, Modrate, Major, Extreme</div>
+
+                        <div class="js-values" title="a1">Extreme, Minor, Modrate, Major, Negligible</div>
+                        <div class="js-values" title="b2">Modrate, Negligible, Negligible, Negligible, Negligible</div>
+                        <div class="js-values" title="c3">Extreme, Minor, Modrate, Major, Major</div>
+                        <div class="js-values" title="d4">Modrate, N/D, Major, Major, Extreme</div>
+                        <div class="js-values" title="e5">Negligible, Minor, Modrate, Major</div>
+                        <div class="js-values" title="f6">Extreme, Modrate, Modrate, Major, Major</div>
+
+                        <div class="js-color-palette">Silver; CadetBlue; SteelBlue; Gold; Orange; DarkRed</div>
+
+                        <div class="js-datalabel-width">50px</div>
+
+                        <div class="js-value-bar-data-margin">1px</div>
+                    </div>
+                </td>
+                <td width="50%" align="center">
+                    <div class="js-chart" type="heatmap" template="darkweb" title="Impact per class - Dec 2024" ytitle="" xtitle="" showlabels="off" showlegend="off">
+                        <div class="js-labels">Grade 8, Grade 9, Grade 10, Grade 11, Grade 12</div>
+                        <div class="js-keys">Low, Medium, High, Extreme</div>
+
+                        <div class="js-values" title="January">Low, Low, Medium, Low, High</div>
+                        <div class="js-values" title="February">Low, Low, Medium, Low, Medium</div>
+                        <div class="js-values" title="March">Low, Low, Medium, Medium, Medium</div>
+                        <div class="js-values" title="April">Low, Low, Medium, Medium, Medium</div>
+                        <div class="js-values" title="May">Medium, Low, Medium, Medium, Medium</div>
+                        <div class="js-values" title="June">Medium, Medium, Medium, High, High</div>
+                        <div class="js-values" title="July">High, Medium, Medium, High, High</div>
+                        <div class="js-values" title="August">Medium, Medium, Medium, High, High</div>
+                        <div class="js-values" title="September">High, High, High, Medium, High</div>
+                        <div class="js-values" title="October">Medium, Extreme, Extreme, High, High</div>
+                        <div class="js-values" title="November">Medium, High, Medium, High, Extreme</div>
+                        <div class="js-values" title="December">Medium, Extreme, Low, Extreme, Extreme</div>
+
+                        <div class="js-color-palette" type="qualitative">Green; Gold; DarkOrange; DarkRed</div>
+                        <div class="js-value-bar-data-margin">0px</div>
+                        <div class="js-datalabel-text-color">white</div>
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        </table>
+
+    </body>
+</html>

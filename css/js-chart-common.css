@@ -1,0 +1,388 @@
+/* Include root directives */
+:root {
+    --js-chart-size-xxsmall: 9px;
+    --js-chart-size-xsmall: 10px;
+    --js-chart-size-small: 11px;
+    --js-chart-size-normal: 12px;
+    --js-chart-size-large: 14px;
+    --js-chart-size-xlarge: 16px;
+    --js-chart-size-xxlarge: 20px;
+    --js-chart-common-base-title-height: 30px;
+    --js-chart-common-base-datatable-height: 60px;
+    --js-chart-common-base-footer-height: 15px;
+    --js-chart-common-control-panel-width: 30px;
+    --js-chart-common-legend-width: 30px;
+    --js-chart-common-legend-height: 30px;
+    --js-chart-common-loading-width: 80px;
+    --js-chart-common-loading-height: 80px;
+}
+
+/* Basic HTML elements */
+select {
+    width: calc(100% - 20px);
+    padding: 5px;
+    border-radius: 5px;
+}
+input[type=TEXT] {
+    width: calc(100% - 30px);
+    padding: 5px;
+    margin: 3px 0px 3px 0px;
+    border: 0.5px solid #dddddd;
+    border-radius: 3px;
+}
+/* css switch */
+.js-chart-common-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 26px;
+}
+.js-chart-common-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.js-chart-common-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.js-chart-common-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .js-chart-common-slider {
+    background-color: SteelBlue;
+}
+input:focus + .js-chart-common-slider {
+    box-shadow: 0 0 1px SteelBlue;
+}
+input:checked + .js-chart-common-slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+.js-chart-common-slider {
+    border-radius: 34px;
+}
+.js-chart-common-slider:before {
+    border-radius: 50%;
+}
+
+/* Input elements */
+.js-values, .js-low-values, .js-high-values {
+    display: none;
+}
+.js-labels, .js-keys {
+    display: none;
+}
+.js-bin-first-edge, .js-bin-last-edge, .js-bin-size, .js-bin-frequencies, .js-bin-labels {
+    display: none;
+}
+.js-x-points, .js-y-points, .js-s-points {
+    display: none;
+}
+.js-open, .js-high, .js-low, .js-close, .js-volume {
+    display: none;
+}
+.js-color-palette, .js-canvas-box-shadow, .js-canvas-bg-color {
+    display: none;
+}
+.js-chart-font-family, .js-chart-font-size, .js-chart-font-weight, .js-chart-bg-color, .js-chart-text-color, .js-chart-border, .js-chart-border-radius, .js-chart-box-shadow {
+    display: none;
+}
+.js-title-font-family, .js-title-font-size, .js-title-font-weight, .js-title-bg-color, .js-title-text-color, .js-title-border, .js-title-border-radius, .js-title-box-shadow {
+    display: none;
+}
+.js-footer-font-family, .js-footer-font-size, .js-footer-font-weight, .js-footer-bg-color, .js-footer-text-color, .js-footer-border, .js-footer-border-radius, .js-footer-box-shadow {
+    display: none;
+}
+.js-control-button-font-family, .js-control-button-font-size, .js-control-button-font-weight, .js-control-button-bg-color, .js-control-button-text-color, .js-control-button-border, .js-control-button-border-radius, .js-control-button-box-shadow, .js-control-button-opacity {
+    display: none;
+}
+.js-legend-font-family, .js-legend-font-size, .js-legend-font-weight, .js-legend-bg-color, .js-legend-text-color, .js-legend-border, .js-legend-border-radius, .js-legend-box-shadow, .js-legend-opacity {
+    display: none;
+}
+.js-datatable-font-family, .js-datatable-font-size, .js-datatable-font-weight, .js-datatable-bg-color, .js-datatable-text-color, .js-datatable-border, .js-datatable-border-radius, .js-datatable-box-shadow {
+    display: none;
+}
+.js-options-menu-font-family, .js-options-menu-font-size, .js-options-menu-font-weight, .js-options-menu-bg-color, .js-options-menu-text-color, .js-options-menu-border, .js-options-menu-border-radius, .js-options-menu-box-shadow, .js-options-menu-opacity, .js-options-menu-scrollbar-color {
+    display: none;
+}
+.js-options-menu-title-font-family, .js-options-menu-title-font-size, .js-options-menu-title-font-weight, .js-options-menu-title-bg-color, .js-options-menu-title-text-color, .js-options-menu-title-border, .js-options-menu-title-border-radius, .js-options-menu-title-box-shadow, .js-options-menu-title-opacity, .js-options-menu-scrollbar-color {
+    display: none;
+}
+.js-datalabel-prepend, .js-datalabel-append, .js-datalabel-width, .js-datalabel-height, .js-datalabel-font-family, .js-datalabel-font-size, .js-datalabel-font-weight, .js-datalabel-bg-color, .js-datalabel-text-color, .js-datalabel-border, .js-datalabel-border-radius, .js-datalabel-box-shadow, .js-datalabel-opacity {
+    display: none;
+}
+.js-value-bar-border, .js-value-bar-border-radius, .js-value-bar-box-shadow, .js-value-bar-opacity, .js-value-bar-min-height, .js-value-bar-min-width, .js-value-bar-series-margin, .js-value-bar-data-margin, .js-value-bar-hover-bg-color {
+    display: none;
+}
+.js-value-line-opacity, .js-value-line-thickness, .js-value-line-min-width, .js-value-line-min-height, .js-value-line-color {
+    display: none;
+}
+.js-grid-line-color, .js-grid-line-thickness, .js-zero-line-color, .js-zero-line-thickness {
+    display: none;
+}
+.js-scale-text-color, .js-scale-border {
+    display: none;
+}
+.js-marker-width, .js-marker-height, .js-marker-bg-color, .js-marker-border, .js-marker-border-radius, .js-marker-box-shadow, .js-marker-opacity, .js-marker-emoji {
+    display: none;
+}
+.js-candle-min-width, .js-candle-min-height, .js-candle-wick-min-height, .js-candle-wick-bg-color, .js-candle-wick-min-width, .js-candle-wick-border, .js-candle-wick-border-radius, .js-candle-wick-box-shadow, .js-candle-wick-opacity, .js-candle-border, .js-candle-border-radius, .js-candle-box-shadow, .js-candle-opacity, .js-candle-data-margin {
+    display: none;
+}
+.js-venn-title-font-family, .js-venn-title-font-size, .js-venn-title-font-weight, .js-venn-title-text-color, .js-venn-font-family, .js-venn-font-size, .js-venn-font-weight, .js-venn-text-color {
+    display: none;
+}
+
+
+/* Common and base containers and panels */
+.js-chart-common-base-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-common-title-container {
+    flex: 0 0 auto;
+    height: var(--js-chart-common-base-title-height);
+    line-height: var(--js-chart-common-base-title-height);
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-large);
+}
+.js-chart-common-level0-inner-panel {
+    flex: 1 1 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 3px 0px 0px;
+}
+.js-chart-common-control-panel-container {
+    flex: 0 0 auto;
+    width: var(--js-chart-common-control-panel-width);
+    margin: 10px 0px 0px 0px;
+}
+.js-chart-common-option-debug-container {
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: var(--js-chart-size-xxsmall);
+}
+.js-chart-common-option-beta-label-container {
+    border: 0.5px solid black;
+    background-color: firebrick;
+    writing-mode: vertical-lr;
+    color: white;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 600;
+    text-align: center;
+    padding: 5px;
+}
+.js-chart-common-option-bin-size-label, .js-chart-common-option-bubble-size-label {
+    font-size: var(--js-chart-size-normal);
+    font-weight: 500;
+    margin: 10px 0px 0px 0px;
+}
+.js-chart-common-option-bin-size {
+    width: 100%;
+    text-align: right;
+}
+.js-chart-common-option-bubble-size {
+    width: 100%;
+    text-align: right;
+    font-size: var(--js-chart-size-xsmall);
+}
+.js-chart-common-level1-inner-panel {
+    flex: 1 1 auto;
+    width: 100%;
+}
+.js-chart-common-datatable-container {
+    flex: 0 0 auto;
+    height: var(--js-chart-common-base-datatable-height);
+    width: calc(100% - 10px);
+    margin: 5px 0px 0px 5px;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.js-chart-common-datatable-header-label {
+    text-align: left;
+    margin: 0px 0px 0px 5px;
+    font-size: var(--js-chart-size-small);
+    font-weight: 600;
+}
+.js-chart-common-footer-container {
+    flex: 0 0 auto;
+    height: var(--js-chart-common-base-footer-height);
+    font-size: var(--js-chart-size-small);
+    padding: 0px 20px 0 20px;
+    text-align: left;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.js-chart-common-level2-inner-panel {
+    flex: 1 1 auto;
+    margin: 0px 0px 5px 0px;
+    position: relative;
+}
+.js-chart-common-legend-container {
+    flex: 0 0 auto;
+    position: relative;
+}
+.js-chart-common-legend-block {
+    flex: 1 1 auto;
+}
+.js-chart-common-legend-color-block {
+    flex: 0 0 auto;
+    width: var(--js-chart-common-legend-width);
+    height: var(--js-chart-common-legend-height);
+    border-radius: 2px;
+}
+.js-chart-common-legend-label-block {
+    flex: 1 1 auto;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+}
+.js-chart-common-legend-sequential-inner-panel {
+    flex: 1 1 auto;
+}
+.js-chart-common-button {
+    writing-mode: vertical-lr;
+    text-align: center;
+    width: var(--js-chart-common-control-panel-width);
+    line-height: var(--js-chart-common-control-panel-width);
+    height: 70px;
+    border: 0.5px solid #dddddd;
+    border-radius: 5px;
+    background-color: #dcdcdc;
+    color: #000000;
+    font-size: var(--js-chart-size-normal);
+    margin: 0px 0px 3px 0px;
+    cursor: pointer;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.js-chart-common-options-menu-container {
+    position: absolute;
+    z-index: 300;
+    top: 10px;
+    left: 30px;
+    width: calc(100% - 40px);
+    height: calc(100% - 20px);
+    background-color: #ffffe6;
+    border: 0.5px solid #eeeeee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-common-options-menu-title-container {
+    flex: 0 0 auto;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: var(--js-chart-size-large);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-common-options-menu-title-label-container {
+    flex: 1 1 auto;
+    width: calc(100% - 45px);
+}
+.js-chart-common-options-menu-title-close-button-container {
+    flex: 1 1 auto;
+    width: 45px;
+}
+.js-chart-common-options-menu-title-close-button {
+    text-align: center;
+    font-size: var(--js-chart-size-normal);
+    background-color: lightsteelblue;
+    border: 0.5px solid #dddddd;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 5px 0px 0px 0px;
+    cursor: pointer;
+}
+.js-chart-common-options-menu-content-container {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: grid;
+    grid-template-columns: 150px calc(100% - 150px);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    margin: 3px 3px 3px 5px;
+    row-gap: 15px;
+}
+.js-chart-common-options-menu-label-container {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    text-align: left;
+}
+.js-chart-common-menu-option-text-container {
+    padding: 0px 0px 15px 0px;
+    text-align: left;
+}
+.js-chart-common-datatable-table {
+    table-layout: fixed;
+    border: 0.5px solid #dddddd;
+    width: 100%;
+}
+.js-chart-common-datatable-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.js-chart-common-datalabel-container {
+    text-align: center;
+    text-wrap: nowrap;
+}
+.js-chart-common-polling-container {
+    position: fixed;
+    background-color: white;
+    z-index: 350;
+    width: var(--js-chart-common-loading-width);
+    height: var(--js-chart-common-loading-height);
+    top: calc(50% - var(--js-chart-common-loading-height));
+    left: calc(50% - var(--js-chart-common-loading-width));
+    border: 0.5px solid #dddddd;
+    border-radius: 10px;
+}
+.js-chart-common-polling-label {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    font-size: var(--js-chart-size-large);
+    font-weight: 600;
+}

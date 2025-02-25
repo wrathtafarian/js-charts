@@ -1,0 +1,224 @@
+:root {
+    --js-chart-waterfall-column-y-axis-title-width: 80px;
+    --js-chart-waterfall-column-x-axis-title-height: 20px;
+    --js-chart-waterfall-bar-y-axis-title-width: 20px;
+    --js-chart-waterfall-bar-x-axis-title-height: 20px;
+    --js-chart-waterfall-bar-x-axis-legend-height: 20px;
+    --js-chart-waterfall-bar-y-axis-legend-width: 100px;
+}
+.js-chart-waterfall-column-level0-container {
+    display: grid;
+    grid-template-columns: var(--js-chart-waterfall-column-y-axis-title-width) calc(100% - var(--js-chart-waterfall-column-y-axis-title-width));
+    grid-template-rows: calc(100% - var(--js-chart-waterfall-column-x-axis-title-height)) var(--js-chart-waterfall-column-x-axis-title-height);
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+}
+.js-chart-waterfall-column-y-axis-container {
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-waterfall-column-y-axis-title-container {
+    flex: 1 1 auto;
+    width: 20px;
+    writing-mode: vertical-lr;
+    line-height: 20px;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(----js-chart-size-normal);
+}
+.js-chart-waterfall-column-y-axis-scale-label-container {
+    flex: 1 1 auto;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-waterfall-column-y-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+}
+.js-chart-waterfall-column-y-axis-scale-label-block-last {
+    position: absolute;
+    text-align: right;
+    vertical-align: top;
+    font-size: var(--js-chart-size-small);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 55px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+}
+.js-chart-waterfall-column-y-axis-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-waterfall-column-y-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-waterfall-column-level1-inner-panel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.js-chart-waterfall-column-level2-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - 20px);
+    width: calc(100% - 2px);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-waterfall-column-x-axis-legend-container {
+    flex: 1 1 auto;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-waterfall-column-x-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+}
+.js-chart-waterfall-column-infobox-container {
+}
+.js-chart-waterfall-column-x-axis-title-container {
+    line-height: var(--js-chart-waterfall-column-x-axis-title-height);
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(----js-chart-size-normal);
+}
+.js-chart-waterfall-column-series-column-container {
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-waterfall-bar-level0-inner-panel {
+    height: 100%;
+    display: grid;
+    grid-template-columns: var(--js-chart-waterfall-bar-y-axis-title-width) calc(100% - var(--js-chart-waterfall-bar-y-axis-title-width));
+    grid-template-rows: calc(100% - var(--js-chart-waterfall-bar-x-axis-title-height)) var(--js-chart-waterfall-bar-x-axis-title-height);
+    margin: 0px 15px 0px 0px;
+}
+.js-chart-waterfall-bar-y-axis-title-container {
+    text-align: center;
+    writing-mode: vertical-lr;
+    line-height: var(--js-chart-waterfall-bar-y-axis-title-width);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(----js-chart-size-normal);
+}
+.js-chart-waterfall-bar-level1-inner-panel {
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-waterfall-bar-infobox-container {
+}
+.js-chart-waterfall-bar-x-axis-title-container {
+    text-align: center;
+    line-height: var(--js-chart-waterfall-bar-x-axis-title-height);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(----js-chart-size-normal);
+}
+.js-chart-waterfall-bar-level2-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - var(--js-chart-waterfall-bar-x-axis-legend-height));
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-waterfall-bar-x-axis-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-waterfall-bar-x-axis-legend-height);
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-waterfall-bar-x-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-waterfall-bar-y-axis-legend-container {
+    flex: 1 1 auto;
+    width: var(--js-chart-waterfall-bar-y-axis-legend-width);
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5px 0px 0px;
+}
+.js-chart-waterfall-bar-y-axis-legend-block {
+    flex: 1 1 0px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    vertical-align: middle;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-waterfall-bar-level3-inner-panel {
+    flex: 1 1 auto;
+    width: calc(100% - var(--js-chart-waterfall-bar-y-axis-legend-width));
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-waterfall-bar-x-axis-scale-container {
+    flex: 1 1 auto;
+    height: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-waterfall-bar-x-axis-scale-label-container {
+    flex: 1 1 auto;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-waterfall-bar-x-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: left;
+    vertical-align: top;
+    font-size: var(--js-chart-size-small);
+    position: relative;
+}
+.js-chart-waterfall-bar-x-axis-scale-label-text-block {
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    width: 55px;
+    height: 20px;
+    vertical-align: top;
+    text-align: center;
+}
+.js-chart-waterfall-bar-x-axis-scale-label-text-block-last {
+    position: absolute;
+    top: 0px;
+    right: -50%;
+    width: 55px;
+    height: 20px;
+    vertical-align: top;
+    text-align: center;
+}
+.js-chart-waterfall-bar-series-bar-container {
+    flex: 1 1 0px;
+    position: relative;
+}

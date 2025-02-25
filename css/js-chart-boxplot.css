@@ -1,0 +1,238 @@
+:root {
+    --js-chart-boxplot-y-axis-width: 80px;
+    --js-chart-boxplot-x-axis-height: 20px;
+    --js-chart-boxplot-x-axis-legend-height: 20px;
+    --js-chart-boxplot-horizontal-y-axis-height: 80px;
+    --js-chart-boxplot-horizontal-x-axis-width: 20px;
+    --js-chart-boxplot-horizontal-y-axis-legend-width: 20px;
+}
+.js-chart-boxplot-level0-inner-panel {
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: var(--js-chart-boxplot-y-axis-width) calc(100% - var(--js-chart-boxplot-y-axis-width));
+    grid-template-rows: calc(100% - var(--js-chart-boxplot-x-axis-height)) var(--js-chart-boxplot-x-axis-height);
+}
+.js-chart-boxplot-y-axis-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px 0px;
+}
+.js-chart-boxplot-y-axis-title-container {
+    flex: 1 1 auto;
+    width: 20px;
+    line-height: 20px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-boxplot-y-axis-scale-label-container {
+    flex: 1 1 auto;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-boxplot-y-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-boxplot-y-axis-scale-label-block-last {
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-boxplot-y-axis-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-boxplot-y-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-boxplot-level1-inner-panel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.js-chart-boxplot-level2-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - var(--js-chart-boxplot-x-axis-legend-height));
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px 0px;
+}
+.js-chart-boxplot-x-axis-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-boxplot-x-axis-legend-height);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-boxplot-x-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    line-height: var(--js-chart-boxplot-x-axis-legend-height);
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-boxplot-infobox-container {
+}
+.js-chart-boxplot-x-axis-title-container {
+    line-height: var(--js-chart-boxplot-x-axis-height);
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-boxplot-series-container {
+    flex: 1 1 0px;
+    min-width: calc(var(--js-chart-boxplot-min-value-container-width) * 2);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-boxplot-value-container {
+    flex: 1 1 0px;
+    position: relative;
+}
+.js-chart-boxplot-horizontal-level0-inner-panel {
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: var(--js-chart-boxplot-horizontal-x-axis-width) calc(100% - var(--js-chart-boxplot-horizontal-x-axis-width));
+    grid-template-rows: calc(100% - var(--js-chart-boxplot-horizontal-y-axis-height)) var(--js-chart-boxplot-horizontal-y-axis-height);
+}
+.js-chart-boxplot-horizontal-x-axis-title-container {
+    text-align: center;
+    writing-mode: vertical-lr;
+    line-height: var(--js-chart-boxplot-horizontal-x-axis-width);
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-boxplot-horizontal-level1-inner-panel {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+.js-chart-boxplot-horizontal-x-axis-legend-container {
+    flex: 1 1 auto;
+    width: var(--js-chart-boxplot-horizontal-y-axis-legend-width);
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-boxplot-horizontal-x-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    line-height: 20px;
+    writing-mode: vertical-lr;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-boxplot-horizontal-level2-inner-panel {
+    flex: 1 1 auto;
+    width: calc(100% - var(--js-chart-boxplot-horizontal-y-axis-legend-width));
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-boxplot-horizontal-infobox-container {
+}
+.js-chart-boxplot-horizontal-y-axis-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 20px;
+}
+.js-chart-boxplot-horizontal-y-axis-scale-container {
+    flex: 1 1 auto;
+    height: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-boxplot-horizontal-y-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-boxplot-horizontal-y-axis-scale-label-container {
+    flex: 1 1 auto;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.js-chart-boxplot-horizontal-y-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: left;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-boxplot-horizontal-y-axis-scale-label-block-last {
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    right: 0px;
+    top: 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-boxplot-horizontal-y-axis-title-container {
+    flex: 1 1 auto;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-boxplot-horizontal-series-container {
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-boxplot-horizontal-value-container {
+    flex: 1 1 0px;
+    position: relative;
+}

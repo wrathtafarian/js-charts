@@ -1,0 +1,72 @@
+:root {
+    --js-chart-heatmap-y-axis-title-width: 15px;
+    --js-chart-heatmap-x-axis-title-height: 15px;
+    --js-chart-heatmap-y-axis-legend-width: 55px;
+    --js-chart-heatmap-x-axis-legend-height: 15px;
+}
+.js-chart-heatmap-level0-inner-panel {
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: var(--js-chart-heatmap-y-axis-title-width) calc(100% - var(--js-chart-heatmap-y-axis-title-width));
+    grid-template-rows: calc(100% - var(--js-chart-heatmap-x-axis-title-height)) var(--js-chart-heatmap-x-axis-title-height);
+}
+.js-chart-heatmap-y-axis-title-container {
+    line-height: var(--js-chart-heatmap-y-axis-title-width);
+    writing-mode: vertical-lr;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-heatmap-level1-inner-panel {
+    display: grid;
+    grid-template-columns: var(--js-chart-heatmap-y-axis-legend-width) calc(100% - var(--js-chart-heatmap-y-axis-legend-width));
+    grid-template-rows: calc(100% - var(--js-chart-heatmap-x-axis-legend-height)) var(--js-chart-heatmap-x-axis-legend-height);
+}
+.js-chart-heatmap-y-axis-legend-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 3px 0px 0px;
+}
+.js-chart-heatmap-y-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: right;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-heatmap-level2-inner-panel {
+    display: grid;
+}
+.js-chart-heatmap-inner-infobox-container {
+}
+.js-chart-heatmap-x-axis-legend-container {
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-heatmap-x-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    line-height: var(--js-chart-heatmap-x-axis-legend-height);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-heatmap-infobox-container {
+}
+.js-chart-heatmap-x-axis-title-container {
+    line-height: var(--js-chart-heatmap-x-axis-title-height);
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}

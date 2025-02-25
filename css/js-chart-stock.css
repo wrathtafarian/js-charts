@@ -1,0 +1,113 @@
+:root {
+    --js-chart-stock-y-axis-width: 80px;
+    --js-chart-stock-x-axis-height: 20px;
+}
+.js-chart-stock-level0-inner-panel {
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: var(--js-chart-stock-y-axis-width) calc(100% - var(--js-chart-stock-y-axis-width));
+    grid-template-rows: calc(100% - var(--js-chart-stock-x-axis-height)) var(--js-chart-stock-x-axis-height);
+}
+.js-chart-stock-y-axis-container {
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-stock-y-axis-title-container {
+    flex: 1 1 auto;
+    width: 20px;
+    line-height: 20px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-stock-y-axis-scale-label-container {
+    flex: 1 1 auto;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-stock-y-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-stock-y-axis-scale-label-block-last {
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-stock-y-axis-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-stock-y-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-stock-level1-inner-panel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.js-chart-stock-level2-inner-panel {
+    margin: 0px 20px 0px 0px;
+    flex: 1 1 auto;
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-stock-series-value-container {
+    flex: 1 1 0px;
+    position: relative;
+}
+.js-chart-stock-infobox-container {
+}
+.js-chart-stock-x-axis-container {
+    text-align: center;
+    line-height: var(--js-chart-stock-x-axis-height);
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-stock-x-axis-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-stock-x-axis-height);
+    margin: 0px 20px 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-stock-x-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    line-height: var(--js-chart-stock-x-axis-height);
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}

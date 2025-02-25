@@ -1,0 +1,144 @@
+:root {
+    --js-chart-funnel-bar-y-axis-title-width: 15px;
+    --js-chart-funnel-bar-x-axis-title-height: 15px;
+    --js-chart-funnel-bar-left-legend-container-width: 20%;
+    --js-chart-funnel-bar-right-legend-container-width: 20%;
+}
+.js-chart-funnel-bar-level0-inner-panel {
+    height: 100%;
+    display: grid;
+    grid-template-columns: var(--js-chart-funnel-bar-y-axis-title-width) calc(100% - var(--js-chart-funnel-bar-y-axis-title-width));
+    grid-template-rows: calc(100% - var(--js-chart-funnel-bar-x-axis-title-height)) var(--js-chart-funnel-bar-x-axis-title-height);
+    margin: 0px 5px 0px 5px;
+}
+.js-chart-funnel-column-level0-inner-panel {
+    height: 100%;
+    display: grid;
+    grid-template-columns: calc(100% - var(--js-chart-funnel-bar-y-axis-title-width)) var(--js-chart-funnel-bar-y-axis-title-width);
+    grid-template-rows: calc(100% - var(--js-chart-funnel-bar-x-axis-title-height)) var(--js-chart-funnel-bar-x-axis-title-height);
+    margin: 0px 5px 0px 5px;
+}
+.js-chart-funnel-bar-y-axis-title-container {
+    text-align: center;
+    writing-mode: vertical-lr;
+    line-height: var(--js-chart-funnel-bar-y-axis-title-width);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-funnel-column-y-title-container {
+    text-align: center;
+    writing-mode: vertical-lr;
+    line-height: var(--js-chart-funnel-bar-y-axis-title-width);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-funnel-bar-level1-inner-panel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+.js-chart-funnel-column-level1-inner-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.js-chart-funnel-bar-infobox-container, .js-chart-funnel-column-infobox-container {
+}
+.js-chart-funnel-bar-x-axis-title-container {
+    line-height: var(--js-chart-funnel-bar-x-axis-title-height);
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-funnel-column-x-title-container {
+    line-height: var(--js-chart-funnel-bar-x-axis-title-height);
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-funnel-bar-left-legend-container {
+    flex: 1 1 auto;
+    width: var(--js-chart-funnel-bar-left-legend-container-width);
+    display: flex;
+    flex-direction: column;
+    margin: 0px 5px 0px 0px;
+}
+.js-chart-funnel-column-top-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-funnel-bar-left-legend-container-width);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-funnel-bar-level2-inner-panel {
+    flex: 1 1 auto;
+    width: calc(100% - (var(--js-chart-funnel-bar-left-legend-container-width) + var(--js-chart-funnel-bar-right-legend-container-width)));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.js-chart-funnel-column-level2-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - (var(--js-chart-funnel-bar-left-legend-container-width) + var(--js-chart-funnel-bar-right-legend-container-width)));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.js-chart-funnel-bar-right-legend-container {
+    flex: 1 1 auto;
+    width: var(--js-chart-funnel-bar-right-legend-container-width);
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 5px;
+}
+.js-chart-funnel-column-bottom-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-funnel-bar-right-legend-container-width);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-funnel-bar-left-legend-block {
+    flex: 1 1 0px;
+    text-align: right;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-large);
+}
+.js-chart-funnel-bar-top-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-large);
+}
+.js-chart-funnel-bar-right-legend-block {
+    flex: 1 1 0px;
+    text-align: left;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-large);
+}
+.js-chart-funnel-bar-bottom-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-large);
+}
