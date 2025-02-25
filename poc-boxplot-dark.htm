@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-boxplot.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-boxplot.js"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: #666666; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #999999;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus nibh, accumsan vel sollicitudin vitae, consequat in mi. Mauris placerat condimentum mi, nec tempor nisi tincidunt id. Ut porttitor arcu eu nunc tristique ultricies. Vestibulum ligula massa, porttitor non suscipit id, suscipit ac nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce eu dignissim elit, non lobortis dui. Donec porttitor, lacus non blandit pulvinar, diam massa pellentesque turpis, at consectetur velit nunc rhoncus sapien. In ullamcorper dolor quis egestas ultrices. Vivamus ultrices risus elit, a faucibus massa ultricies ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris metus ante, vestibulum ac est vel, lobortis pellentesque orci. Cras risus enim, viverra in libero vitae, ultricies ullamcorper lacus. Morbi nec leo nisl. Nullam molestie nibh sit amet orci sollicitudin, finibus venenatis massa interdum. Sed id massa et leo feugiat consectetur eget id diam.</p>
+
+        <div class="js-chart" type="box plot" template="darkweb" title="Average daily temperatures 2024 (Johannesburg and Cape Town)" ytitle="Temperature (C)" xtitle="Month of the year" width="auto">
+            <div class="js-series" title="January">
+                <div class="js-values" title="Johannesburg">38, 38, 28, 24, 37, 34, 24, 30, 20, 33, 22, 40, 24, 21, 21, 26, 24, 37, 22, 24, 24, 40, 34, 36, 40, 22, 35, 38, 30, 36, 25</div>
+                <div class="js-values" title="Cape Town">36, 26, 27, 40, 26, 31, 33, 35, 22, 32, 34, 32, 28, 26, 26, 35, 26, 34, 27, 43, 31, 28, 36, 23, 27, 41, 41, 29, 36, 25, 43</div>
+            </div>
+            <div class="js-series" title="February">
+                <div class="js-values" title="Johannesburg">31, 24, 29, 21, 32, 20, 24, 30, 32, 25, 29, 28, 30, 26, 22, 32, 30, 20, 30, 21, 30, 32, 23, 27, 26, 20, 30, 22</div>
+                <div class="js-values" title="Cape Town">24, 34, 27, 36, 23, 31, 33, 27, 23, 32, 22, 26, 37, 24, 28, 36, 23, 35, 29, 27, 32, 23, 25, 30, 35, 32, 24, 26</div>
+            </div>
+            <div class="js-series" title="March">
+                <div class="js-values" title="Johannesburg">30, 25, 19, 20, 28, 21, 30, 25, 21, 27, 21, 21, 26, 20, 21, 27, 25, 24, 22, 23, 25, 20, 22, 20, 19, 27, 22, 22, 30, 26, 22</div>
+                <div class="js-values" title="Cape Town">29, 36, 29, 21, 23, 30, 21, 26, 37, 25, 39, 37, 21, 34, 31, 25, 39, 21, 35, 37, 30, 29, 29, 25, 22, 37, 33, 24, 41, 31, 23</div>
+            </div>
+            <div class="js-series" title="April">
+                <div class="js-values" title="Johannesburg">18, 23, 17, 28, 17, 21, 28, 17, 26, 24, 27, 18, 26, 28, 23, 22, 24, 18, 17, 23, 24, 23, 19, 20, 21, 23, 24, 27, 27, 21</div>
+                <div class="js-values" title="Cape Town">20, 21, 34, 24, 33, 20, 29, 34, 31, 31, 27, 32, 20, 19, 20, 31, 20, 35, 18, 24, 28, 30, 33, 28, 32, 28, 21, 26, 36, 25</div>
+            </div>
+            <div class="js-series" title="May">
+                <div class="js-values" title="Johannesburg">15, 21, 14, 22, 21, 14, 22, 18, 16, 14, 17, 19, 18, 19, 23, 17, 14, 18, 19, 24, 24, 19, 21, 16, 15, 16, 18, 15, 15, 22, 19</div>
+                <div class="js-values" title="Cape Town">21, 19, 26, 27, 26, 29, 30, 29, 32, 31, 24, 20, 16, 22, 23, 24, 21, 20, 19, 28, 24, 32, 27, 25, 19, 24, 24, 27, 32, 32, 32</div>
+            </div>
+            <div class="js-series" title="June">
+                <div class="js-values" title="Johannesburg">21, 14, 20, 13, 19, 21, 22, 22, 20, 11, 13, 16, 13, 14, 15, 17, 11, 13, 19, 19, 12, 19, 12, 15, 12, 12, 12, 14, 15, 11</div>
+                <div class="js-values" title="Cape Town">17, 15, 28, 17, 18, 19, 14, 16, 20, 18, 27, 28, 17, 24, 20, 27, 17, 18, 14, 25, 19, 16, 28, 28, 14, 15, 28, 15, 17, 19</div>
+            </div>
+            <div class="js-series" title="July">
+                <div class="js-values" title="Johannesburg">15, 14, 15, 11, 18, 19, 18, 22, 11, 18, 13, 23, 23, 14, 16, 12, 14, 21, 19, 18, 13, 17, 19, 11, 19, 22, 15, 23, 17, 15, 15</div>
+                <div class="js-values" title="Cape Town">18, 20, 13, 15, 24, 25, 20, 16, 14, 24, 20, 15, 17, 15, 15, 26, 28, 26, 20, 20, 17, 19, 23, 15, 20, 27, 16, 23, 21, 24, 15</div>
+            </div>
+            <div class="js-series" title="August">
+                <div class="js-values" title="Johannesburg">17, 21, 17, 24, 15, 24, 24, 17, 20, 15, 15, 20, 14, 20, 19, 18, 24, 15, 20, 20, 25, 21, 22, 15, 19, 24, 22, 16, 17, 17, 15</div>
+                <div class="js-values" title="Cape Town">26, 29, 28, 21, 21, 18, 20, 30, 14, 28, 22, 23, 23, 21, 30, 25, 15, 30, 15, 31, 23, 19, 16, 14, 15, 21, 18, 21, 17, 30, 14</div>
+            </div>
+            <div class="js-series" title="September">
+                <div class="js-values" title="Johannesburg">25, 29, 29, 19, 24, 18, 22, 27, 22, 17, 25, 18, 26, 17, 28, 25, 21, 18, 22, 22, 29, 18, 23, 19, 28, 20, 22, 23, 27, 28</div>
+                <div class="js-values" title="Cape Town">29, 18, 24, 32, 18, 18, 30, 26, 31, 22, 20, 20, 20, 28, 18, 27, 19, 25, 17, 19, 20, 15, 20, 19, 27, 16, 29, 24, 31, 26</div>
+            </div>
+            <div class="js-series" title="October">
+                <div class="js-values" title="Johannesburg">23, 24, 20, 25, 23, 29, 20, 27, 20, 29, 26, 26, 19, 23, 22, 23, 18, 22, 26, 20, 27, 27, 20, 24, 18, 24, 28, 25, 23, 25, 31</div>
+                <div class="js-values" title="Cape Town">31, 21, 17, 17, 29, 27, 32, 27, 31, 27, 25, 35, 34, 17, 17, 18, 33, 21, 20, 36, 29, 33, 23, 33, 27, 36, 34, 17, 23, 29, 34</div>
+            </div>
+            <div class="js-series" title="November">
+                <div class="js-values" title="Johannesburg">30, 31, 35, 29, 24, 24, 33, 22, 18, 24, 18, 37, 23, 29, 28, 32, 19, 26, 28, 23, 18, 20, 26, 18, 18, 28, 35, 28, 24, 19</div>
+                <div class="js-values" title="Cape Town">26, 29, 19, 24, 21, 19, 33, 23, 37, 29, 25, 31, 23, 35, 24, 38, 25, 27, 23, 33, 29, 27, 34, 35, 24, 19, 24, 29, 28, 23</div>
+            </div>
+            <div class="js-series" title="December">
+                <div class="js-values" title="Johannesburg">27, 34, 26, 23, 19, 37, 24, 25, 35, 32, 32, 25, 23, 28, 26, 19, 24, 22, 34, 33, 35, 21, 20, 29, 27, 21, 36, 30, 22, 36, 24</div>
+                <div class="js-values" title="Cape Town">24, 31, 23, 38, 36, 22, 21, 28, 27, 34, 36, 37, 29, 27, 25, 23, 39, 22, 22, 27, 37, 37, 25, 35, 28, 22, 32, 25, 30, 37, 25</div>
+            </div>
+
+            <div class="js-value-line-thickness">1px</div>
+            <div class="js-value-bar-data-margin">2px</div>
+            <div class="js-value-bar-series-margin">2px</div>
+            <div class="js-marker-width">10px</div>
+            <div class="js-marker-height">10px</div>
+
+            <div class="js-datalabel-text-color">white</div>
+            <div class="js-color-palette">#33cc33; orange</div>
+
+        </div>
+
+        <p>In pulvinar nec velit commodo rhoncus. Duis elementum dictum turpis sit amet placerat. Maecenas vel finibus ipsum. Morbi placerat, quam et lacinia ornare, orci enim elementum elit, vel lacinia nibh nunc at nisl. Nulla quis est non arcu suscipit viverra. Nam ultrices et tortor vel tristique. Etiam nec nunc auctor, semper felis eget, dapibus arcu. Praesent dapibus, nunc vel viverra congue, purus mi hendrerit nisi, sit amet viverra tortor ipsum et eros. Suspendisse ut nisl laoreet, venenatis nisl et, euismod mi. Ut non vehicula sem. Pellentesque a justo ac velit tempor aliquam. Aliquam sit amet suscipit diam. Sed turpis metus, consequat sit amet ipsum ac, sagittis interdum erat. Sed lobortis ultrices commodo. Integer facilisis, augue et semper venenatis, purus ipsum consectetur sapien, vitae porttitor metus mi id magna. Integer faucibus pretium neque quis tempus.</p>
+
+        <table width="100%">
+        <tbody>
+        <tr>
+            <td valign="top" width="50%" align="center">
+                <div class="js-chart" type="box plot" template="darkweb" title="Average daily temperatures 2024 (Johannesburg and Cape Town)" ytitle="Temperature (C)" xtitle="Month of the year" width="auto">
+                    <div class="js-series" title="January">
+                        <div class="js-values" title="Johannesburg">5, 38, 28, 24, 37, 34, 24, 30, 20, 33, 22, 40, 24, 21, 21, 26, 24, 37, 22, 24, 24, 40, 34, 36, 40, 22, 35, 38, 30, 36, 25</div>
+                        <div class="js-values" title="Cape Town">8, 26, 27, 40, 26, 31, 33, 35, 22, 32, 34, 32, 28, 26, 26, 35, 26, 34, 27, 43, 31, 28, 36, 23, 27, 41, 41, 29, 36, 25, 43</div>
+                    </div>
+                    <div class="js-series" title="February">
+                        <div class="js-values" title="Johannesburg">31, 24, 29, 21, 32, 20, 24, 30, 32, 25, 29, 28, 30, 26, 22, 32, 30, 20, 30, 21, 30, 32, 23, 27, 26, 20, 30, 22</div>
+                        <div class="js-values" title="Cape Town">24, 34, 27, 36, 23, 31, 33, 27, 23, 32, 22, 26, 37, 24, 28, 36, 23, 35, 29, 27, 32, 23, 25, 30, 35, 32, 24, 26</div>
+                    </div>
+                    <div class="js-series" title="March">
+                        <div class="js-values" title="Johannesburg">30, 25, 19, 20, 28, 21, 30, 25, 21, 27, 21, 21, 26, 20, 21, 27, 25, 24, 22, 23, 25, 20, 22, 20, 19, 27, 22, 22, 30, 26, 22</div>
+                        <div class="js-values" title="Cape Town">29, 36, 29, 21, 23, 30, 21, 26, 37, 25, 39, 37, 21, 34, 31, 25, 39, 21, 35, 37, 30, 29, 29, 25, 22, 37, 33, 24, 41, 31, 23</div>
+                    </div>
+                    <div class="js-series" title="April">
+                        <div class="js-values" title="Johannesburg">18, 23, 17, 28, 17, 21, 28, 17, 26, 24, 27, 18, 26, 28, 23, 22, 24, 18, 17, 23, 24, 23, 19, 20, 21, 23, 24, 27, 27, 21</div>
+                        <div class="js-values" title="Cape Town">20, 21, 34, 24, 33, 20, 29, 34, 31, 31, 27, 32, 20, 19, 20, 31, 20, 35, 18, 24, 28, 30, 33, 28, 32, 28, 21, 26, 36, 25</div>
+                    </div>
+                    <div class="js-series" title="May">
+                        <div class="js-values" title="Johannesburg">15, 21, 14, 22, 21, 14, 22, 18, 16, 14, 17, 19, 18, 19, 23, 17, 14, 18, 19, 24, 24, 19, 21, 16, 15, 16, 18, 15, 15, 22, 19</div>
+                        <div class="js-values" title="Cape Town">21, 19, 26, 27, 26, 29, 30, 29, 32, 31, 24, 20, 16, 22, 23, 24, 21, 20, 19, 28, 24, 32, 27, 25, 19, 24, 24, 27, 32, 32, 32</div>
+                    </div>
+                    <div class="js-series" title="June">
+                        <div class="js-values" title="Johannesburg">38, 14, 20, 13, 19, 21, 22, 22, 20, 11, 13, 16, 13, 14, 15, 17, 11, 13, 19, 19, 12, 19, 12, 15, 12, 12, 12, 14, 15, 11</div>
+                        <div class="js-values" title="Cape Town">17, 15, 28, 17, 18, 19, 14, 16, 20, 18, 27, 28, 17, 24, 20, 27, 17, 18, 14, 25, 19, 16, 28, 28, 14, 15, 28, 15, 17, 19</div>
+                    </div>
+                    <div class="js-series" title="July">
+                        <div class="js-values" title="Johannesburg">15, 14, 15, 11, 18, 19, 18, 22, 11, 18, 13, 23, 23, 14, 16, 12, 14, 21, 19, 18, 13, 17, 19, 11, 19, 22, 15, 23, 17, 15, 15</div>
+                        <div class="js-values" title="Cape Town">18, 20, 13, 15, 24, 25, 20, 16, 14, 24, 20, 15, 17, 15, 15, 26, 28, 26, 20, 20, 17, 19, 23, 15, 20, 27, 16, 23, 21, 24, 15</div>
+                    </div>
+                    <div class="js-series" title="August">
+                        <div class="js-values" title="Johannesburg">17, 21, 17, 24, 15, 24, 24, 17, 20, 15, 15, 20, 14, 20, 19, 18, 24, 15, 20, 20, 25, 21, 22, 15, 19, 24, 22, 16, 17, 17, 15</div>
+                        <div class="js-values" title="Cape Town">26, 29, 28, 21, 21, 18, 20, 30, 14, 28, 22, 23, 23, 21, 30, 25, 15, 30, 15, 31, 23, 19, 16, 14, 15, 21, 18, 21, 17, 30, 14</div>
+                    </div>
+                    <div class="js-series" title="September">
+                        <div class="js-values" title="Johannesburg">25, 29, 29, 19, 24, 18, 22, 27, 22, 17, 25, 18, 26, 17, 28, 25, 21, 18, 22, 22, 29, 18, 23, 19, 28, 20, 22, 23, 27, 28</div>
+                        <div class="js-values" title="Cape Town">29, 18, 24, 32, 18, 18, 30, 26, 31, 22, 20, 20, 20, 28, 18, 27, 19, 25, 17, 19, 20, 15, 20, 19, 27, 16, 29, 24, 31, 26</div>
+                    </div>
+                    <div class="js-series" title="October">
+                        <div class="js-values" title="Johannesburg">23, 24, 20, 25, 23, 29, 20, 27, 20, 29, 26, 26, 19, 23, 22, 23, 18, 22, 26, 20, 27, 27, 20, 24, 18, 24, 28, 25, 23, 25, 31</div>
+                        <div class="js-values" title="Cape Town">31, 21, 17, 17, 29, 27, 32, 27, 31, 27, 25, 35, 34, 17, 17, 18, 33, 21, 20, 36, 29, 33, 23, 33, 27, 36, 34, 17, 23, 29, 34</div>
+                    </div>
+                    <div class="js-series" title="November">
+                        <div class="js-values" title="Johannesburg">30, 31, 35, 29, 24, 24, 33, 22, 18, 24, 18, 37, 23, 29, 28, 32, 19, 26, 28, 23, 18, 20, 26, 18, 18, 28, 35, 28, 24, 19</div>
+                        <div class="js-values" title="Cape Town">26, 29, 19, 24, 21, 19, 33, 23, 37, 29, 25, 31, 23, 35, 24, 38, 25, 27, 23, 33, 29, 27, 34, 35, 24, 19, 24, 29, 28, 23</div>
+                    </div>
+                    <div class="js-series" title="December">
+                        <div class="js-values" title="Johannesburg">27, 34, 26, 23, 19, 37, 24, 25, 35, 32, 32, 25, 23, 28, 26, 19, 24, 22, 34, 33, 35, 21, 20, 29, 27, 21, 36, 30, 22, 36, 24</div>
+                        <div class="js-values" title="Cape Town">24, 31, 23, 38, 36, 22, 21, 28, 27, 34, 36, 37, 29, 27, 25, 23, 39, 22, 22, 27, 37, 37, 25, 35, 28, 22, 32, 25, 30, 37, 25</div>
+                    </div>
+        
+                    <div class="js-value-line-thickness">1px</div>
+                    <div class="js-value-bar-min-width">8px</div>
+                    <div class="js-value-bar-data-margin">2px</div>
+                    <div class="js-value-bar-series-margin">2px</div>
+                    <div class="js-marker-width">10px</div>
+                    <div class="js-marker-height">10px</div>
+        
+                    <div class="js-datalabel-text-color">white</div>
+                    <div class="js-color-palette">#cc99ff; orange</div>
+        
+                </div>
+        
+            </td>
+            <td valign="top" width="50%" align="center">
+                <div class="js-chart" type="horizontal box plot" template="darkweb" title="Average daily temperatures 2024 (Johannesburg and Cape Town)" ytitle="Temperature (C)" xtitle="Month of the year" width="auto">
+                    <div class="js-series" title="January">
+                        <div class="js-values" title="Johannesburg">4, 38, 28, 24, 37, 34, 24, 30, 20, 33, 22, 40, 24, 21, 21, 26, 24, 37, 22, 24, 24, 40, 34, 36, 40, 22, 35, 38, 30, 36, 25</div>
+                        <div class="js-values" title="Cape Town">36, 26, 27, 40, 26, 31, 33, 35, 22, 32, 34, 32, 28, 26, 26, 35, 26, 34, 27, 43, 31, 28, 36, 23, 27, 41, 41, 29, 36, 25, 43</div>
+                    </div>
+                    <div class="js-series" title="February">
+                        <div class="js-values" title="Johannesburg">31, 24, 29, 21, 32, 20, 24, 30, 32, 25, 29, 28, 30, 26, 22, 32, 30, 20, 30, 21, 30, 32, 23, 27, 26, 20, 30, 22</div>
+                        <div class="js-values" title="Cape Town">24, 34, 27, 36, 23, 31, 33, 27, 23, 32, 22, 26, 37, 24, 28, 36, 23, 35, 29, 27, 32, 23, 25, 30, 35, 32, 24, 26</div>
+                    </div>
+                    <div class="js-series" title="March">
+                        <div class="js-values" title="Johannesburg">30, 25, 19, 20, 28, 21, 30, 25, 21, 27, 21, 21, 26, 20, 21, 27, 25, 24, 22, 23, 25, 20, 22, 20, 19, 27, 22, 22, 30, 26, 22</div>
+                        <div class="js-values" title="Cape Town">29, 36, 29, 21, 23, 30, 21, 26, 37, 25, 39, 37, 21, 34, 31, 25, 39, 21, 35, 37, 30, 29, 29, 25, 22, 37, 33, 24, 41, 31, 23</div>
+                    </div>
+                    <div class="js-series" title="April">
+                        <div class="js-values" title="Johannesburg">18, 23, 17, 28, 17, 21, 28, 17, 26, 24, 27, 18, 26, 28, 23, 22, 24, 18, 17, 23, 24, 23, 19, 20, 21, 23, 24, 27, 27, 21</div>
+                        <div class="js-values" title="Cape Town">20, 21, 34, 24, 33, 20, 29, 34, 31, 31, 27, 32, 20, 19, 20, 31, 20, 35, 18, 24, 28, 30, 33, 28, 32, 28, 21, 26, 36, 25</div>
+                    </div>
+                    <div class="js-series" title="May">
+                        <div class="js-values" title="Johannesburg">15, 21, 14, 22, 21, 14, 22, 18, 16, 14, 17, 19, 18, 19, 23, 17, 14, 18, 19, 24, 24, 19, 21, 16, 15, 16, 18, 15, 15, 22, 19</div>
+                        <div class="js-values" title="Cape Town">21, 19, 26, 27, 26, 29, 30, 29, 32, 31, 24, 20, 16, 22, 23, 24, 21, 20, 19, 28, 24, 32, 27, 25, 19, 24, 24, 27, 32, 32, 32</div>
+                    </div>
+                    <div class="js-series" title="June">
+                        <div class="js-values" title="Johannesburg">47, 14, 20, 13, 19, 21, 22, 22, 20, 11, 13, 16, 13, 14, 15, 17, 11, 13, 19, 19, 12, 19, 12, 15, 12, 12, 12, 14, 15, 11</div>
+                        <div class="js-values" title="Cape Town">17, 15, 28, 17, 18, 19, 14, 16, 20, 18, 27, 28, 17, 24, 20, 27, 17, 18, 14, 25, 19, 16, 28, 28, 14, 15, 28, 15, 17, 19</div>
+                    </div>
+                    <div class="js-series" title="July">
+                        <div class="js-values" title="Johannesburg">15, 14, 15, 11, 18, 19, 18, 22, 11, 18, 13, 23, 23, 14, 16, 12, 14, 21, 19, 18, 13, 17, 19, 11, 19, 22, 15, 23, 17, 15, 15</div>
+                        <div class="js-values" title="Cape Town">18, 20, 13, 15, 24, 25, 20, 16, 14, 24, 20, 15, 17, 15, 15, 26, 28, 26, 20, 20, 17, 19, 23, 15, 20, 27, 16, 23, 21, 24, 15</div>
+                    </div>
+                    <div class="js-series" title="August">
+                        <div class="js-values" title="Johannesburg">17, 21, 17, 24, 15, 24, 24, 17, 20, 15, 15, 20, 14, 20, 19, 18, 24, 15, 20, 20, 25, 21, 22, 15, 19, 24, 22, 16, 17, 17, 15</div>
+                        <div class="js-values" title="Cape Town">26, 29, 28, 21, 21, 18, 20, 30, 14, 28, 22, 23, 23, 21, 30, 25, 15, 30, 15, 31, 23, 19, 16, 14, 15, 21, 18, 21, 17, 30, 14</div>
+                    </div>
+                    <div class="js-series" title="September">
+                        <div class="js-values" title="Johannesburg">25, 29, 29, 19, 24, 18, 22, 27, 22, 17, 25, 18, 26, 17, 28, 25, 21, 18, 22, 22, 29, 18, 23, 19, 28, 20, 22, 23, 27, 28</div>
+                        <div class="js-values" title="Cape Town">29, 18, 24, 32, 18, 18, 30, 26, 31, 22, 20, 20, 20, 28, 18, 27, 19, 25, 17, 19, 20, 15, 20, 19, 27, 16, 29, 24, 31, 26</div>
+                    </div>
+                    <div class="js-series" title="October">
+                        <div class="js-values" title="Johannesburg">23, 24, 20, 25, 23, 29, 20, 27, 20, 29, 26, 26, 19, 23, 22, 23, 18, 22, 26, 20, 27, 27, 20, 24, 18, 24, 28, 25, 23, 25, 31</div>
+                        <div class="js-values" title="Cape Town">31, 21, 17, 17, 29, 27, 32, 27, 31, 27, 25, 35, 34, 17, 17, 18, 33, 21, 20, 36, 29, 33, 23, 33, 27, 36, 34, 17, 23, 29, 34</div>
+                    </div>
+                    <div class="js-series" title="November">
+                        <div class="js-values" title="Johannesburg">30, 31, 35, 29, 24, 24, 33, 22, 18, 24, 18, 37, 23, 29, 28, 32, 19, 26, 28, 23, 18, 20, 26, 18, 18, 28, 35, 28, 24, 19</div>
+                        <div class="js-values" title="Cape Town">26, 29, 19, 24, 21, 19, 33, 23, 37, 29, 25, 31, 23, 35, 24, 38, 25, 27, 23, 33, 29, 27, 34, 35, 24, 19, 24, 29, 28, 23</div>
+                    </div>
+                    <div class="js-series" title="December">
+                        <div class="js-values" title="Johannesburg">27, 34, 26, 23, 19, 37, 24, 25, 35, 32, 32, 25, 23, 28, 26, 19, 24, 22, 34, 33, 35, 21, 20, 29, 27, 21, 36, 30, 22, 36, 24</div>
+                        <div class="js-values" title="Cape Town">24, 31, 23, 38, 36, 22, 21, 28, 27, 34, 36, 37, 29, 27, 25, 23, 39, 22, 22, 27, 37, 37, 25, 35, 28, 22, 32, 25, 30, 37, 25</div>
+                    </div>
+        
+                    <div class="js-value-line-thickness">1px</div>
+                    <div class="js-value-bar-data-margin">5px</div>
+                    <div class="js-value-bar-series-margin">10px</div>
+                    <div class="js-marker-width">10px</div>
+                    <div class="js-marker-height">10px</div>
+        
+                    <div class="js-datalabel-text-color">white</div>
+                    <div class="js-color-palette">#33cc33; orange</div>
+        
+                </div>
+        
+            </td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Ut sollicitudin felis orci, vitae pellentesque erat mollis vitae. Suspendisse varius lectus ligula, eget tristique eros sagittis eget. Sed consectetur ac leo in varius. Mauris aliquam, quam id sollicitudin rutrum, enim enim tincidunt libero, nec rutrum mauris leo eu arcu. Aliquam tincidunt ex tortor, sit amet molestie felis consectetur vel. Fusce faucibus nibh non facilisis porta. Aliquam luctus odio eu arcu faucibus, sit amet tristique risus auctor. Morbi nec congue nunc. Quisque porta mauris et felis convallis placerat. Donec pellentesque, lacus sed auctor pulvinar, urna eros accumsan augue, eget consectetur arcu lectus a nunc. Fusce fringilla velit sed nisl vestibulum gravida. Nullam ullamcorper felis velit, vitae semper nisi sollicitudin eu. Etiam vulputate ligula sed sagittis semper. Aliquam vel mollis felis. Quisque fringilla, tortor eu tincidunt mattis, lectus justo euismod mauris, eget ullamcorper ipsum felis ut turpis. Sed eu sollicitudin nulla.</p>
+        <p>Sed eget neque vitae erat luctus ultrices ut eget felis. Donec eu libero condimentum nunc dapibus molestie. Aenean malesuada placerat velit. In in ex felis. Morbi scelerisque enim mauris, non commodo ipsum egestas sit amet. Nunc suscipit fermentum imperdiet. Phasellus quis lacus vel massa aliquam bibendum sit amet sit amet metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque tempor lorem facilisis urna vehicula pretium. Nullam nec ante ultrices, volutpat risus vitae, pellentesque eros.</p>
+        <p>Ut eu dui sit amet massa malesuada semper non et massa. Sed ut nunc sem. Duis blandit tortor non lorem sodales commodo. Sed sit amet ex non dui vulputate ullamcorper. Morbi vitae laoreet tortor. Nunc lacinia posuere quam ut lacinia. Suspendisse ornare, diam a luctus porta, dui mauris faucibus eros, vel euismod nulla libero in ipsum. Nulla consequat, sem at euismod egestas, mauris nulla imperdiet nibh, vel luctus eros metus ultricies diam. Suspendisse ut velit a nisl maximus blandit. Donec convallis, lacus in vehicula mollis, enim lorem auctor massa, in tempor orci lacus auctor nisi. Vestibulum non nibh vitae tellus rhoncus consequat. Duis lobortis mattis risus vel posuere.</p>
+        <p>Nam iaculis, purus sed lacinia elementum, erat nibh euismod elit, non facilisis neque justo sit amet mauris. Suspendisse blandit eu orci a viverra. Mauris tincidunt velit at maximus laoreet. Nullam ut ultrices arcu. Vestibulum felis libero, tempor sit amet vehicula cursus, commodo sit amet elit. Duis volutpat, sapien feugiat laoreet fringilla, massa purus tempus justo, quis feugiat ipsum quam id lacus. Vivamus pellentesque aliquet ex, in euismod turpis semper in. Cras efficitur diam lacus, sit amet elementum libero porttitor vitae. Praesent dapibus sollicitudin quam, quis tincidunt tellus accumsan ac.</p>
+        <p>Sed eget diam sed odio cursus dapibus. Cras malesuada ut tortor dignissim dictum. Sed vitae libero massa. Morbi ac dapibus nulla. In in pharetra justo, in malesuada dui. Morbi pretium nulla sed odio malesuada convallis. Aliquam et dolor ipsum. Cras sit amet sapien interdum, finibus odio a, dignissim mi. Curabitur dui orci, feugiat quis felis eget, lacinia dignissim ex. Maecenas egestas justo vitae orci fermentum fringilla. Vivamus dolor leo, accumsan vel tincidunt at, faucibus quis leo.</p>
+        <p>Nunc molestie, dolor sit amet bibendum interdum, justo lacus finibus libero, vel convallis nunc sapien quis nisi. Integer sit amet pretium dui. Vestibulum consectetur faucibus aliquam. Cras rutrum diam a vestibulum facilisis. Vestibulum sodales ex quis enim scelerisque tincidunt. Etiam eu imperdiet magna. Maecenas enim elit, consectetur ac quam ac, facilisis luctus dui. Maecenas non nibh eu est ornare mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum et dui pellentesque, faucibus elit sed, sodales ante. Aenean ullamcorper varius mi, eu gravida tellus. Donec ac vestibulum sapien. Donec volutpat condimentum ante vitae ultricies. Pellentesque dictum convallis euismod.</p>
+        <p>Suspendisse faucibus lacinia velit, id ornare risus egestas vel. Ut est ligula, elementum sed augue vitae, vehicula porta eros. Ut ut enim lacus. Fusce a nibh et erat placerat porta eu ut lacus. Etiam sagittis auctor elit eget congue. Phasellus faucibus sed felis vitae tempus. Integer lacinia justo quis volutpat accumsan. Fusce facilisis luctus ex, ut semper nulla vehicula in. Nam et arcu ullamcorper, eleifend ligula ut, dignissim ligula. Proin aliquam, libero et imperdiet lobortis, nulla orci consequat urna, tempor maximus erat neque vitae tortor. Vestibulum non ex sollicitudin sem ultricies facilisis nec a purus. Proin non ornare nibh, id placerat augue. Aliquam erat volutpat. Maecenas nec sollicitudin odio.</p>
+        <p>Nulla varius purus in posuere feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus blandit risus augue, sed feugiat lorem mollis in. Aenean sem nulla, mollis quis sapien ultricies, gravida aliquet mauris. Integer a velit ante. Phasellus eget libero at nisl bibendum scelerisque. Duis sollicitudin felis nec pretium mattis. Sed maximus laoreet erat ut auctor. Aliquam lobortis vel nisi sit amet congue. Proin at nisl in magna convallis pretium sagittis lacinia enim. Praesent sollicitudin posuere vestibulum. Nam aliquet nunc sed neque egestas, at condimentum lorem fermentum. Nulla viverra ipsum non nunc ultrices, ac maximus dolor molestie. Cras sed venenatis sem. Praesent ut neque at justo vestibulum mattis vitae eu eros. In dapibus justo nunc.</p>
+    </body>
+</html>

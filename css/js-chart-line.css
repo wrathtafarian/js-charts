@@ -1,0 +1,119 @@
+:root {
+    --js-chart-line-y-axis-width: 80px;
+    --js-chart-line-x-axis-height: 20px;
+    --js-chart-line-x-axis-legend-height: 20px;
+    --js-chart-line-min-series-width: 5px;
+}
+.js-chart-line-level0-inner-panel {
+    height: 100%;
+    width: calc(100% - 10px);
+    margin: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: var(--js-chart-line-y-axis-width) calc(100% - var(--js-chart-line-y-axis-width));
+    grid-template-rows: calc(100% - var(--js-chart-line-x-axis-height)) var(--js-chart-line-x-axis-height);
+}
+.js-chart-line-y-axis-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px 0px;
+}
+.js-chart-line-y-axis-title-container {
+    flex: 1 1 auto;
+    width: 20px;
+    line-height: 20px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-line-y-axis-scale-label-container {
+    flex: 1 1 auto;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-line-y-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: right;
+    vertical-align: top;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-line-y-axis-scale-label-block-last {
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+    text-align: right;
+    vertical-align: top;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-line-y-axis-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-line-y-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-line-level1-inner-panel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+.js-chart-line-level2-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - var(--js-chart-line-x-axis-legend-height));
+    margin: 10px 40px 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-line-x-axis-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-line-x-axis-legend-height);
+    margin: 0px 40px 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-line-x-axis-legend-block {
+    flex: 1 1 0px;
+    min-width: var(--js-chart-line-min-series-width);
+    position: relative;
+}
+.js-chart-line-x-axis-legend-label {
+    position: absolute;
+    /*width: var(--js-chart-line-min-series-width);*/
+    height: var(--js-chart-line-x-axis-legend-height);
+    top: 0px;
+    /*left: calc(0px - (var(--js-chart-line-min-series-width) / 2));*/
+    text-wrap: nowap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 400;
+}
+.js-chart-line-infobox-container {
+}
+.js-chart-line-x-axis-container {
+    text-align: center;
+    line-height: var(--js-chart-line-x-axis-height);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-line-series-container {
+    flex: 1 1 0px;
+    min-width: var(--js-chart-line-min-series-width);
+    position: relative;
+}

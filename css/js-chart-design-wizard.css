@@ -1,0 +1,9 @@
+.js-chart-design-color-palette-wizard-container {
+    position: absolute;
+    width: 1000px;
+    height: 200px;
+    top: 200px;
+    left: calc(50% - 500px);
+    border: 0.5px solid #dddddd;
+    background-color: White;
+}

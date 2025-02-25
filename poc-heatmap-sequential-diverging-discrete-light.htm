@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-heatmap.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-heatmap.js"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: transparent; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #333333;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+
+        <div style="text-align: center;"><h1>Heatmap - Sequential / Diverging Discrete color palette</h1></div>
+
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td width="50%" align="center">
+                        <div class="js-chart" type="heatmap" title="SD - data (abs) - position (abs)" ytitle="y-axis title" xtitle="x-axis title">
+                            <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+    
+                            <div class="js-values" title="A1">10,20,30,40,50</div>
+                            <div class="js-values" title="B2">20,30,40,50,40</div>
+                            <div class="js-values" title="C3">30,40, N/D ,40,30</div>
+                            <div class="js-values" title="D4">40,50, ,30,20</div>
+                            <div class="js-values" title="E5">50,60,70,80,90</div>
+    
+                            <div class="js-color-palette" type="sequential discrete">0!gold; 50!orange; 80!red</div>
+
+                            <div class="js-value-bar-data-margin">1px</div>
+                        </div>
+                    </td>
+                    <td width="50%" align="center">
+                        <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title">
+                            <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+    
+                            <div class="js-values" title="A1">10,-20,-30,-40,-50</div>
+                            <div class="js-values" title="B2">20,30,40,-50,-40</div>
+                            <div class="js-values" title="C3">-30,40,50,-40,30</div>
+                            <div class="js-values" title="D4">40,50,40,30,-20</div>
+                            <div class="js-values" title="E5">50,40,30,20,10</div>
+    
+                            <div class="js-color-palette" type="diverging discrete">forestgreen; -80%!yellowgreen; -50%!silver; 50%!orange; 80%!red</div>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            </table>
+
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td width="50%" align="center">
+                            <div class="js-chart" type="heatmap" title="SD - data (rel) - position (rel)" ytitle="y-axis title" xtitle="x-axis title">
+                                <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+        
+                                <div class="js-values" title="A1">12%, 45%, 78%, 36%, 12%</div>
+                                <div class="js-values" title="B2">-34%, -45%, -10%, -4%, 7%</div>
+                                <div class="js-values" title="C3">-10%, -14%, -5%, 24%, 36%</div>
+                                <div class="js-values" title="D4">24%, 35%, 46%, 75%, 88%</div>
+                                <div class="js-values" title="E5">75%, 84%, 82%, 45%, 95%</div>
+        
+                                <div class="js-color-palette" type="sequential discrete">blue; -50%!lightblue; -20%!orange; 20%!darkorange; 50%!red; 80%!black</div>
+                            </div>
+                        </td>
+                        <td width="50%" align="center">
+                            <div class="js-chart" type="heatmap" title="SD - data (rel) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlabels="auto" showlegend="off">
+                                <div class="js-labels">AAA, BBB, CCC, DDD, EEE, FFF, GGG, HHH, III, JJJ</div>
+
+                                <div class="js-values" title="a1">71.182, -4.667, 81.113, -7.822, 58.665, 97.631, 75.16, -41.206, 5.99, -9.514</div>
+                                <div class="js-values" title="b2">41.241, -3.75, 89.909, 64.355, 28.552, 91.978, -39.636, -3.479, 87.055, -56.556</div>
+                                <div class="js-values" title="c3">24.656, 71.816, 98.888, 63.823, 40.396, 98.076, 84.416, -5.757, -66.377, 48.048</div>
+                                <div class="js-values" title="d4">99.561, 45.266, 41.471, -12.979, -19.946, 39.937, 90.317, 98.479, 11.98, 12.084</div>
+                                <div class="js-values" title="e5">-5.366, 96.975, -39.198, 70.087, -6.534, -43.811, 58.227, -55.219, 1.345, 20.33</div>
+                                <div class="js-values" title="f6">-60.425, -43.371, -2.397, 92.226, 48.211, -6.26, -34.848, 70.994, -60.908, 87.925</div>
+                                <div class="js-values" title="g7">-16.115, 54.248, 45.977, -89.234, 28.299, -7.425, 5.862, 98.002, -11.667, -99.759</div>
+                                <div class="js-values" title="h8">-11.754, -73.134, -31.381, -28.122, -89.897, 42.861, -88.022, 57.894, 4.633, 94.792</div>
+                                <div class="js-values" title="i9">-11.815, 14.283, -32.054, 66.312, -45.851, -56.356, 74.049, -50.285, 40.471, -55.933</div>
+                                <div class="js-values" title="j10">-7.052, 66.689, 21.446, 81.104, 38.272, 59.899, 72.476, 18.23, -69.027, 18.199</div>
+
+                                <div class="js-canvas-bg-color">#ffa500</div>
+                                <div class="js-chart-bg-color">#ffa500</div>
+                                <div class="js-chart-text-color">#ffffff</div>
+                                <div class="js-title-text-color">#ffffff</div>
+                                <div class="js-footer-text-color">#ffffff</div>
+                                <div class="js-datalabel-text-color">orange</div>
+                                <div class="js-datatable-text-color">white</div>
+
+                                <div class="js-color-palette" type="sequential discrete">steelblue; 0!orange</div>
+
+                                <div class="js-value-bar-data-margin">2px</div>
+                                <div class="js-control-button-text-color">white</div>
+                                <div class="js-control-button-bg-color">steelblue</div>
+                                <div class="js-control-button-font-size">15px</div>
+                                <div class="js-control-button-font-weight">600</div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                </table>
+    
+        </body>
+</html>
