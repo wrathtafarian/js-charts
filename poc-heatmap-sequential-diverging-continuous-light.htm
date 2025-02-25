@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-heatmap.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-heatmap.js"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: transparent; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #333333;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+
+        <div style="text-align: center;"><h1>Heatmap - Sequential / Diverging Continuous color palette</h1></div>
+
+        <p>Nulla convallis, ipsum vitae ultricies dapibus, orci est varius libero, sit amet egestas elit lorem ac nunc. Mauris et turpis eget enim cursus pharetra at vitae mauris. Etiam volutpat ac elit quis pellentesque. Morbi vel urna luctus, blandit nibh et, aliquet sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat tortor a massa venenatis molestie. Nullam leo nisl, molestie in gravida sit amet, maximus ac enim. Ut ante enim, molestie sed ante ac, laoreet fermentum orci. Morbi consequat, erat vel egestas facilisis, diam arcu vestibulum erat, in iaculis mi ex eget lectus. Nam tempor hendrerit eros nec egestas. Duis euismod feugiat urna, a hendrerit turpis ultricies eu. Suspendisse rhoncus dui lorem, et pharetra nisl sollicitudin vitae. Nunc a leo odio.</p>
+
+        <div class="js-chart" type="heatmap" title="Top performers - Jan to Dec 2024" ytitle="Month of year" xtitle="Product code">
+            <div class="js-labels">P#-1477, P#-1478, P#-1488, P#-1488, P#-1536, P#-1537, P#-1870, P#-1872, P#-1999</div>
+
+            <div class="js-values" title="January">82.982, 53.827, 79.006, 47.006, 86.58, 38.596, 18.07, 85.04, 28.419, 94.295</div>
+            <div class="js-values" title="February">40.15, 85.492, 97.075, 63.038, 95.929, 18.682, 57.369, 31.305, 48.257, 84.151</div>
+            <div class="js-values" title="March">18.847, 66.751, 59.315, 94.007, 79.766, 15.928, 92.255, 60.945, 98.089, 80.509</div>
+            <div class="js-values" title="April">63.116, 77.263, 24.62, 51.273, 67.266, 74.568, 58.348, 23.09, 49.081, 96.587</div>
+            <div class="js-values" title="May">70.757, 44.725, 90.147, 53.754, 74.035, 66.383, 70.546, 78.028, 93.725, 51.326</div>
+            <div class="js-values" title="June">22.902, 15.108, 35.908, 29.075, 62.544, 91.502, 69.173, 72.321, 60.679, 88.5</div>
+            <div class="js-values" title="July">70.881, 46.747, 61.685, 23.086, 26.932, 34.413, 31.29, 70.486, 17.472, 23.658</div>
+            <div class="js-values" title="August">33.461, 82.317, 91.325, 58.151, 25.499, 97.765, 19.682, 80.744, 24.472, 73.267</div>
+            <div class="js-values" title="September">17.401, 66.169, 86.9, 37.613, 35.32, 37.82, 23.559, 40.143, 33.573, 68.369</div>
+            <div class="js-values" title="October">73.417, 46.093, 95.371, 82.939, 32.546, 97.067, 44.366, 45.574, 53.033, 30.693</div>
+            <div class="js-values" title="November">50.179, 34.388, 77.504, 17.729, 45.316, 45.024, 24.32, 65.201, 82.364, 80.162</div>
+            <div class="js-values" title="December">66.749, 64.239, 85.808, 15.616, 69.048, 32.03, 86.951, 96.536, 48.469, 77.164</div>
+
+            <div class="js-color-palette" type="sequential discrete">0!hsl(200, 100%, 90%); 20!hsl(200, 100%, 85%); 40!hsl(200, 100%, 80%); 60!hsl(200, 100%, 75%); 80!hsl(200, 100%, 70%); 90!hsl(200, 100%, 30%);</div>
+            <div class="js-control-button-bg-color">hsl(200, 100%, 20%);</div>
+            <div class="js-datalabel-font-size">9px</div>
+        </div>
+
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td width="50%" align="center">
+                        <div class="js-chart" type="heatmap" title="SD - data (rel) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlabels="on" showlegend="bottom">
+                            <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+
+                            <div class="js-values" title="A1">1%,2%,3%,4%,5%</div>
+                            <div class="js-values" title="A1">6%,7%,8%,9%,10%</div>
+                            <div class="js-values" title="A1">11%,12%,13%,14%,15%</div>
+                            <div class="js-values" title="A1">16%,17%,18%,19%,20%</div>
+                            <div class="js-values" title="A1">21%,22%,23%,24%,25%</div>
+                            <div class="js-values" title="A1">26%,27%,28%,29%,30%</div>
+                            <div class="js-values" title="A1">35%,34%,33%,32%,31%</div>
+                            <div class="js-values" title="A1">36%,37%,38%,39%,40%</div>
+                            <div class="js-values" title="A1">41%,42%,43%,44%,45%</div>
+                            <div class="js-values" title="A1">46%,47%,48%,49%,50%</div>
+                            <div class="js-values" title="A1">51%,52%,53%,54%,55%</div>
+                            <div class="js-values" title="A1">56%,57%,58%,59%,60%</div>
+                            <div class="js-values" title="A1">61%,62%,63%,64%,65%</div>
+                            <div class="js-values" title="A1">66%,67%,68%,69%,70%</div>
+                            <div class="js-values" title="A1">71%,72%,73%,74%,75%</div>
+                            <div class="js-values" title="A1">76%,77%,78%,79%,80%</div>
+                            <div class="js-values" title="A1">81%,82%,83%,84%,85%</div>
+                            <div class="js-values" title="A1">86%,87%,88%,89%,90%</div>
+                            <div class="js-values" title="A1">91%,92%,93%,94%,95%</div>
+                            <div class="js-values" title="A1">96%,97%,98%,99%,100%</div>
+
+                            <div class="js-color-palette" type="sequential continuous">0%!hsl(207, 44%, 80%); 100%!hsl(207, 44%, 20%);</div>
+
+                            <div class="js-value-bar-data-margin">0px</div>
+                            <div class="js-datalabel-opacity">0.5</div>
+                        </div>
+                    </td>
+                    <td width="50%" align="center">
+                        <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlabels="on" showlegend="bottom">
+                            <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+
+                            <div class="js-values" title="A1">0,20,30,40,50</div>
+                            <div class="js-values" title="B2">20,10, ,50,40</div>
+                            <div class="js-values" title="C3">30,40,30,40,30</div>
+                            <div class="js-values" title="D4">40,50,DnD,10,20</div>
+                            <div class="js-values" title="E5">50,40,30,20,0</div>
+    
+                            <div class="js-color-palette" type="diverging continuous">0!orange; 50!purple</div>
+                            <div class="js-value-bar-data-margin">1px</div>
+                            <div class="js-datalabel-opacity">0.5</div>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            </table>
+            <br><br><br>
+    <table width="100%">
+            <thead>
+                <tr>
+                    <td width="50%" align="center">
+                        <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlabels="on" showlegend="bottom">
+                            <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+    
+                            <div class="js-values" title="A1">1,2,3,4,5</div>
+                            <div class="js-values" title="B2">6,7,8,9,10</div>
+                            <div class="js-values" title="C3">11,12,13,14,15</div>
+                            <div class="js-values" title="D4">16,17,18,19,20</div>
+                            <div class="js-values" title="E5">21,22,23,24,25</div>
+                            <div class="js-values" title="F6">26,27,28,29,30</div>
+                            <div class="js-values" title="G7">35,34,33,32,31</div>
+                            <div class="js-values" title="H8">36,37,38,39,40</div>
+                            <div class="js-values" title="I9">41,42,43,44,45</div>
+                            <div class="js-values" title="J10">46,47,48,49,50</div>
+                            <div class="js-values" title="J10">51,52,53,54,55</div>
+                            <div class="js-values" title="I9">56,57,58,59,60</div>
+                            <div class="js-values" title="H8">61,62,63,64,65</div>
+                            <div class="js-values" title="G7">66,67,68,69,70</div>
+                            <div class="js-values" title="F6">71,72,73,74,75</div>
+                            <div class="js-values" title="E5">76,77,78,79,80</div>
+                            <div class="js-values" title="D4">81,82,83,84,85</div>
+                            <div class="js-values" title="C3">86,87,88,89,90</div>
+                            <div class="js-values" title="B2">91,92,93,94,95</div>
+                            <div class="js-values" title="A1">96,97,98,99,100</div>
+
+                            <div class="js-color-palette" type="sequential continuous">0%!blue; 20%!green; 40%!yellow; 60%!orange; 80%!red; 100%!darkred;</div>
+
+                            <div class="js-value-bar-data-margin">0px</div>
+                            <div class="js-datalabel-opacity">0.5</div>
+                        </div>
+                    </td>
+                    <td width="50%" align="center">
+                        <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlabels="on" showlegend="bottom">
+                            <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+
+                            <div class="js-values" title="A1">0,20,30,40,50</div>
+                            <div class="js-values" title="B2">-20,-10, ,70,80</div>
+                            <div class="js-values" title="C3">-30,-40,30,40,70</div>
+                            <div class="js-values" title="D4">-40,-50,DnD,10,60</div>
+                            <div class="js-values" title="E5">-120,-40,-30,-20,0</div>
+    
+                            <div class="js-color-palette" type="diverging continuous">-50!red; 0!orange; 50!purple</div>
+                            <div class="js-value-bar-data-margin">1px</div>
+                            <div class="js-datalabel-opacity">0.5</div>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            </table>
+            <br><br><br>
+
+                <table width="100%">
+                <thead>
+                    <tr>
+                        <td width="50%" align="center">
+                            <div class="js-chart" type="heatmap" title="SD - data (abs) - position (abs)" template="darkweb" ytitle="y-axis title" xtitle="x-axis title" showlabels="on" showlegend="bottom">
+                                <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+        
+                                <div class="js-values" title="A1">1,2,3,4,5</div>
+                                <div class="js-values" title="B2">6,7,8,9,10</div>
+                                <div class="js-values" title="C3">11,12,13,14,15</div>
+                                <div class="js-values" title="D4">16,17,18,19,20</div>
+                                <div class="js-values" title="E5">21,22,23,24,25</div>
+                                <div class="js-values" title="F6">26,27,28,29,30</div>
+                                <div class="js-values" title="G7">35,34,33,32,31</div>
+                                <div class="js-values" title="H8">36,37,38,39,40</div>
+                                <div class="js-values" title="I9">41,42,43,44,45</div>
+                                <div class="js-values" title="J10">46,47,48,49,50</div>
+                                <div class="js-values" title="J10">51,52,53,54,55</div>
+                                <div class="js-values" title="I9">56,57,58,59,60</div>
+                                <div class="js-values" title="H8">61,62,63,64,65</div>
+                                <div class="js-values" title="G7">66,67,68,69,70</div>
+                                <div class="js-values" title="F6">71,72,73,74,75</div>
+                                <div class="js-values" title="E5">76,77,78,79,80</div>
+                                <div class="js-values" title="D4">81,82,83,84,85</div>
+                                <div class="js-values" title="C3">86,87,88,89,90</div>
+                                <div class="js-values" title="B2">91,92,93,94,95</div>
+                                <div class="js-values" title="A1">96,97,98,99,100</div>
+    
+                                <div class="js-color-palette" type="sequential continuous">0!darkred; 20!hsl(30, 100%, 60%); 50!hsl(30, 100%, 60%); 100!hsl(210, 100%, 30%)</div>
+    
+                                <div class="js-value-bar-data-margin">0px</div>
+                                <div class="js-datalabel-text-color">white</div>
+                                <div class="js-datalabel-opacity">0.5</div>
+                            </div>
+                        </td>
+                        <td width="50%" align="center">
+                            <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlabels="on" showlegend="bottom">
+                                <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+    
+                                <div class="js-values" title="A1">0,20,30,40,50</div>
+                                <div class="js-values" title="B2">20,10, ,50,40</div>
+                                <div class="js-values" title="C3">30,40,30,40,30</div>
+                                <div class="js-values" title="D4">40,50,DnD,10,20</div>
+                                <div class="js-values" title="E5">50,40,30,20,0</div>
+        
+                                <div class="js-color-palette" type="diverging continuous">0!orange; 50!purple</div>
+                                <div class="js-value-bar-data-margin">1px</div>
+                                <div class="js-datalabel-opacity">0.5</div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                </table>
+                <br><br><br>
+    
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td width="50%" align="center">
+                            <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlegend="bottom" showlabels="on">
+                                <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+        
+                                <div class="js-values" title="A1">45,40,35,30,25</div>
+                                <div class="js-values" title="A1">40,35,30,25,20</div>
+                                <div class="js-values" title="A1">35,30,25,20,15</div>
+                                <div class="js-values" title="A1">30,25,20,15,10</div>
+                                <div class="js-values" title="A1">25,20,15,10,5</div>
+
+                                <div class="js-color-palette" type="sequential continuous">0!hsl(120, 60%, 80%); 50!hsl(120, 60%, 20%);</div>
+                                <div class="js-value-bar-data-margin">0px</div>
+                                <div class="js-control-button-bg-color">forestgreen</div>
+                            </div>
+                        </td>
+                        <td width="50%" align="center">
+                            <div class="js-chart" type="heatmap" title="SD - data (abs) - position (rel)" ytitle="y-axis title" xtitle="x-axis title" showlegend="bottom" showlabels="on">
+                                <div class="js-labels">AAA, BBB, CCC, DDD, EEE</div>
+
+                                <div class="js-values" title="Z-001">58, 12, 47, 16, -8, 84, 47, -3, 35</div>
+                                <div class="js-values" title="Z-001">9, 95, -49, 9, -98, 78, 81, -43, -21, 14</div>
+                                <div class="js-values" title="Z-001">-87, -37, 99, -100, 81, -59, 42, 32, -37, -78</div>
+                                <div class="js-values" title="Z-001">7, -66, -62, -68, 56, 56, 12, -89, -91, -49</div>
+                                <div class="js-values" title="Z-001">60, 99, -65, -70, 9, 18, 92, -15, -41, 32</div>
+                                <div class="js-values" title="Z-001">-98, 68, 42, 40, -39, 24, -1, -72, -96, -7</div>
+                                <div class="js-values" title="Z-001">24, 45, 33, 16, 74, 23, 94, -17, -74, -59</div>
+                                <div class="js-values" title="Z-001">-21, -51, -64, -34, 43, -70, 27, -13, -47, 18</div>
+                                <div class="js-values" title="Z-001">-46, -56, 85, 74, -44, 42, -28, -34, -96, 18</div>
+                                <div class="js-values" title="Z-001">53, -85, -23, -76, -70, 7, 9, 36, 89, 57</div>
+
+                                <div class="js-color-palette" type="sequential continuous">-100!hsl(120, 60%, 20%); 0!gold; 100!gold</div>
+                                <div class="js-control-button-bg-color">hsl(120, 60%, 20%)</div>
+                                <div class="js-value-bar-data-margin">0px</div>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                </table>
+            
+    </body>
+</html>

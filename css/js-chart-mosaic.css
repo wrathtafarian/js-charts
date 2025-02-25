@@ -1,0 +1,106 @@
+:root {
+    --js-chart-mosaic-y-axis-width: 80px;
+    --js-chart-mosaic-x-axis-height: 45px;
+}
+.js-chart-mosaic-level0-inner-panel {
+    height: 100%;
+    margin: 0px 5px 0px 5px;
+    display: grid;
+    grid-template-columns: var(--js-chart-mosaic-y-axis-width) calc(100% - var(--js-chart-mosaic-y-axis-width));
+    grid-template-rows: calc(100% - var(--js-chart-mosaic-x-axis-height)) var(--js-chart-mosaic-x-axis-height);
+}
+.js-chart-mosaic-y-axis-container {
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-mosaic-y-axis-title-container {
+    flex: 1 1 auto;
+    width: 20px;
+    line-height: 20px;
+    writing-mode: vertical-lr;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-mosaic-y-axis-scale-label-container {
+    flex: 1 1 auto;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-mosaic-y-axis-scale-label-block {
+    flex: 1 1 0px;
+    text-align: right;
+    vertical-align: top;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-mosaic-y-axis-scale-label-block-last {
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    bottom: -20px;
+    right: 0px;
+    text-align: right;
+    vertical-align: top;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-mosaic-y-axis-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-mosaic-x-axis-scale-container {
+    flex: 1 1 auto;
+    height: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-mosaic-y-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-mosaic-x-axis-scale-block {
+    flex: 1 1 auto;
+}
+.js-chart-mosaic-x-axis-scale-label-container {
+    flex: 1 1 auto;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.js-chart-mosaic-x-axis-scale-label-block {
+    flex: 1 1 auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-mosaic-x-axis-title-container {
+    flex: 1 1 auto;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+    font-weight: 400;
+}
+.js-chart-mosaic-level1-inner-panel {
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-mosaic-infobox-container {
+}
+.js-chart-mosaic-x-axis-container {
+    display: flex;
+    flex-direction: column;
+}

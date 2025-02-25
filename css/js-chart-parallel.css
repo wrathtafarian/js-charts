@@ -1,0 +1,84 @@
+:root {
+    --js-chart-parallel-coordinates-y-axis-legend-width: 40px;
+    --js-chart-parallel-coordinates-x-axis-legend-height: 20px;
+}
+.js-chart-parallel-coordinates-level0-inner-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-parallel-coordinates-level1-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - var(--js-chart-parallel-coordinates-x-axis-legend-height));
+    margin: 5px 5px 0px 5px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.js-chart-parallel-coordinates-x-axis-legend-container {
+    flex: 1 1 auto;
+    height: var(--js-chart-parallel-coordinates-x-axis-legend-height);
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-parallel-coordinates-series-value-container {
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-parallel-coordinates-y-axis-legend-scale-label-container {
+    flex: 1 1 auto;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.js-chart-parallel-coordinates-y-axis-legend-scale-label-block {
+    flex: 1 1 0px;
+    text-align: right;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-parallel-coordinates-y-axis-legend-scale-label-block-last {
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    text-align: right;
+    vertical-align: top;
+    bottom: -20px;
+    right: 0px;
+    vertical-align: top;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-xsmall);
+    font-weight: 400;
+}
+.js-chart-parallel-coordinates-y-axis-legend-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-parallel-coordinates-y-axis-legend-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-parallel-coordinates-data-value-container {
+    flex: 1 1 auto;
+    width: calc(100% - var(--js-chart-parallel-coordinates-y-axis-legend-width));
+}
+.js-chart-parallel-coordinates-x-axis-legend-block {
+    flex: 1 1 0px;
+    line-height: var(--js-chart-parallel-coordinates-x-axis-legend-height);
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-small);
+    font-weight: 600;
+}

@@ -1,0 +1,164 @@
+:root {
+    --js-chart-bar-y-axis-title-width: 15px;
+    --js-chart-bar-x-axis-title-height: 15px;
+    --js-chart-bar-x-axis-legend-container-height: 20px;
+    --js-chart-bar-y-axis-legend-container-width: 30px;
+    --js-chart-bar-min-bar-height: 25px;
+}
+.js-chart-bar-level0-container {
+    width: calc(100% - 20px);
+    height: 100%;
+    margin: 0px 10px 0px 10px;
+    display: grid;
+    grid-template-columns: var(--js-chart-bar-y-axis-title-width) calc(100% - var(--js-chart-bar-y-axis-title-width));
+    grid-template-rows: calc(100% - var(--js-chart-bar-x-axis-title-height)) var(--js-chart-bar-x-axis-title-height);
+}
+.js-chart-bar-y-axis-title-container {
+    flex: 1 1 auto;
+    line-height: var(--js-chart-bar-y-axis-title-width);
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-bar-level1-container {
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-bar-level1-inner-panel {
+    flex: 1 1 auto;
+    height: calc(100% - var(--js-chart-bar-x-axis-legend-container-height));
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+.js-chart-bar-level1-x-axis-container {
+    flex: 0 0 auto;
+    height: var(--js-chart-bar-x-axis-legend-container-height);
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-bar-level1-x-axis-scale-container {
+    flex: 1 1 auto;
+    /* align-self: flex-end; */
+    height: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.js-chart-bar-level1-x-axis-scale-label-container {
+    flex: 1 1 auto;
+    /* align-self: flex-end; */
+    height: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.js-chart-bar-level1-x-axis-scale-label-block {
+    flex: 1 1 0px;
+    position: relative;
+}
+.js-chart-bar-level1-x-axis-scale-label {
+    position: absolute;
+    text-align: center;
+    font-size: var(--js-chart-size-small);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 30px;
+    height: 20px;
+    top: 0px;
+    left: -15px;
+}
+.js-chart-bar-level1-x-axis-scale-label-last {
+    position: absolute;
+    text-align: center;
+    font-size: var(--js-chart-size-small);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 30px;
+    height: 20px;
+    top: 0px;
+    right: -15px;
+}
+.js-chart-bar-level1-x-axis-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-bar-level2-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px 0px 0px;
+}
+.js-chart-bar-level2-y-axis-legend-container {
+    flex: 1 1 auto;
+    width: var(--js-chart-bar-y-axis-legend-container-width);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-bar-level2-y-axis-legend-block {
+    flex: 1 1 0px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    font-size: var(--js-chart-size-small);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.js-chart-bar-level2-y-axis-legend-scale-label-container {
+    flex: 1 1 auto;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-bar-level2-y-axis-legend-scale-container {
+    flex: 1 1 auto;
+    width: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-bar-level2-y-axis-legend-scale-block {
+    flex: 1 1 0px;
+}
+.js-chart-bar-level2-inner-panel {
+    flex: 1 1 auto;
+    width: calc(100% - var(--js-chart-bar-y-axis-legend-container-width));
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-bar-infobox-container {
+}
+.js-chart-bar-x-axis-title-container {
+    text-align: center;
+    line-height: var(--js-chart-bar-x-axis-title-height);
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--js-chart-size-normal);
+}
+.js-chart-bar-series-value-container {
+    flex: 1 1 0px;
+    margin: 2px 0px 2px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-bar-value-bar-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    min-height: var(--js-chart-bar-min-bar-height);
+    /* margin: 2px 0px 2px 0px; */
+}
+.js-chart-bar-negative-spacer, .js-chart-bar-positive-spacer {
+    flex: 0 0 auto;
+}
+.js-chart-bar-value-bar-block {
+    flex: 0 0 auto;
+    background-color: beige;
+    position: relative;
+}

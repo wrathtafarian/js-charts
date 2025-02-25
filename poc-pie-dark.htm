@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-pie.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-pie.js"></script>
+        <script type="text/javascript" src="js/data-in.json"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: #666666; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #999999;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+        <p>Nam commodo ac nisi tristique hendrerit. Nunc sit amet faucibus quam, a lacinia sapien. Curabitur porttitor dolor a sapien tempor, eu dignissim velit sagittis. Curabitur id placerat nisi, ac ornare nisl. Aliquam pharetra lobortis velit eu varius. Donec vel mauris quis lectus tempus laoreet. Phasellus eget pretium lacus, ut bibendum tortor. Vivamus dolor tellus, volutpat id felis porttitor, bibendum lacinia leo. Quisque ultricies ornare laoreet. Etiam gravida est at sapien aliquet, vitae fermentum tellus tempor.</p>
+
+        <table width="100%">
+        <thead>
+        <tr>
+            <td width="50%" align="center">
+                <div class="js-chart" type="stacked doughnut" template="darkweb" title="Breakdown of sales per employee" holetitle="Q4 2024" showlabels="auto">
+                    <div class="js-labels">John, Stacey, George, Charlie, Melanie, Bill, Derick</div>
+                    <div class="js-values" title="AA-01">132,152,188,201,209,312,410,805</div>
+                    <div class="js-values" title="BB-02">132,152,188,201,209,312,410,805</div>
+
+                    <div class="js-datalabel-prepend">$</div>
+                    <div class="js-datalabel-text-color">#ffffff</div>
+
+                    <div class="js-color-palette">Orange; SteelBlue; #3E5879; #6A9AB0; #e6e6e6; #dcdcdc; #d0d0d0; #c6c6c6</div>
+                </div>
+            </td>
+            <td width="50%" align="center">
+                <div class="js-chart" type="pie" template="darkweb" title="Breakdown of sales per employee" showlegend="bottom" showdatatable="off" holetitle="2024 Q4" startangle="0deg" width="600px">
+                    <div class="js-labels">John, Stacey, George, Charlie, Melanie, Bill, Derick</div>
+                    <div class="js-values" title="Series-X">87,250,268,320,380,745,790</div>
+
+                    <div class="js-canvas-box-shadow">0px 0px 15px #444444</div>
+                </div>
+            </td>
+        </tr>
+        </thead>
+        </table>
+
+
+        <p>Fusce feugiat volutpat nibh et pretium. Curabitur pretium elit tortor. Duis sed orci porta, pellentesque lacus ac, condimentum sapien. Praesent pretium risus in odio accumsan, eu pretium enim vehicula. Aliquam erat volutpat. Vestibulum enim est, imperdiet id varius eu, luctus ut dolor. Fusce pellentesque mattis ante, eu pellentesque quam facilisis ut. Aliquam posuere malesuada magna ac cursus. Suspendisse vel sodales nulla.</p>
+
+        <table width="100%">
+            <thead>
+            <tr>
+                <td width="50%" align="center">
+                    <div class="js-chart" type="pie" version="2.0" template="darkweb" title="Sources of income" showlegend="bottom" showdatatable="no">
+                        <div class="js-labels">Label-1,Label-2,Label-3,Label-4,Label-5,Label-6,Label-7,Label-8</div>
+                        <div class="js-values">45,90,90,90,90,90,45,75</div>
+                        <div class="js-values">45,90,90,90,90,90,45</div>
+
+                        <!-- <div class="js-color-palette">Orange, #213555, #3E5879, #6A9AB0, CadetBlue, #BCCCDC, #778899, #BDB76B, NavajoWhite, DarkOliveGreen</div> -->
+                         <div class="js-color-palette">PaleGreen; YellowGreen; MediumAquamarine; DarkSeaGreen; Olive; Teal; DarkTurquoise; Aquamarine</div>
+                    </div>
+                </td>
+                <td width="50%" align="center">
+                    <div class="js-chart" type="stacked doughnut" version="2.0" template="darkweb" title="Sources of income" showlegend="bottom" holetitle="Regional" showdatatable="yes">
+                        <div class="js-values">45,90,90,90,90,90,45</div>
+                        <div class="js-values">45,90,90,90,90,90,45</div>
+                    </div>
+                </td>
+                </td>
+            </tr>
+        </thead>
+        </table>
+
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc a consequat sapien, eget pellentesque neque. In hac habitasse platea dictumst. Suspendisse nec quam at mauris scelerisque facilisis. Maecenas consequat tortor nec purus volutpat, eget eleifend nisl venenatis. Nulla facilisi. Morbi quis felis bibendum purus bibendum sollicitudin cursus in justo. Cras aliquam volutpat risus eu suscipit. Integer turpis urna, facilisis at molestie eget, venenatis at massa.</p>
+
+        <table width="100%">
+            <thead>
+            <tr>
+                <td width="50%" align="center">
+                    <div class="js-chart" type="pie" version="2.0" template="darkweb" title="Class vote" showlegend="bottom" showdatatable="no">
+                        <div class="js-labels">Yes, No</div>
+                        <div class="js-values">23,45</div>
+
+                        <div class="js-color-palette">PaleGreen; YellowGreen; MediumAquamarine; DarkSeaGreen; Olive; Teal; DarkTurquoise; Aquamarine</div>
+                    </div>
+                </td>
+                <td width="50%" align="center">
+                    <div class="js-chart" type="stacked doughnut" version="2.0" template="darkweb" title="Class vote" showlegend="bottom" showlabels="yes" holetitle="Gr. 6 to Gr. 8" showdatatable="no" startangle="90deg">
+                        <div class="js-labels">Yes, No</div>
+                        <div class="js-values" title="Grade 6">18,37</div>
+                        <div class="js-values" title="Grade 7">12,35</div>
+                        <div class="js-values" title="Grade 8">14,29</div>
+
+                        <div class="js-color-palette">Teal; LightSteelBlue; Aquamarine</div>
+                    </div>
+                </td>
+                </td>
+            </tr>
+        </thead>
+        </table>
+
+        <p>Etiam nec faucibus arcu. Vestibulum porttitor sit amet massa nec tristique. Nunc quis velit ac ligula facilisis aliquet. Duis pulvinar lectus lorem, non finibus velit fermentum a. Curabitur vel porta dui, nec pulvinar elit. Phasellus nibh nunc, aliquet eu enim id, feugiat convallis ipsum. Aliquam purus mi, ultricies nec aliquet vel, euismod vel ipsum. Duis quis placerat odio. Integer id ornare nisl. Morbi varius accumsan nisi, sit amet pretium sapien imperdiet in.</p>
+        <p>Proin pulvinar ante a magna viverra, at tempus lectus consectetur. Suspendisse tincidunt maximus mauris, euismod consequat massa fermentum eget. Fusce condimentum quam ac lectus facilisis, ut tincidunt arcu lacinia. Maecenas non vestibulum diam. Sed in dolor gravida, eleifend nisl ut, pellentesque metus. Cras id nisl sapien. Pellentesque vel fermentum eros. Sed eget efficitur eros. Fusce tempor elit ac eros posuere, et dictum nulla ullamcorper. Vestibulum nec purus vel turpis tincidunt fermentum ac nec nunc. Morbi feugiat aliquam dolor, et consequat lorem fringilla id. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    </body>
+</html>
