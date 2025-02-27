@@ -53,7 +53,7 @@ function jsChartColumnDrawRangeContainers(level2_inner_panel, i_chart, min_scale
                 datalabel_container_style.value = "position: absolute; left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height + "; line-height: " + i_chart.i_design.datalabel_height + "; text-align: center; font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 datalabel_container.setAttributeNode( datalabel_container_style );
                 //datalabel_container.innerText = jsChartCommonFormatChartAmount(roundNumber(range_diff, num_of_decimals_to_use), i_chart.i_design.datalabel_append, i_chart.i_design.datalabel_prepend);
-                datalabel_container.innerText = range_diff;
+                datalabel_container.innerText = roundNumber(range_diff, 2);
                 value_column.appendChild( datalabel_container );
             }
 

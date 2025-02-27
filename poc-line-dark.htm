@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+        <title>jsCharts - Proof of Concept</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link href="css/js-chart-common.css" rel="stylesheet">
+        <link href="css/js-chart-line.css" rel="stylesheet">
+        <script type="text/javascript" src="js/js-chart-common.js"></script>
+        <script type="text/javascript" src="js/js-chart-line.js"></script>
+    </head>
+    <body dir="ltr" lang="en" style="background-color: #666666; font-family: 'Open Sans', sans-serif; font-size: 12px; color: #999999;">
+        <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus nibh, accumsan vel sollicitudin vitae, consequat in mi. Mauris placerat condimentum mi, nec tempor nisi tincidunt id. Ut porttitor arcu eu nunc tristique ultricies. Vestibulum ligula massa, porttitor non suscipit id, suscipit ac nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce eu dignissim elit, non lobortis dui. Donec porttitor, lacus non blandit pulvinar, diam massa pellentesque turpis, at consectetur velit nunc rhoncus sapien. In ullamcorper dolor quis egestas ultrices. Vivamus ultrices risus elit, a faucibus massa ultricies ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris metus ante, vestibulum ac est vel, lobortis pellentesque orci. Cras risus enim, viverra in libero vitae, ultricies ullamcorper lacus. Morbi nec leo nisl. Nullam molestie nibh sit amet orci sollicitudin, finibus venenatis massa interdum. Sed id massa et leo feugiat consectetur eget id diam.</p>
+
+        <div class="js-chart" type="line" template="darkweb" title="Data Usage (GB) for February 2025" xtitle="Day of Month - February 2025" ytitle="Data Consumed (GB)" width="auto" showlabels="no">
+            <div class="js-labels">01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29</div>
+
+            <div class="js-values" title="Uploads">11.415, 8.479, 10.402, 11.543, 7.139, 13.77, 8.474, 9.379, 12.626, 12.228, 9.242, 13.965, 8.732, 13.793, 12.781, 13.044, 7.113, 12.415, 13.092, 13.726, 10.013, 9.99, 10.678, 11.804, 13.091, 12.467, 7.974, 13.845, 13.569</div>
+            <div class="js-values" title="Downloads">34.601, 22.675, 21.394, 14.111, 15.406, 27.736, 20.979, 19.406, 29.585, 15.601, 19.181, 23.607, 35.024, 34.476, 28.133, 28.444, 31.885, 22.254, 17.194, 18.939, 27.291, 29.548, 21.132, 14.848, 26.573, 24.241, 27.153, 14.621, 22.271</div>
+
+            <div class="js-color-palette">Gold; Lime</div>
+
+        </div>
+
+        <p>In pulvinar nec velit commodo rhoncus. Duis elementum dictum turpis sit amet placerat. Maecenas vel finibus ipsum. Morbi placerat, quam et lacinia ornare, orci enim elementum elit, vel lacinia nibh nunc at nisl. Nulla quis est non arcu suscipit viverra. Nam ultrices et tortor vel tristique. Etiam nec nunc auctor, semper felis eget, dapibus arcu. Praesent dapibus, nunc vel viverra congue, purus mi hendrerit nisi, sit amet viverra tortor ipsum et eros. Suspendisse ut nisl laoreet, venenatis nisl et, euismod mi. Ut non vehicula sem. Pellentesque a justo ac velit tempor aliquam. Aliquam sit amet suscipit diam. Sed turpis metus, consequat sit amet ipsum ac, sagittis interdum erat. Sed lobortis ultrices commodo. Integer facilisis, augue et semper venenatis, purus ipsum consectetur sapien, vitae porttitor metus mi id magna. Integer faucibus pretium neque quis tempus.</p>
+
+        <div class="js-chart" type="stacked line" template="darkweb" title="Data Usage (GB) for February 2025" xtitle="Day of Month - February 2025" ytitle="Data Consumed (GB)" width="auto" showlabels="no">
+            <div class="js-labels">01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29</div>
+
+            <div class="js-values" title="Uploads">11.415, 8.479, 10.402, 11.543, 7.139, 13.77, 8.474, 9.379, 12.626, 12.228, 9.242, 13.965, 8.732, 13.793, 12.781, 13.044, 7.113, 12.415, 13.092, 13.726, 10.013, 9.99, 10.678, 11.804, 13.091, 12.467, 7.974, 13.845, 13.569</div>
+            <div class="js-values" title="Downloads">34.601, 22.675, 21.394, 14.111, 15.406, 27.736, 20.979, 19.406, 29.585, 15.601, 19.181, 23.607, 35.024, 34.476, 28.133, 28.444, 31.885, 22.254, 17.194, 18.939, 27.291, 29.548, 21.132, 14.848, 26.573, 24.241, 27.153, 14.621, 22.271</div>
+
+            <div class="js-color-palette">Gold; Lime</div>
+
+        </div>
+
+        <p>Ut sollicitudin felis orci, vitae pellentesque erat mollis vitae. Suspendisse varius lectus ligula, eget tristique eros sagittis eget. Sed consectetur ac leo in varius. Mauris aliquam, quam id sollicitudin rutrum, enim enim tincidunt libero, nec rutrum mauris leo eu arcu. Aliquam tincidunt ex tortor, sit amet molestie felis consectetur vel. Fusce faucibus nibh non facilisis porta. Aliquam luctus odio eu arcu faucibus, sit amet tristique risus auctor. Morbi nec congue nunc. Quisque porta mauris et felis convallis placerat. Donec pellentesque, lacus sed auctor pulvinar, urna eros accumsan augue, eget consectetur arcu lectus a nunc. Fusce fringilla velit sed nisl vestibulum gravida. Nullam ullamcorper felis velit, vitae semper nisi sollicitudin eu. Etiam vulputate ligula sed sagittis semper. Aliquam vel mollis felis. Quisque fringilla, tortor eu tincidunt mattis, lectus justo euismod mauris, eget ullamcorper ipsum felis ut turpis. Sed eu sollicitudin nulla.</p>
+
+        <div class="js-chart" type="100% stacked line" template="darkweb" title="Data Usage (GB) for February 2025" xtitle="Day of Month - February 2025" ytitle="Data Consumed (GB)" width="auto" showlabels="yes">
+            <div class="js-labels">01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29</div>
+
+            <div class="js-values" title="Uploads">11.415, 8.479, 10.402, 11.543, 7.139, 13.77, 8.474, 9.379, 12.626, 12.228, 9.242, 13.965, 8.732, 13.793, 12.781, 13.044, 7.113, 12.415, 13.092, 13.726, 10.013, 9.99, 10.678, 11.804, 13.091, 12.467, 7.974, 13.845, 13.569</div>
+            <div class="js-values" title="Downloads">34.601, 22.675, 21.394, 14.111, 15.406, 27.736, 20.979, 19.406, 29.585, 15.601, 19.181, 23.607, 35.024, 34.476, 28.133, 28.444, 31.885, 22.254, 17.194, 18.939, 27.291, 29.548, 21.132, 14.848, 26.573, 24.241, 27.153, 14.621, 22.271</div>
+
+            <div class="js-marker-width">8px</div>
+            <div class="js-datalabel-text-color">white</div>
+            <div class="js-color-palette">Gold; Lime</div>
+
+        </div>
+        <p>Sed eget neque vitae erat luctus ultrices ut eget felis. Donec eu libero condimentum nunc dapibus molestie. Aenean malesuada placerat velit. In in ex felis. Morbi scelerisque enim mauris, non commodo ipsum egestas sit amet. Nunc suscipit fermentum imperdiet. Phasellus quis lacus vel massa aliquam bibendum sit amet sit amet metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque tempor lorem facilisis urna vehicula pretium. Nullam nec ante ultrices, volutpat risus vitae, pellentesque eros.</p>
+
+        <table width="100%">
+        <tbody>
+        <tr>
+            <td valign="top" width="33%" align="center">
+                <div class="js-chart" type="line" template="darkweb" title="Selling Price Comparison: 30 Day Average" xtitle="Day of Month - February 2025" ytitle="US ($)" width="auto" height="300px" showlabels="no" showlegend="off" showcontrols="off">
+                    <div class="js-labels">01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29</div>
+        
+                    <div class="js-values" title="StocK A">23.065, 9.318, 54.866, -8.057, 8.238, 25.895, 17.698, 29.777, 44.106, 33.601, 21.758, 56.225, 37.31, 30.946, 57.096, -10.632, -12.786, 10.469, -2.44, 27.484, 40.216, 6.113, -1.425, 40.017, -19.599, -14.407, 8.783, 51.425, 55.276</div>
+                    <div class="js-values" title="Stock B">29.918, 30.994, -2.471, 31.75, 52.918, 3.627, 59.735, 16.459, 10.265, 43.695, 57.896, 46.485, -0.345, 6.501, 4.143, 35.895, 42.673, 21.416, 20.408, 40.13, 42.48, 48.507, 58.435, 19.052, 10.12, 54.726, 20.363, -7.34, -16.876, 48.682</div>
+                    <div class="js-values" title="Stocl C">-14.075, -19.033, 20.062, -4.982, 49.086, 57.542, 55.245, 23.763, 25.623, 20.665, 55.604, 19.178, 59.615, -17.429, 44.881, -4.353, -6.756, 20.909, 20.583, 27.534, 24.098, 49.358, -16.748, 32.683, 3.895, 48.092, 5.138, 56.945, 21.596, 29.469</div>
+                    <div class="js-values" title="Stock D">6.176, 29.597, 31.075, 37.22, 13.926, 12.763, 20.695, 42.084, 23.973, 14.326, 38.725, 14.231, 16.809, 36.038, 9.657, 52.404, 20.986, 37.133, 34.401, 28.873, 51.742, 50.722, -9.785, 13.63, 35.244, -11.361, 47.82, 22.584, 46.798, 38.327</div>
+        
+                    <div class="js-value-line-thickness">1px</div>
+                    <div class="js-marker-width">7px</div>
+        
+                </div>
+            </td>
+            <td valign="top" width="33%" align="center">
+                <div class="js-chart" type="stacked line" template="darkweb" title="Selling Price Comparison: 30 Day Average" xtitle="Day of Month - February 2025" ytitle="US ($)" width="auto" height="300px" showlabels="no" showlegend="off" showcontrols="off">
+                    <div class="js-labels">01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29</div>
+        
+                    <div class="js-values" title="StocK A">23.065, 9.318, 54.866, -8.057, 8.238, 25.895, 17.698, 29.777, 44.106, 33.601, 21.758, 56.225, 37.31, 30.946, 57.096, -10.632, -12.786, 10.469, -2.44, 27.484, 40.216, 6.113, -1.425, 40.017, -19.599, -14.407, 8.783, 51.425, 55.276</div>
+                    <div class="js-values" title="Stock B">29.918, 30.994, -2.471, 31.75, 52.918, 3.627, 59.735, 16.459, 10.265, 43.695, 57.896, 46.485, -0.345, 6.501, 4.143, 35.895, 42.673, 21.416, 20.408, 40.13, 42.48, 48.507, 58.435, 19.052, 10.12, 54.726, 20.363, -7.34, -16.876, 48.682</div>
+                    <div class="js-values" title="Stocl C">-14.075, -19.033, 20.062, -4.982, 49.086, 57.542, 55.245, 23.763, 25.623, 20.665, 55.604, 19.178, 59.615, -17.429, 44.881, -4.353, -6.756, 20.909, 20.583, 27.534, 24.098, 49.358, -16.748, 32.683, 3.895, 48.092, 5.138, 56.945, 21.596, 29.469</div>
+                    <div class="js-values" title="Stock D">6.176, 29.597, 31.075, 37.22, 13.926, 12.763, 20.695, 42.084, 23.973, 14.326, 38.725, 14.231, 16.809, 36.038, 9.657, 52.404, 20.986, 37.133, 34.401, 28.873, 51.742, 50.722, -9.785, 13.63, 35.244, -11.361, 47.82, 22.584, 46.798, 38.327</div>
+        
+                    <div class="js-value-line-thickness">1px</div>
+                    <div class="js-marker-width">7px</div>
+        
+                </div>
+            </td>
+            <td valign="top" width="33%" align="center">
+                <div class="js-chart" type="100% stacked line" template="darkweb" title="Selling Price Comparison: 30 Day Average" xtitle="Day of Month - February 2025" ytitle="US ($)" width="auto" height="300px" showlabels="no" showlegend="off" showcontrols="off">
+                    <div class="js-labels">01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29</div>
+        
+                    <div class="js-values" title="StocK A">23.065, 9.318, 54.866, -8.057, 8.238, 25.895, 17.698, 29.777, 44.106, 33.601, 21.758, 56.225, 37.31, 30.946, 57.096, -10.632, -12.786, 10.469, -2.44, 27.484, 40.216, 6.113, -1.425, 40.017, -19.599, -14.407, 8.783, 51.425, 55.276</div>
+                    <div class="js-values" title="Stock B">29.918, 30.994, -2.471, 31.75, 52.918, 3.627, 59.735, 16.459, 10.265, 43.695, 57.896, 46.485, -0.345, 6.501, 4.143, 35.895, 42.673, 21.416, 20.408, 40.13, 42.48, 48.507, 58.435, 19.052, 10.12, 54.726, 20.363, -7.34, -16.876, 48.682</div>
+                    <div class="js-values" title="Stocl C">-14.075, -19.033, 20.062, -4.982, 49.086, 57.542, 55.245, 23.763, 25.623, 20.665, 55.604, 19.178, 59.615, -17.429, 44.881, -4.353, -6.756, 20.909, 20.583, 27.534, 24.098, 49.358, -16.748, 32.683, 3.895, 48.092, 5.138, 56.945, 21.596, 29.469</div>
+                    <div class="js-values" title="Stock D">6.176, 29.597, 31.075, 37.22, 13.926, 12.763, 20.695, 42.084, 23.973, 14.326, 38.725, 14.231, 16.809, 36.038, 9.657, 52.404, 20.986, 37.133, 34.401, 28.873, 51.742, 50.722, -9.785, 13.63, 35.244, -11.361, 47.82, 22.584, 46.798, 38.327</div>
+        
+                    <div class="js-value-line-thickness">1px</div>
+                    <div class="js-marker-width">7px</div>
+        
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+
+
+        <p>Ut eu dui sit amet massa malesuada semper non et massa. Sed ut nunc sem. Duis blandit tortor non lorem sodales commodo. Sed sit amet ex non dui vulputate ullamcorper. Morbi vitae laoreet tortor. Nunc lacinia posuere quam ut lacinia. Suspendisse ornare, diam a luctus porta, dui mauris faucibus eros, vel euismod nulla libero in ipsum. Nulla consequat, sem at euismod egestas, mauris nulla imperdiet nibh, vel luctus eros metus ultricies diam. Suspendisse ut velit a nisl maximus blandit. Donec convallis, lacus in vehicula mollis, enim lorem auctor massa, in tempor orci lacus auctor nisi. Vestibulum non nibh vitae tellus rhoncus consequat. Duis lobortis mattis risus vel posuere.</p>
+        <p>Nam iaculis, purus sed lacinia elementum, erat nibh euismod elit, non facilisis neque justo sit amet mauris. Suspendisse blandit eu orci a viverra. Mauris tincidunt velit at maximus laoreet. Nullam ut ultrices arcu. Vestibulum felis libero, tempor sit amet vehicula cursus, commodo sit amet elit. Duis volutpat, sapien feugiat laoreet fringilla, massa purus tempus justo, quis feugiat ipsum quam id lacus. Vivamus pellentesque aliquet ex, in euismod turpis semper in. Cras efficitur diam lacus, sit amet elementum libero porttitor vitae. Praesent dapibus sollicitudin quam, quis tincidunt tellus accumsan ac.</p>
+        <p>Sed eget diam sed odio cursus dapibus. Cras malesuada ut tortor dignissim dictum. Sed vitae libero massa. Morbi ac dapibus nulla. In in pharetra justo, in malesuada dui. Morbi pretium nulla sed odio malesuada convallis. Aliquam et dolor ipsum. Cras sit amet sapien interdum, finibus odio a, dignissim mi. Curabitur dui orci, feugiat quis felis eget, lacinia dignissim ex. Maecenas egestas justo vitae orci fermentum fringilla. Vivamus dolor leo, accumsan vel tincidunt at, faucibus quis leo.</p>
+        <p>Nunc molestie, dolor sit amet bibendum interdum, justo lacus finibus libero, vel convallis nunc sapien quis nisi. Integer sit amet pretium dui. Vestibulum consectetur faucibus aliquam. Cras rutrum diam a vestibulum facilisis. Vestibulum sodales ex quis enim scelerisque tincidunt. Etiam eu imperdiet magna. Maecenas enim elit, consectetur ac quam ac, facilisis luctus dui. Maecenas non nibh eu est ornare mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum et dui pellentesque, faucibus elit sed, sodales ante. Aenean ullamcorper varius mi, eu gravida tellus. Donec ac vestibulum sapien. Donec volutpat condimentum ante vitae ultricies. Pellentesque dictum convallis euismod.</p>
+        <p>Suspendisse faucibus lacinia velit, id ornare risus egestas vel. Ut est ligula, elementum sed augue vitae, vehicula porta eros. Ut ut enim lacus. Fusce a nibh et erat placerat porta eu ut lacus. Etiam sagittis auctor elit eget congue. Phasellus faucibus sed felis vitae tempus. Integer lacinia justo quis volutpat accumsan. Fusce facilisis luctus ex, ut semper nulla vehicula in. Nam et arcu ullamcorper, eleifend ligula ut, dignissim ligula. Proin aliquam, libero et imperdiet lobortis, nulla orci consequat urna, tempor maximus erat neque vitae tortor. Vestibulum non ex sollicitudin sem ultricies facilisis nec a purus. Proin non ornare nibh, id placerat augue. Aliquam erat volutpat. Maecenas nec sollicitudin odio.</p>
+        <p>Nulla varius purus in posuere feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus blandit risus augue, sed feugiat lorem mollis in. Aenean sem nulla, mollis quis sapien ultricies, gravida aliquet mauris. Integer a velit ante. Phasellus eget libero at nisl bibendum scelerisque. Duis sollicitudin felis nec pretium mattis. Sed maximus laoreet erat ut auctor. Aliquam lobortis vel nisi sit amet congue. Proin at nisl in magna convallis pretium sagittis lacinia enim. Praesent sollicitudin posuere vestibulum. Nam aliquet nunc sed neque egestas, at condimentum lorem fermentum. Nulla viverra ipsum non nunc ultrices, ac maximus dolor molestie. Cras sed venenatis sem. Praesent ut neque at justo vestibulum mattis vitae eu eros. In dapibus justo nunc.</p>
+    </body>
+</html>
