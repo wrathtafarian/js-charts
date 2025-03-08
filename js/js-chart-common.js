@@ -409,10 +409,11 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "marker_border_radius": "none",
         "marker_box_shadow": "none",
         "marker_opacity": "1.0",
+        //"marker_emoji": ["0x1F9E1", "0x1F44D", "0x1F44E"],
         "marker_emoji": ["0x1F9E1", "0x1F44D", "0x1F44E"],
         "not_defined_bg_color": "silver",
-        "not_defined_text_color": "white",
-        "diff_column_font_family": "\"Open Sans\", sans-serif",
+        "not_defined_text_color": "white"
+        /*"diff_column_font_family": "\"Open Sans\", sans-serif",
         "diff_column_font_size": "10px",
         "diff_column_font_weight": 400,
         "diff_column_border": "0.5px dashed #333333",
@@ -423,7 +424,6 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "diff_column_negative_text_color": "black",
         "diff_column_positive_bg_color": "#ddffdd",
         "diff_column_positive_text_color": "black",
-        /*
         "candle_min_width": "10px",
         "candle_min_height": "3px",
         "candle_data_margin": "16px",
@@ -438,7 +438,6 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "candle_wick_border_radius": "0px",
         "candle_wick_box_shadow": "none",
         "candle_wick_opacity": "1.0",
-        */
         "venn_title_font_family": "\"Open Sans\", sans-serif",
         "venn_title_font_size": "14px",
         "venn_title_font_weight": 600,
@@ -452,6 +451,7 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "venn_sub_font_weight": 400,
         "venn_sub_text_color": "white",
         "venn_opacity": "55%"
+        */
     },
     {
         "name": "darkweb",
@@ -575,7 +575,8 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "marker_opacity": "1.0",
         "marker_emoji": ["0x1F9E1", "0x1F44D", "0x1F44E"],
         "not_defined_bg_color": "silver",
-        "not_defined_text_color": "white",
+        "not_defined_text_color": "white"
+        /*
         "diff_column_font_family": "\"Open Sans\", sans-serif",
         "diff_column_font_size": "10px",
         "diff_column_font_weight": 400,
@@ -587,7 +588,6 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "diff_column_negative_text_color": "black",
         "diff_column_positive_bg_color": "#ddffdd",
         "diff_column_positive_text_color": "black",
-        /*
         "candle_min_width": "4px",
         "candle_min_height": "3px",
         "candle_data_margin": "10px",
@@ -602,7 +602,6 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "candle_wick_border_radius": "0px",
         "candle_wick_box_shadow": "none",
         "candle_wick_opacity": "1.0",
-        */
         "venn_title_font_family": "\"Open Sans\", sans-serif",
         "venn_title_font_size": "14px",
         "venn_title_font_weight": 600,
@@ -616,6 +615,7 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "venn_sub_font_weight": 400,
         "venn_sub_text_color": "white",
         "venn_opacity": "55%"
+        */
     }
 ]
 

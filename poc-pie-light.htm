@@ -14,7 +14,12 @@
     <body dir="ltr" lang="en">
         <div style="background: radial-gradient(circle at 33% 33%, #777777, #000000); padding: 15px 0 15px 15px; font-size: 25px; font-weight: 700; color: #ffffff; border-radius: 5px;">jsCharts Demo</div>
         <p>Nam commodo ac nisi tristique hendrerit. Nunc sit amet faucibus quam, a lacinia sapien. Curabitur porttitor dolor a sapien tempor, eu dignissim velit sagittis. Curabitur id placerat nisi, ac ornare nisl. Aliquam pharetra lobortis velit eu varius. Donec vel mauris quis lectus tempus laoreet. Phasellus eget pretium lacus, ut bibendum tortor. Vivamus dolor tellus, volutpat id felis porttitor, bibendum lacinia leo. Quisque ultricies ornare laoreet. Etiam gravida est at sapien aliquet, vitae fermentum tellus tempor.</p>
-
+        <div class="js-chart" type="pie" title="Chart title" template="default">
+            <div class="js-values" title="February 2024">132, 152, 188, 201, 209</div>
+            <div class="js-labels">John, Stacey, George, Charlie, Melanie</div>
+            <div class="js-color-palette">Orange; #ffffe6; #e3b; hsl(140, 40%, 50%); rgb(240, 40, 28)</div>
+        </div>
+        <br><br>
         <table width="100%">
         <thead>
         <tr>
@@ -30,9 +35,10 @@
                 </div>
             </td>
             <td width="50%" align="center">
-                <div class="js-chart" type="pie" title="Breakdown of sales per employee" showlegend="bottom" showdatatable="off" holetitle="2024 Q4" startangle="0deg" width="600px">
+                <div class="js-chart" type="stacked doughnut" title="Breakdown of sales per employee" showlegend="off" showdatatable="off" showcontrols="off" holetitle="2024 Q4" startangle="0deg" width="600px">
                     <div class="js-labels">John, Stacey, George, Charlie, Melanie, Bill, Derick</div>
                     <div class="js-values" title="Series-X">87,250,268,320,380,745,790</div>
+                    <div class="js-values" title="Series-Y">92,267,272,322,388,775,780</div>
 
                     <div class="js-canvas-box-shadow">0px 0px 15px #666666</div>
                 </div>
