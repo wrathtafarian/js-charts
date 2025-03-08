@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="../css/js-chart-common.css" rel="stylesheet">
+        <link href="../css/js-chart-mosaic.css" rel="stylesheet">
+        <script type="text/javascript" src="../js/js-chart-common.js"></script>
+        <script type="text/javascript" src="../js/js-chart-mosaic.js"></script>
+        <script type="application/json" id="parts-data">
+            {
+                "title": "Stock level",
+                "nodes": [
+                    {"title": "Engine", "value": 12},
+                    {"title": "Transmission", "value": 48},
+                    {"title": "Battery", "value": 21},
+                    {"title": "Alternator", "value": 67},
+                    {"title": "Radiator", "value": 52},
+                    {"title": "Brake Pads", "value": 41},
+                    {"title": "Tires", "value": 97},
+                    {"title": "Steering Wheel", "value": 34},
+                    {"title": "Air Filter", "value": 81},
+                    {"title": "Exhaust System", "value": 41},
+                    {"title": "Fuel Pump", "value": 57},
+                    {"title": "Timing Belt", "value": 68},
+                    {"title": "Clutch", "value": 13},
+                    {"title": "Shock Absorbers", "value": 75},
+                    {"title": "Wipers", "value": 73},
+                    {"title": "Headlights", "value": 94},
+                    {"title": "Taillights", "value": 18},
+                    {"title": "Side Mirrors", "value": 45},
+                    {"title": "Spark Plugs", "value": 62},
+                    {"title": "Differential", "value": 84},
+                    {"title": "Drive Shaft", "value": 24},
+                    {"title": "Fender", "value": 55},
+                    {"title": "Bumper", "value": 29},
+                    {"title": "Grille", "value": 75},
+                    {"title": "Windshield", "value": 41}
+                ]
+            }
+        </script>
+    </head>
+	<body>
+        <div class="js-chart" type="treemap" title="The Wrench & Bolt" jsondata="parts-data">
+            <div class="js-value-bar-border">0.5px solid #cccccc</div>
+            <div class="js-value-bar-data-margin">0px</div>
+            <div class="js-color-palette">SteelBlue</div>
+            <div class="js-datalabel-width">150px</div>
+            <div class="js-datalabel-height">100px</div>
+        </div>
+	</body>
+</html>

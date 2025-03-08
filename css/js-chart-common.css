@@ -146,7 +146,7 @@ input:checked + .js-chart-common-slider:before {
 .js-candle-min-width, .js-candle-min-height, .js-candle-wick-min-height, .js-candle-wick-bg-color, .js-candle-wick-min-width, .js-candle-wick-border, .js-candle-wick-border-radius, .js-candle-wick-box-shadow, .js-candle-wick-opacity, .js-candle-border, .js-candle-border-radius, .js-candle-box-shadow, .js-candle-opacity, .js-candle-data-margin {
     display: none;
 }
-.js-venn-title-font-family, .js-venn-title-font-size, .js-venn-title-font-weight, .js-venn-title-text-color, .js-venn-font-family, .js-venn-font-size, .js-venn-font-weight, .js-venn-text-color {
+.js-venn-title-font-family, .js-venn-title-font-size, .js-venn-title-font-weight, .js-venn-title-text-color, .js-venn-font-family, .js-venn-font-size, .js-venn-font-weight, .js-venn-text-color , .js-venn-opacity {
     display: none;
 }
 

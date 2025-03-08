@@ -15,7 +15,65 @@
 
         <p>In pulvinar nec velit commodo rhoncus. Duis elementum dictum turpis sit amet placerat. Maecenas vel finibus ipsum. Morbi placerat, quam et lacinia ornare, orci enim elementum elit, vel lacinia nibh nunc at nisl. Nulla quis est non arcu suscipit viverra. Nam ultrices et tortor vel tristique. Etiam nec nunc auctor, semper felis eget, dapibus arcu. Praesent dapibus, nunc vel viverra congue, purus mi hendrerit nisi, sit amet viverra tortor ipsum et eros. Suspendisse ut nisl laoreet, venenatis nisl et, euismod mi. Ut non vehicula sem. Pellentesque a justo ac velit tempor aliquam. Aliquam sit amet suscipit diam. Sed turpis metus, consequat sit amet ipsum ac, sagittis interdum erat. Sed lobortis ultrices commodo. Integer facilisis, augue et semper venenatis, purus ipsum consectetur sapien, vitae porttitor metus mi id magna. Integer faucibus pretium neque quis tempus.</p>
 
-        <div class="js-chart" type="parallel coordinates" title="Model specification comparison" ytitle="y-axis title" xtitle="x-axis title" showlegend="bottom" width="800px">
+        <div class="js-chart" type="parallel coordinates" template="default" title="Model specification comparison" ytitle="y-axis title" xtitle="x-axis title" showlegend="off">
+            <div class="js-labels">Cylinders, Displacement (cc), Power (hp), Weight (lb), Acceleration 0-60mph (s), Milage (mpg), Year</div>
+
+            <div class="js-values">0.976, 358.526, 186.554, 3818.616, 16.381, 27.919, 89.871</div>
+            <div class="js-values">0.752, 357.54, 151.083, 3536.849, 15.63, 29.444, 87.541</div>
+            <div class="js-values">0.503, 350.223, 155.07, 3862.217, 16.426, 29.021, 87.004</div>
+            <div class="js-values">0.102, 350.089, 164.257, 3574.006, 16.686, 21.162, 89.348</div>
+            <div class="js-values">1.098, 353.398, 158.056, 3873.633, 15.225, 22.97, 88.922</div>
+            <div class="js-values">1.213, 355.136, 167.578, 3590.064, 16.816, 23.752, 87.118</div>
+            <div class="js-values">1.897, 357.625, 179.834, 3632.711, 16.437, 20.248, 88.889</div>
+            <div class="js-values">1.047, 357.122, 168.232, 3605.754, 17.108, 22.638, 89.187</div>
+            <div class="js-values">1.343, 356.673, 166.414, 3563.59, 16.982, 24.646, 88.676</div>
+            <div class="js-values">2.637, 368.594, 117.85, 3212.654, 11.665, 46.262, 88.316</div>
+            <div class="js-values">2.97, 326.763, 124.279, 3249.133, 12.921, 43.715, 87.809</div>
+            <div class="js-values">3.484, 331.754, 146.617, 3130.105, 14.356, 55.34, 89.49</div>
+            <div class="js-values">3.652, 362.997, 131.843, 3263.171, 13.473, 54.559, 89.31</div>
+            <div class="js-values">3.967, 383.803, 140.798, 3262.584, 14.863, 40.85, 88.533</div>
+            <div class="js-values">4.665, 381.411, 148.069, 3284.942, 14.008, 44.247, 88.657</div>
+            <div class="js-values">4.65, 331.501, 136.811, 3237.218, 13.994, 45.013, 87.152</div>
+            <div class="js-values">4.31, 399.276, 145.652, 3201.854, 13.475, 41.937, 87.224</div>
+            <div class="js-values">4.812, 394.168, 131.375, 3287.659, 13.99, 46.227, 89.82</div>
+            <div class="js-values">4.048, 353.641, 148.595, 3227.631, 12.562, 43.185, 89.622</div>
+            <div class="js-values">5.308, 382.738, 149.525, 3220.809, 14.38, 52.932, 87.807</div>
+
+            <div class="js-value-line-thickness">2px</div>
+            <div class="js-scale-border">0.5px solid #999999</div>
+
+            <div class="js-color-palette">darkorange; darkorange; darkorange; darkorange; darkorange; darkorange; darkorange; darkorange; darkorange; Lime; Lime; Lime; Lime; Lime; Lime; Lime; Lime; Lime; Lime; Lime; Lime;</div>
+        </div>
+
+        <p>Ut sollicitudin felis orci, vitae pellentesque erat mollis vitae. Suspendisse varius lectus ligula, eget tristique eros sagittis eget. Sed consectetur ac leo in varius. Mauris aliquam, quam id sollicitudin rutrum, enim enim tincidunt libero, nec rutrum mauris leo eu arcu. Aliquam tincidunt ex tortor, sit amet molestie felis consectetur vel. Fusce faucibus nibh non facilisis porta. Aliquam luctus odio eu arcu faucibus, sit amet tristique risus auctor. Morbi nec congue nunc. Quisque porta mauris et felis convallis placerat. Donec pellentesque, lacus sed auctor pulvinar, urna eros accumsan augue, eget consectetur arcu lectus a nunc. Fusce fringilla velit sed nisl vestibulum gravida. Nullam ullamcorper felis velit, vitae semper nisi sollicitudin eu. Etiam vulputate ligula sed sagittis semper. Aliquam vel mollis felis. Quisque fringilla, tortor eu tincidunt mattis, lectus justo euismod mauris, eget ullamcorper ipsum felis ut turpis. Sed eu sollicitudin nulla.</p>
+
+        <table width="100%">
+        <tbody>
+        <tr>
+            <td width="50%" valign="top" align="center">
+                <div class="js-chart" type="parallel coordinates" template="darkweb" title="Model comparison" width="calc(100% - 40px)">
+                    <div class="js-labels">Burn time, Intake, Flow, Consumption, Volume, Output, Min. power, Max. power, Price</div>
+
+                    <div class="js-values" title="BA0">7,   7, 7,   92.5, 7.5, 900, 550, 750, 185000</div>
+                    <div class="js-values" title="DA1">7,   6, 8,   85, 6.5, 450, 250, 450, 75000</div>
+                    <div class="js-values" title="DA2">9,   6, 8,   82.5, 5, 550, 350, 550, 82000</div>
+                    <div class="js-values" title="DA3">8.5, 8, 7.5, 80, 5, 650, 450, 750, 92000</div>
+
+                    <div class="js-values" title="EA1">11, 18, 14,     75, 6.5, 600, 450, 650, 128000</div>
+                    <div class="js-values" title="EA2">10, 19, 14,     71, 5, 900, 450, 750, 144000</div>
+                    <div class="js-values" title="EA3">12, 19, 14.5.5, 68, 5, 1100, 550, 950, 165000</div>
+                    <div class="js-values" title="GA7">14, 19.5, 13.5, 65, 5, 1500, 650, 1100, 209000</div>
+
+                    <div class="js-color-palette">hsl(130, 100%, 90%); hsl(130, 100%, 90%); hsl(130, 100%, 90%); hsl(130, 100%, 90%);  hsl(207, 100%, 75%); hsl(207, 100%, 75%); hsl(207, 100%, 75%); hsl(207, 100%, 75%); </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        </table>
+
+        <p>In pulvinar nec velit commodo rhoncus. Duis elementum dictum turpis sit amet placerat. Maecenas vel finibus ipsum. Morbi placerat, quam et lacinia ornare, orci enim elementum elit, vel lacinia nibh nunc at nisl. Nulla quis est non arcu suscipit viverra. Nam ultrices et tortor vel tristique. Etiam nec nunc auctor, semper felis eget, dapibus arcu. Praesent dapibus, nunc vel viverra congue, purus mi hendrerit nisi, sit amet viverra tortor ipsum et eros. Suspendisse ut nisl laoreet, venenatis nisl et, euismod mi. Ut non vehicula sem. Pellentesque a justo ac velit tempor aliquam. Aliquam sit amet suscipit diam. Sed turpis metus, consequat sit amet ipsum ac, sagittis interdum erat. Sed lobortis ultrices commodo. Integer facilisis, augue et semper venenatis, purus ipsum consectetur sapien, vitae porttitor metus mi id magna. Integer faucibus pretium neque quis tempus.</p>
+
+        <div class="js-chart" type="parallel coordinates" title="Model specification comparison" ytitle="y-axis title" xtitle="x-axis title" showlegend="bottom" width="calc(100% - 40px)">
             <div class="js-labels">Seats qty, Acceleration (0-100km/h), Economy (L/100km), Cylinders, Gear Ratio Qty, Engine Capacity (Cc), Max. Torque (Nm), Max. Power (KW), Tax, Price</div>
 
             <div class="js-values" title="Model AA11">5, 8.9, 6.1, 4, 7, 1984, 270, 110, 7556, 952000</div>
@@ -36,7 +94,8 @@
 
 
         <p>In pulvinar nec velit commodo rhoncus. Duis elementum dictum turpis sit amet placerat. Maecenas vel finibus ipsum. Morbi placerat, quam et lacinia ornare, orci enim elementum elit, vel lacinia nibh nunc at nisl. Nulla quis est non arcu suscipit viverra. Nam ultrices et tortor vel tristique. Etiam nec nunc auctor, semper felis eget, dapibus arcu. Praesent dapibus, nunc vel viverra congue, purus mi hendrerit nisi, sit amet viverra tortor ipsum et eros. Suspendisse ut nisl laoreet, venenatis nisl et, euismod mi. Ut non vehicula sem. Pellentesque a justo ac velit tempor aliquam. Aliquam sit amet suscipit diam. Sed turpis metus, consequat sit amet ipsum ac, sagittis interdum erat. Sed lobortis ultrices commodo. Integer facilisis, augue et semper venenatis, purus ipsum consectetur sapien, vitae porttitor metus mi id magna. Integer faucibus pretium neque quis tempus.</p>
-        <div class="js-chart" type="parallel coordinates" title="Model specification comparison" ytitle="y-axis title" xtitle="x-axis title" showlegend="off" width="800px">
+
+        <div class="js-chart" type="parallel coordinates" title="Model specification comparison" ytitle="y-axis title" xtitle="x-axis title" showlegend="off" width="calc(100% - 40px)">
             <div class="js-labels">Item 1, Item 2, Item 3, Item 4, Item 5, Item 6</div>
 
             <div class="js-values" title="Model A">10, 240, 44, 600, 1875, 1</div>
@@ -59,38 +118,6 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus nibh, accumsan vel sollicitudin vitae, consequat in mi. Mauris placerat condimentum mi, nec tempor nisi tincidunt id. Ut porttitor arcu eu nunc tristique ultricies. Vestibulum ligula massa, porttitor non suscipit id, suscipit ac nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce eu dignissim elit, non lobortis dui. Donec porttitor, lacus non blandit pulvinar, diam massa pellentesque turpis, at consectetur velit nunc rhoncus sapien. In ullamcorper dolor quis egestas ultrices. Vivamus ultrices risus elit, a faucibus massa ultricies ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris metus ante, vestibulum ac est vel, lobortis pellentesque orci. Cras risus enim, viverra in libero vitae, ultricies ullamcorper lacus. Morbi nec leo nisl. Nullam molestie nibh sit amet orci sollicitudin, finibus venenatis massa interdum. Sed id massa et leo feugiat consectetur eget id diam.</p>
 
-        <div class="js-chart" type="parallel coordinates" template="darkweb" title="Model specification comparison" ytitle="y-axis title" xtitle="x-axis title" showlegend="off" width="1200px">
-            <div class="js-labels">Cylinders, Displacement (cc), Power (hp), Weight (lb), Acceleration 0-60mph (s), Milage (mpg), Year</div>
-
-            <div class="js-values">3.484, 331.754, 166.617, 3230.105, 17.356, 35.34, 89.49</div>
-            <div class="js-values">0.976, 358.526, 186.554, 3818.616, 14.381, 27.919, 89.871</div>
-            <div class="js-values">0.752, 397.54, 131.083, 3436.849, 13.63, 39.444, 87.541</div>
-            <div class="js-values">0.503, 350.223, 135.07, 3862.217, 16.426, 39.021, 87.004</div>
-            <div class="js-values">1.098, 393.398, 128.056, 3873.633, 14.225, 42.97, 88.922</div>
-            <div class="js-values">2.637, 368.594, 197.85, 3512.654, 16.665, 36.262, 88.316</div>
-            <div class="js-values">3.652, 362.997, 131.843, 3863.171, 18.473, 44.559, 89.31</div>
-            <div class="js-values">4.65, 331.501, 146.811, 3637.218, 13.994, 25.013, 87.152</div>
-            <div class="js-values">0.102, 390.089, 164.257, 3574.006, 16.686, 41.162, 89.348</div>
-            <div class="js-values">1.897, 357.625, 179.834, 3632.711, 14.437, 30.248, 88.889</div>
-            <div class="js-values">3.967, 383.803, 150.798, 3562.584, 15.863, 40.85, 88.533</div>
-            <div class="js-values">1.047, 377.122, 168.232, 3605.754, 17.108, 42.638, 89.187</div>
-            <div class="js-values">5.308, 382.738, 129.525, 3220.809, 14.38, 32.932, 87.807</div>
-            <div class="js-values">4.31, 399.276, 175.652, 3201.854, 13.475, 41.937, 87.224</div>
-            <div class="js-values">2.97, 326.763, 134.279, 3549.133, 17.921, 43.715, 87.809</div>
-            <div class="js-values">4.665, 381.411, 188.069, 3284.942, 16.008, 44.247, 88.657</div>
-            <div class="js-values">1.213, 365.136, 137.578, 3390.064, 13.816, 43.752, 87.118</div>
-            <div class="js-values">1.343, 356.673, 166.414, 3563.59, 15.982, 34.646, 88.676</div>
-            <div class="js-values">4.812, 394.168, 161.375, 3387.659, 13.99, 36.227, 89.82</div>
-            <div class="js-values">4.048, 353.641, 158.595, 3627.631, 12.562, 33.185, 89.622</div>
-
-            <div class="js-value-line-thickness">1px</div>
-            <div class="js-scale-border">0.5px solid #999999</div>
-            <div class="js-chart-text-color">#bbbbbb</div>
-
-            <div class="js-color-palette">darkorange</div>
-        </div>
-
-        <p>Ut sollicitudin felis orci, vitae pellentesque erat mollis vitae. Suspendisse varius lectus ligula, eget tristique eros sagittis eget. Sed consectetur ac leo in varius. Mauris aliquam, quam id sollicitudin rutrum, enim enim tincidunt libero, nec rutrum mauris leo eu arcu. Aliquam tincidunt ex tortor, sit amet molestie felis consectetur vel. Fusce faucibus nibh non facilisis porta. Aliquam luctus odio eu arcu faucibus, sit amet tristique risus auctor. Morbi nec congue nunc. Quisque porta mauris et felis convallis placerat. Donec pellentesque, lacus sed auctor pulvinar, urna eros accumsan augue, eget consectetur arcu lectus a nunc. Fusce fringilla velit sed nisl vestibulum gravida. Nullam ullamcorper felis velit, vitae semper nisi sollicitudin eu. Etiam vulputate ligula sed sagittis semper. Aliquam vel mollis felis. Quisque fringilla, tortor eu tincidunt mattis, lectus justo euismod mauris, eget ullamcorper ipsum felis ut turpis. Sed eu sollicitudin nulla.</p>
         <p>Sed eget neque vitae erat luctus ultrices ut eget felis. Donec eu libero condimentum nunc dapibus molestie. Aenean malesuada placerat velit. In in ex felis. Morbi scelerisque enim mauris, non commodo ipsum egestas sit amet. Nunc suscipit fermentum imperdiet. Phasellus quis lacus vel massa aliquam bibendum sit amet sit amet metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque tempor lorem facilisis urna vehicula pretium. Nullam nec ante ultrices, volutpat risus vitae, pellentesque eros.</p>
         <p>Ut eu dui sit amet massa malesuada semper non et massa. Sed ut nunc sem. Duis blandit tortor non lorem sodales commodo. Sed sit amet ex non dui vulputate ullamcorper. Morbi vitae laoreet tortor. Nunc lacinia posuere quam ut lacinia. Suspendisse ornare, diam a luctus porta, dui mauris faucibus eros, vel euismod nulla libero in ipsum. Nulla consequat, sem at euismod egestas, mauris nulla imperdiet nibh, vel luctus eros metus ultricies diam. Suspendisse ut velit a nisl maximus blandit. Donec convallis, lacus in vehicula mollis, enim lorem auctor massa, in tempor orci lacus auctor nisi. Vestibulum non nibh vitae tellus rhoncus consequat. Duis lobortis mattis risus vel posuere.</p>
         <p>Nam iaculis, purus sed lacinia elementum, erat nibh euismod elit, non facilisis neque justo sit amet mauris. Suspendisse blandit eu orci a viverra. Mauris tincidunt velit at maximus laoreet. Nullam ut ultrices arcu. Vestibulum felis libero, tempor sit amet vehicula cursus, commodo sit amet elit. Duis volutpat, sapien feugiat laoreet fringilla, massa purus tempus justo, quis feugiat ipsum quam id lacus. Vivamus pellentesque aliquet ex, in euismod turpis semper in. Cras efficitur diam lacus, sit amet elementum libero porttitor vitae. Praesent dapibus sollicitudin quam, quis tincidunt tellus accumsan ac.</p>
