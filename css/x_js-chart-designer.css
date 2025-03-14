@@ -1,0 +1,227 @@
+.js-chart-designer {
+    position: fixed;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    min-width: 800px;
+    max-width: 1400px;
+    top: 20px;
+    left: 20px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-design-left-column {
+    flex: 1 1 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-design-page-header {
+    flex: 1 1 auto;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-design-close-button {
+    flex: 1 1 auto;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.js-chart-design-close-button:hover {
+    background-color: #ffffe6;
+}
+.js-chart-design-page_title {
+    flex: 1 1 auto;
+    width: calc(100% - 30px);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0px 0px 0px 10px;
+}
+.js-chart-design-page-button-container {
+    flex: 1 1 auto;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-design-export-button {
+    flex: 1 1 auto;
+    width: 100%;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0px 3px 0px 3px;
+    border-radius: 5px;
+    background-color: steelblue;
+    color: white;
+    font-weight: 700;
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+.js-chart-design-export-button:hover {
+    color: #dcdcdc;
+    border: 0.5px solid #ffffff;
+}
+.js-chart-design-page-dropdown-container {
+    flex: 1 1 auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-design-page-chart-type-dropdown, .js-chart-design-page-style-template-dropdown {
+    width: 100%;
+    margin: 2px 5px 2px 5px;
+}
+.js-chart-design-page-tab-outer-container {
+    flex: 1 1 auto;
+    height: calc(100% - (30px + 40px + 40px));
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-design-page-tab-header-container {
+    flex: 1 1 auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: 600;
+}
+.js-chart-design-page-tab-chart-attributes {
+    flex: 1 1 auto;
+    width: 50%;
+    border: 0.5px solid black;
+    border-radius: 5px 5px 0px 0px;
+    margin: 5px 1px 0px 1px;
+    padding: 0px 0px 0px 10px;
+    background-color: #dcdcdc;
+    cursor: pointer;
+}
+.js-chart-design-page-tab-chart-attributes:hover {
+    background-color: steelblue;
+}
+.js-chart-design-page-tab-style-template, .js-chart-design-page-tab-style-directives {
+    flex: 1 1 auto;
+    width: 50%;
+    border: 0.5px solid black;
+    border-radius: 5px 5px 0px 0px;
+    margin: 5px 1px 0px 1px;
+    padding: 0px 0px 0px 10px;
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+}
+.js-chart-design-page-tab-style-template:hover, .js-chart-design-page-tab-style-directives:hover {
+    background-color: steelblue;
+}
+.js-chart-design-page-tab-content-container {
+    flex: 1 1 auto;
+    height: calc(100% - 40px);
+}
+.js-chart-design-right-column {
+    flex: 1 1 auto;
+    width: 50%;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-design-page-preview-container {
+    flex: 1 1 auto;
+    height: 50%;
+    min-height: 400px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.js-chart-design-page-input-container {
+    flex: 1 1 auto;
+    height: 50%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: steelblue #dcdcdc;
+    margin: 5px 0px 5px 0px;
+}
+.js-chart-designer-input-container-title {
+    font-size: 16px;
+    margin: 0px 0px 0px 10px;
+}
+.js-chart-designer-input-container-desc {
+    font-size: 11px;
+    margin: 3px 0px 5px 10px;
+}
+.js-chart-designer-input-values-series-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 10px 0px 0px 10px;
+}
+.js-chart-designer-input-values-js-values-container {
+    color: #333333;
+}
+.js-chart-designer-update-preview-button {
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: crimson;
+    color: white;
+    font-weight: 700;
+    border: 0.5px solid black;
+    border-radius: 8px;
+    margin: 5px 0px 0px 10px;
+    cursor: pointer;
+}
+.js-chart-designer-update-preview-button:hover {
+    color: #dcdcdc;
+    border: 0.5px solid #ffffff;
+}
+    .js-chart-designer-input-values-label {
+    margin: 0px 0px 0px 10px;
+}
+.js-chart-design-chart-attributes-container {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: steelblue #f0f0f0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+}
+.js-chart-design-style-template-container {
+    height: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: steelblue #f0f0f0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+}
+.js-chart-design-style-directives-container {
+    height: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: steelblue #f0f0f0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+}
+.js-chart-designer-chart-attribute-block-label, .js-chart-designer-style-template-block-label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    padding-left: 5px;
+}

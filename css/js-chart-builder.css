@@ -1,0 +1,264 @@
+:root {
+    --js-chart-builder-heading-panel-height: 40px;
+    --js-chart-builder-button-panel-height: 30px;
+    --js-chart-builder-dropdown-panel-height: 30px;
+    --js-chart-builder-tabs-panel-height: 30px;
+    --js-chart-builder-preview-panel-height: 400px;
+    --js-chart-builder-preview-panel-width: 400px;
+    --js-chart-button-bg-color: ForestGreen;
+}
+
+#js-chart-builder-labels {
+    width: calc(100% - 30px);
+}
+.js-chart-builder {
+    position: fixed;
+    width: calc(100% - 80px);
+    height: calc(100% - 40px);
+    min-width: 1000px;
+    max-width: 1400px;
+    top: 20px;
+    left: 40px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-builder-left-column-panel {
+    flex: 1 1 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-builder-right-column-panel {
+    flex: 1 1 auto;
+    width: 50%;
+    min-width: var(--js-chart-builder-preview-panel-width);
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-builder-heading-panel {
+    flex: 1 1 auto;
+    height: var(--js-chart-builder-heading-panel-height);
+    border-radius: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-builder-close-button {
+    flex: 1 1 auto;
+    width: calc(var(--js-chart-builder-heading-panel-height) - 15px);
+    height: calc(var(--js-chart-builder-heading-panel-height) - 15px);
+    line-height: calc(var(--js-chart-builder-heading-panel-height) - 15px);
+    font-size: calc(var(--js-chart-builder-heading-panel-height) - 15px);
+    font-weight: 600;
+    text-align: center;
+    border: 0.5px solid #333333;
+    border-radius: 3px;
+    margin: 2px 0px 0px 2px;
+    cursor: pointer;
+}
+/*
+.js-chart-builder-close-button:hover {
+    background-color: #ffbbbb;
+}
+*/
+.js-chart-builder-page-title {
+    flex: 1 1 auto;
+    width: calc(100% - var(--js-chart-builder-heading-panel-height));
+    font-size: calc(var(--js-chart-builder-heading-panel-height) - 10px);
+    line-height: var(--js-chart-builder-heading-panel-height);
+    font-weight: 400;
+    text-align: center;
+}
+/*
+.js-chart-builder-heading-panel {
+    flex: 1 1 auto;
+    height: var(--js-chart-builder-heading-panel-height);
+    line-height: var(--js-chart-builder-heading-panel-height);
+    border-radius: 10px 0px 0px 0px;
+    text-align-last: center;
+    font-size: 28px;
+    font-weight: 300;
+}
+*/
+.js-chart-builder-button-panel {
+    flex: 1 1 auto;
+    height: var(--js-chart-builder-button-panel-height);
+    line-height: var(--js-chart-builder-button-panel-height);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-builder-button-label-panel {
+    flex: 1 1 0px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+.js-chart-builder-button-elem {
+    flex: 1 1 0px;
+    width: max-content;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 2px;
+    line-height: calc(var(--js-chart-builder-button-panel-height) - 4px);
+    border: 0.5px solid #333333;
+    border-radius: 3px;
+    background-color: var(--js-chart-button-bg-color);
+    color: white;
+    cursor: pointer;
+}
+.js-chart-builder-button-elem:hover {
+    background-color: hsl(120, 61%, 29%);
+}
+/*
+.js-chart-builder-button-elem:hover {
+    font-weight: 600;
+}
+*/
+.js-chart-builder-dropdown-panel {
+    flex: 1 1 auto;
+    height: var(--js-chart-builder-dropdown-panel-height);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-builder-dropdown-select {
+    flex: 1 1 0px;
+    font-size: 14px;
+    margin: 0px 2.5px 0px 2.5px;
+}
+.js-chart-builder-tabs-panel {
+    flex: 1 1 auto;
+    height: var(--js-chart-builder-tabs-panel-height);
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-builder-chart-attribute-tab, .js-chart-builder-style-directives-tab {
+    flex: 1 1 0px;
+    text-align: left;
+    padding-left: 15px;
+    line-height: var(--js-chart-builder-tabs-panel-height);
+    font-size: 16px;
+    font-weight: 500;
+    border: 0.5px solid #333333;
+    border-radius: calc(var(--js-chart-builder-tabs-panel-height) / 2) calc(var(--js-chart-builder-tabs-panel-height) / 2) 0px 0px;
+    /*border-radius: 5px var(--js-chart-builder-tabs-panel-height) 0px 0px;*/
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+}
+.js-chart-builder-chart-attribute-tab:hover, .js-chart-builder-style-directives-tab:hover {
+    background-color: hsl(207, 44%, 39%);
+}
+/*
+.js-chart-builder-chart-attribute-tab:hover, .js-chart-builder-style-directives-tab:hover {
+    font-weight: 700;
+    background-color: hsl(207, 44%, 45%);
+}
+*/
+.js-chart-builder-content-panel {
+    flex: 1 1 auto;
+    height: calc(100% - (var(--js-chart-builder-heading-panel-height) + var(--js-chart-builder-button-panel-height) + var(--js-chart-builder-dropdown-panel-height) + var(--js-chart-builder-tabs-panel-height)));
+    border-radius: 0px 0px 0px 10px;
+}
+.js-chart-builder-chart-attr-content-panel {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: grid;
+    grid-template-columns: 30% 20px calc(70% - 20px);
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+}
+.js-chart-builder-option-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 10px;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.js-chart-builder-style-directives-content-panel {
+    height: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    display: grid;
+    grid-template-columns: 30% 20px calc(70% - 20px);
+    grid-template-rows: 40px;
+    grid-auto-rows: 40px;
+}
+.js-chart-builder-preview-panel {
+    flex: 1 1 auto;
+    height: var(--js-chart-builder-preview-panel-height);
+    margin: 0 auto;
+    border-radius: 0px 10px 0px 0px;
+}
+.js-chart-builder-data-panel {
+    flex: 1 1 auto;
+    height: calc(100% - var(--js-chart-builder-preview-panel-height));
+    border-radius: 0px 0px 10px 0px;
+    padding: 0px 10px 0px 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+.js-chart-builder-directives-heading {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: cadetblue;
+    color: white;
+    padding-left: 10px;
+    line-height: 40px;
+}
+.js-chart-builder-data-input-label {
+    flex: 1 1 auto;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+.js-chart-builder-data-input-sub-label {
+    flex: 1 1 auto;
+    font-size: 10px;
+    font-weight: 500;
+    text-wrap-mode: wrap;
+    padding-top: 5px;
+}
+.js-chart-builder-data-value-container {
+    padding: 5px 0px 0px 5px;
+}
+.js-chart-builder-categorical-value-label {
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+/*
+.js-chart-builder-categorical-value-sub-label {
+    font-size: 8px;
+    font-weight: 400;
+}
+*/
+.js-chart-builder-popup-msg-container {
+    position: absolute;
+    z-index: 200;
+    top: 0px;
+    left: calc(50% - (300px / 2));
+    height: 50px;
+    width: 300px;
+    border: 0.5px solid #666666;
+    border-radius: 0px 0px 5px 5px;
+    line-height: 50px;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #ffffe6;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
