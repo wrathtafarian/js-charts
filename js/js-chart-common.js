@@ -400,7 +400,7 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "footer_border_radius": "0px 0px 10px 10px",
         "footer_box_shadow": "none",
         "footer_inner_text": "2024 \u00A9 Wrathcom Ltd",
-        "color_palette": ["Orange", "#3E5879", "#213555", "#6A9AB0", "SkyBlue", "#BCCCDC", "#778899", "#BDB76B", "NavajoWhite", "DarkOliveGreen"],
+        "color_palette": ["Orange", "#3E5879", "#213555", "#6A9AB0", "hsl(182, 25%, 40%)", "#BCCCDC", "#778899", "#BDB76B", "NavajoWhite", "DarkOliveGreen"],
         "color_position": ["20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"],
         "bin_size": 1,
         "marker_width": "15px",
@@ -828,6 +828,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "span bar": {
         "alternative_names": ["range bar", "floating bar", "difference bar", "high low bar"],
         "chart_group": "span",
+        "chart_description": "A <strong>span chart</strong> (also known as a range bar chart) visually represents the range between two values over a category or time period, often using horizontal or vertical bars. It is useful for comparing variations, showing min-max ranges, or highlighting differences between two data points.",
+        "data_description": "A span chart uses <strong>numerical data</strong> that represents a <strong>range between two values</strong> (e.g., minimum and maximum, start and end) for a given category or time period. This data is typically continuous and can be used to compare variations, trends, or differences across multiple entities.",
         "data_type": "range",
         "draw_functionname": "jsChartDrawSpanBarChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -843,6 +845,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "span column": {
         "alternative_names": ["range column", "floating column", "difference column", "high low column"],
         "chart_group": "span",
+        "chart_description": "A <strong>span chart</strong> (also known as a range bar chart) visually represents the range between two values over a category or time period, often using horizontal or vertical bars. It is useful for comparing variations, showing min-max ranges, or highlighting differences between two data points.",
+        "data_description": "A span chart uses <strong>numerical data</strong> that represents a <strong>range between two values</strong> (e.g., minimum and maximum, start and end) for a given category or time period. This data is typically continuous and can be used to compare variations, trends, or differences across multiple entities.",
         "data_type": "range",
         "draw_functionname": "jsChartDrawSpanColumnChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -933,6 +937,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "waterfall bar": {
         "alternative_names": ["flying bar", "mario bar"],
         "chart_group": "waterfall",
+        "chart_description": "A <strong>waterfall chart</strong> visually represents how an initial value increases or decreases through a series of intermediate changes, leading to a final value. It is useful for analyzing cumulative effects in financial statements, profit and loss analysis, or any scenario where incremental changes impact a total.",
+        "data_description": "A waterfall chart uses <strong>sequential numerical data</strong> that represents <strong>incremental positive and negative changes</strong> contributing to a cumulative total. This data is often used in financial analysis, budgeting, or operational performance tracking, where individual contributions affect an overall value.",
         "data_type": "cumulative",
         "draw_functionname": "jsChartDrawWaterfallBarChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "ytitle", "xtitle", "scalemin", "scalemax", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -940,7 +946,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "ignore_negative_values": false,
         "ignore_zero_values": false,
         "requires_zero_baseline": true,
-        "allow_multiseries": true,
+        "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
         "type_options": {
         }
@@ -948,6 +954,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "waterfall column": {
         "alternative_names": ["flying column", "mario column"],
         "chart_group": "waterfall",
+        "chart_description": "A <strong>waterfall chart</strong> visually represents how an initial value increases or decreases through a series of intermediate changes, leading to a final value. It is useful for analyzing cumulative effects in financial statements, profit and loss analysis, or any scenario where incremental changes impact a total.",
+        "data_description": "A waterfall chart uses <strong>sequential numerical data</strong> that represents <strong>incremental positive and negative changes</strong> contributing to a cumulative total. This data is often used in financial analysis, budgeting, or operational performance tracking, where individual contributions affect an overall value.",
         "data_type": "cumulative",
         "draw_functionname": "jsChartDrawWaterfallColumnChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "ytitle", "xtitle", "scalemin", "scalemax", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -955,7 +963,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "ignore_negative_values": false,
         "ignore_zero_values": false,
         "requires_zero_baseline": true,
-        "allow_multiseries": true,
+        "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
         "type_options": {
         }
@@ -963,6 +971,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "histogram": {
         "alternative_names": [],
         "chart_group": "histogram",
+        "chart_description": "A <strong>histogram</strong> is a type of bar chart that represents the distribution of numerical data by grouping values into bins and displaying their frequencies. It helps visualize the shape, spread, and central tendency of a dataset, making it useful for identifying patterns such as skewness or outliers.",
+        "data_description": "A histogram is used for <strong>continuous numerical data</strong>, where values are grouped into <strong>intervals</strong> (<strong>bins</strong>) to show <strong>frequency distributions</strong>. It is ideal for visualizing data such as measurements, durations, or other quantitative variables that can be divided into ranges.",
         "data_type": "frequency",
         "draw_functionname": "jsChartDrawHistogramChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "sortdata", "scalemin", "scalemax", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -970,7 +980,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "ignore_negative_values": false,
         "ignore_zero_values": false,
         "requires_zero_baseline": true,
-        "allow_multiseries": true,
+        "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
         "type_options": {
         }
@@ -978,6 +988,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "scatter": {
         "alternative_names": ["scattergram"],
         "chart_group": "scatter",
+        "chart_description": "A <strong>scatter chart</strong> displays individual data points plotted along two numerical axes to show relationships, correlations, or distributions between variables. It is useful for identifying trends, clusters, and outliers in datasets, especially in statistical and scientific analyses.",
+        "data_description": "A scatter chart uses <strong>paired numerical data</strong>, where each data point consists of <strong>two continuous variables</strong> plotted on the x and y axes. This type of data is commonly used to analyze relationships, correlations, or distributions between variables in scientific, financial, and statistical contexts.",
         "data_type": "points",
         "draw_functionname": "jsChartDrawScatterChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "xscalemin", "xscalemax", "yscalemin", "yscalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "markertype", "showwidget"],
@@ -993,6 +1005,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "bubble": {
         "alternative_names": [],
         "chart_group": "scatter",
+        "chart_description": "A <strong>bubble chart</strong> is an extension of a scatter chart that uses bubbles (circles) to represent data points, where the x and y positions indicate two numerical variables, and the bubble size represents a third variable. It is useful for visualizing relationships, distributions, and comparisons across three dimensions of data in business, economics, and scientific analysis.",
+        "data_description": "A bubble chart uses <strong>numerical data</strong> with <strong>three variables per data point</strong>: two for positioning on the x and y axes and a third for bubble size, often representing magnitude or importance. This type of data is commonly used to compare relationships, distributions, and trends across multiple entities in business, finance, and scientific analysis.",
         "data_type": "points",
         "draw_functionname": "jsChartDrawBubbleChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "xscalemin", "xscalemax", "yscalemin", "yscalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -1084,6 +1098,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "candlestick": {
         "alternative_names": ["japanese candlestick"],
         "chart_group": "stock",
+        "chart_description": "A <strong>candlestick chart</strong> is a financial chart used to display price movements over time, where each candlestick represents the opening, closing, high, and low prices within a specific period. It is commonly used in stock market analysis and trading to identify trends, patterns, and market sentiment.",
+        "data_description": "A candlestick chart uses <strong>time-series financial data</strong>, where each data point consists of four numerical values: <strong>opening price</strong>, <strong>closing price</strong>, <strong>highest price</strong>, and <strong>lowest price</strong> within a specific time period. This data is commonly used in stock market analysis, forex trading, and commodities to track price trends and market fluctuations.",
         "data_type": "ohlc",
         "draw_functionname": "jsChartDrawCandlestickChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "limitdata", "scalemin", "scalemax", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
@@ -1091,7 +1107,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "ignore_negative_values": false,
         "ignore_zero_values": false,
         "requires_zero_baseline": false,
-        "allow_multiseries": true,
+        "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
         "type_options": {
             "enable_beta": true
