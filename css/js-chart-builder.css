@@ -47,6 +47,22 @@
 }
 .js-chart-builder-close-button {
     flex: 1 1 auto;
+    height: calc(var(--js-chart-builder-heading-panel-height) - 15px);
+    line-height: calc(var(--js-chart-builder-heading-panel-height) - 15px);
+    font-size: calc(var(--js-chart-builder-heading-panel-height) - 25px);
+    font-weight: 600;
+    text-align: center;
+    padding: 2px 5px 2px 5px;
+    margin: 2px 0px 0px 2px;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+/*
+.js-chart-builder-close-button {
+    flex: 1 1 auto;
     width: calc(var(--js-chart-builder-heading-panel-height) - 15px);
     height: calc(var(--js-chart-builder-heading-panel-height) - 15px);
     line-height: calc(var(--js-chart-builder-heading-panel-height) - 15px);
@@ -58,7 +74,6 @@
     margin: 2px 0px 0px 2px;
     cursor: pointer;
 }
-/*
 .js-chart-builder-close-button:hover {
     background-color: #ffbbbb;
 }
@@ -205,6 +220,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
+    background-color: lightyellow;
 }
 .js-chart-builder-directives-heading {
     font-size: 14px;
@@ -261,4 +277,86 @@
     color: black;
     font-size: 14px;
     font-weight: 600;
+}
+.js-chart-builder-series-outer-container {
+    border: 0.5px solid #bbbbbb;
+    border-radius: 5px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px 0px;
+}
+.js-chart-builder-series-label-container {
+    flex: 1 1 auto;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 5px 0px 0px 5px;
+}
+.js-chart-builder-series-middle-container {
+    flex: 1 1 auto;
+    width: calc(100% - (20px + 20px));
+    background-color: White;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 5px 10px;
+}
+.js-chart-builder-series-remove-button {
+    flex: 1 1 auto;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    writing-mode: vertical-lr;
+    background-color: crimson;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+.js-chart-builder-series-title-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+.js-chart-builder-series-data-grid-container {
+    display: grid;
+    grid-template-columns: 30px 150px calc(100% - (30px + 150px + 30px)) 30px;
+    grid-template-rows: 30px;
+    grid-auto-rows: 30px;
+    row-gap: 5px;
+    font-size: 14px;
+}
+.js-chart-builder-series-data-grid-header {
+    line-height: 30px;
+    text-align: center;
+    background-color: cadetblue;
+    color: white;
+    font-weight: 400;
+}
+.js-chart-builder-series-data-set-button {
+    width: 150px;
+    background-color: rgb(34, 140, 34);
+    margin: 10px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 30px;
+    border: 0.5px solid rgb(51, 51, 51);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+.js-chart-builder-series-data-series-row-index {
+    line-height: 30px;
+    text-align: center;
+}
+.js-chart-builder-series-data-set-remove-button {
+    text-align: center;
+    line-height: 30px;
+    background-color: crimson;
+    color: white;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -6,7 +6,7 @@
 
 const BUILDER_DEFAULTS = {
     //"chart_type": IDEFAULT_CHART_ATTRIBUTES["type"].default,
-    "chart_type": "candlestick",
+    "chart_type": "box plot",
     "template_name": IDEFAULT_CHART_ATTRIBUTES["template"].default,
     "data": {
         "categorical": {
@@ -86,6 +86,64 @@ const BUILDER_DEFAULTS = {
                 "low": [119.44, 121.42, 127.36, 126.8537, 120.1201, 114.4501, 114.41],
                 "close": [120.63, 125.37, 129.55, 127.33, 121.84, 116.04, 117.32]
             }
+        },
+        "hierarchical": {
+            "chart_title": "Stock levels",
+            "data": {
+                "title": "Stock level",
+                "nodes": [
+                    {"title": "Engine", "value": 12},
+                    {"title": "Transmission", "value": 48},
+                    {"title": "Battery", "value": 21},
+                    {"title": "Alternator", "value": 67},
+                    {"title": "Radiator", "value": 52},
+                    {"title": "Brake Pads", "value": 41},
+                    {"title": "Tires", "value": 97},
+                    {"title": "Steering Wheel", "value": 34},
+                    {"title": "Air Filter", "value": 81},
+                    {"title": "Exhaust System", "value": 41},
+                    {"title": "Fuel Pump", "value": 57},
+                    {"title": "Timing Belt", "value": 68},
+                    {"title": "Clutch", "value": 13},
+                    {"title": "Shock Absorbers", "value": 75},
+                    {"title": "Wipers", "value": 73},
+                    {"title": "Headlights", "value": 94},
+                    {"title": "Taillights", "value": 18},
+                    {"title": "Side Mirrors", "value": 45},
+                    {"title": "Spark Plugs", "value": 62},
+                    {"title": "Differential", "value": 84},
+                    {"title": "Drive Shaft", "value": 24},
+                    {"title": "Fender", "value": 55},
+                    {"title": "Bumper", "value": 29},
+                    {"title": "Grille", "value": 75},
+                    {"title": "Windshield", "value": 41}
+                ]
+            }
+        },
+        "series": {
+            "chart_title": "Courier Service Delivery Time Performance",
+            "data": [
+                {
+                    "title": "New York",
+                    "data": [5, 6, 7, 6, 5, 8, 9, 6, 5, 7]
+                },
+                {
+                    "title": "Los Angeles",
+                    "data": [1, 5, 6, 7, 4, 5, 6, 7, 8, 5]
+                },
+                {
+                    "title": "Chicago",
+                    "data": [6, 7, 8, 9, 6, 7, 6, 5, 8, 9]
+                },
+                {
+                    "title": "Houston",
+                    "data": [3, 4, 5, 6, 3, 4, 5, 5, 6, 4]
+                },
+                {
+                    "title": "Miami",
+                    "data": [2, 3, 4, 3, 2, 3, 4, 3, 5, 9]
+                }
+            ]
         }
     }
 }
@@ -861,6 +919,1034 @@ function jsChartBuilderPopulateHistogramPreviewData_Boundary(bin_first_edge, bin
     return true;
 }
 
+/*
+// define series value containers + inputs
+function jsChartBuilderPopulateInputData_Series_Values_Values(series_values_container, chart_series_container, insert_element = false) {
+
+var series_data_index = (document.getElementsByClassName("js-chart-builder-series-outer-container").length % BUILDER_DEFAULTS.data.series.data.length);
+    if (series_data_index > 0) {
+        series_data_index--;
+    }
+
+    // value inner container
+    var value_inner_container = document.createElement("div");
+    var value_inner_container_style = document.createAttribute("style");
+    value_inner_container_style.value = "flex: 1 1 auto; display: flex; flex-direction: row; border: 0.5px solid #666666; border-radius: 3px; margin: 0px 0px 10px 0px;";
+    value_inner_container.setAttributeNode( value_inner_container_style );
+    var value_inner_container_class = document.createAttribute("class");
+    value_inner_container_class.value = "js-chart-builder-series-value-inner-container";
+    value_inner_container.setAttributeNode( value_inner_container_class );
+    if (insert_element) {
+        series_values_container.insertBefore( value_inner_container, series_values_container.children[ (series_values_container.children.length-1) ] );
+    } else {
+        series_values_container.appendChild( value_inner_container );
+    }
+
+    // value inner left container
+    var value_left_inner_container = document.createElement("div");
+    var value_left_inner_container_style = document.createAttribute("style");
+    value_left_inner_container_style.value = "flex: 1 1 auto; width: 20px; background-color: CadetBlue; color: White; line-height: 20px; writing-mode: vertical-lr; text-align: center; font-size: 13px; font-weight: 600;";
+    value_left_inner_container.setAttributeNode( value_left_inner_container_style );
+    value_left_inner_container.innerText = "Data set " + series_values_container.getElementsByClassName("js-chart-builder-series-value-inner-container").length;
+    value_inner_container.appendChild( value_left_inner_container );
+
+    // value inner main container
+    var value_left_main_container = document.createElement("div");
+    var value_left_main_container_style = document.createAttribute("style");
+    value_left_main_container_style.value = "flex: 1 1 auto; width: calc(100% - (20px + 20px)); padding: 0px 0px 0px 10px;";
+    value_left_main_container.setAttributeNode( value_left_main_container_style );
+    value_inner_container.appendChild( value_left_main_container );
+
+    // value inner right container
+    var value_right_inner_container = document.createElement("div");
+    var value_right_inner_container_style = document.createAttribute("style");
+    value_right_inner_container_style.value = "flex: 1 1 auto; width: 20px; background-color: Crimson; color: White; line-height: 20px; writing-mode: vertical-lr; text-align: center; font-size: 12px; font-weight: 400; border-radius: 0px 3px 3px 0px; cursor: pointer;";
+    value_right_inner_container.setAttributeNode( value_right_inner_container_style );
+    value_right_inner_container.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    value_right_inner_container.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    value_right_inner_container.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    value_right_inner_container.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    value_right_inner_container.innerText = "Remove";
+    value_inner_container.appendChild( value_right_inner_container );
+
+    // value title label
+    var series_title_label = document.createElement("div");
+    var series_title_label_style = document.createAttribute("style");
+    series_title_label_style.value = "flex: 1 1 auto; font-size: 13px; font-weight: 600;";
+    series_title_label.setAttributeNode( series_title_label_style );
+    series_title_label.innerText = "Data value set name or short description";
+    value_left_main_container.appendChild( series_title_label );
+
+    // values input
+    var values_label_input = document.createElement("input");
+    var values_label_input_type = document.createAttribute("type");
+    values_label_input_type.value = "TEXT";
+    values_label_input.setAttributeNode( values_label_input_type );
+    var values_label_input_style = document.createAttribute("style");
+    values_label_input_style.value = "flex: 1 1 auto;";
+    values_label_input.setAttributeNode( values_label_input_style );
+    values_label_input.value = BUILDER_DEFAULTS.data.series.data[ series_data_index ].title;
+    value_left_main_container.appendChild( values_label_input );
+
+    // value values label
+    var values_title_label = document.createElement("div");
+    var values_title_label_style = document.createAttribute("style");
+    values_title_label_style.value = "flex: 1 1 auto; font-size: 13px; font-weight: 600;";
+    values_title_label.setAttributeNode( values_title_label_style );
+    values_title_label.innerHTML = "Data values <span style=\"font-size: 10px;\">(comma-separated list of numeric values)</span>";
+    value_left_main_container.appendChild( values_title_label );
+
+    // values input
+    var values_values_input = document.createElement("input");
+    var values_values_input_type = document.createAttribute("type");
+    values_values_input_type.value = "TEXT";
+    values_values_input.setAttributeNode( values_values_input_type );
+    var values_values_input_style = document.createAttribute("style");
+    values_values_input_style.value = "flex: 1 1 auto; margin: 0px 0px 10px 0px;";
+    values_values_input.setAttributeNode( values_values_input_style );
+    values_values_input.value = BUILDER_DEFAULTS.data.series.data[ series_data_index ].data.join(", ");
+    value_left_main_container.appendChild( values_values_input );
+
+    // set the preview chart container
+    var value_container = document.createElement("div");
+    var value_container_class = document.createAttribute("class");
+    value_container_class.value = "js-values";
+    value_container.setAttributeNode( value_container_class );
+    var value_container_title = document.createAttribute("title");
+    value_container_title.value = BUILDER_DEFAULTS.data.series.data[ series_data_index ].title;
+    value_container.setAttributeNode( value_container_title );
+    value_container.innerText = BUILDER_DEFAULTS.data.series.data[ series_data_index ].data.join(", ");
+    chart_series_container.appendChild( value_container );
+
+    return true;
+}
+// define the input controls for series values
+function jsChartBuilderPopulateInputData_Series_Values(data_panel) {
+
+    // series outer container
+    var series_outer_container = document.createElement("div");
+    var series_outer_container_class = document.createAttribute("class");
+    series_outer_container_class.value = "js-chart-builder-series-outer-container";
+    series_outer_container.setAttributeNode( series_outer_container_class );
+    var series_outer_container_style = document.createAttribute("style");
+    series_outer_container_style.value = "display: flex; flex-direction: row; border: 0.5px solid #dcdcdc; border-radius: 5px; min-height: 30px; margin: 10px 0px 0px 0px;";
+    series_outer_container.setAttributeNode( series_outer_container_style );
+    data_panel.insertBefore(series_outer_container, data_panel.children[ (data_panel.children.length-1) ]);
+
+    // series inner container
+    var series_inner_container = document.createElement("div");
+    var series_inner_container_style = document.createAttribute("style");
+    series_inner_container_style.value = "flex: 1 1 auto; width: calc(100% - 20px); background-color: hsl(198, 73%, 90%); display: flex; flex-direction: column; padding: 5px 10px 5px 10px;";
+    series_inner_container.setAttributeNode( series_inner_container_style );
+    series_outer_container.appendChild( series_inner_container );
+
+    // series title label
+    var series_title_label = document.createElement("div");
+    var series_title_label_style = document.createAttribute("style");
+    series_title_label_style.value = "flex: 1 1 auto; font-size: 13px; font-weight: 600;";
+    series_title_label.setAttributeNode( series_title_label_style );
+    series_title_label.innerText = "Series name or short description";
+    series_inner_container.appendChild( series_title_label );
+
+    var series_data_index = (document.getElementsByClassName("js-chart-builder-series-outer-container").length % BUILDER_DEFAULTS.data.series.data.length);
+    if (series_data_index > 0) {
+        series_data_index--;
+    }
+
+    // series title input
+    var series_title_input = document.createElement("input");
+    var series_title_input_type = document.createAttribute("type");
+    series_title_input_type.value = "TEXT";
+    series_title_input.setAttributeNode( series_title_input_type );
+    var series_title_input_style = document.createAttribute("style");
+    series_title_input_style.value = "flex: 1 1 auto;";
+    series_title_input.setAttributeNode( series_title_input_style );
+    series_title_input.value = BUILDER_DEFAULTS.data.series.data[ series_data_index ].title;
+    series_inner_container.appendChild( series_title_input );
+
+    // series value containers
+    var series_values_container = document.createElement("div");
+    var series_values_container_style = document.createAttribute("style");
+    series_values_container_style.value = "flex: 1 1 auto; display: flex; flex-direction: column; margin: 0px 0px 0px 10px; border: 0.5px solid #dcdcdc; border-radius: 5px; min-height: 30px; background-color: hsl(79, 61%, 80%); padding: 5px 10px 5px 10px;";
+    series_values_container.setAttributeNode( series_values_container_style );
+    //series_inner_container.appendChild( series_values_container );
+    //series_inner_container.insertBefore(series_values_container,series_inner_container.children[ (series_inner_container.children.length-1) ]);
+    series_inner_container.appendChild( series_values_container );
+
+    // draw the chart series container
+    var chart_series_container = document.createElement("div");
+    var chart_series_container_class = document.createAttribute("class");
+    chart_series_container_class.value = "js-series";
+    chart_series_container.setAttributeNode( chart_series_container_class );
+    document.getElementById("js-chart-builder-preview").appendChild( chart_series_container );
+
+    var draw_values = jsChartBuilderPopulateInputData_Series_Values_Values(series_values_container, chart_series_container, false);
+
+
+    // add more data values button
+    var more_values_button = document.createElement("div");
+    var more_values_button_style = document.createAttribute("style");
+    more_values_button_style.value = "flex: 1 1 auto; width: 120px; background-color: rgb(34, 140, 34); margin: 10px 0px; font-size: 14px; font-weight: 400; text-align: center; height: 30px; line-height: 30px; border: 0.5px solid black; border-radius: 3px; color: white; cursor: pointer;";
+    more_values_button.setAttributeNode( more_values_button_style );
+    more_values_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    more_values_button.addEventListener("mousedown", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    more_values_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    more_values_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    more_values_button.addEventListener("click", function () {
+
+        var draw_series_values_container = jsChartBuilderPopulateInputData_Series_Values_Values(series_values_container, chart_series_container, true);
+
+    }, false);
+    more_values_button.innerText = "+More Values";
+    series_values_container.appendChild( more_values_button );
+
+    // remove button
+    var remove_button_container = document.createElement("div");
+    var remove_button_container_style = document.createAttribute("style");
+    remove_button_container_style.value = "flex: 1 1 auto; width: 20px; line-height: 20px; text-align: center; color: White; background-color: Crimson; border: 0.5px solid black; border-radius: 0px 5px 5px 0px; writing-mode: vertical-lr; cursor: pointer;";
+    remove_button_container.setAttributeNode( remove_button_container_style );
+    remove_button_container.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    remove_button_container.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    remove_button_container.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    remove_button_container.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    remove_button_container.innerText = "Remove";
+    series_outer_container.appendChild( remove_button_container );
+
+    return true;
+}
+// add data set for a series container
+function jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid, preview_series_container) {
+
+    var num_of_rows = data_set_grid.getElementsByClassName("js-chart-builder-series-data-set-row").length;
+    var data_index = ((num_of_rows + 1) % BUILDER_DEFAULTS.data.series.data.length) - 1;
+    if (data_index < 0) {
+        data_index = (BUILDER_DEFAULTS.data.series.data.length - 1);
+    }
+
+    // row number
+    var row_number = document.createElement("div");
+    var row_number_style = document.createAttribute("style");
+    row_number_style.value = "line-height: 30px; text-align: center;";
+    row_number.setAttributeNode( row_number_style );
+    var row_number_class = document.createAttribute("class");
+    row_number_class.value = "js-chart-builder-series-data-set-row";
+    row_number.setAttributeNode( row_number_class );
+    row_number.innerText = (num_of_rows + 1);
+    data_set_grid.appendChild( row_number );
+
+    // row name
+    var row_name = document.createElement("input");
+    var row_name_type = document.createAttribute("type");
+    row_name_type.value = "TEXT";
+    row_name.setAttributeNode( row_name_type );
+    var row_name_style = document.createAttribute("style");
+    row_name_style.value = "margin: 0px 5px 0px 0px;";
+    row_name.setAttributeNode( row_name_style );
+    row_name.addEventListener("change", function () {
+
+        preview_series_container.children[ (parseInt(this.previousElementSibling.innerText)-1) ].setAttribute("title", this.value);
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    row_name.value = BUILDER_DEFAULTS.data.series.data[ data_index ].title;
+    data_set_grid.appendChild( row_name );
+
+    // row values
+    var row_values = document.createElement("input");
+    var row_values_type = document.createAttribute("type");
+    row_values_type.value = "TEXT";
+    row_values.setAttributeNode( row_values_type );
+    var row_values_style = document.createAttribute("style");
+    row_values_style.value = "margin: 0px 5px 0px 0px;";
+    row_values.setAttributeNode( row_values_style );
+    row_values.addEventListener("change", function () {
+
+        preview_series_container.children[ (parseInt(this.previousElementSibling.previousElementSibling.innerText)-1) ].innerText = this.value;
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    row_values.value = BUILDER_DEFAULTS.data.series.data[ data_index].data.join(", ");
+    data_set_grid.appendChild( row_values );
+
+    // row remove
+    var row_remove = document.createElement("div");
+    var row_remove_style = document.createAttribute("style");
+    row_remove_style.value = "text-align: center; font-weight: 400; background-color: crimson; color: white; border: 0.5px solid #bbbbbb; border-radius: 3px; line-height: 30px; cursor: pointer;";
+    row_remove.setAttributeNode( row_remove_style );
+    var row_remove_title = document.createAttribute("title");
+    row_remove_title.value = "Remove one data row";
+    row_remove.setAttributeNode( row_remove_title );
+    row_remove.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    row_remove.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    row_remove.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    row_remove.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    row_remove.addEventListener("click", function () {
+
+    preview_series_container.children[ (parseInt(this.previousElementSibling.previousElementSibling.previousElementSibling.innerText)-1) ].remove();
+
+        this.previousElementSibling.previousElementSibling.previousElementSibling.remove();
+        this.previousElementSibling.previousElementSibling.remove();
+        this.previousElementSibling.remove();
+        this.remove();
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+        for (var tt = 0; tt < document.getElementsByClassName("js-chart-builder-series-data-set-row").length; tt++) {
+            document.getElementsByClassName("js-chart-builder-series-data-set-row")[tt].innerText = (tt + 1);
+        }
+
+    }, false);
+    row_remove.innerText = "X";
+    data_set_grid.appendChild( row_remove );
+
+    // update the preview chart
+    var new_values = document.createElement("div");
+    var new_values_class = document.createAttribute("class");
+    new_values_class.value = "js-values";
+    new_values.setAttributeNode( new_values_class );
+    var new_values_title = document.createAttribute("title");
+    new_values_title.value = BUILDER_DEFAULTS.data.series.data[ data_index ].title;
+    new_values.setAttributeNode( new_values_title );
+    new_values.innerText = BUILDER_DEFAULTS.data.series.data[ data_index ].data.join(", ");
+    preview_series_container.appendChild( new_values );
+
+    var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+
+    return true;
+}
+// add series container
+function jsChartBuilderPopulateInputData_SeriesContainer(data_panel) {
+
+    var get_series_container = document.getElementsByClassName("js-chart-builder-series-outer-container");
+
+    // series outer container
+    var series_outer_container = document.createElement("div");
+    var series_outer_container_style = document.createAttribute("style");
+    series_outer_container_style.value = "border: 0.5px solid #bbbbbb; border-radius: 5px; margin: 10px 0px 0px 0px; display: flex; flex-direction: row;";
+    series_outer_container.setAttributeNode( series_outer_container_style );
+    var series_outer_container_class = document.createAttribute("class");
+    series_outer_container_class.value = "js-chart-builder-series-outer-container";
+    series_outer_container.setAttributeNode( series_outer_container_class );
+    data_panel.insertBefore(series_outer_container, data_panel.children[ (data_panel.children.length-1) ]);
+
+    // left series container - series label
+    var series_outer_container_label = document.createElement("div");
+    var series_outer_container_label_style = document.createAttribute("style");
+    series_outer_container_label_style.value = "flex: 1 1 auto; width: 30px; line-height: 30px; writing-mode: vertical-lr; background-color: hsl(182, 25%, 50%); color: white; font-weight: 400; text-align: center;";
+    series_outer_container_label.setAttributeNode( series_outer_container_label_style );
+    series_outer_container_label.innerText = "Series " + (get_series_container.length);
+    series_outer_container.appendChild( series_outer_container_label );
+
+    // middle series container
+    var middle_series_container = document.createElement("div");
+    var middle_series_container_style = document.createAttribute("style");
+    middle_series_container_style.value = "flex: 1 1 auto; width: calc(100% - (30px + 20px)); background-color: white; display: flex; flex-direction: column; padding: 5px 10px 5px 10px;";
+    middle_series_container.setAttributeNode( middle_series_container_style );
+    series_outer_container.appendChild( middle_series_container );
+
+    // middle series container - series title label
+    var series_label_container = document.createElement("div");
+    var series_label_container_style = document.createAttribute("style");
+    series_label_container_style.value = "flex: 1 1 auto; font-size: 14px; font-weight: 500;";
+    series_label_container.setAttributeNode( series_label_container_style );
+    series_label_container.innerText = "Series name or short description:";
+    middle_series_container.appendChild( series_label_container );
+
+    // middle series container - series title input
+    var series_index = (get_series_container.length % BUILDER_DEFAULTS.data.series.data.length) -1;
+    if (series_index < 0) {
+        series_index = (BUILDER_DEFAULTS.data.series.data.length - 1);
+    }
+
+    // update preview chart
+    var preview_series_container = document.createElement("div");
+    var preview_series_container_class = document.createAttribute("class");
+    preview_series_container_class.value = "js-series";
+    preview_series_container.setAttributeNode( preview_series_container_class );
+    var preview_series_container_title = document.createAttribute("title");
+    preview_series_container_title.value = BUILDER_DEFAULTS.data.series.data[ series_index ].title;
+    preview_series_container.setAttributeNode( preview_series_container_title );
+    document.getElementById("js-chart-builder-preview").appendChild( preview_series_container );
+
+    var series_label_input = document.createElement("input");
+    var series_label_input_type = document.createAttribute("type");
+    series_label_input_type.value = "TEXT";
+    series_label_input.setAttributeNode( series_label_input_type );
+    series_label_input.addEventListener("change", function () {
+
+        preview_series_container.setAttribute("title", this.value);
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    series_label_input.value = BUILDER_DEFAULTS.data.series.data[ series_index ].title;
+    middle_series_container.appendChild( series_label_input );
+
+    // data sets table/grid
+    var data_set_grid = document.createElement("div");
+    var data_set_grid_style = document.createAttribute("style");
+    data_set_grid_style.value = "display: grid; grid-template-columns: 30px 200px calc(100% - (30px + 200px + 30px)) 30px; grid-template-rows: 30px; grid-auto-rows: 30px; row-gap: 5px; margin: 5px 0px 0px 0px;";
+    data_set_grid.setAttributeNode( data_set_grid_style );
+    var data_set_grid_class = document.createAttribute("class");
+    data_set_grid_class.value = "js-chart-builder-series-data-set-grid";
+    data_set_grid.setAttributeNode( data_set_grid_class );
+    middle_series_container.append( data_set_grid );
+
+    // grid header (#)
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_style = document.createAttribute("style");
+    data_set_grid_header_style.value = "font-size: 13px; font-weight: 400; text-align: center; background-color: cadetblue; color: white; line-height: 30px; border-radius: 5px 0px 0px 0px;";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
+    data_set_grid_header.innerText = "#";
+    data_set_grid.append( data_set_grid_header );
+
+    // grid header (Name)
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_style = document.createAttribute("style");
+    data_set_grid_header_style.value = "font-size: 13px; font-weight: 400; text-align: center; background-color: cadetblue; color: white; line-height: 30px;";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
+    data_set_grid_header.innerText = "Name or short desc.";
+    data_set_grid.append( data_set_grid_header );
+
+    // grid header (Values)
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_style = document.createAttribute("style");
+    data_set_grid_header_style.value = "font-size: 13px; font-weight: 400; text-align: center; background-color: cadetblue; color: white; line-height: 30px;";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
+    data_set_grid_header.innerHTML = "Values <span style=\"font-size: 10px;\">(comma-separated list of numeric values)</span>";
+    data_set_grid.append( data_set_grid_header );
+
+    // grid header (remove)
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_style = document.createAttribute("style");
+    data_set_grid_header_style.value = "font-size: 13px; font-weight: 400; text-align: center; background-color: cadetblue; color: white; line-height: 30px; border-radius: 0px 5px 0px 0px;";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
+    //data_set_grid_header.innerText = "X";
+    data_set_grid.append( data_set_grid_header );
+
+
+    // add data set button
+    var more_data_set_button = document.createElement("div");
+    var more_data_set_button_style = document.createAttribute("style");
+    more_data_set_button_style.value = "width: 150px; background-color: forestgreen; margin: 10px 0px; font-weight: 400; font-size: 13px; font-weight: 400; text-align: center; line-height: 20px; border: 0.5px solid #333333; border-radius: 3px; color: white; cursor: pointer;";
+    more_data_set_button.setAttributeNode( more_data_set_button_style );
+    more_data_set_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    more_data_set_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    more_data_set_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    more_data_set_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    more_data_set_button.addEventListener("click", function () {
+
+        var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid, preview_series_container);
+
+    }, false);
+    more_data_set_button.innerText = "+More Data Set";
+    middle_series_container.appendChild( more_data_set_button );
+
+    // add one dta row by default
+    var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid, preview_series_container);
+
+    // right series container - remove button
+    var right_series_container = document.createElement("div");
+    var right_series_container_style = document.createAttribute("style");
+    right_series_container_style.value = "flex: 1 1 auto; width: 20px; line-height: 20px; writing-mode: vertical-lr; background-color: crimson; color: white; font-weight: 400; text-align: center; cursor: pointer;";
+    right_series_container.setAttributeNode( right_series_container_style );
+    right_series_container.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    right_series_container.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    right_series_container.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    right_series_container.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    right_series_container.addEventListener("click", function () {
+
+        preview_series_container.remove()
+        this.parentElement.remove();
+
+        for (var tt = 0; tt <= document.getElementsByClassName("js-chart-builder-series-outer-container").length; tt++) {
+            document.getElementsByClassName("js-chart-builder-series-outer-container")[tt].children[0].innerText = "Series " + (tt+1);
+        }
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    right_series_container.innerText = "Remove Series";
+    series_outer_container.appendChild( right_series_container );
+
+    return true;
+}
+*/
+
+// add a data set to a series container
+function jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid_container, preview_series_container) {
+
+    var rownum = data_set_grid_container.getElementsByClassName("js-chart-builder-series-data-series-row-index").length;
+    var data_index = ((rownum + 1) % BUILDER_DEFAULTS.data.series.data.length) - 1;
+    if (data_index < 0) {
+        data_index = (BUILDER_DEFAULTS.data.series.data.length - 1);
+    }
+
+    // row count
+    var row_counter = document.createElement("div");
+    var row_counter_class = document.createAttribute("class");
+    row_counter_class.value = "js-chart-builder-series-data-series-row-index";
+    row_counter.setAttributeNode( row_counter_class );
+    row_counter.innerText = (rownum + 1);
+    data_set_grid_container.appendChild( row_counter );
+
+    // data set name
+    var data_set_name = document.createElement("input");
+    var data_set_name_type = document.createAttribute("type");
+    data_set_name_type.value = "TEXT";
+    data_set_name.setAttributeNode( data_set_name_type );
+    var data_set_name_style = document.createAttribute("style");
+    data_set_name_style.value = "margin: 0px 5px 0px 0px;";
+    data_set_name.setAttributeNode( data_set_name_style );
+    data_set_name.addEventListener("change", function () {
+
+        for (var tt = 0; tt < document.getElementsByClassName("js-chart-builder-series-outer-container").length; tt++) {
+            if (this.parentElement.parentElement.parentElement == document.getElementsByClassName("js-chart-builder-series-outer-container")[tt]) {
+
+                var preview_chart = document.getElementById("js-chart-builder-preview");
+                preview_chart.getElementsByClassName("js-series")[tt].getElementsByClassName("js-values")[ rownum ].setAttribute("title", this.value);
+
+                var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+            }
+        }
+
+    }, false);
+    data_set_name.value = BUILDER_DEFAULTS.data.series.data[ data_index ].title + " " + rownum;
+    data_set_grid_container.appendChild( data_set_name );
+
+    // data set values
+    var data_set_values = document.createElement("input");
+    var data_set_values_type = document.createAttribute("type");
+    data_set_values_type.value = "TEXT";
+    data_set_values.setAttributeNode( data_set_values_type );
+    var data_set_values_style = document.createAttribute("style");
+    data_set_values_style.value = "margin: 0px 5px 0px 0px;";
+    data_set_values.setAttributeNode( data_set_values_style );
+    data_set_values.addEventListener("change", function () {
+
+        for (var tt = 0; tt < document.getElementsByClassName("js-chart-builder-series-outer-container").length; tt++) {
+            if (this.parentElement.parentElement.parentElement == document.getElementsByClassName("js-chart-builder-series-outer-container")[tt]) {
+
+                var preview_chart = document.getElementById("js-chart-builder-preview");
+                preview_chart.getElementsByClassName("js-series")[tt].getElementsByClassName("js-values")[ rownum ].innerText = this.value;
+
+                var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+            }
+        }
+
+    }, false);
+    data_set_values.value = BUILDER_DEFAULTS.data.series.data[ data_index ].data.join(", ");
+    data_set_grid_container.appendChild( data_set_values );
+
+    // data set remove
+    var data_set_remove_button = document.createElement("div");
+    var data_set_remove_button_class = document.createAttribute("class");
+    data_set_remove_button_class.value = "js-chart-builder-series-data-set-remove-button";
+    data_set_remove_button.setAttributeNode( data_set_remove_button_class );
+    var data_set_remove_button_title = document.createAttribute("title");
+    data_set_remove_button_title.value = "Remove data set";
+    data_set_remove_button.setAttributeNode( data_set_remove_button_title );
+    data_set_remove_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    data_set_remove_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    data_set_remove_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    data_set_remove_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    data_set_remove_button.addEventListener("click", function () {
+
+        for (var tt = 0; tt < document.getElementsByClassName("js-chart-builder-series-outer-container").length; tt++) {
+            if (this.parentElement.parentElement.parentElement == document.getElementsByClassName("js-chart-builder-series-outer-container")[tt]) {
+
+                var preview_chart = document.getElementById("js-chart-builder-preview");
+                preview_chart.getElementsByClassName("js-series")[tt].getElementsByClassName("js-values")[ (parseInt(this.previousElementSibling.previousElementSibling.previousElementSibling.innerText)-1) ].remove();
+
+            }
+        }
+
+        this.previousElementSibling.previousElementSibling.previousElementSibling.remove();
+        this.previousElementSibling.previousElementSibling.remove();
+        this.previousElementSibling.remove();
+        this.remove();
+
+        for (var tt = 0; tt < data_set_grid_container.getElementsByClassName("js-chart-builder-series-data-series-row-index").length; tt++) {
+            data_set_grid_container.getElementsByClassName("js-chart-builder-series-data-series-row-index")[tt].innerText = (tt+1);
+        }
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    data_set_remove_button.innerText = "X";
+    data_set_grid_container.appendChild( data_set_remove_button );
+
+    // update preview chart
+    var new_values = document.createElement("div");
+    var new_values_class = document.createAttribute("class");
+    new_values_class.value = "js-values";
+    new_values.setAttributeNode( new_values_class );
+    var new_values_title = document.createAttribute("title");
+    new_values_title.value = BUILDER_DEFAULTS.data.series.data[ data_index ].title + " " + rownum;
+    new_values.setAttributeNode( new_values_title );
+    new_values.innerText = BUILDER_DEFAULTS.data.series.data[ data_index ].data.join(", ");
+    preview_series_container.appendChild( new_values );
+
+    var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    return true;
+}
+// add series container
+function jsChartBuilderPopulateInputData_SeriesContainer(data_panel) {
+
+    var series_outer_container_element = document.getElementsByClassName("js-chart-builder-series-outer-container");
+    var connum = series_outer_container_element.length;
+    var con_index = ((connum + 1) % BUILDER_DEFAULTS.data.series.data.length) - 1;
+    if (con_index < 0) {
+        con_index = (BUILDER_DEFAULTS.data.series.data.length - 1);
+    }
+
+    // series outer container
+    var series_outer_container = document.createElement("div");
+    var series_outer_container_class = document.createAttribute("class");
+    series_outer_container_class.value = "js-chart-builder-series-outer-container";
+    series_outer_container.setAttributeNode( series_outer_container_class );
+    var series_outer_container_connum = document.createAttribute("connum");
+    series_outer_container_connum.value = connum;
+    series_outer_container.setAttributeNode( series_outer_container_connum );
+    data_panel.insertBefore(series_outer_container, data_panel.children[ (data_panel.children.length-1) ] );
+
+    // series outer container - left label
+    var series_label_container = document.createElement("div");
+    var series_label_container_class = document.createAttribute("class");
+    series_label_container_class.value = "js-chart-builder-series-label-container";
+    series_label_container.setAttributeNode( series_label_container_class );
+    series_label_container.innerText = "Series " + (series_outer_container_element.length);
+    series_outer_container.appendChild( series_label_container );
+
+    // series outer container - middle container
+    var middle_series_container = document.createElement("div");
+    var middle_series_container_class = document.createAttribute("class");
+    middle_series_container_class.value = "js-chart-builder-series-middle-container";
+    middle_series_container.setAttributeNode( middle_series_container_class );
+    series_outer_container.appendChild( middle_series_container );
+
+    // series outer container - middle container - series title label
+    var series_title_label = document.createElement("div");
+    var series_title_label_class = document.createAttribute("class");
+    series_title_label_class.value = "js-chart-builder-series-title-label";
+    series_title_label.setAttributeNode( series_title_label_class );
+    series_title_label.innerHTML = "Series name or short description:";
+    middle_series_container.appendChild( series_title_label );
+
+    // series outer container - middle container - series title input
+    var series_title_input = document.createElement("input");
+    var series_title_input_type = document.createAttribute("type");
+    series_title_input_type.value = "TEXT";
+    series_title_input.setAttributeNode( series_title_input_type );
+    series_title_input.value = BUILDER_DEFAULTS.data.series.data[ con_index ].title;
+    series_title_input.addEventListener("change", function () {
+
+        for (var tt = 0; tt < document.getElementsByClassName("js-chart-builder-series-outer-container").length; tt++) {
+            if (this.parentElement.parentElement == document.getElementsByClassName("js-chart-builder-series-outer-container")[tt]) {
+
+                var preview_chart = document.getElementById("js-chart-builder-preview");
+                preview_chart.getElementsByClassName("js-series")[tt].setAttribute("title", this.value);
+
+                var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+            }
+        }
+
+    }, false);
+    middle_series_container.appendChild( series_title_input );
+
+    // update the preview chart
+    var preview_chart = document.getElementById("js-chart-builder-preview");
+
+    var preview_series_container = document.createElement("div");
+    var preview_series_container_class = document.createAttribute("class");
+    preview_series_container_class.value = "js-series";
+    preview_series_container.setAttributeNode( preview_series_container_class );
+    var preview_series_container_title = document.createAttribute("title");
+    preview_series_container_title.value = BUILDER_DEFAULTS.data.series.data[ con_index ].title;
+    preview_series_container.setAttributeNode( preview_series_container_title );
+    preview_chart.appendChild( preview_series_container );
+
+    // series outer container - middle container - data set label
+    var data_set_label_heading = document.createElement("div");
+    var data_set_label_heading_class = document.createAttribute("class");
+    data_set_label_heading_class.value = "js-chart-builder-series-title-label";
+    data_set_label_heading.setAttributeNode( data_set_label_heading_class );
+    data_set_label_heading.innerHTML = "Data sets:";
+    middle_series_container.appendChild( data_set_label_heading );
+
+    // series outer container - middle container - data set grid container
+    var data_set_grid_container = document.createElement("div");
+    var data_set_grid_container_class = document.createAttribute("class");
+    data_set_grid_container_class.value = "js-chart-builder-series-data-grid-container";
+    data_set_grid_container.setAttributeNode( data_set_grid_container_class );
+    middle_series_container.appendChild( data_set_grid_container );
+
+    // data set grid header - row index
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_class = document.createAttribute("class");
+    data_set_grid_header_class.value = "js-chart-builder-series-data-grid-header";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_class );
+    var data_set_grid_header_style = document.createAttribute("style");
+    data_set_grid_header_style.value = "border-radius: 5px 0px 0px 0px;";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
+    data_set_grid_header.innerText = "#";
+    data_set_grid_container.appendChild( data_set_grid_header );
+
+    // data set grid header - data set title
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_class = document.createAttribute("class");
+    data_set_grid_header_class.value = "js-chart-builder-series-data-grid-header";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_class );
+    data_set_grid_header.innerText = "Name";
+    data_set_grid_container.appendChild( data_set_grid_header );
+
+    // data set grid header - data set values
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_class = document.createAttribute("class");
+    data_set_grid_header_class.value = "js-chart-builder-series-data-grid-header";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_class );
+    data_set_grid_header.innerHTML = "Values <span style=\"font-size: 10px;\">(comma-separated list of numeric values)</span>";
+    data_set_grid_container.appendChild( data_set_grid_header );
+
+    // data set grid header - remove column
+    var data_set_grid_header = document.createElement("div");
+    var data_set_grid_header_class = document.createAttribute("class");
+    data_set_grid_header_class.value = "js-chart-builder-series-data-grid-header";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_class );
+    var data_set_grid_header_style = document.createAttribute("style");
+    data_set_grid_header_style.value = "border-radius: 0px 5px 0px 0px;";
+    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
+    data_set_grid_container.appendChild( data_set_grid_header );
+
+    var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid_container, preview_series_container);
+
+    // add more data set button
+    var more_data_set_button = document.createElement("div");
+    var more_data_set_button_class = document.createAttribute("class");
+    more_data_set_button_class.value = "js-chart-builder-series-data-set-button";
+    more_data_set_button.setAttributeNode( more_data_set_button_class );
+    more_data_set_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    more_data_set_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    more_data_set_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    more_data_set_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    more_data_set_button.addEventListener("click", function () {
+
+        var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid_container, preview_series_container);
+
+    }, false);
+    more_data_set_button.innerText = "+More Data Set";
+    middle_series_container.appendChild( more_data_set_button );
+
+
+    // series outer container - right remove button
+    var right_series_remove_button = document.createElement("div");
+    var right_series_remove_button_class = document.createAttribute("class");
+    right_series_remove_button_class.value = "js-chart-builder-series-remove-button";
+    right_series_remove_button.setAttributeNode( right_series_remove_button_class );
+    right_series_remove_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    right_series_remove_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    right_series_remove_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    right_series_remove_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    right_series_remove_button.addEventListener("mouseup", function () {
+
+        for (var tt = 0; tt < document.getElementsByClassName("js-chart-builder-series-outer-container").length; tt++) {
+            if (document.getElementsByClassName("js-chart-builder-series-outer-container")[tt] == this.parentElement) {
+
+                var preview_chart = document.getElementById("js-chart-builder-preview");
+                preview_chart.getElementsByClassName("js-series")[tt].remove();
+                break;
+            }
+        }
+
+        this.parentElement.remove();
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    right_series_remove_button.innerText = "Remove Series";
+    series_outer_container.appendChild( right_series_remove_button );
+
+
+
+
+    return true;
+}
+// add series input data
+function jsChartBuilderPopulateInputData_Series(data_panel, chart_type) {
+
+    for (var tt = (data_panel.children.length-1); tt >= 0; tt--) {
+        data_panel.children[tt].remove();
+    }
+
+    // label
+    var data_input_label = document.createElement("div");
+    var data_input_label_class = document.createAttribute("class");
+    data_input_label_class.value = "js-chart-builder-data-input-label";
+    data_input_label.setAttributeNode( data_input_label_class );
+    data_input_label.innerText = "Numeric Data (Distribution & Spread)";
+    data_panel.appendChild( data_input_label );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].chart_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // data labels label
+    var data_input_value_labels = document.createElement("div");
+    var data_input_value_labels_class = document.createAttribute("class");
+    data_input_value_labels_class.value = "js-chart-builder-categorical-value-label";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_class );
+    var data_input_value_labels_style = document.createAttribute("style");
+    data_input_value_labels_style.value = "margin-top: 5px;";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_style );
+    if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].allow_multiseries) {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: ForestGreen; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">YES</span>";
+    } else {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: Crimson; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">NO</span>";
+    }
+    data_panel.appendChild( data_input_value_labels );
+
+    // add series button
+    var more_series_button = document.createElement("div");
+    var more_series_button_style = document.createAttribute("style");
+    more_series_button_style.value = "width: 150px; background-color: forestgreen; margin: 10px 0px; font-weight: 400; font-size: 14px; font-weight: 400; text-align: center; line-height: 30px; border: 0.5px solid #333333; border-radius: 3px; color: white; cursor: pointer;";
+    more_series_button.setAttributeNode( more_series_button_style );
+    more_series_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    more_series_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    more_series_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    more_series_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    more_series_button.addEventListener("click", function () {
+
+        var add_series = jsChartBuilderPopulateInputData_SeriesContainer(data_panel);
+
+    }, false);
+    more_series_button.innerText = "+More Series";
+    data_panel.appendChild( more_series_button );
+
+    more_series_button.setAttributeNode( more_series_button_style );
+    data_panel.appendChild( more_series_button );
+
+    // add one series row
+    var add_series = jsChartBuilderPopulateInputData_SeriesContainer(data_panel);
+
+    return this;
+}
+// add hierarchical input data
+function jsChartBuilderPopulateInputData_Hierarchical(data_panel, chart_type) {
+
+    for (var tt = (data_panel.children.length-1); tt >= 0; tt--) {
+        data_panel.children[tt].remove();
+    }
+
+    // label
+    var data_input_label = document.createElement("div");
+    var data_input_label_class = document.createAttribute("class");
+    data_input_label_class.value = "js-chart-builder-data-input-label";
+    data_input_label.setAttributeNode( data_input_label_class );
+    data_input_label.innerText = "Hierarchical Categorical Data";
+    data_panel.appendChild( data_input_label );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].chart_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // data labels label
+    var data_input_value_labels = document.createElement("div");
+    var data_input_value_labels_class = document.createAttribute("class");
+    data_input_value_labels_class.value = "js-chart-builder-categorical-value-label";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_class );
+    var data_input_value_labels_style = document.createAttribute("style");
+    data_input_value_labels_style.value = "margin-top: 5px;";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_style );
+    if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].allow_multiseries) {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: ForestGreen; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">YES</span>";
+    } else {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: Crimson; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">NO</span>";
+    }
+    data_panel.appendChild( data_input_value_labels );
+
+    // label
+    var top_container = document.createElement("div");
+    var top_container_style = document.createAttribute("style");
+    top_container_style.value = "display: flex; flex-direction: row;";
+    top_container.setAttributeNode( top_container_style );
+    data_panel.appendChild( top_container );
+
+    // label
+    var label_label = document.createElement("div");
+    var label_label_style = document.createAttribute("style");
+    label_label_style.value = "flex: 1 1 auto; width: calc(100% - 80px); font-size: 14px; font-weight: 500; margin: 10px 0px 0px 0px;";
+    label_label.setAttributeNode( label_label_style );
+    label_label.innerHTML = "Hierarchical Data <span style=\"font-size: 10px;\">(JSON)</span>";
+    top_container.appendChild( label_label );
+
+    // button
+    var label_button = document.createElement("div");
+    var label_button_style = document.createAttribute("style");
+    label_button_style.value = "flex: 1 1 auto; width: 80px; border: 0.5px solid black; background-color: crimson; color: white; font-weight: 500; text-align: center; padding: 2px 5px 2px 5px; height: 20px; line-height: 20px; border-radius: 5px; margin: 0px 20px 0px 0px; cursor: pointer;";
+    label_button.setAttributeNode( label_button_style );
+    label_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    label_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    label_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    label_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 500;
+    }, false);
+    label_button.addEventListener("click", function () {
+        
+        document.getElementById("default-json-data").innerText = document.getElementById("js-chart-builder-hierarchical-data").value;
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    label_button.innerText = "Update";
+    top_container.appendChild( label_button );
+
+    /*
+    var label_label = document.createElement("div");
+    var label_label_style = document.createAttribute("style");
+    label_label_style.value = "font-size: 14px; font-weight: 500; margin: 10px 0px 0px 0px;";
+    label_label.setAttributeNode( label_label_style );
+    label_label.innerHTML = "Hierarchical Data <span style=\"font-size: 10px;\">(JSON)</span>";
+    data_panel.appendChild( label_label );
+    */
+
+    // json inout data
+    var hierarchical_data = document.createElement("TEXTAREA");
+    hierarchical_data.id = "js-chart-builder-hierarchical-data";
+    var hierarchical_data_style = document.createAttribute("style");
+    hierarchical_data_style.value = "font-size: 11px; width: calc(100% - 20px); max-width: calc(100% - 20px); height: 300px; border-radius: 5px; border: 0.5px solid #eeeeee; margin-bottom: 30px;";
+    hierarchical_data.setAttributeNode( hierarchical_data_style );
+    hierarchical_data.addEventListener("change", function () {
+
+        if (JSON.stringify(this.value) != JSON.stringify(document.getElementById("default-json-data").innerText)) {
+
+            document.getElementById("default-json-data").innerText = this.value;
+
+            var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+        }
+
+    }, false);
+    hierarchical_data.innerText = JSON.stringify(BUILDER_DEFAULTS.data.hierarchical.data);
+    data_panel.appendChild( hierarchical_data );
+
+    return true;
+}
 // add ohlc input data
 function jsChartBuilderPopulateInputData_OHLC(data_panel, chart_type) {
 
@@ -2091,6 +3177,16 @@ function jsChartBuilderPopulateInputData(data_panel, data_type, chart_type) {
         case "ohlc":
             var populate_input_data = jsChartBuilderPopulateInputData_OHLC(data_panel, chart_type);
             break;
+        
+        // hierarchical
+        case "hierarchical":
+            var populate_input_data = jsChartBuilderPopulateInputData_Hierarchical(data_panel, chart_type);
+            break;
+        
+        // series
+        case "series":
+            var populate_input_data = jsChartBuilderPopulateInputData_Series(data_panel, chart_type);
+            break;
 
         // default -- categorical
         default:
@@ -2154,9 +3250,9 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
     var preview_chart_template = document.createAttribute("template");
     preview_chart_template.value = template_name;
     preview_chart.setAttributeNode( preview_chart_template );
-    var preview_chart_showlegend = document.createAttribute("showlegend");
-    preview_chart_showlegend.value = IDEFAULT_CHART_ATTRIBUTES["showlegend"].default;
-    preview_chart.setAttributeNode( preview_chart_showlegend );
+    // var preview_chart_showlegend = document.createAttribute("showlegend");
+    // preview_chart_showlegend.value = IDEFAULT_CHART_ATTRIBUTES["showlegend"].default;
+    // preview_chart.setAttributeNode( preview_chart_showlegend );
     var preview_chart_showcontrols = document.createAttribute("showcontrols");
     preview_chart_showcontrols.value = "off"
     preview_chart.setAttributeNode( preview_chart_showcontrols );
@@ -2165,6 +3261,26 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
         var preview_chart_showlabels = document.createAttribute("showlabels");
         preview_chart_showlabels.value = "off"
         preview_chart.setAttributeNode( preview_chart_showlabels );
+    } else if (chart_type == "treemap") {
+        var preview_chart_sortdata = document.createAttribute("sortdata");
+        preview_chart_sortdata.value = "on";
+        preview_chart.setAttributeNode( preview_chart_sortdata );
+
+        var preview_chart_drawalg = document.createAttribute("drawalg");
+        preview_chart_drawalg.value = "portrait quad";
+        preview_chart.setAttributeNode( preview_chart_drawalg );
+
+        var preview_chart_showlegend = document.createAttribute("showlegend");
+        preview_chart_showlegend.value = "bottom";
+        preview_chart.setAttributeNode( preview_chart_showlegend );
+
+        var preview_chart_jsondata = document.createAttribute("jsondata");
+        preview_chart_jsondata.value = "default-json-data";
+        preview_chart.setAttributeNode( preview_chart_jsondata );
+    } else if ((chart_type == "box plot") || (chart_type == "horizontal box plot")) {
+        var preview_chart_sortdata = document.createAttribute("showlegend");
+        preview_chart_sortdata.value = "off";
+        preview_chart.setAttributeNode( preview_chart_sortdata );
     }
 
     preview_panel.appendChild( preview_chart );
@@ -2214,6 +3330,14 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
             preview_values.setAttributeNode( preview_values_class );
             preview_values.innerText = BUILDER_DEFAULTS.data.frequency.data.join(", ");
             preview_chart.appendChild( preview_values );
+
+            // define a color palette
+            var color_palette = document.createElement("div");
+            var color_palette_class = document.createAttribute("class");
+            color_palette_class.value = "js-color-palette";
+            color_palette.setAttributeNode( color_palette_class );
+            color_palette.innerText = "hsl(214, 32%, 50%)";
+            preview_chart.appendChild( color_palette );
 
             break;
         
@@ -2280,6 +3404,119 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
             preview_chart.appendChild( preview_close );
 
             break;
+        
+        // hierarchical
+        case "hierarchical":
+
+            // <script type="application/json" id="json-data2">
+            var script_tags = document.createElement("script");
+            script_tags.id = "default-json-data";
+            var script_tags_type = document.createAttribute("type");
+            script_tags_type.value = "application/json";
+            script_tags.setAttributeNode( script_tags_type );
+            script_tags.innerText = JSON.stringify( BUILDER_DEFAULTS.data.hierarchical.data );
+            preview_chart.appendChild( script_tags );
+
+            // color palette
+            var color_palette = document.createElement("div");
+            var color_palette_class = document.createAttribute("class");
+            color_palette_class.value = "js-color-palette";
+            color_palette.setAttributeNode( color_palette_class );
+            var color_palette_type = document.createAttribute("type");
+            color_palette_type.value = "sequential continuous";
+            color_palette.setAttributeNode( color_palette_type );
+            color_palette.innerText = "10!hsl(0, 68%, 20%); 30!hsl(0, 68%, 40%); 50!Orange; 70!SkyBlue; 90!YellowGreen;";
+            preview_chart.appendChild( color_palette );
+
+            // value bar data margin
+            var data_margin = document.createElement("div");
+            var data_margin_class = document.createAttribute("class");
+            data_margin_class.value = "js-value-bar-data-margin";
+            data_margin.setAttributeNode( data_margin_class );
+            data_margin.innerText = "0.5px";
+            preview_chart.appendChild( data_margin );
+
+            // data label width
+            var data_label_width = document.createElement("div");
+            var data_label_width_class = document.createAttribute("class");
+            data_label_width_class.value = "js-datalabel-width";
+            data_label_width.setAttributeNode( data_label_width_class );
+            data_label_width.innerText = "80px";
+            preview_chart.appendChild( data_label_width );
+
+            break;
+        
+        // series
+        case "series":
+
+            /*
+            var color_palette = document.createElement("div");
+            var color_palette_class = document.createAttribute("class");
+            color_palette_class.value = "js-color-palette";
+            color_palette.setAttributeNode( color_palette_class );
+            //color_palette.innerText = "hsl(207, 44%, 60%)";
+            color_palette.innerText = "YellowGreen";
+            preview_chart.appendChild( color_palette );
+            */
+
+            var label_color = document.createElement("div");
+            var label_color_class = document.createAttribute("class");
+            label_color_class.value = "js-datalabel-text-color";
+            label_color.setAttributeNode( label_color_class );
+            label_color.innerText = "black";
+            preview_chart.appendChild( label_color );
+
+            var margin_container = document.createElement("div");
+            var margin_container_class = document.createAttribute("class");
+            margin_container_class.value = "js-value-bar-data-margin";
+            margin_container.setAttributeNode( margin_container_class );
+            margin_container.innerText = "10px";
+            preview_chart.appendChild( margin_container );
+
+            var line_thickness = document.createElement("div");
+            var line_thickness_class = document.createAttribute("class");
+            line_thickness_class.value = "js-value-line-thickness";
+            line_thickness.setAttributeNode( line_thickness_class );
+            line_thickness.innerText = "2px";
+            preview_chart.appendChild( line_thickness );
+
+            var marker_width = document.createElement("div");
+            var marker_width_class = document.createAttribute("class");
+            marker_width_class.value = "js-marker-width";
+            marker_width.setAttributeNode( marker_width_class );
+            marker_width.innerText = "10px";
+            preview_chart.appendChild( marker_width );
+
+            var marker_height = document.createElement("div");
+            var marker_height_class = document.createAttribute("class");
+            marker_height_class.value = "js-marker-height";
+            marker_height.setAttributeNode( marker_height_class );
+            marker_height.innerText = "10px";
+            preview_chart.appendChild( marker_height );
+
+            var marker_border = document.createElement("div");
+            var marker_border_class = document.createAttribute("class");
+            marker_border_class.value = "js-marker-border";
+            marker_border.setAttributeNode( marker_border_class );
+            marker_border.innerText = "0.5px solid black";
+            preview_chart.appendChild( marker_border );
+
+            var font_size = document.createElement("div");
+            var font_size_class = document.createAttribute("class");
+            font_size_class.value = "js-datalabel-font-size";
+            font_size.setAttributeNode( font_size_class );
+            font_size.innerText = "14px";
+            preview_chart.appendChild( font_size );
+
+            var font_weight = document.createElement("div");
+            var font_weight_class = document.createAttribute("class");
+            font_weight_class.value = "js-datalabel-font-weight";
+            font_weight.setAttributeNode( font_weight_class );
+            font_weight.innerText = "500";
+            preview_chart.appendChild( font_weight );
+
+            break;
+
     }
 
     if (chart_type == "bubble") {
@@ -2399,6 +3636,26 @@ function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, t
                         option_control.value = "auto";
                     } else if ((chart_type == "bubble") && (ikey == "marker_height")) {
                         option_control.value = "auto";
+                    } else if ((chart_type == "treemap") && (ikey == "value_bar_data_margin")) {
+                        option_control.value = "0.5px";
+                    } else if ((chart_type == "treemap") && (ikey == "datalabel_width")) {
+                        option_control.value = "80px";
+                    } else if ((chart_type == "treemap") && (ikey == "color_palette")) {
+                        option_control.value = "10!hsl(0, 68%, 20%); 30!hsl(0, 68%, 40%); 50!Orange; 70!SkyBlue; 90!YellowGreen";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "value_bar_data_series")) {
+                        option_control.value = "25px";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "value_line_thickness")) {
+                        option_control.value = "2px";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "value_bar_data_margin")) {
+                        option_control.value = "25px";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "value_bar_border_radius")) {
+                        option_control.value = "2px";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "marker_width")) {
+                        option_control.value = "10px";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "marker_height")) {
+                        option_control.value = "10px";
+                    } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "marker_border")) {
+                        option_control.value = "0.5px solid black";
                     } else {
                         option_control.value = ivalue;
                     }
@@ -2507,14 +3764,22 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
             var option_control_disabled = document.createAttribute("disabled");
             option_control_disabled.value = "disabled";
             option_control.setAttributeNode( option_control_disabled );
+
             //option_control.value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
             if (ivalue == "title") {
                 option_control.value = BUILDER_DEFAULTS.data[ IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_type ].chart_title;
             } else if ((chart_type == "bubble") && (ivalue == "showlabels")) {
                 option_control.value = "off";
+            } else if ((chart_type == "treemap") && (ivalue == "sortdata")) {
+                option_control.value = "on";
+            } else if ((chart_type == "treemap") && (ivalue == "drawalg")) {
+                option_control.value = "portrait quad";
+            } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ivalue == "showlegend")) {
+                option_control.value = "off";
             } else {
                 option_control.value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
             }
+
             option_control.addEventListener("change", function () {
                 var preview_chart = document.getElementsByClassName("js-chart")[0];
                 preview_chart.setAttribute(ivalue, this.value);
@@ -2589,15 +3854,16 @@ function jsChartBuilderOpen() {
     var close_button_title = document.createAttribute("title");
     close_button_title.value = "Close window";
     close_button.setAttributeNode( close_button_title );
-    close_button.innerText = "X";
+    //close_button.innerText = "X";
+    close_button.innerText = "Close";
     close_button.addEventListener("click", function () {
         var toggle_window = jsChartBuilderClose();
     }, false);
     close_button.addEventListener("mouseover", function () {
-        this.style.backgroundColor = "#ffffe6";
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
     }, false);
     close_button.addEventListener("mouseout", function () {
-        this.style.backgroundColor = "White";
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
     }, false);
     close_button.addEventListener("mousedown", function () {
         this.style.fontWeight = 200;
@@ -2862,7 +4128,7 @@ function jsChartBuilderOpen() {
     template_dropdown.setAttributeNode( template_dropdown_class );
     template_dropdown.addEventListener("change", function () {
         
-        var populate_style_directives = jsChartBuilderPopulateStyleDirectives(document.getElementsByClassName("js-chart-builder-style-directives-content-panel")[0], this.value, chart_type);
+        var populate_style_directives = jsChartBuilderPopulateStyleDirectives(document.getElementsByClassName("js-chart-builder-style-directives-content-panel")[0], this.value, document.getElementsByClassName("js-chart-builder-dropdown-chart-type").value);
 
         document.getElementsByClassName("js-chart")[0].setAttribute("template", this.value);
 

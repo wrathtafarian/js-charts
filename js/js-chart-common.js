@@ -1037,6 +1037,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "line": {
         "alternative_names": [""],
         "chart_group": "line",
+        "chart_description": "A <strong>line chart</strong> displays data points connected by a continuous line to show trends, patterns, or changes over time. It is commonly used for time-series analysis, performance tracking, and comparing multiple datasets to identify trends and fluctuations.",
+        "data_description": "A line chart uses <strong>numerical data plotted along two axes</strong>, typically with <strong>time or a sequential variable on the x-axis</strong> and a <strong>continuous numerical value on the y-axis</strong>. This type of data is commonly used for tracking trends, changes, and comparisons over time in fields like finance, science, and business analytics.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawLineChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showdiff", "showcontrols", "showdatatable", "showwidget"],
@@ -1052,6 +1054,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "stacked line": {
         "alternative_names": [""],
         "chart_group": "line",
+        "chart_description": "A <strong>stacked line chart</strong> displays multiple data series as lines stacked on top of each other, showing the cumulative total while maintaining individual contributions. It is useful for visualizing trends, comparing part-to-whole relationships over time, and analyzing the overall impact of multiple categories in a dataset.",
+        "data_description": "A line chart uses <strong>numerical data plotted along two axes</strong>, typically with <strong>time or a sequential variable on the x-axis</strong> and a <strong>continuous numerical value on the y-axis</strong>. This type of data is commonly used for tracking trends, changes, and comparisons over time in fields like finance, science, and business analytics.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawStackedLineChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showdiff", "showcontrols", "showdatatable", "showwidget"],
@@ -1067,6 +1071,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "100% stacked line": {
         "alternative_names": [""],
         "chart_group": "line",
+        "chart_description": "A <strong>100% stacked line chart</strong> displays multiple data series as lines stacked on top of each other, with values normalized to a percentage scale (0–100%), showing the proportional contribution of each series over time. It is useful for analyzing relative trends and comparing part-to-whole relationships without focusing on absolute values.",
+        "data_description": "A line chart uses <strong>numerical data plotted along two axes</strong>, typically with <strong>time or a sequential variable on the x-axis</strong> and a <strong>continuous numerical value on the y-axis</strong>. This type of data is commonly used for tracking trends, changes, and comparisons over time in fields like finance, science, and business analytics.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawRelativeStackedLineChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showdiff", "showcontrols", "showdatatable", "showwidget"],
@@ -1163,6 +1169,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "box plot": {
         "alternative_names": ["vertical box plot", "boxplot", "box and whisker", "box-and-whisker", "box and whisker plot", "box-and-whisker plot"],
         "chart_group": "boxplot",
+        "chart_description": "A <strong>boxplot chart</strong> (or <strong>box-and-whisker plot</strong>) visualizes the distribution of a dataset by displaying its minimum, first quartile, median, third quartile, and maximum values, with potential outliers. It is useful for identifying data spread, variability, skewness, and outliers in statistical analysis.",
+        "data_description": "A boxplot chart uses <strong>numerical data</strong>, typically representing a single variable measured across different categories or groups, to display its <strong>distribution and spread</strong>. This type of data is useful for statistical analysis, as it highlights central tendency, variability, and potential outliers in datasets.",
         "data_type": "series",
         "draw_functionname": "jsChartDrawBoxPlot",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "sortdata", "showborder", "showlabels", "showlegend", "showcontrols", "showdatatable", "showmedians", "showwhiskers", "showgridlines", "showzeroline", "showwidget"],
@@ -1227,6 +1235,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "treemap": {
         "alternative_names": [],
         "chart_group": "mosaic",
+        "chart_description": "A <strong>treemap chart</strong> displays hierarchical data using nested rectangles, where the size and color of each block represent different values or categories. It is useful for visualizing proportions, comparisons, and hierarchical structures in large datasets, making it easier to identify patterns and relationships.",
+        "data_description": "A treemap chart uses <strong>hierarchical categorical data with numerical values</strong>, where each category is represented as a nested rectangle sized proportionally to its value. This type of data is commonly used to visualize part-to-whole relationships, distributions, and comparisons in areas like financial analysis, resource allocation, and market segmentation.",
         "data_type": "hierarchical",
         "draw_functionname": "jsChartDrawTreemapChart",
         "supported_options": ["class", "type", "version", "template", "jsondata", "width", "height", "title", "sortdata", "limitdata", "showborder", "showlabels", "showlegend", "showcontrols", "showdatatable", "drawalg", "showwidget"],
