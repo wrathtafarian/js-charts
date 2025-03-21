@@ -5,12 +5,218 @@
 // 5. add random button next to categotical values
 
 const BUILDER_DEFAULTS = {
-    //"chart_type": IDEFAULT_CHART_ATTRIBUTES["type"].default,
-    "chart_type": "box plot",
+    "chart_type": IDEFAULT_CHART_ATTRIBUTES["type"].default,
+    //"chart_type": "parallel coordinates",
     "template_name": IDEFAULT_CHART_ATTRIBUTES["template"].default,
+    "chart_attributes": {
+        "100% stacked bar": {
+            "title": "Sales Revenue (2022 - 2024)",
+            "showcontrols": "print_only"
+        },
+        "100% stacked column": {
+            "showcontrols": "print_only"
+        },
+        "100% stacked line": {
+            "showcontrols": "print_only"
+        },
+        "100% stacked lollipop bar": {
+            "showcontrols": "print_only"
+        },
+        "100% stacked lollipop column": {
+            "showcontrols": "print_only"
+        },
+        "bar": {
+            "showcontrols": "print_only"
+        },
+        "box plot": {
+            "showcontrols": "print_only",
+            "showlegend": false
+        },
+        "bubble": {
+            "showcontrols": "print_only",
+            "showlabels": false
+        },
+        "candlestick": {
+            "showcontrols": "print_only"
+        },
+        "column": {
+            "showcontrols": "print_only"
+        },
+        "doughnut": {
+            "holetitle": "2022",
+            "showcontrols": "print_only"
+        },
+        "funnel bar": {
+            "sortdata": "on column desc",
+            "showcontrols": "print_only"
+        },
+        "funnel column": {
+            "sortdata": "on column desc",
+            "showcontrols": "print_only"
+        },
+        "heatmap": {
+            "showcontrols": "print_only"
+        },
+        "histogram": {
+            "showcontrols": "print_only"
+        },
+        "horizontal box plot": {
+            "showlegend": false,
+            "showcontrols": "print_only"
+        },
+        "line": {
+            "showcontrols": "print_only"
+        },
+        "lollipop bar": {
+            "showcontrols": "print_only"
+        },
+        "lollipop column": {
+            "showcontrols": "print_only"
+        },
+        "marimekko": {
+            "showcontrols": "print_only"
+        },
+        "marimekko column": {
+            "showcontrols": "print_only"
+        },
+        "ohlc": {
+            "showcontrols": "print_only"
+        },
+        "parallel coordinates": {
+            "sortdata": "on",
+            "showcontrols": "print_only"
+        },
+        "pie": {
+            "title": "Sales Revenue (2022 - 2024)",
+            "showcontrols": "print_only"
+        },
+        "population pyramid": {
+            "showcontrols": "print_only"
+        },
+        "scatter": {
+            "showcontrols": "print_only"
+        },
+        "span bar": {
+            "showcontrols": "print_only"
+        },
+        "span column": {
+            "showcontrols": "print_only"
+        },
+        "stacked bar": {
+            "showcontrols": "print_only"
+        },
+        "stacked column": {
+            "showcontrols": "print_only"
+        },
+        "stacked doughnut": {
+            "holetitle": "2022 - 2024",
+            "showcontrols": "print_only"
+        },
+        "stacked line": {
+            "showcontrols": "print_only"
+        },
+        "stacked lollipop bar": {
+            "showcontrols": "print_only"
+        },
+        "stacked lollipop column": {
+            "showcontrols": "print_only"
+        },
+        "treemap": {
+            "sortdata": "on",
+            "drawalg": "portrait quad",
+            "showlegend": "bottom",
+            "jsondata": "default-json-data",
+            "showcontrols": "print_only"
+        },
+        "waterfall bar": {
+            "showcontrols": "print_only"
+        },
+        "waterfall column": {
+            "showcontrols": "print_only"
+        }
+    },
+    "style_template_directives": {
+        "pie": {
+            "chart_bg_color": "yellow"
+        },
+        "bar": {
+            "value_bar_data_margin": "2px",
+            "value_bar_series_margin": "5px",
+            "value_bar_border_radius": "0px 2px 2px 0px",
+            "value_bar_min_width": "3px"
+        },
+        "bubble": {
+            "marker_width": "auto",
+            "marker_height": "auto"
+        },
+        "column": {
+            "value_bar_data_margin": "2px",
+            "value_bar_series_margin": "5px",
+            "value_bar_border_radius": "2px 2px 0px 0px",
+            "value_bar_min_height": "3px"
+        },
+        "funnel bar": {
+            "value_bar_data_margin": "1px",
+            "value-bar-border-radius": "2px"
+        },
+        "funnel column": {
+            "value_bar_data_margin": "1px",
+            "value-bar-border-radius": "2px"
+        },
+        "histogram": {
+            "value_bar_min_width": "10px"
+        },
+        "line": {
+            "value_line_thickness": "1px",
+            "marker_width": "7px",
+            "marker_height": "7px",
+            "datalabel_text_color": "black"
+        },
+        "ohlc": {
+            "value_line_thickness": "5px",
+            "datalabel_text_color": "black",
+            "color_palette": "indianred; forestgreen; black;"
+        },
+        "population pyramid": {
+            "value_bar_data_margin": "1px",
+            "datalabel_text_color": "black",
+            "value_bar_min_width": "3px"
+        },
+        "stacked line": {
+            "value_line_thickness": "1px",
+            "marker_width": "7px",
+            "marker_height": "7px",
+            "datalabel_text_color": "black"
+        },
+        "100% stacked line": {
+            "value_line_thickness": "1px",
+            "marker_width": "7px",
+            "marker_height": "7px",
+            "datalabel_text_color": "black"
+        },
+        "parallel coordinates": {
+            "value_line_thickness": "1px",
+            "color_palette": "hsl(16, 100%, 72%)"
+        },
+        "span bar": {
+            "value_bar_data_margin": "1px",
+            "value_bar_border_radius": "2px",
+            "datalabel_prepend": "$",
+            "datalabel_append": "mil",
+            "datalabel_width": "70px"
+        },
+        "span column": {
+            "value_bar_data_margin": "1px",
+            "value_bar_border_radius": "2px",
+            "datalabel_prepend": "$",
+            "datalabel_append": "mil",
+            "datalabel_width": "70px"
+        }
+    },
     "data": {
         "categorical": {
             "chart_title": "Sales Revenue",
+            "labels": ["Furniture", "Groceries", "Electronics", "Toys", "Clothing"],
             "data": [
                 {
                     "title": "2022",
@@ -26,6 +232,60 @@ const BUILDER_DEFAULTS = {
                 }
             ]
         },
+        "population pyramid": {
+            "chart_title": "Orange Campus Student Population 2023",
+            "labels": ["Male students", "Female students"],
+            "data": [
+                {
+                    "title": "Over 70",
+                    "data": [0.1, 0.1]
+                },
+                {
+                    "title": "65 to 69",
+                    "data": [0.5, 0.2]
+                },
+                {
+                    "title": "60 to 64",
+                    "data": [1.0, 0.7]
+                },
+                {
+                    "title": "55 to 59",
+                    "data": [1.2, 0.9]
+                },
+                {
+                    "title": "50 to 54",
+                    "data": [2.0, 1.6]
+                },
+                {
+                    "title": "45 to 49",
+                    "data": [2.5, 2.0]
+                },
+                {
+                    "title": "40 to 44",
+                    "data": [2.7, 2.3]
+                },
+                {
+                    "title": "35 to 39",
+                    "data": [2.8, 2.6]
+                },
+                {
+                    "title": "30 to 34",
+                    "data": [3.0, 2.7]
+                },
+                {
+                    "title": "25 to 29",
+                    "data": [3.2, 3.0]
+                },
+                {
+                    "title": "20 to 24",
+                    "data": [2.9, 2.4]
+                },
+                {
+                    "title": "Under 20",
+                    "data": [2.4, 1.7]
+                }
+            ]
+        },
         "frequency": {
             "chart_title": "Operations",
             "title": "2022",
@@ -37,24 +297,13 @@ const BUILDER_DEFAULTS = {
             "bin_size": 0.5
         },
         "range": {
-            "chart_title": "Daily Price Movement: High and Low Price",
-            "labels": ["02/03", "02/04", "02/05", "02/06", "02/07", "02/08", "02/09"],
+            "chart_title": "Well-known paintings and their approximate selling prices",
+            "labels": ["Salvator Mundi by Leonardo da Vinci", "Interchange by Willem de Kooning", "The Card Players by Paul Cézanne", "Nafea Faa Ipoipo (When Will You Marry?) by Paul Gauguin", "No. 17A by Jackson Pollock", "Les Femmes d'Alger (\"Version O\") by Pablo Picasso"],
             "data": [
                 {
                     "title": "2022",
-                    "labels": ["02/03", "02/04", "02/05", "02/06", "02/07", "02/08", "02/09"],
-                    "low_values": [1258, 1262, 1264, 1269, 1264, 1231, 1244],
-                    "high_values": [1381, 1396, 1381, 1298, 1284, 1284, 1295]
-                },
-                {
-                    "title": "2023",
-                    "low_values": [1258, 1262, 1264, 1269, 1264, 1231, 1244],
-                    "high_values": [1381, 1396, 1381, 1298, 1284, 1284, 1295]
-                },
-                {
-                    "title": "2024",
-                    "low_values": [1258, 1262, 1264, 1269, 1264, 1231, 1244],
-                    "high_values": [1381, 1396, 1381, 1298, 1284, 1284, 1295]
+                    "low_values": [100, 60, 10, 5, 2, 1],
+                    "high_values": [450.3, 300, 250, 210, 200, 179.4]
                 }
             ]
         },
@@ -144,6 +393,179 @@ const BUILDER_DEFAULTS = {
                     "data": [2, 3, 4, 3, 2, 3, 4, 3, 5, 9]
                 }
             ]
+        },
+        // parallel coordinates
+        "parallel coordinates": {
+            "chart_title": "Electric Vehicle (EV) Performance Metrics",
+            "labels": ["Price ($)", "Battery Capacity (kWh)", "Range (miles)", "Charging Time (hours)", "Efficiency (miles/kWh)"],
+            "data": [
+                [ 45795, 47, 333, 8.0, 2.56 ],
+                [ 30860, 74, 272, 3.1, 4.91 ],
+                [ 106820, 74, 294, 8.7, 4.59 ],
+                [ 84886, 72, 187, 3.2, 4.24 ],
+                [ 36265, 44, 173, 4.2, 3.52 ],
+                [ 112386, 80, 218, 9.1, 2.93 ],
+                [ 67194, 67, 265, 8.0, 2.89 ],
+                [ 117498, 46, 247, 10.3, 3.13 ],
+                [ 74131, 112, 347, 8.1, 3.87 ],
+                [ 90263, 111, 363, 7.0, 4.29 ],
+                [ 46023, 51, 288, 1.6, 4.15 ],
+                [ 71090, 73, 389, 4.7, 3.2 ],
+                [ 97221, 72, 293, 3.5, 4.89 ],
+                [ 94820, 87, 246, 3.3, 4.34 ],
+                [ 30769, 62, 350, 11.7, 3.89 ],
+                [ 89735, 101, 273, 5.0, 4.03 ],
+                [ 92955, 76, 336, 10.8, 3.55 ],
+                [ 94925, 83, 219, 7.8, 3.12 ],
+                [ 97969, 74, 357, 9.6, 3.39 ],
+                [ 35311, 104, 242, 6.3, 4.39 ],
+                [ 113104, 86, 152, 7.1, 2.54 ],
+                [ 83707, 117, 297, 6.2, 2.79 ],
+                [ 115305, 42, 336, 2.7, 2.62 ],
+                [ 58693, 40, 313, 8.8, 2.6 ],
+                [ 101932, 44, 296, 3.7, 4.64 ],
+                [ 55658, 53, 239, 0.8, 4.26 ],
+                [ 114478, 66, 344, 7.9, 3.69 ],
+                [ 48431, 48, 296, 2.5, 2.74 ],
+                [ 32747, 118, 297, 11.3, 3.73 ],
+                [ 89150, 54, 245, 11.5, 3.68 ],
+                [ 95725, 81, 348, 11.0, 2.93 ],
+                [ 114654, 116, 201, 4.8, 3.58 ],
+                [ 65773, 90, 382, 0.7, 3.5 ],
+                [ 97435, 102, 310, 11.2, 4.04 ],
+                [ 86886, 91, 317, 5.4, 4.09 ],
+                [ 96803, 43, 277, 11.6, 2.61 ],
+                [ 61551, 62, 188, 11.6, 3.44 ],
+                [ 41394, 54, 231, 10.3, 4.06 ],
+                [ 99092, 82, 253, 3.9, 3.76 ],
+                [ 33890, 68, 278, 4.9, 4.64 ],
+                [ 71606, 75, 160, 10.3, 4.15 ],
+                [ 110038, 52, 369, 4.1, 2.91 ],
+                [ 117313, 71, 334, 2.4, 2.68 ],
+                [ 40627, 110, 366, 6.9, 4.11 ],
+                [ 38792, 98, 327, 11.3, 2.57 ],
+                [ 103969, 67, 300, 8.5, 3.96 ],
+                [ 73001, 105, 308, 7.1, 4.85 ],
+                [ 106552, 81, 371, 1.6, 3.94 ],
+                [ 53897, 84, 191, 7.6, 3.47 ],
+                [ 98148, 101, 248, 11.9, 4.11 ],
+                [ 53483, 96, 156, 2.1, 3.65 ],
+                [ 78555, 45, 293, 6.5, 3.86 ],
+                [ 47159, 67, 239, 10.6, 4.85 ],
+                [ 110077, 67, 261, 9.0, 3.47 ],
+                [ 65920, 83, 398, 8.5, 4.9 ],
+                [ 97121, 69, 393, 8.6, 4.76 ],
+                [ 99479, 101, 209, 4.6, 2.99 ],
+                [ 119475, 114, 262, 3.9, 2.67 ],
+                [ 49457, 101, 151, 9.8, 2.75 ],
+                [ 96557, 40, 278, 9.8, 2.55 ],
+                [ 107189, 66, 197, 10.5, 2.74 ],
+                [ 108953, 101, 289, 11.0, 4.21 ],
+                [ 82995, 116, 346, 6.4, 2.68 ],
+                [ 70757, 42, 186, 6.3, 3.3 ],
+                [ 39692, 109, 309, 9.7, 4.61 ],
+                [ 75758, 111, 396, 8.0, 2.56 ],
+                [ 102409, 66, 158, 8.6, 4.54 ],
+                [ 101211, 48, 382, 9.7, 3.2 ],
+                [ 95697, 101, 248, 10.7, 2.8 ],
+                [ 67065, 76, 296, 4.4, 4.24 ],
+                [ 62606, 90, 197, 4.8, 4.07 ],
+                [ 41534, 83, 357, 1.6, 4.69 ],
+                [ 70397, 63, 280, 7.2, 4.34 ],
+                [ 31016, 118, 297, 0.9, 4.51 ],
+                [ 119789, 98, 301, 5.9, 3.21 ],
+                [ 85591, 71, 203, 6.7, 2.94 ],
+                [ 119812, 91, 269, 3.8, 4.38 ],
+                [ 53247, 101, 310, 7.3, 4.52 ],
+                [ 54300, 97, 301, 0.9, 4.98 ],
+                [ 104065, 91, 265, 0.9, 3.53 ],
+                [ 112798, 51, 224, 10.0, 3.43 ],
+                [ 39268, 78, 262, 4.6, 4.44 ],
+                [ 116807, 41, 349, 2.0, 3.35 ],
+                [ 42185, 42, 313, 6.5, 4.83 ],
+                [ 93704, 95, 315, 9.4, 4.65 ],
+                [ 116779, 98, 253, 3.0, 3.57 ],
+                [ 69099, 41, 233, 7.7, 4.38 ],
+                [ 38571, 41, 376, 1.5, 4.39 ],
+                [ 68044, 93, 261, 1.1, 2.76 ],
+                [ 81214, 40, 366, 6.6, 4.76 ],
+                [ 91228, 58, 248, 6.7, 3.76 ],
+                [ 78984, 41, 302, 7.8, 4.57 ],
+                [ 70774, 92, 242, 8.9, 3.3 ],
+                [ 32568, 83, 295, 11.7, 4.74 ],
+                [ 92592, 71, 277, 6.4, 3.47 ],
+                [ 97563, 109, 259, 4.2, 2.53 ],
+                [ 32695, 71, 231, 9.6, 4.76 ],
+                [ 78190, 107, 343, 3.6, 2.73 ],
+                [ 35258, 94, 203, 5.5, 3.3 ],
+                [ 117538, 114, 312, 1.4, 4.88 ]
+            ]
+        },
+        // heatmap uses categorical data, but the color plattes are special (qualitative, sequential continuous, sequential discrete, diverging continuous, diverging discrete)
+        "heatmap": {
+            "chart_title": "Water consumption per region",
+            "qualitative": {
+                "labels": ["Region A", "Region B", "Region C", "Region D", "Region E", "Region F"],
+                "keys": ["N/D", "Very Low", "Low", "Medium", "High", "Extreme"],
+                "color_palette": ["#bbbbbb", "YellowGreen", "gold", "orange", "crimson", "brown"],
+                "data": [
+                    {
+                        "title": "0:00 to 3:59",
+                        "data": ["Low", "Very Low", "Low", "Very Low", "Very Low", "Very Low"]
+                    },
+                    {
+                        "title": "4:00 to 7:59",
+                        "data": ["Low", "Low", "Medium", "Medium", "Medium", "Low"]
+                    },
+                    {
+                        "title": "8:00 to 11:59",
+                        "data": ["Medium", "High", "High", "High", "High", "High"]
+                    },
+                    {
+                        "title": "12:00 to 15:59",
+                        "data": ["High", "Extreme", "Extreme", "Extreme", "Extreme", "High"]
+                    },
+                    {
+                        "title": "16:00 to 19:59",
+                        "data": ["Extreme", "Extreme", "High", "Extreme", "N/D", "High"]
+                    },
+                    {
+                        "title": "20:00 to 23:59",
+                        "data": ["Medium", "Low", "Medium", "Medium", "Medium", "Low"]
+                    }
+                ]
+            },
+            "continuous": {
+                "labels": ["Region A", "Region B", "Region C", "Region D", "Region E", "Region F"],
+                "color_palette": ["#bbbbbb", "YellowGreen", "gold", "orange", "crimson", "brown"],
+                "color_position": [30, 40, 50, 60, 70, 80],
+                "data": [
+                    {
+                        "title": "0:00 to 3:59",
+                        "data": [14, 8, 12, 11, 7, 4]
+                    },
+                    {
+                        "title": "4:00 to 7:59",
+                        "data": [18, 17, 22, 27, 23, 16]
+                    },
+                    {
+                        "title": "8:00 to 11:59",
+                        "data": [27, 35, 36, 31, 38, 37]
+                    },
+                    {
+                        "title": "12:00 to 15:59",
+                        "data": [35, 42, 48, 45, 46, 39]
+                    },
+                    {
+                        "title": "16:00 to 19:59",
+                        "data": [48, 42, 36, 42, "N/D", 36]
+                    },
+                    {
+                        "title": "20:00 to 23:59",
+                        "data": [24, 18, 22, 24, 29, 16]
+                    }
+                ]
+            }
         }
     }
 }
@@ -597,7 +1019,7 @@ function jsChartBuilderAddInputData_Categorical(data_panel, index, enable_button
     outer_container.setAttributeNode( outer_container_class );
     outer_container.setAttributeNode( outer_container_class );
     var outer_container_style = document.createAttribute("style");
-    outer_container_style.value = "display: flex; flex-direction: row; margin: 10px 0px 0px 0px;";
+    outer_container_style.value = "display: flex; flex-direction: row; margin: 10px 0px 0px 0px; border: 0.5px solid #bbbbbb; border-radius: 5px;";
     outer_container.setAttributeNode( outer_container_style );
     //data_panel.appendChild( outer_container );
     //data_panel.insertBefore(outer_container, data_panel.children[ (data_panel.children.length-1) ]);
@@ -1675,9 +2097,6 @@ function jsChartBuilderPopulateInputData_SeriesContainer(data_panel) {
     var data_set_grid_header_class = document.createAttribute("class");
     data_set_grid_header_class.value = "js-chart-builder-series-data-grid-header";
     data_set_grid_header.setAttributeNode( data_set_grid_header_class );
-    var data_set_grid_header_style = document.createAttribute("style");
-    data_set_grid_header_style.value = "border-radius: 0px 5px 0px 0px;";
-    data_set_grid_header.setAttributeNode( data_set_grid_header_style );
     data_set_grid_container.appendChild( data_set_grid_header );
 
     var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid_container, preview_series_container);
@@ -2969,6 +3388,842 @@ function jsChartBuilderPopulateInputData_Frequency(data_panel, chart_type) {
 
     return true;
 }
+// add rows to the color palette grid
+function jsChartBuilderRenderQualitativePalette_AddRows(grid_container) {
+
+    var grid_position = grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem").length;
+
+    // number
+    var index_elem = document.createElement("div");
+    var index_elem_class = document.createAttribute("class");
+    index_elem_class.value = "js-chart-builder-palette-grid-elem";
+    index_elem.setAttributeNode( index_elem_class );
+    index_elem.innerText = (grid_position + 1);
+    grid_container.appendChild( index_elem );
+
+    // text key
+    var text_key = document.createElement("input");
+    var text_key_type = document.createAttribute("type");
+    text_key_type.value = "TEXT";
+    text_key.setAttributeNode( text_key_type );
+    var text_key_style = document.createAttribute("style");
+    text_key_style.value = "margin: 0px 2px 2px 0px;";
+    text_key.setAttributeNode( text_key_style );
+    if (grid_position < BUILDER_DEFAULTS.data.heatmap.qualitative.keys.length) {
+        text_key.value = BUILDER_DEFAULTS.data.heatmap.qualitative.keys[ grid_position ];
+    }
+    text_key.addEventListener("change", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+        var new_keys = [];
+
+        for (var tt = 0; tt < grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem").length; tt++) {
+            if (grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem")[tt].nextElementSibling.value.length > 0) {
+                new_keys.push( grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem")[tt].nextElementSibling.value );
+            }
+        }
+
+        preview_chart.getElementsByClassName("js-keys")[0].innerText = new_keys.join(", ");
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    grid_container.appendChild( text_key );
+
+    // color key
+    var color_key = document.createElement("input");
+    var color_key_type = document.createAttribute("type");
+    color_key_type.value = "TEXT";
+    color_key.setAttributeNode( color_key_type );
+    var color_key_style = document.createAttribute("style");
+    color_key_style.value = "margin: 0px 2px 2px 0px;";
+    color_key.addEventListener("change", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+        var new_colors = [];
+
+        for (var tt = 0; tt < grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem").length; tt++) {
+            if (grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem")[tt].nextElementSibling.nextElementSibling.value.length > 0) {
+                new_colors.push( grid_container.getElementsByClassName("js-chart-builder-palette-grid-elem")[tt].nextElementSibling.nextElementSibling.value );
+            }
+        }
+
+        preview_chart.getElementsByClassName("js-color-palette")[0].innerText = new_colors.join("; ");
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    color_key.setAttributeNode( color_key_style );
+    color_key.addEventListener("change", function () {
+
+        this.nextElementSibling.style.backgroundColor = this.value;
+
+    }, false);
+    if (grid_position < BUILDER_DEFAULTS.data.heatmap.qualitative.keys.length) {
+        color_key.value = BUILDER_DEFAULTS.data.heatmap.qualitative.color_palette[ grid_position ];
+    }
+    grid_container.appendChild( color_key );
+
+    // color preview
+    var color_preview = document.createElement("div");
+    var color_preview_style = document.createAttribute("style");
+    if (grid_position < BUILDER_DEFAULTS.data.heatmap.qualitative.keys.length) {
+        color_preview_style.value = "border: 0.5px solid #bbbbbb; border-radius: 3px; background-color: " + BUILDER_DEFAULTS.data.heatmap.qualitative.color_palette[ grid_position ] + ";";
+    } else {
+        color_preview_style.value = "border: 0.5px solid #bbbbbb; border-radius: 3px;";
+    }
+    color_preview.setAttributeNode( color_preview_style );
+    grid_container.appendChild( color_preview );
+
+    return true;
+}
+// render the qualitative color palette input screen
+function jsChartBuilderRenderContinuousPalette(data_panel) {
+
+    if (document.getElementsByClassName("js-chart-builder-palette-container").length > 0) {
+        for (var tt = (document.getElementsByClassName("js-chart-builder-palette-container").length - 1); tt >= 0; tt--) {
+            document.getElementsByClassName("js-chart-builder-palette-container")[tt].remove();
+        }
+    }
+
+    // palette container
+    var palette_container = document.createElement("div");
+    var palette_container_class = document.createAttribute("class");
+    palette_container_class.value = "js-chart-builder-palette-container";
+    palette_container.setAttributeNode( palette_container_class );
+    var palette_container_style = document.createAttribute("style");
+    palette_container_style.value = "background-color: hsl(40, 100%, 90%);";
+    palette_container.setAttributeNode( palette_container_style );
+    data_panel.insertBefore( palette_container, data_panel.children[ 6 ]);
+
+    // palette heading
+    var header_container = document.createElement("div");
+    var header_container_class = document.createAttribute("class");
+    header_container_class.value = "js-chart-builder-palette-header-container";
+    header_container.setAttributeNode( header_container_class );
+    header_container.innerText = "Continuous Color Palette";
+    palette_container.appendChild( header_container );
+
+    // palette grid
+    var grid_container = document.createElement("div");
+    var grid_container_class = document.createAttribute("class");
+    grid_container_class.value = "js-chart-builder-palette-grid-container";
+    grid_container.setAttributeNode( grid_container_class );
+    palette_container.appendChild( grid_container );
+
+    // update preview chart
+    var preview_chart = document.getElementById("js-chart-builder-preview");
+
+    for (var tt = (preview_chart.getElementsByClassName("js-color-palette").length - 1); tt >= 0; tt--) {
+        preview_chart.getElementsByClassName("js-color-palette")[tt].remove();
+    }
+
+    for (var tt = (preview_chart.getElementsByClassName("js-keys").length - 1); tt >= 0; tt--) {
+        preview_chart.getElementsByClassName("js-keys")[tt].remove();
+    }
+
+    for (var tt = (preview_chart.getElementsByClassName("js-labels").length - 1); tt >= 0; tt--) {
+        preview_chart.getElementsByClassName("js-labels")[tt].remove();
+    }
+
+    var labels_input = document.createElement("div");
+    var labels_input_class = document.createAttribute("class");
+    labels_input_class.value = "js-labels";
+    labels_input.setAttributeNode( labels_input_class );
+    labels_input.innerText = BUILDER_DEFAULTS.data.heatmap.continuous.labels.join(", ");
+    preview_chart.appendChild( labels_input );
+
+    var color_palette = document.createElement("div");
+    var color_palette_class = document.createAttribute("class");
+    color_palette_class.value = "js-color-palette";
+    color_palette.setAttributeNode( color_palette_class );
+    var color_palette_type = document.createAttribute("type");
+    color_palette_type.value = "sequential continuous";
+    color_palette.setAttributeNode( color_palette_type );
+    color_palette.innerText = BUILDER_DEFAULTS.data.heatmap.continuous.color_palette.join("; ");
+    preview_chart.appendChild( color_palette );
+
+    return true;
+}
+// render the qualitative color palette input screen
+function jsChartBuilderRenderQualitativePalette(data_panel) {
+
+    if (document.getElementsByClassName("js-chart-builder-palette-container").length > 0) {
+        for (var tt = (document.getElementsByClassName("js-chart-builder-palette-container").length - 1); tt >= 0; tt--) {
+            document.getElementsByClassName("js-chart-builder-palette-container")[tt].remove();
+        }
+    }
+
+    // palette container
+    var palette_container = document.createElement("div");
+    var palette_container_class = document.createAttribute("class");
+    palette_container_class.value = "js-chart-builder-palette-container";
+    palette_container.setAttributeNode( palette_container_class );
+    var palette_container_style = document.createAttribute("style");
+    palette_container_style.value = "background-color: hsl(40, 100%, 90%);";
+    palette_container.setAttributeNode( palette_container_style );
+    data_panel.insertBefore( palette_container, data_panel.children[ 6 ]);
+
+    // palette heading
+    var header_container = document.createElement("div");
+    var header_container_class = document.createAttribute("class");
+    header_container_class.value = "js-chart-builder-palette-header-container";
+    header_container.setAttributeNode( header_container_class );
+    header_container.innerText = "Qualitative Color Palette";
+    palette_container.appendChild( header_container );
+
+    // palette grid
+    var grid_container = document.createElement("div");
+    var grid_container_class = document.createAttribute("class");
+    grid_container_class.value = "js-chart-builder-palette-grid-container";
+    grid_container.setAttributeNode( grid_container_class );
+    palette_container.appendChild( grid_container );
+
+    for (var tt = 0; tt < 10; tt++) {
+
+        var add_rows = jsChartBuilderRenderQualitativePalette_AddRows(grid_container);
+
+    }
+
+    // updte the preview chart
+    var preview_chart = document.getElementById("js-chart-builder-preview");
+
+    var keys_input = document.createElement("div");
+    var keys_input_class = document.createAttribute("class");
+    keys_input_class.value = "js-keys";
+    keys_input.setAttributeNode( keys_input_class );
+    keys_input.innerText = BUILDER_DEFAULTS.data.heatmap.qualitative.keys.join(", ");
+    preview_chart.appendChild( keys_input );
+
+    var labels_input = document.createElement("div");
+    var labels_input_class = document.createAttribute("class");
+    labels_input_class.value = "js-labels";
+    labels_input.setAttributeNode( labels_input_class );
+    labels_input.innerText = BUILDER_DEFAULTS.data.heatmap.qualitative.labels.join(", ");
+    preview_chart.appendChild( labels_input );
+
+    var color_palette = document.createElement("div");
+    var color_palette_class = document.createAttribute("class");
+    color_palette_class.value = "js-color-palette";
+    color_palette.setAttributeNode( color_palette_class );
+    color_palette.innerText = BUILDER_DEFAULTS.data.heatmap.qualitative.color_palette.join("; ");
+    preview_chart.appendChild( color_palette );
+
+    /*
+    for (var tt = 0; tt < BUILDER_DEFAULTS.data.heatmap.qualitative.data.length; tt++) {
+
+        var data_values = document.createElement("div");
+        var data_values_class = document.createAttribute("class");
+        data_values_class.value = "js-values";
+        data_values.setAttributeNode( data_values_class );
+        var data_values_title = document.createAttribute("title");
+        data_values_title.value = BUILDER_DEFAULTS.data.heatmap.qualitative.data[tt].title;
+        data_values.setAttributeNode( data_values_title );
+        data_values.innerText = BUILDER_DEFAULTS.data.heatmap.qualitative.data[tt].data.join(", ");
+        preview_chart.appendChild( data_values );
+
+    }
+    */
+
+    // more rows button
+    var more_rows_button = document.createElement("div");
+    var more_rows_button_class = document.createAttribute("class");
+    more_rows_button_class.value = "js-chart-builder-palette-more-rows-button";
+    more_rows_button.setAttributeNode( more_rows_button_class );
+    more_rows_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    more_rows_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    more_rows_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    more_rows_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    more_rows_button.addEventListener("click", function () {
+
+        var add_rows = jsChartBuilderRenderQualitativePalette_AddRows(grid_container);
+
+    }, false);
+    more_rows_button.innerText = "+More Rows";
+    palette_container.appendChild( more_rows_button );
+
+
+    return true;
+}
+// add a valuw row to the qualitative color palette
+function jsChartBuilderRenderQualitativePalette_ValueRow(value_container) {
+
+    var rowlen = document.getElementsByClassName("js-chart-builder-qualitative-value-cell").length;
+    var data_index = ((rowlen + 1) % BUILDER_DEFAULTS.data.heatmap.qualitative.data.length) - 1;
+    if (data_index < 0) {
+        data_index = (BUILDER_DEFAULTS.data.heatmap.qualitative.data.length - 1);
+    }
+
+    // row number
+    var row_number = document.createElement("div");
+    var row_number_class = document.createAttribute("class");
+    row_number_class.value = "js-chart-builder-qualitative-value-cell";
+    row_number.setAttributeNode( row_number_class );
+    row_number.innerText = (rowlen + 1);
+    value_container.appendChild( row_number );
+
+    // row title
+    var row_title = document.createElement("input");
+    var row_title_type = document.createAttribute("type");
+    row_title_type.value = "TEXT";
+    row_title.setAttributeNode( row_title_type );
+    var row_title_style = document.createAttribute("style");
+    row_title_style.value = "margin: 0px 2px 0px 0px;";
+    row_title.setAttributeNode( row_title_style );
+    row_title.addEventListener("change", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+
+        for (var tt = (preview_chart.getElementsByClassName("js-values").length - 1); tt >= 0; tt--) {
+
+            preview_chart.getElementsByClassName("js-values")[tt].remove();
+
+        }
+
+        for (var tt = 0; tt < value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length; tt++) {
+
+            var new_values = document.createElement("div");
+            var new_values_class = document.createAttribute("class");
+            new_values_class.value = "js-values";
+            new_values.setAttributeNode( new_values_class );
+            var new_values_title = document.createAttribute("title");
+            new_values_title.value = value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.value;
+            new_values.setAttributeNode( new_values_title );
+            new_values.innerText = value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.nextElementSibling.value;
+            preview_chart.appendChild( new_values );
+
+        }
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    row_title.value = BUILDER_DEFAULTS.data.heatmap.qualitative.data[ data_index ].title;
+    value_container.appendChild( row_title );
+
+    // row values
+    var row_values = document.createElement("input");
+    var row_values_type = document.createAttribute("type");
+    row_values_type.value = "TEXT";
+    row_values.setAttributeNode( row_values_type );
+    var row_values_style = document.createAttribute("style");
+    row_values_style.value = "margin: 0px 2px 0px 0px;";
+    row_values.setAttributeNode( row_values_style );
+    row_values.addEventListener("change", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+
+        for (var tt = (preview_chart.getElementsByClassName("js-values").length - 1); tt >= 0; tt--) {
+
+            preview_chart.getElementsByClassName("js-values")[tt].remove();
+
+        }
+
+        for (var tt = 0; tt < value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length; tt++) {
+
+            var new_values = document.createElement("div");
+            var new_values_class = document.createAttribute("class");
+            new_values_class.value = "js-values";
+            new_values.setAttributeNode( new_values_class );
+            var new_values_title = document.createAttribute("title");
+            new_values_title.value = value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.value;
+            new_values.setAttributeNode( new_values_title );
+            new_values.innerText = value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.nextElementSibling.value;
+            preview_chart.appendChild( new_values );
+
+        }
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    row_values.value = BUILDER_DEFAULTS.data.heatmap.qualitative.data[ data_index ].data.join(", ");
+    value_container.appendChild( row_values );
+
+    // row remove
+    var row_remove_button = document.createElement("div");
+    var row_remove_button_style = document.createAttribute("style");
+    row_remove_button_style.value = "text-align: center; background-color: crimson; color: white; font-size: 14px; font-weight: 400; line-height: 30px; cursor: pointer; border-radius: 3px;";
+    row_remove_button.setAttributeNode( row_remove_button_style );
+    var row_remove_button_title = document.createAttribute("title");
+    row_remove_button_title.value = "Remove this data set";
+    row_remove_button.setAttributeNode( row_remove_button_title );
+    row_remove_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    row_remove_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    row_remove_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    row_remove_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    row_remove_button.addEventListener("click", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview")
+        
+        for (var tt = 0; tt < value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length; tt++) {
+
+            if (this == value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.nextElementSibling.nextElementSibling) {
+                preview_chart.getElementsByClassName("js-values")[tt].remove();
+
+                value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.nextElementSibling.nextElementSibling.remove();
+                value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.nextElementSibling.remove();
+                value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.remove();
+                value_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].remove();
+
+                var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+            }
+        }
+
+    }, false);
+    row_remove_button.innerText = "X";
+    value_container.appendChild( row_remove_button );
+
+    // update the preview chart
+    var preview_chart = document.getElementById("js-chart-builder-preview");
+    
+    var values_input = document.createElement("div");
+    var values_input_class = document.createAttribute("class");
+    values_input_class.value = "js-values";
+    values_input.setAttributeNode( values_input_class );
+    var values_input_title = document.createAttribute("title");
+    values_input_title.value = BUILDER_DEFAULTS.data.heatmap.qualitative.data[ data_index ].title;
+    values_input.setAttributeNode( values_input_title );
+    values_input.innerText = BUILDER_DEFAULTS.data.heatmap.qualitative.data[ data_index ].data.join(", ");
+    preview_chart.appendChild( values_input );
+
+    var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    return true;
+}
+// add a row to the input data grid for the parallel coordinates
+function jsChartBuilderPopulateInputData_CategoricalParallelCoordinates_AddRow(values_grid_container, ivalue) {
+
+    // row number
+    var row_number = document.createElement("div");
+    var row_number_class = document.createAttribute("class");
+    row_number_class.value = "js-chart-builder-qualitative-value-cell";
+    row_number.setAttributeNode( row_number_class );
+    row_number.innerText = (values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length + 1);
+    values_grid_container.appendChild( row_number );
+
+    // row values
+    var row_values = document.createElement("input");
+    var row_values_type = document.createAttribute("type");
+    row_values_type.value = "TEXT";
+    row_values.setAttributeNode( row_values_type );
+    var row_values_style = document.createAttribute("style");
+    row_values_style.value = "margin: 0px 3px 0px 0px;";
+    row_values.setAttributeNode( row_values_style );
+    row_values.addEventListener("change", function () {
+
+        for (var tt = 0; tt < values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length; tt++) {
+            if (this == values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling) {
+
+                var preview_chart = document.getElementById("js-chart-builder-preview");
+                preview_chart.getElementsByClassName("js-values")[tt].innerText = values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.value;
+            }
+        }
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    row_values.value = ivalue.join(", ");
+    values_grid_container.appendChild( row_values );
+
+    // remove button
+    var row_remove_button = document.createElement("div");
+    var row_remove_button_style = document.createAttribute("style");
+    row_remove_button_style.value = "background-color: crimson; color: white; text-align: center; line-height: 30px; font-weight: 400; border-radius: 5px; cursor: pointer;";
+    row_remove_button.setAttributeNode( row_remove_button_style );
+    var row_remove_button_title = document.createAttribute("title");
+    row_remove_button_title.value = "Remove values from chart";
+    row_remove_button.setAttributeNode( row_remove_button_title );
+    row_remove_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    row_remove_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    row_remove_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    row_remove_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    row_remove_button.addEventListener("click", function () {
+
+        for (var tt = 0; tt < values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length; tt++) {
+            if (this == values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].nextElementSibling.nextElementSibling) {
+                this.previousElementSibling.previousElementSibling.remove();
+                this.previousElementSibling.remove();
+                this.remove();
+                document.getElementById("js-chart-builder-preview").getElementsByClassName("js-values")[tt].remove();
+            }
+            //values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].innerText = (tt + 1);
+        }
+        for (var tt = 0; tt < values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell").length; tt++) {
+            values_grid_container.getElementsByClassName("js-chart-builder-qualitative-value-cell")[tt].innerText = (tt + 1);
+        }
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    row_remove_button.innerText = "X";
+    values_grid_container.appendChild( row_remove_button );
+
+    // update preview chart
+    var preview_chart = document.getElementById("js-chart-builder-preview");
+
+    var input_values = document.createElement("div");
+    var input_values_class = document.createAttribute("class");
+    input_values_class.value = "js-values";
+    input_values.setAttributeNode( input_values_class );
+    input_values.innerText = ivalue.join(", ");
+    preview_chart.appendChild( input_values );
+
+    return true;
+}
+// add categorical input data for a parallel coordinates chart
+function jsChartBuilderPopulateInputData_CategoricalParallelCoordinates(data_panel, chart_type) {
+
+    for (var tt = (data_panel.children.length-1); tt >=0; tt--) {
+        data_panel.children[tt].remove();
+    }
+
+    // label
+    var data_input_label = document.createElement("div");
+    var data_input_label_class = document.createAttribute("class");
+    data_input_label_class.value = "js-chart-builder-data-input-label";
+    data_input_label.setAttributeNode( data_input_label_class );
+    data_input_label.innerText = "Parallel Coordinates (Multivariate Numerical Data)";
+    data_panel.appendChild( data_input_label );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].chart_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // data labels label
+    var data_input_value_labels = document.createElement("div");
+    var data_input_value_labels_class = document.createAttribute("class");
+    data_input_value_labels_class.value = "js-chart-builder-categorical-value-label";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_class );
+    var data_input_value_labels_style = document.createAttribute("style");
+    data_input_value_labels_style.value = "margin-top: 5px;";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_style );
+    if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].allow_multiseries) {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: ForestGreen; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">YES</span>";
+    } else {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: Crimson; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">NO</span>";
+    }
+    data_panel.appendChild( data_input_value_labels );
+
+    // labels label
+    var labels_label = document.createElement("div");
+    var labels_label_class = document.createAttribute("class");
+    labels_label_class.value = "js-chart-builder-categorical-value-label";
+    labels_label.setAttributeNode( labels_label_class );
+    labels_label.innerHTML = "Category Names <span style=\"font-size: 10px;\">(comma-separated list of text values)</span>";
+    data_panel.appendChild( labels_label );
+
+    // labels input
+    var labels_input = document.createElement("input");
+    var labels_input_type = document.createAttribute("type");
+    labels_input_type.value = "TEXT";
+    labels_input.setAttributeNode( labels_input_type );
+    var labels_input_style = document.createAttribute("style");
+    labels_input_style.value = "width: calc(100% - 30px)";
+    labels_input.setAttributeNode( labels_input_style );
+    labels_input.addEventListener("change", function () {
+
+        document.getElementById("js-chart-builder-preview").getElementsByClassName("js-labels")[0].innerText = this.value;
+
+        var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    }, false);
+    labels_input.value = BUILDER_DEFAULTS.data["parallel coordinates"].labels.join(", ");
+    data_panel.appendChild( labels_input );
+
+    // values grid container
+    var values_grid_container = document.createElement("div");
+    var values_grid_container_class = document.createAttribute("class");
+    values_grid_container_class.value = "js-chart-builder-parallel-coordinates-values-container";
+    values_grid_container.setAttributeNode( values_grid_container_class );
+    data_panel.appendChild( values_grid_container );
+
+    // grid header - row number
+    var values_grid_header = document.createElement("div");
+    var values_grid_header_class = document.createAttribute("class");
+    values_grid_header_class.value = "js-chart-builder-parallel-coordinates-values-header";
+    values_grid_header.setAttributeNode( values_grid_header_class );
+    var values_grid_header_style = document.createAttribute("style");
+    values_grid_header_style.value = "border-radius: 5px 0px 0px 0px;";
+    values_grid_header.setAttributeNode( values_grid_header_style );
+    values_grid_header.innerText = "#";
+    values_grid_container.appendChild( values_grid_header );
+
+    // grid header - values
+    var values_grid_values = document.createElement("div");
+    var values_grid_values_class = document.createAttribute("class");
+    values_grid_values_class.value = "js-chart-builder-parallel-coordinates-values-header";
+    values_grid_values.setAttributeNode( values_grid_values_class );
+    values_grid_container.appendChild( values_grid_values );
+
+    // grid header - remove
+    var values_grid_values = document.createElement("div");
+    var values_grid_values_class = document.createAttribute("class");
+    values_grid_values_class.value = "js-chart-builder-parallel-coordinates-values-header";
+    values_grid_values.setAttributeNode( values_grid_values_class );
+    var values_grid_values_style = document.createAttribute("style");
+    values_grid_values_style.value = "border-radius: 0px 5px 0px 0px;";
+    values_grid_values.setAttributeNode( values_grid_values_style );
+    values_grid_container.appendChild( values_grid_values );
+
+    for (const [ikey, ivalue] of Object.entries(BUILDER_DEFAULTS.data["parallel coordinates"].data)) {
+        var add_parallel_coordinates_row = jsChartBuilderPopulateInputData_CategoricalParallelCoordinates_AddRow(values_grid_container, ivalue);
+    }
+
+    // add more rows button
+    var add_more = document.createElement("div");
+    var add_more_style = document.createAttribute("style");
+    add_more_style.value = "width: 150px; background-color: ForestGreen; color: White; margin: 10px 0px 0px 0px; font-weight: 400; font-size: 14px; text-align: center; line-height: 30px; border: 0.5px solid #333333; border-radius: 3px; cursor: pointer;";
+    add_more.setAttributeNode( add_more_style );
+    add_more.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    add_more.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    add_more.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    add_more.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    add_more.addEventListener("click", function () {
+        var add_parallel_coordinates_row = jsChartBuilderPopulateInputData_CategoricalParallelCoordinates_AddRow(values_grid_container, []);
+    }, false);
+    add_more.innerText = "+More Rows";
+    data_panel.appendChild( add_more );
+
+    // update preview chart
+    var preview_chart = document.getElementById("js-chart-builder-preview");
+
+    var input_values = document.createElement("div");
+    var input_values_class = document.createAttribute("class");
+    input_values_class.value = "js-labels";
+    input_values.setAttributeNode( input_values_class );
+    input_values.innerText = BUILDER_DEFAULTS.data["parallel coordinates"].labels.join(", ");
+    preview_chart.appendChild( input_values );
+
+    var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+    return true;
+}
+// add categorical input data for a heatmap (using three different color palettes)
+function jsChartBuilderPopulateInputData_CategoricalHeatmap(data_panel, chart_type) {
+
+    for (var tt = (data_panel.children.length-1); tt >=0; tt--) {
+        data_panel.children[tt].remove();
+    }
+
+    // label
+    var data_input_label = document.createElement("div");
+    var data_input_label_class = document.createAttribute("class");
+    data_input_label_class.value = "js-chart-builder-data-input-label";
+    data_input_label.setAttributeNode( data_input_label_class );
+    data_input_label.innerText = "Heatmap";
+    data_panel.appendChild( data_input_label );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].chart_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // short desc
+    var data_input_sublabel = document.createElement("div");
+    var data_input_sublabel_class = document.createAttribute("class");
+    data_input_sublabel_class.value = "js-chart-builder-data-input-sub-label";
+    data_input_sublabel.setAttributeNode( data_input_sublabel_class );
+    data_input_sublabel.innerHTML = IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_description;
+    data_panel.appendChild( data_input_sublabel );
+
+    // data labels label
+    var data_input_value_labels = document.createElement("div");
+    var data_input_value_labels_class = document.createAttribute("class");
+    data_input_value_labels_class.value = "js-chart-builder-categorical-value-label";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_class );
+    var data_input_value_labels_style = document.createAttribute("style");
+    data_input_value_labels_style.value = "margin-top: 5px;";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_style );
+    if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].allow_multiseries) {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: ForestGreen; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">YES</span>";
+    } else {
+        data_input_value_labels.innerHTML = "Allow multi-series data sets: <span style=\"font-weight: 500; background-color: Crimson; color: white; padding: 2px 4px 2px 4px; border-radius: 3px;\">NO</span>";
+    }
+    data_panel.appendChild( data_input_value_labels );
+
+    // add color palette choice - label
+    var data_input_value_labels = document.createElement("div");
+    var data_input_value_labels_class = document.createAttribute("class");
+    data_input_value_labels_class.value = "js-chart-builder-categorical-value-label";
+    data_input_value_labels.setAttributeNode( data_input_value_labels_class );
+    data_input_value_labels.innerHTML = "Select color palette type:";
+    data_panel.appendChild( data_input_value_labels );
+
+    // color palette type container
+    var color_palette_choice_container = document.createElement("div");
+    var color_palette_choice_container_style = document.createAttribute("style");
+    color_palette_choice_container_style.value = "border: 0.5px solid #bbbbbb; border-radius: 5px; height: 30px; display: flex; flex-direction: row;";
+    color_palette_choice_container.setAttributeNode( color_palette_choice_container_style );
+    data_panel.appendChild( color_palette_choice_container );
+
+    // color palette type container - qualitative choice
+    var palette_choice = document.createElement("div");
+    var palette_choice_style = document.createAttribute("style");
+    palette_choice_style.value = "flex: 1 1 0px; margin: 2.5px 5px 2.5px 5px; border: 1px solid hsl(40, 100%, 50%); border-radius: 3px; background-color: hsl(40, 100%, 70%); font-weight: 600; line-height: 25px; text-align: center; cursor: pointer;";
+    palette_choice.setAttributeNode( palette_choice_style );
+    palette_choice.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(40, 100%, 50%)";
+    }, false);
+    palette_choice.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(40, 100%, 70%)";
+    }, false);
+    palette_choice.addEventListener("mousedown", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    palette_choice.addEventListener("mouseup", function () {
+        this.style.fontWeight = 600;
+    }, false);
+    palette_choice.addEventListener("click", function () {
+
+        var render_qualitative_palette = jsChartBuilderRenderQualitativePalette(data_panel);
+
+    }, false);
+    palette_choice.innerText = "Qualitative";
+    color_palette_choice_container.appendChild( palette_choice );
+
+    // color palette type container - continuous choice
+    var palette_choice = document.createElement("div");
+    var palette_choice_style = document.createAttribute("style");
+    palette_choice_style.value = "flex: 1 1 0px; margin: 2.5px 5px 2.5px 5px; border: 1px solid hsl(270, 100%, 60%); border-radius: 3px; background-color: hsl(270, 100%, 80%); font-weight: 600; line-height: 25px; text-align: center; cursor: pointer;";
+    palette_choice.setAttributeNode( palette_choice_style );
+    palette_choice.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(270, 100%, 60%)";
+    }, false);
+    palette_choice.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(270, 100%, 80%)";
+    }, false);
+    palette_choice.addEventListener("mousedown", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    palette_choice.addEventListener("mouseup", function () {
+        this.style.fontWeight = 600;
+    }, false);
+    palette_choice.addEventListener("click", function () {
+
+        var render_qualitative_palette = jsChartBuilderRenderContinuousPalette(data_panel);
+
+    }, false);
+    palette_choice.innerText = "Continuous";
+    color_palette_choice_container.appendChild( palette_choice );
+
+    // color palette type container - discrete choice
+    var palette_choice = document.createElement("div");
+    var palette_choice_style = document.createAttribute("style");
+    palette_choice_style.value = "flex: 1 1 0px; margin: 2.5px 5px 2.5px 5px; border: 1px solid hsl(120, 100%, 50%); border-radius: 3px; background-color: hsl(120, 100%, 70%); font-weight: 600; line-height: 25px; text-align: center; cursor: pointer;";
+    palette_choice.setAttributeNode( palette_choice_style );
+    palette_choice.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 100%, 50%)";
+    }, false);
+    palette_choice.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 100%, 70%)";
+    }, false);
+    palette_choice.addEventListener("mousedown", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    palette_choice.addEventListener("mouseup", function () {
+        this.style.fontWeight = 600;
+    }, false);
+    palette_choice.innerText = "Discrete";
+    color_palette_choice_container.appendChild( palette_choice );
+
+    // show the qualitative palette
+    var render_qualitative_palette = jsChartBuilderRenderQualitativePalette(data_panel);
+
+    // value container label
+    var value_container_label = document.createElement("div");
+    var value_container_label_class = document.createAttribute("class");
+    value_container_label_class.value = "js-chart-builder-color-palette-value-label-container";
+    value_container_label.setAttributeNode( value_container_label_class );
+    value_container_label.innerText = "Input data values"
+    data_panel.appendChild(value_container_label);
+
+    // value container
+    var value_container = document.createElement("div");
+    var value_container_class = document.createAttribute("class");
+    value_container_class.value = "js-chart-builder-color-palette-value-container";
+    value_container.setAttributeNode( value_container_class );
+    data_panel.appendChild(value_container);
+
+    for (var tt = 0; tt < BUILDER_DEFAULTS.data.heatmap.qualitative.data.length; tt++) {
+
+        var add_value_row = jsChartBuilderRenderQualitativePalette_ValueRow(value_container);
+
+    }
+
+    // add more values button
+    var more_values_button = document.createElement("div");
+    var more_values_button_style = document.createAttribute("style");
+    more_values_button_style.value = "width: 150px; text-align: center; height: 30px; line-height: 30px; font-size: 14px; font-weight: 400; background-color: ForestGreen; color: white; border: 0.5px solid black; border-radius: 3px; cursor: pointer;";
+    more_values_button.setAttributeNode( more_values_button_style );
+    more_values_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    more_values_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    more_values_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    more_values_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    more_values_button.addEventListener("click", function () {
+
+        var add_value_row = jsChartBuilderRenderQualitativePalette_ValueRow(value_container);
+
+    }, false);
+    more_values_button.innerText = "+More Values";
+    data_panel.appendChild( more_values_button );
+
+
+    return true;
+}
 // add categorical input data
 function jsChartBuilderPopulateInputData_Categorical(data_panel, chart_type) {
 
@@ -3032,7 +4287,8 @@ function jsChartBuilderPopulateInputData_Categorical(data_panel, chart_type) {
     var data_input_value_input_type = document.createAttribute("type");
     data_input_value_input_type.value = "TEXT";
     data_input_value_input.setAttributeNode( data_input_value_input_type );
-    data_input_value_input.value = "Furniture, Groceries, Electronics, Toys, Clothing";
+    //data_input_value_input.value = "Furniture, Groceries, Electronics, Toys, Clothing";
+    data_input_value_input.value = BUILDER_DEFAULTS.data.categorical.labels.join(", ");
     //data_input_value_input.addEventListener("focus", function () {
     //    this.select();
     //}, false);
@@ -3050,7 +4306,13 @@ function jsChartBuilderPopulateInputData_Categorical(data_panel, chart_type) {
 
     // allow multi series or not
     if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].allow_multiseries) {
-        var loop_count = 3;
+        if (["bar", "lollipop bar"].indexOf( chart_type ) > -1) {
+            var loop_count = 2;
+        } else if (chart_type == "population pyramid") {
+            var loop_count = 12;
+        } else {
+            var loop_count = 3;
+        }
     } else {
         var loop_count = 1;
     }
@@ -3190,14 +4452,42 @@ function jsChartBuilderPopulateInputData(data_panel, data_type, chart_type) {
 
         // default -- categorical
         default:
-            var populate_input_data = jsChartBuilderPopulateInputData_Categorical(data_panel, chart_type);
+            if (chart_type == "heatmap") {
+                var populate_input_data = jsChartBuilderPopulateInputData_CategoricalHeatmap(data_panel, chart_type);
+            } else if (chart_type == "parallel coordinates") {
+                var populate_input_data = jsChartBuilderPopulateInputData_CategoricalParallelCoordinates(data_panel, chart_type);
+            } else {
+                var populate_input_data = jsChartBuilderPopulateInputData_Categorical(data_panel, chart_type);
+            }
             break;
+    }
+
+    return true;
+}
+// append or amend a style template directive
+function jsChartBuilderAppendStyleDirective(preview_chart, directive_name, directive_value) {
+
+    var this_directive = preview_chart.getElementsByClassName( directive_name );
+    if (this_directive.length == 0) {
+
+        var new_directive = document.createElement("div");
+        var new_directive_class = document.createAttribute("class");
+        new_directive_class.value = directive_name;
+        new_directive.setAttributeNode( new_directive_class );
+        new_directive.innerText = directive_value;
+        preview_chart.appendChild( new_directive );
+
     }
 
     return true;
 }
 // add the preview chart
 function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_name) {
+
+    // overwrite the categorical data for population pyramids
+    if (chart_type == "population pyramid") {
+        BUILDER_DEFAULTS.data.categorical = BUILDER_DEFAULTS.data["population pyramid"];
+    }
 
     for (var tt = (preview_panel.children.length-1); tt >= 0; tt--) {
         preview_panel.children[tt].remove();
@@ -3244,49 +4534,110 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
     var preview_chart_type = document.createAttribute("type");
     preview_chart_type.value = chart_type;
     preview_chart.setAttributeNode( preview_chart_type );
+    /*
     var preview_chart_title = document.createAttribute("title");
-    preview_chart_title.value = BUILDER_DEFAULTS.data[ IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_type ].chart_title;
+    if (chart_type == "heatmap") {
+        preview_chart_title.value = BUILDER_DEFAULTS.data.heatmap.chart_title;
+    } else if (chart_type == "parallel coordinates") {
+        preview_chart_title.value = BUILDER_DEFAULTS.data["parallel coordinates"].chart_title;
+    } else {
+        preview_chart_title.value = BUILDER_DEFAULTS.data[ IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_type ].chart_title;
+    }
     preview_chart.setAttributeNode( preview_chart_title );
+    */
     var preview_chart_template = document.createAttribute("template");
     preview_chart_template.value = template_name;
     preview_chart.setAttributeNode( preview_chart_template );
     // var preview_chart_showlegend = document.createAttribute("showlegend");
     // preview_chart_showlegend.value = IDEFAULT_CHART_ATTRIBUTES["showlegend"].default;
     // preview_chart.setAttributeNode( preview_chart_showlegend );
-    var preview_chart_showcontrols = document.createAttribute("showcontrols");
-    preview_chart_showcontrols.value = "off"
-    preview_chart.setAttributeNode( preview_chart_showcontrols );
+    // var preview_chart_showcontrols = document.createAttribute("showcontrols");
+    // preview_chart_showcontrols.value = "print_only"
+    // preview_chart.setAttributeNode( preview_chart_showcontrols );
 
-    if (chart_type == "bubble") {
-        var preview_chart_showlabels = document.createAttribute("showlabels");
-        preview_chart_showlabels.value = "off"
-        preview_chart.setAttributeNode( preview_chart_showlabels );
-    } else if (chart_type == "treemap") {
-        var preview_chart_sortdata = document.createAttribute("sortdata");
-        preview_chart_sortdata.value = "on";
-        preview_chart.setAttributeNode( preview_chart_sortdata );
-
-        var preview_chart_drawalg = document.createAttribute("drawalg");
-        preview_chart_drawalg.value = "portrait quad";
-        preview_chart.setAttributeNode( preview_chart_drawalg );
-
-        var preview_chart_showlegend = document.createAttribute("showlegend");
-        preview_chart_showlegend.value = "bottom";
-        preview_chart.setAttributeNode( preview_chart_showlegend );
-
-        var preview_chart_jsondata = document.createAttribute("jsondata");
-        preview_chart_jsondata.value = "default-json-data";
-        preview_chart.setAttributeNode( preview_chart_jsondata );
-    } else if ((chart_type == "box plot") || (chart_type == "horizontal box plot")) {
-        var preview_chart_sortdata = document.createAttribute("showlegend");
-        preview_chart_sortdata.value = "off";
-        preview_chart.setAttributeNode( preview_chart_sortdata );
+    if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ] != "undefined") {
+        for (const [ikey, ivalue] of Object.entries(BUILDER_DEFAULTS.chart_attributes[ chart_type ])) {
+            preview_chart.setAttribute(ikey, ivalue);
+        }
     }
+
+    /*
+    // bubble
+    switch(chart_type) {
+        case "bubble":
+            var preview_chart_showlabels = document.createAttribute("showlabels");
+            preview_chart_showlabels.value = "off"
+            preview_chart.setAttributeNode( preview_chart_showlabels );
+
+            break;
+        // treemap
+        case "treemap":
+            var preview_chart_sortdata = document.createAttribute("sortdata");
+            preview_chart_sortdata.value = "on";
+            preview_chart.setAttributeNode( preview_chart_sortdata );
+
+            var preview_chart_drawalg = document.createAttribute("drawalg");
+            preview_chart_drawalg.value = "portrait quad";
+            preview_chart.setAttributeNode( preview_chart_drawalg );
+
+            var preview_chart_showlegend = document.createAttribute("showlegend");
+            preview_chart_showlegend.value = "bottom";
+            preview_chart.setAttributeNode( preview_chart_showlegend );
+
+            var preview_chart_jsondata = document.createAttribute("jsondata");
+            preview_chart_jsondata.value = "default-json-data";
+            preview_chart.setAttributeNode( preview_chart_jsondata );
+
+            break;
+        // box plot
+        // horizontal box plot
+        case "box plot":
+        case "horizontal box plot":
+            var preview_chart_sortdata = document.createAttribute("showlegend");
+            preview_chart_sortdata.value = "off";
+            preview_chart.setAttributeNode( preview_chart_sortdata );
+
+            break;
+        // span bar
+        case "span bar":
+            var preview_chart_xtitle = document.createAttribute("xtitle");
+            preview_chart_xtitle.value = "Selling Price in US Dollar ($)";
+            preview_chart.setAttributeNode( preview_chart_xtitle );
+
+            var preview_chart_ytitle = document.createAttribute("ytitle");
+            preview_chart_ytitle.value = "Artist & Painting name";
+            preview_chart.setAttributeNode( preview_chart_ytitle );
+
+            break;
+        // funnel bar
+        case "funnel bar":
+        case "funnel column":
+            var preview_chart_sortdata = document.createAttribute("sortdata");
+            preview_chart_sortdata.value = "on column desc";
+            preview_chart.setAttributeNode( preview_chart_sortdata );
+
+            break;
+        // population pyramid
+        case "population pyramid":
+            var preview_chart_xtitle = document.createAttribute("xtitle");
+            preview_chart_xtitle.value = "Students x 1000";
+            preview_chart.setAttributeNode( preview_chart_xtitle );
+
+            break;
+
+    }
+    */
 
     preview_panel.appendChild( preview_chart );
 
     if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].allow_multiseries) {
-        var loop_count = 3;
+        if (["bar", "lollipop bar"].indexOf( chart_type ) > -1) {
+            var loop_count = 2;
+        } else if (chart_type == "population pyramid") {
+            var loop_count = 12;
+        } else {
+            var loop_count = 3;
+        }
     } else {
         var loop_count = 1;
     }
@@ -3295,27 +4646,31 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
     switch(IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_type) {
         // categorical
         case "categorical":
-            // add the preview labels
-            var preview_labels = document.createElement("div");
-            var preview_labels_class = document.createAttribute("class");
-            preview_labels_class.value = "js-labels";
-            preview_labels.setAttributeNode( preview_labels_class );
-            preview_labels.innerText = "Furniture, Groceries, Electronics, Toys, Clothing";
-            preview_chart.appendChild( preview_labels );
 
-            for (var tt = 0; tt < loop_count; tt++) {
+            if ((chart_type != "heatmap") && (chart_type != "parallel coordinates")) {
+                // add the preview labels
+                var preview_labels = document.createElement("div");
+                var preview_labels_class = document.createAttribute("class");
+                preview_labels_class.value = "js-labels";
+                preview_labels.setAttributeNode( preview_labels_class );
+                //preview_labels.innerText = "Furniture, Groceries, Electronics, Toys, Clothing";
+                preview_labels.innerText = BUILDER_DEFAULTS.data.categorical.labels.join(", ");
+                preview_chart.appendChild( preview_labels );
 
-                // add the preview values
-                var preview_values = document.createElement("div");
-                var preview_values_class = document.createAttribute("class");
-                preview_values_class.value = "js-values";
-                preview_values.setAttributeNode( preview_values_class );
-                var preview_values_title = document.createAttribute("title");
-                preview_values_title.value = BUILDER_DEFAULTS.data.categorical.data[tt].title;
-                preview_values.setAttributeNode( preview_values_title );
-                preview_values.innerText = BUILDER_DEFAULTS.data.categorical.data[tt].data.join(", ");
-                preview_chart.appendChild( preview_values );
+                for (var tt = 0; tt < loop_count; tt++) {
 
+                    // add the preview values
+                    var preview_values = document.createElement("div");
+                    var preview_values_class = document.createAttribute("class");
+                    preview_values_class.value = "js-values";
+                    preview_values.setAttributeNode( preview_values_class );
+                    var preview_values_title = document.createAttribute("title");
+                    preview_values_title.value = BUILDER_DEFAULTS.data.categorical.data[tt].title;
+                    preview_values.setAttributeNode( preview_values_title );
+                    preview_values.innerText = BUILDER_DEFAULTS.data.categorical.data[tt].data.join(", ");
+                    preview_chart.appendChild( preview_values );
+
+                }
             }
 
             break;
@@ -3519,33 +4874,410 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
 
     }
 
-    if (chart_type == "bubble") {
+    if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ] != "undefined") {
+        for (const [ikey, ivalue] of Object.entries(BUILDER_DEFAULTS.style_template_directives[ chart_type ])) {
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-" + (ikey.replaceAll("_", "-")), ivalue);
+        }
+    }
 
-        var preview_values = document.createElement("div");
-        var preview_values_class = document.createAttribute("class");
-        preview_values_class.value = "js-marker-width";
-        preview_values.setAttributeNode( preview_values_class );
-        preview_values.innerText = "auto";
-        preview_chart.appendChild( preview_values );
+    /*
+    switch(chart_type) {
 
-        var preview_values = document.createElement("div");
-        var preview_values_class = document.createAttribute("class");
-        preview_values_class.value = "js-marker-height";
-        preview_values.setAttributeNode( preview_values_class );
-        preview_values.innerText = "auto";
-        preview_chart.appendChild( preview_values );
+        // bubble
+        case "bubble":
+            var preview_values = document.createElement("div");
+            var preview_values_class = document.createAttribute("class");
+            preview_values_class.value = "js-marker-width";
+            preview_values.setAttributeNode( preview_values_class );
+            preview_values.innerText = "auto";
+            preview_chart.appendChild( preview_values );
 
+            var preview_values = document.createElement("div");
+            var preview_values_class = document.createAttribute("class");
+            preview_values_class.value = "js-marker-height";
+            preview_values.setAttributeNode( preview_values_class );
+            preview_values.innerText = "auto";
+            preview_chart.appendChild( preview_values );
+
+            break;
+
+        // bar
+        case "bar":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-min-height", "5px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-min-width", "3px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-series-margin", "5px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-data-margin", "1px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-border-radius", "0px 2px 2px 0px");
+
+            break;
+
+        // column
+        case "column":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-min-height", "3px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-series-margin", "5px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-data-margin", "1px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-border-radius", "2px 2px 0px 0px");
+
+            break;
+
+        // span bar
+        // span column
+        case "span bar":
+        case "span column":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-data-margin", "1px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-border-radius", "2px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-datalabel-prepend", "$");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-datalabel-append", "mil");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-datalabel-width", "100px");
+
+            break;
+
+        // funnel bar
+        // funnel column
+        case "funnel bar":
+        case "funnel column":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-data-margin", "1px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-border-radius", "2px");
+
+            break;
+
+        // histogram
+        case "histogram":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-min-width", "10px");
+
+            break;
+
+        // parallel coordinates
+        case "parallel coordinates":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-line-thickness", "1.5px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-color-palette", "SteelBlue");
+
+            break;
+
+        // line
+        // stacked line
+        // 100% stacked line
+        case "line":
+        case "stacked line":
+        case "100% stacked line":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-line-thickness", "2px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-marker-width", "10px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-datalabel-text-color", "black");
+
+            break;
+        // population pyramid
+        case "population pyramid":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-data-margin", "1px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-datalabel-text-color", "black");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-bar-min-width", "3px");
+
+            break;
+        // ohlc
+        case "ohlc":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-line-thickness", "5px");
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-datalabel-text-color", "black");
+
+            break;
+        // parallel coordinates
+        case "parallel coordinates":
+            var add_style_directive = jsChartBuilderAppendStyleDirective(preview_chart, "js-value-line-thickness", "2px");
+
+            break;
+    }
+    */
+
+    return true;
+}
+
+/*
+// search the styl directives panel
+function jsChartBuilderSearchStyleDirective(style_directives_content_panel, search_value) {
+
+    for (const [ikey, ivalue] of Object.entries(style_directives_content_panel.getElementsByClassName("js-chart-builder-style-directive-name"))) {
+        if (ivalue.innerText.indexOf( search_value ) > -1) {
+            ivalue.style.backgroundColor = "#ffffe6";
+            ivalue.style.backgroundColor = "#ffffe6";
+        } else {
+            ivalue.style.backgroundColor = "white";
+        }
     }
 
     return true;
 }
+*/
 // populate the style directives content panel
-function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, template_name, chart_type) {
+function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, template_name, chart_type, search_term = "") {
 
     for (var tt = (style_directives_content_panel.children.length-1); tt >= 0; tt--) {
         style_directives_content_panel.children[tt].remove();
     }
 
+    var directive_list = [];
+    for (const [ikey, ivalue] of Object.entries(IDEFAULT_DESIGN_TEMPLATES[0])) {
+        if ((["name", "description"].indexOf(ikey) == -1) && (ikey.indexOf(search_term.replaceAll("-", "_")) > -1)) {
+            if (directive_list.indexOf( ikey ) == -1) {
+                directive_list.push( ikey );
+            }
+        }
+    }
+
+    directive_list.sort();
+
+    // search container
+    var search_container = document.createElement("div");
+    var search_container_class = document.createAttribute("class");
+    search_container_class.value = "js-chart-builder-search-container";
+    search_container.setAttributeNode( search_container_class );
+    style_directives_content_panel.appendChild( search_container );
+
+    // search label
+    var search_label = document.createElement("div");
+    var search_label_class = document.createAttribute("class");
+    search_label_class.value = "js-chart-builder-search-label";
+    search_label.setAttributeNode( search_label_class );
+    search_label.innerText = "Search";
+    search_container.appendChild( search_label );
+
+    // search input
+    var search_input = document.createElement("input");
+    search_input.id = "js-chart-builder-search-input";
+    var search_input_type = document.createAttribute("type");
+    search_input_type.value = "TEXT";
+    search_input.setAttributeNode( search_input_type );
+    var search_input_style = document.createAttribute("style");
+    search_input_style.value = "width: 100%; margin: 2px 20px 2px 0px;";
+    search_input.setAttributeNode( search_input_style );
+    search_input.addEventListener("change", function () {
+        var search_for_directive = jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, template_name, chart_type, this.value);
+    }, false);
+    search_container.appendChild( search_input );
+
+    // clear button
+    var clear_button = document.createElement("div");
+    var clear_button_class = document.createAttribute("class");
+    clear_button_class.value = "js-chart-buillder-search-button";
+    clear_button.setAttributeNode( clear_button_class );
+    var clear_button_title = document.createAttribute("title");
+    clear_button_title.value = "Clear the search box";
+    clear_button.setAttributeNode( clear_button_title );
+    var clear_button_style = document.createAttribute("style");
+    clear_button_style.value = "width: 30px;";
+    clear_button.setAttributeNode( clear_button_style );
+    clear_button.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    clear_button.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
+    clear_button.addEventListener("mousedown", function () {
+        this.style.fontWeight = 200;
+    }, false);
+    clear_button.addEventListener("mouseup", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    clear_button.addEventListener("click", function () {
+
+        var search_for_directive = jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, template_name, chart_type, "");
+
+
+    }, false);
+    clear_button.innerText = "X";
+    search_container.appendChild( clear_button );
+
+    var this_template;
+    for (const [hkey, hvalue] of Object.entries(IDEFAULT_DESIGN_TEMPLATES)) {
+        if (hvalue.name == template_name) {
+            this_template = hvalue;
+            break;
+        }
+    }
+
+    var directive_groups = {};
+    var prev_group = "";
+    for (const [ikey, ivalue] of Object.entries(directive_list)) {
+        var sub_cat = ivalue.substring(0, ivalue.indexOf("_"));
+        if (prev_group != sub_cat) {
+            directive_groups[ sub_cat] = 1;
+        } else {
+            directive_groups[ sub_cat]++;
+        }
+        prev_group = sub_cat;
+    }
+
+    var prev_cat = "";
+    for (const [ikey, ivalue] of Object.entries(directive_list)) {
+        var sub_cat = ivalue.substring(0, ivalue.indexOf("_"));
+
+        if (prev_cat != sub_cat) {
+
+            var group_label = document.createElement("div");
+            var group_label_style = document.createAttribute("style");
+            group_label_style.value = "grid-row: span " + directive_groups[ sub_cat ] + "; writing-mode: vertical-lr; line-height: 30px; text-align: left; font-size: 16px; font-weight: 600; background-color: CadetBlue; color: White; padding: 5px 0px 0px 0px; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; border: 0.5px solid white;";
+            group_label.setAttributeNode( group_label_style );
+            group_label.innerText = sub_cat;
+            style_directives_content_panel.appendChild( group_label );
+
+        }
+
+        // directive label
+        var directive_label = document.createElement("div");
+        var directive_label_class = document.createAttribute("class");
+        directive_label_class.value = "js-chart-builder-style-directive-name";
+        directive_label.setAttributeNode( directive_label_class );
+        directive_label.innerText = ivalue;
+        style_directives_content_panel.appendChild( directive_label );
+
+        // directive checkbox
+        var directive_checkbox = document.createElement("input");
+        var directive_checkbox_type = document.createAttribute("type");
+        directive_checkbox_type.value = "CHECKBOX";
+        directive_checkbox.setAttributeNode( directive_checkbox_type );
+        directive_checkbox.addEventListener("change", function () {
+
+            if (this.nextElementSibling.disabled) {
+                this.nextElementSibling.disabled = false;
+            } else {
+                this.nextElementSibling.disabled = true;
+            }
+
+            this.nextElementSibling.select();
+
+        }, false);
+        style_directives_content_panel.appendChild( directive_checkbox );
+
+        // directive textbox
+        var directive_textbox = document.createElement("input");
+        var directive_textbox_type = document.createAttribute("type");
+        directive_textbox_type.value = "TEXT";
+        directive_textbox.setAttributeNode( directive_textbox_type );
+        var directive_textbox_disabled = document.createAttribute("disabled");
+        directive_textbox_disabled.value = "disabled";
+        directive_textbox.setAttributeNode( directive_textbox_disabled );
+        directive_textbox.addEventListener("change", function () {
+
+            var preview_chart = document.getElementById("js-chart-builder-preview");
+
+            var directive_lookup_name = "js-" + this.previousElementSibling.previousElementSibling.innerText.replaceAll("_", "-");
+            var directive_elems = preview_chart.getElementsByClassName( directive_lookup_name );
+
+            if (directive_elems.length == 0) {
+
+                var new_directive = document.createElement("div");
+                var new_directive_class = document.createAttribute("class");
+                new_directive_class.value = directive_lookup_name;
+                new_directive.setAttributeNode( new_directive_class );
+                new_directive.innerText = this.value;
+                preview_chart.appendChild( new_directive );
+
+            } else {
+                directive_elems[0].innerText = this.value;
+            }
+
+            var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+            var pop_msg = jsChartBuilderPopMessage("Style directive updated.");
+        }, false);
+
+        if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ] != "undefined") {
+            if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ][ ivalue ] != "undefined") {
+                var t_directive_value = BUILDER_DEFAULTS.style_template_directives[ chart_type ][ ivalue];
+            } else {
+                var t_directive_value = directive_textbox.value = this_template[ ivalue ];
+            }
+        } else {
+            var t_directive_value = directive_textbox.value = this_template[ ivalue ];
+        }
+
+        var directive_value;
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+        if ((typeof preview_chart != "undefined") && (preview_chart != null)) {
+            var preview_chart_directive_name = "js-" + ivalue.replaceAll("_", "-");
+            if (preview_chart.getElementsByClassName( preview_chart_directive_name ).length > 0) {
+                directive_value = preview_chart.getElementsByClassName( preview_chart_directive_name )[0].innerText;
+            } else {
+                directive_value = t_directive_value;
+            }
+        } else {
+            directive_value = t_directive_value;
+        }
+        directive_textbox.value = directive_value;
+        style_directives_content_panel.appendChild( directive_textbox );
+
+        prev_cat = sub_cat;
+    }
+
+    // document.getElementById("js-chart-builder-search-input").select();
+
+    /*
+    var start_total = 2;
+    for (const [ikey, ivalue] of Object.entries(directive_groups)) {
+
+        start_total += ivalue;
+        
+        // group label
+        var group_label = document.createElement("div");
+        var group_label_style = document.createAttribute("style");
+        group_label_style.value = "grid-row: " + start_total + " / span " + ivalue + "; writing-mode: vertical-lr;"
+        group_label.setAttributeNode( group_label_style );
+        group_label.innerText = ikey;
+        style_directives_content_panel.appendChild( group_label );
+
+        // style directive name
+        var style_directive_name = document.createElement("div");
+        var style_directive_name_class = document.createAttribute("class");
+        style_directive_name_class.value = "js-chart-builder-style-directive-name";
+        style_directive_name.setAttributeNode( style_directive_name_class );
+        style_directive_name.innerText = "XXX";
+        style_directives_content_panel.appendChild( style_directive_name );
+
+        // style directive checkbox
+        var style_directive_checkbox = document.createElement("div");
+        var style_directive_checkbox_class = document.createAttribute("class");
+        style_directive_checkbox_class.value = "js-chart-builder-style-directive-checkbox";
+        style_directive_checkbox.setAttributeNode( style_directive_checkbox_class );
+        style_directives_content_panel.appendChild( style_directive_checkbox );
+
+        // style directive value
+        var style_directive_value = document.createElement("div");
+        var style_directive_value_class = document.createAttribute("class");
+        style_directive_value_class.value = "js-chart-builder-style-directive-value";
+        style_directive_value.setAttributeNode( style_directive_value_class );
+        style_directives_content_panel.appendChild( style_directive_value );
+
+    }
+
+    var prev_directive = "";
+    for (const [ikey, ivalue] of Object.entries(directive_list)) {
+
+        var sub_cat = ivalue.substring(0, ivalue.indexOf("_"));
+
+        // style directive name
+        var style_directive_name = document.createElement("div");
+        var style_directive_name_class = document.createAttribute("class");
+        style_directive_name_class.value = "js-chart-builder-style-directive-name";
+        style_directive_name.setAttributeNode( style_directive_name_class );
+        style_directive_name.innerText = sub_cat;
+        style_directives_content_panel.appendChild( style_directive_name );
+
+        // style directive checkbox
+        var style_directive_checkbox = document.createElement("div");
+        var style_directive_checkbox_class = document.createAttribute("class");
+        style_directive_checkbox_class.value = "js-chart-builder-style-directive-checkbox";
+        style_directive_checkbox.setAttributeNode( style_directive_checkbox_class );
+        style_directives_content_panel.appendChild( style_directive_checkbox );
+
+        // style directive value
+        var style_directive_value = document.createElement("div");
+        var style_directive_value_class = document.createAttribute("class");
+        style_directive_value_class.value = "js-chart-builder-style-directive-value";
+        style_directive_value.setAttributeNode( style_directive_value_class );
+        style_directives_content_panel.appendChild( style_directive_value );
+
+    }
+    */
+
+
+    /*
     // headers
     var heading_label = document.createElement("div");
     var heading_label_class = document.createAttribute("class");
@@ -3656,6 +5388,10 @@ function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, t
                         option_control.value = "10px";
                     } else if (((chart_type == "box plot") || (chart_type == "horizontal box plot")) && (ikey == "marker_border")) {
                         option_control.value = "0.5px solid black";
+                    } else if ((chart_type == "parallel coordinates") && (ikey == "value_line_thickness")) {
+                        option_control.value = "1.5px";
+                    } else if ((chart_type == "parallel coordinates") && (ikey == "color_palette")) {
+                        option_control.value = "SteelBlue";
                     } else {
                         option_control.value = ivalue;
                     }
@@ -3675,6 +5411,11 @@ function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, t
                 }
             }
         }
+    }
+    */
+
+    if (search_term.length > 0) {
+        document.getElementById("js-chart-builder-search-input").focus();
     }
 
     return true;
@@ -3712,6 +5453,143 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
     for (const [ikey, ivalue] of Object.entries(IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ]["supported_options"])) {
         if ( ["class", "type", "version", "template"].indexOf(ivalue) == -1) {
 
+            // default
+            // control
+            // label
+            // description
+            // options
+
+            // add label
+            var option_label = document.createElement("div");
+            var option_label_class = document.createAttribute("class");
+            option_label_class.value = "js-chart-builder-option-label";
+            option_label.setAttributeNode( option_label_class );
+            var option_label_title = document.createAttribute("title");
+            option_label_title.value = ivalue;
+            option_label.setAttributeNode( option_label_title );
+            option_label.innerText = ivalue + ":";
+            chart_attributes_content_panel.appendChild( option_label );
+
+            // add checkbox
+            var option_checkbox = document.createElement("input");
+            var option_checkbox_type = document.createAttribute("type");
+            option_checkbox_type.value = "CHECKBOX";
+            option_checkbox.setAttributeNode( option_checkbox_type );
+            option_checkbox.addEventListener("change", function () {
+
+                if (this.checked) {
+                    this.nextElementSibling.disabled = false;
+                } else {
+                    this.nextElementSibling.disabled = true;
+                }
+                this.nextElementSibling.focus();
+
+            }, false);
+            chart_attributes_content_panel.appendChild( option_checkbox );
+
+            if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ] != "undefined") {
+                if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ] != "undefined") {
+                    var cell_value = BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ];
+                } else {
+                    var cell_value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
+                }
+            } else {
+                var cell_value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
+            }
+
+            // add input control
+            switch ( IDEFAULT_CHART_ATTRIBUTES[ ivalue ].control) {
+
+                // text
+                case "text":
+                    var option_textbox = document.createElement("input");
+                    var option_textbox_type = document.createAttribute("type");
+                    option_textbox_type.value = "TEXT";
+                    option_textbox.setAttributeNode( option_textbox_type );
+                    var option_textbox_disabled = document.createAttribute("disabled");
+                    option_textbox_disabled.value = "disabled";
+                    option_textbox.setAttributeNode( option_textbox_disabled );
+                    var option_textbox_style = document.createAttribute("style");
+                    option_textbox_style.value = "width: calc(100% - 20px);";
+                    option_textbox.setAttributeNode( option_textbox_style );
+                    option_textbox.addEventListener("change", function () {
+                        var preview_chart = document.getElementById("js-chart-builder-preview");
+                        if (preview_chart.getAttribute(ivalue) != this.value) {
+                            preview_chart.setAttribute(ivalue, this.value);
+                            var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+                        }
+                    }, false);
+                    option_textbox.addEventListener("focus", function () {
+                        this.select();
+                    }, false);
+                    option_textbox.value = cell_value;
+                    chart_attributes_content_panel.appendChild( option_textbox );
+
+                    break;
+                // dropdown
+                case "dropdown":
+                    var option_dropdown = document.createElement("select");
+                    var option_dropdown_disabled = document.createAttribute("disabled");
+                    option_dropdown_disabled.value = "disabled";
+                    option_dropdown.setAttributeNode( option_dropdown_disabled );
+                    var option_dropdown_style = document.createAttribute("style");
+                    option_dropdown_style.value = "width: calc(100% - 10px);";
+                    option_dropdown.setAttributeNode( option_dropdown_style );
+                    option_dropdown.addEventListener("change", function () {
+                        var preview_chart = document.getElementById("js-chart-builder-preview");
+                        if (preview_chart.getAttribute(ivalue) != this.value) {
+                            preview_chart.setAttribute(ivalue, this.value);
+                            var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+                        }
+                    }, false);
+                    chart_attributes_content_panel.appendChild( option_dropdown );
+
+                    for (var tt = 0; tt < IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options.length; tt++) {
+
+                        var option_option = document.createElement("option");
+                        option_option.value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options[tt];
+                        option_option.innerHTML = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options[tt];
+
+                        if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ] != "undefined") {
+                            if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ] != "undefined") {
+                                var compare_option = BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ];
+                            } else {
+                                var compare_option = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
+                            }
+                        } else {
+                            var compare_option = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
+                        }
+
+                        if (compare_option == IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options[tt]) {
+                            var option_selected = document.createAttribute("selected");
+                            option_selected.value = "selected";
+                            option_option.setAttributeNode( option_selected );
+                        }
+
+                        /*
+                        if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ] != "undefined") {
+                            if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ] != "undefined") {
+                                if (BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ] == IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options[tt]) {
+                                    var option_selected = document.createAttribute("selected");
+                                    option_selected.value = "selected";
+                                    option_option.setAttributeNode( option_selected );
+                                }
+                            }
+                        } else if (IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default == IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options[tt]) {
+                            var option_selected = document.createAttribute("selected");
+                            option_selected.value = "selected";
+                            option_option.setAttributeNode( option_selected );
+                        }
+                        */
+
+                        option_dropdown.appendChild( option_option );
+
+                    }
+
+                    break;
+            }
+
+            /*
             // add label
             var option_label = document.createElement("div");
             var option_label_class = document.createAttribute("class");
@@ -3755,7 +5633,6 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
             }, false);
             chart_attributes_content_panel.appendChild( option_checkbox );
 
-            // add input control
             var option_control = document.createElement("input");
             option_control.id = "js-chart-attr-" + (ivalue.replaceAll("_", "-"));
             var option_control_type = document.createAttribute("type");
@@ -3764,10 +5641,87 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
             var option_control_disabled = document.createAttribute("disabled");
             option_control_disabled.value = "disabled";
             option_control.setAttributeNode( option_control_disabled );
+            if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ] != "undefined") {
+                if (typeof BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ] != "undefined") {
+                    option_control.value = BUILDER_DEFAULTS.chart_attributes[ chart_type ][ ivalue ];
+                } else {
+                    option_control.value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
+                }
+            } else {
+                option_control.value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
+            }
+            chart_attributes_content_panel.appendChild( option_control );
+            */
+
+            /*
+            // add input control
+            switch(IDEFAULT_CHART_ATTRIBUTES[ivalue].control) {
+
+                // text
+                case "text":
+                    var option_control = document.createElement("input");
+                    option_control.id = "js-chart-attr-" + (ivalue.replaceAll("_", "-"));
+                    var option_control_type = document.createAttribute("type");
+                    option_control_type.value = "TEXT";
+                    option_control.setAttributeNode( option_control_type );
+                    var option_control_disabled = document.createAttribute("disabled");
+                    option_control_disabled.value = "disabled";
+                    option_control.setAttributeNode( option_control_disabled );
+
+                    break;
+                // dropdown
+                case "dropdown":
+                    var option_control = document.createElement("select");
+                    option_control.id = "js-chart-attr-" + (ivalue.replaceAll("_", "-"));
+                    var option_control_style = document.createAttribute("style");
+                    option_control_style.value = "width: 100%; font-size: 11px;";
+                    option_control.setAttributeNode( option_control_style );
+                    var option_control_disabled = document.createAttribute("disabled");
+                    option_control_disabled.value = "disabled";
+                    option_control.setAttributeNode( option_control_disabled );
+
+                    if (IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options) {
+
+                        for (const [hkey, hvalue] of Object.entries(IDEFAULT_CHART_ATTRIBUTES[ ivalue ].options)) {
+
+                            var dropdown_option = document.createElement("option");
+                            dropdown_option.value = hvalue;
+                            dropdown_option.innerText = hvalue;
+                            if (hvalue == IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default) {
+                                var dropdown_option_selected = document.createAttribute("selected");
+                                dropdown_option_selected.value = "selected";
+                                dropdown_option.setAttributeNode( dropdown_option_selected );
+                            }
+                            option_control.appendChild( dropdown_option );
+
+                        }
+
+                    }
+
+                    break;
+                // checkbox
+                case "checkbox":
+                    var option_control = document.createElement("input");
+                    option_control.id = "js-chart-attr-" + (ivalue.replaceAll("_", "-"));
+                    var option_control_type = document.createAttribute("type");
+                    option_control_type.value = "TEXT";
+                    option_control.setAttributeNode( option_control_type );
+                    var option_control_disabled = document.createAttribute("disabled");
+                    option_control_disabled.value = "disabled";
+                    option_control.setAttributeNode( option_control_disabled );
+
+                    break;
+            }
 
             //option_control.value = IDEFAULT_CHART_ATTRIBUTES[ ivalue ].default;
             if (ivalue == "title") {
-                option_control.value = BUILDER_DEFAULTS.data[ IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_type ].chart_title;
+                if (chart_type == "heatmap") {
+                    option_control.value = BUILDER_DEFAULTS.data.heatmap.chart_title;
+                } else if (chart_type == "parallel coordinates") {
+                    option_control.value = BUILDER_DEFAULTS.data["parallel coordinates"].chart_title;
+                } else {
+                    option_control.value = BUILDER_DEFAULTS.data[ IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ].data_type ].chart_title;
+                }
             } else if ((chart_type == "bubble") && (ivalue == "showlabels")) {
                 option_control.value = "off";
             } else if ((chart_type == "treemap") && (ivalue == "sortdata")) {
@@ -3789,6 +5743,7 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
                 this.select();
             }, false);
             chart_attributes_content_panel.appendChild( option_control );
+            */
 
         }
     }
@@ -3916,11 +5871,33 @@ function jsChartBuilderOpen() {
     button_elem_title.value = "Export all HTML code for this chart.";
     button_elem.setAttributeNode( button_elem_title );
     button_elem.innerText = "All";
+    button_elem.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 24%)";
+    }, false);
+    button_elem.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(120, 61%, 34%)";
+    }, false);
     button_elem.addEventListener("mousedown", function () {
         this.style.fontWeight = 200;
     }, false);
     button_elem.addEventListener("mouseup", function () {
         this.style.fontWeight = 400;
+    }, false);
+    button_elem.addEventListener("click", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+        var export_save = document.importNode(preview_chart, false);
+
+        for (const [ikey, ivalue] of Object.entries(preview_chart.children)) {
+            if (ivalue.className != "js-chart-common-base-container") {
+                export_save.appendChild( ivalue.cloneNode(true) );
+            }
+        }
+
+        navigator.clipboard.writeText(export_save.outerHTML );
+
+        var pop_msg = jsChartBuilderPopMessage("Export copied to clipboard.")
+
     }, false);
     button_panel.appendChild( button_elem );
 
@@ -4256,7 +6233,7 @@ function jsChartBuilder() {
     if (this_builder.length == 0) {
         var start_builder = jsChartBuilderOpen();
 
-        setTimeout(initChart, 100, null, "js-chart-builder-preview");
+        setTimeout(initChart, 200, null, "js-chart-builder-preview");
     }
 
 }

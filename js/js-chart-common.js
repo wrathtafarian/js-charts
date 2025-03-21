@@ -43,7 +43,6 @@ showlines
 showmedians
 showmarkers
 markertype
-showdiff
 drawalg
 
 showwidget
@@ -175,19 +174,22 @@ const IDEFAULT_CHART_ATTRIBUTES = {
         "default": "0deg",
         "control": "dropdown",
         "label": "Starting angle",
-        "description": "Set the starting angle of the pie, doughnut or stacked doughnut chart."
+        "description": "Set the starting angle of the pie, doughnut or stacked doughnut chart.",
+        "options": ["0deg", "90deg"]
     },
     "swapaxis": {
         "default": false,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Swap chart axis",
-        "description": "Swap the value along the axis."
+        "description": "Swap the value along the axis.",
+        "options": [true, false]
     },
     "sortdata": {
         "default": false,
-        "control": "text",
+        "control": "dropdown",
         "label": "Sort text.",
-        "description": "Specify the sort ordering text."
+        "description": "Specify the sort ordering text.",
+        "options": ["auto", true, false, "on label asc", "on label desc", "on title asc", "on title desc", "on row asc", "on row desc", "on column asc", "on column desc"]
     },
     "limitdata": {
         "default": false,
@@ -197,93 +199,101 @@ const IDEFAULT_CHART_ATTRIBUTES = {
     },
     "showborder": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Chart border",
-        "description": "Toggle (show or hide) the border around the chart."
+        "description": "Toggle (show or hide) the border around the chart.",
+        "options": [true, false]
     },
     "showlabels": {
         "default": "auto",
         "control": "dropdown",
         "label": "Data labels",
-        "description": "Toggle (show or hide) the data lables on the chart canvas."
+        "description": "Toggle (show or hide) the data lables on the chart canvas.",
+        "options": ["auto", true, false, "absolute", "relative"]
     },
     "showlegend": {
         "default": true,
         "control": "dropdown",
         "label": "Legend",
-        "description": "Toggle (show or hide) or set the position of the chart legend."
+        "description": "Toggle (show or hide) or set the position of the chart legend.",
+        "options": ["auto", true, false, "side", "bottom"]
     },
     "showgridlines": {
         "default": false,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Show gridlines",
-        "description": "Toggle (show or hide) grid lines on the chart canvas."
+        "description": "Toggle (show or hide) grid lines on the chart canvas.",
+        "options": ["auto", true, false]
     },
     "showzeroline": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Show zero line",
-        "description": "Toggle (show or hide) the zero grid line on the chart canvas."
+        "description": "Toggle (show or hide) the zero grid line on the chart canvas.",
+        "options": ["auto", true, false]
     },
     "showcontrols": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Controls panel",
-        "description": "Toggle (show or hide) the controls panel."
+        "description": "Toggle (show or hide) the controls panel.",
+        "options": ["auto", true, false, "print_only"]
     },
     "showdatatable": {
         "default": false,
         "control": "dropdown",
         "label": "Data table",
-        "description": "Toggle (show or hide) the data table containing the raw data of the chart."
+        "description": "Toggle (show or hide) the data table containing the raw data of the chart.",
+        "options": ["auto", true, false, "table", "csv", "xml"]
     },
     "showlines": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Lines",
-        "description": "Toggle (show or hide) a line chart imposed on top of the chart canvas."
+        "description": "Toggle (show or hide) a line chart imposed on top of the chart canvas.",
+        "options": ["auto", true, false]
     },
     "showmedians": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Medians",
-        "description": "Toggle (show or hide) a median line imposed on top of the box plot."
+        "description": "Toggle (show or hide) a median line imposed on top of the box plot.",
+        "options": ["auto", true, false]
     },
     "showwhiskers": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Whiskers",
-        "description": "Toggle (show or hide) whiskers imposed on top of the chart canvas."
+        "description": "Toggle (show or hide) whiskers imposed on top of the chart canvas.",
+        "options": ["auto", true, false]
     },
     "showmarkers": {
         "default": true,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Markers",
-        "description": "Toggle (show or hide) markers imposed on the chart canvas."
+        "description": "Toggle (show or hide) markers imposed on the chart canvas.",
+        "options": ["auto", true, false]
     },
     "markertype": {
         "default": "circle",
         "control": "dropdown",
         "label": "Marker type",
-        "description": "Change the scatter chart marker / pointer."
-    },
-    "showdiff": {
-        "default": false,
-        "control": "checkbox",
-        "label": "Difference (up/down) columns",
-        "description": "Toggle (show/hide) difference (up/down) columns."
+        "description": "Change the scatter chart marker / pointer.",
+        "options": ["dot", "circle", "square", "triangle", "bubble"]
     },
     "drawalg": {
         "default": "auto",
         "control": "dropdown",
         "label": "Algorithm",
-        "description": "Specify the draw algorithm."
+        "description": "Specify the draw algorithm.",
+        "options": ["portrait quad", "portrait pivot", "portrait snake", "landscape quad", "landscape pivot", "landscape snake"]
     },
     "showwidget": {
         "default": false,
-        "control": "checkbox",
+        "control": "dropdown",
         "label": "Widget view",
-        "description": "Toggle between normal and widget mode. In widget mode, only a simple uncluttered version of the chart is rendered."
+        "description": "Toggle between normal and widget mode. In widget mode, only a simple uncluttered version of the chart is rendered.",
+        "options": [true, false]
     }
 }
 
@@ -691,7 +701,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_description": "A <strong>bar chart</strong> is a visual representation of categorical data where individual bars represent the frequency, count, or other measures of each category. The categories are displayed along the x-axis, and the height or length of the bars, which are plotted on the y-axis (for vertical bar charts) or x-axis (for horizontal bar charts), corresponds to the value or measure of each category. Bar charts are particularly useful for comparing discrete data across categories, making it easy to observe differences between them.",
         "data_description": "A bar chart uses <strong>categorical data</strong> for the bars and numerical data for their lengths, representing the values of each category. It is useful for comparing absolute values across different categories in a clear and straightforward way.",
         "draw_functionname": "jsChartDrawBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -708,7 +718,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "data_description": "A stacked bar chart uses <strong>categorical data</strong> for the main bars and numerical data for the segments within each bar, representing subcategory values. It is ideal for comparing both total values across categories and the distribution of subcategories within them.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawStackedBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -725,7 +735,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "data_description": "A 100% stacked bar chart uses <strong>categorical data</strong> for the main bars and proportional data for the segments within each bar, where each subcategory is expressed as a percentage of the total. It is useful for comparing the relative distribution of subcategories across different categories, ensuring all bars sum to 100%.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawRelativeStackedBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -740,7 +750,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "bar",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawLollipopBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showlines", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showlines", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -755,7 +765,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "bar",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawStackedLollipopBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showlines", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showlines", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -770,7 +780,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "bar",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawRelativeStackedLollipopBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showlines", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showlines", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -785,7 +795,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "column",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawColumnChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -800,7 +810,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "column",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawStackedColumnChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "scalemin", "scalemax", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -815,7 +825,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "column",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawRelativeStackedColumnChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "sortdata", "xtitle", "ytitle", "swapaxis", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -909,7 +919,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "funnel",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawFunnelBarChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "ytitle", "xtitle", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "ytitle", "xtitle", "sortdata", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": true,
         "ignore_zero_values": false,
@@ -924,7 +934,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "chart_group": "funnel",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawFunnelColumnChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "ytitle", "xtitle", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "ytitle", "xtitle", "sortdata", "showborder", "showlabels", "showlegend", "showgridlines", "showzeroline", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": true,
         "ignore_zero_values": false,
@@ -1022,6 +1032,8 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "heatmap": {
         "alternative_names": ["heat map"],
         "chart_group": "heatmap",
+        "chart_description": "A <strong>heatmap chart</strong> is a data visualization that uses color gradients to represent the magnitude of values across a two-dimensional matrix, making it easy to identify patterns, correlations, and intensity variations. It is commonly used for analyzing trends, density distributions, and relationships in large datasets.",
+        "data_description": "A heatmap chart typically visualizes <strong>numerical data</strong> organized in a matrix format, where <strong>rows and columns represent categorical variables</strong>, and <strong>cell colors indicate corresponding quantitative values</strong>. It is commonly used for displaying correlations, frequency distributions, or intensity levels in large datasets.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawHeatmapChart",
         "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showcontrols", "showdatatable", "showwidget"],
@@ -1041,7 +1053,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "data_description": "A line chart uses <strong>numerical data plotted along two axes</strong>, typically with <strong>time or a sequential variable on the x-axis</strong> and a <strong>continuous numerical value on the y-axis</strong>. This type of data is commonly used for tracking trends, changes, and comparisons over time in fields like finance, science, and business analytics.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawLineChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showdiff", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -1058,7 +1070,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "data_description": "A line chart uses <strong>numerical data plotted along two axes</strong>, typically with <strong>time or a sequential variable on the x-axis</strong> and a <strong>continuous numerical value on the y-axis</strong>. This type of data is commonly used for tracking trends, changes, and comparisons over time in fields like finance, science, and business analytics.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawStackedLineChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showdiff", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -1075,7 +1087,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "data_description": "A line chart uses <strong>numerical data plotted along two axes</strong>, typically with <strong>time or a sequential variable on the x-axis</strong> and a <strong>continuous numerical value on the y-axis</strong>. This type of data is commonly used for tracking trends, changes, and comparisons over time in fields like finance, science, and business analytics.",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawRelativeStackedLineChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showdiff", "showcontrols", "showdatatable", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showlegend", "showlines", "showmarkers", "showcontrols", "showdatatable", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -1138,9 +1150,11 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
     "parallel coordinates": {
         "alternative_names": [""],
         "chart_group": "parallel",
+        "chart_description": "A <strong>parallel coordinates</strong> chart is a visualization technique used to explore and compare high-dimensional data by representing each data point as a line crossing multiple parallel axes, where each axis corresponds to a different variable. It helps identify patterns, correlations, and outliers across multiple numerical attributes in a dataset.",
+        "data_description": "A parallel coordinates chart is used for <strong>multivariate numerical data</strong>, where each data point consists of <strong>multiple continuous variables</strong> that can be plotted across parallel axes. It is ideal for comparing relationships, trends, and distributions across multiple dimensions in datasets like financial metrics, product reviews, or performance evaluations",
         "data_type": "categorical",
         "draw_functionname": "jsChartDrawParallelCoordinatesChart",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showlabels", "showcontrols", "showdatatable", "showgridlines", "showzeroline", "showlines", "showmarkers", "showwidget"],
+        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "xtitle", "ytitle", "swapaxis", "sortdata", "showborder", "showcontrols", "showdatatable", "showgridlines", "showzeroline", "showlines", "showmarkers", "showwidget"],
         "default_template": "default",
         "ignore_negative_values": false,
         "ignore_zero_values": false,
@@ -1148,22 +1162,6 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
         "type_options": {
-        }
-    },
-    "venn diagram": {
-        "alternative_names": ["sey diagram"],
-        "chart_group": "diagram",
-        "data_type": "set",
-        "draw_functionname": "jsChartDrawVennDiagram",
-        "supported_options": ["class", "type", "version", "template", "width", "height", "title", "showborder", "showcontrols", "showdatatable", "showwidget"],
-        "default_template": "default",
-        "ignore_negative_values": true,
-        "ignore_zero_values": true,
-        "requires_zero_baseline": false,
-        "allow_multiseries": true,
-        "allowed_palettes": ["qualitative"],
-        "type_options": {
-            "enable_beta": true
         }
     },
     "box plot": {
@@ -6585,13 +6583,6 @@ function jsChartParseInputOptions( this_chart , i_chart ) {
                     i_chart.i_options[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ] = jsChartReturnMarkerTypeValue( this_chart.getAttribute( IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ).trim(), i_chart.type );
                 } else {
                     i_chart.i_options[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ] = jsChartReturnMarkerTypeValue( IDEFAULT_CHART_ATTRIBUTES[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ].default, i_chart.type );
-                }
-                break;
-            case "showdiff":
-                if (this_chart.hasAttribute( IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt])) {
-                    i_chart.i_options[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ] = jsChartReturnBooleanValue( this_chart.getAttribute( IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ).trim() );
-                } else {
-                    i_chart.i_options[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ] = jsChartReturnBooleanValue( IDEFAULT_CHART_ATTRIBUTES[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].supported_options[tt] ].default );
                 }
                 break;
             case "drawalg":
