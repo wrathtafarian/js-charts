@@ -30,6 +30,24 @@ input[type=TEXT] {
     border: 0.5px solid #dddddd;
     border-radius: 3px;
 }
+/* code block style */
+.js-code-block {
+    background-color: #dcdcdc;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-weight: 400;
+}
+/* alert / warning panel */
+.js-warning-panel {
+    background-color: #ffffe6;
+    color: black;
+    padding: 15px 10px 15px 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
 /* css switch */
 .js-chart-common-switch {
     position: relative;

@@ -5,140 +5,164 @@
 // 5. add random button next to categotical values
 
 const BUILDER_DEFAULTS = {
-    "chart_type": IDEFAULT_CHART_ATTRIBUTES["type"].default,
-    //"chart_type": "parallel coordinates",
+    //"chart_type": IDEFAULT_CHART_ATTRIBUTES["type"].default,
+    "chart_type": "bar",
     "template_name": IDEFAULT_CHART_ATTRIBUTES["template"].default,
+    "git_repo_url": "https://js-charts.com/repo/builder",
     "chart_attributes": {
         "100% stacked bar": {
             "title": "Sales Revenue (2022 - 2024)",
-            "showcontrols": "print_only"
+            "sortdata": "on row avg desc"
         },
         "100% stacked column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)",
+            "sortdata": "on column avg asc"
         },
         "100% stacked line": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2023)",
+            "xtitle": "Departments",
+            "ytitle": "Revenue in US Dollar ($)"
         },
         "100% stacked lollipop bar": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)",
+            "sortdata": "on row avg desc"
         },
         "100% stacked lollipop column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)"
         },
         "bar": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2023)",
+            "sortdata": "on row avg desc"
         },
         "box plot": {
-            "showcontrols": "print_only",
+            "title": "Service delivery data (Courier company)",
             "showlegend": false
         },
         "bubble": {
-            "showcontrols": "print_only",
+            "title": "Relationship between temperature (Celsius) and ice cream sales ($)",
             "showlabels": false
         },
         "candlestick": {
-            "showcontrols": "print_only"
+            "title": "Asset price movement (01/02 to 01/08)",
+            "xtitle": "Date",
+            "ytitle": "Euro (EUR)"
         },
         "column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)",
+            "sortdata": "on column avg asc"
         },
         "doughnut": {
+            "title": "Sales Revenue (2022)",
             "holetitle": "2022",
-            "showcontrols": "print_only"
+            "sortdata": "on column avg asc"
         },
         "funnel bar": {
-            "sortdata": "on column desc",
-            "showcontrols": "print_only"
+            "title": "Job Application Process",
+            "showlegend": "off",
+            "sortdata": "on column desc"
         },
         "funnel column": {
-            "sortdata": "on column desc",
-            "showcontrols": "print_only"
+            "title": "Job Application Process",
+            "showlegend": "off",
+            "sortdata": "on column desc"
         },
         "heatmap": {
-            "showcontrols": "print_only"
+            "title": "Water consumption across region (A - F)",
+            "showlegend": "bottom"
         },
         "histogram": {
-            "showcontrols": "print_only"
+            "title": "Histogram - Example Data Set"
         },
         "horizontal box plot": {
-            "showlegend": false,
-            "showcontrols": "print_only"
+            "title": "Service delivery data (Courier company)",
+            "showlegend": false
         },
         "line": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2023)",
+            "xtitle": "Departments",
+            "ytitle": "Revenue in US Dollar ($)"
         },
         "lollipop bar": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2023)",
+            "sortdata": "on row avg desc"
         },
         "lollipop column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)"
         },
         "marimekko": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)"
         },
         "marimekko column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)"
         },
         "ohlc": {
-            "showcontrols": "print_only"
+            "title": "Asset price movement (01/02 to 01/08)",
+            "xtitle": "Date",
+            "ytitle": "Euro (EUR)"
         },
         "parallel coordinates": {
+            "title": "Electric Vehicle (EV) Model Comparison",
             "sortdata": "on",
-            "showcontrols": "print_only"
         },
         "pie": {
-            "title": "Sales Revenue (2022 - 2024)",
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2024)",
+            "sortdata": "on column avg asc"
         },
         "population pyramid": {
-            "showcontrols": "print_only"
+            "title": "Zombie University Main Campus Population",
+            "xtitle": "Student population x1000",
+            "ytitle": "Age group",
+            "showlegend": "bottom"
         },
         "scatter": {
-            "showcontrols": "print_only"
+            "title": "Relationship between temperature (Celsius) and ice cream sales ($)"
         },
         "span bar": {
-            "showcontrols": "print_only"
+            "title": "Estimated worth of famous paintings"
         },
         "span column": {
-            "showcontrols": "print_only"
+            "title": "Estimated worth of famous paintings"
         },
         "stacked bar": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)",
+            "sortdata": "on row avg desc"
         },
         "stacked column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)",
+            "sortdata": "on column avg asc"
         },
         "stacked doughnut": {
+            "title": "Sales Revenue (2022 - 2024)",
             "holetitle": "2022 - 2024",
-            "showcontrols": "print_only"
+            "sortdata": "on column avg asc"
         },
         "stacked line": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2023)",
+            "xtitle": "Departments",
+            "ytitle": "Revenue in US Dollar ($)"
         },
         "stacked lollipop bar": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)",
+            "sortdata": "on row avg desc"
         },
         "stacked lollipop column": {
-            "showcontrols": "print_only"
+            "title": "Sales Revenue (2022 - 2024)"
         },
         "treemap": {
+            "title": "Jimmy's Motor Spares (Stock Levels - Jan 2024)",
             "sortdata": "on",
             "drawalg": "portrait quad",
             "showlegend": "bottom",
             "jsondata": "default-json-data",
-            "showcontrols": "print_only"
         },
         "waterfall bar": {
-            "showcontrols": "print_only"
+            "title": "Financial Movement"
         },
         "waterfall column": {
-            "showcontrols": "print_only"
+            "title": "Financial Movement"
         }
     },
     "style_template_directives": {
-        "pie": {
-            "chart_bg_color": "yellow"
-        },
         "bar": {
             "value_bar_data_margin": "2px",
             "value_bar_series_margin": "5px",
@@ -147,7 +171,11 @@ const BUILDER_DEFAULTS = {
         },
         "bubble": {
             "marker_width": "auto",
-            "marker_height": "auto"
+            "marker_height": "auto",
+            "color_palette": "yellow"
+        },
+        "candlestick": {
+            "color_palette": "ForestGreen; IndianRed; Black"
         },
         "column": {
             "value_bar_data_margin": "2px",
@@ -157,11 +185,27 @@ const BUILDER_DEFAULTS = {
         },
         "funnel bar": {
             "value_bar_data_margin": "1px",
-            "value-bar-border-radius": "2px"
+            "value-bar-border-radius": "2px",
+            "value_bar_min_width": "1px",
+            "color_palette": "plum",
+            "datalabel_border_radius": "50%",
+            "datalabel_bg_color": "steelblue",
+            "datalabel_text_color": "white",
+            "datalabel_font_weight": "600",
+            "datalabel_width": "35px",
+            "legend_font_weight": "600"
         },
         "funnel column": {
             "value_bar_data_margin": "1px",
-            "value-bar-border-radius": "2px"
+            "value-bar-border-radius": "2px",
+            "value_bar_min_height": "1px",
+            "color_palette": "plum",
+            "datalabel_border_radius": "50%",
+            "datalabel_bg_color": "steelblue",
+            "datalabel_text_color": "white",
+            "datalabel_font_weight": "600",
+            "datalabel_width": "35px",
+            "legend_font_weight": "600"
         },
         "histogram": {
             "value_bar_min_width": "10px"
@@ -196,7 +240,7 @@ const BUILDER_DEFAULTS = {
         },
         "parallel coordinates": {
             "value_line_thickness": "1px",
-            "color_palette": "hsl(16, 100%, 72%)"
+            "color_palette": "YellowGreen"
         },
         "span bar": {
             "value_bar_data_margin": "1px",
@@ -211,6 +255,9 @@ const BUILDER_DEFAULTS = {
             "datalabel_prepend": "$",
             "datalabel_append": "mil",
             "datalabel_width": "70px"
+        },
+        "treemap": {
+            "control_button_bg_color": "olive"
         }
     },
     "data": {
@@ -229,6 +276,42 @@ const BUILDER_DEFAULTS = {
                 {
                     "title": "2024",
                     "data": [252, 124, 260, 137, 264]
+                }
+            ]
+        },
+        "categorical copy": {
+            "chart_title": "Sales Revenue",
+            "labels": ["Furniture", "Groceries", "Electronics", "Toys", "Clothing"],
+            "data": [
+                {
+                    "title": "2022",
+                    "data": [64, 142, 152, 156, 229]
+                },
+                {
+                    "title": "2023",
+                    "data": [152, 70, 121, 171, 238]
+                },
+                {
+                    "title": "2024",
+                    "data": [252, 124, 260, 137, 264]
+                }
+            ]
+        },
+        "funnel bar": {
+            "labels": ["Applications Received", "Resume Shortlisted", "First Round Interview", "Technical Assessment", "Final Interview", "Job Offers Extended", "Job Offers Accepted"],
+            "data": [
+                {
+                    "title": "Job Application Process",
+                    "data": [5000, 2500, 1200, 600, 300, 150, 100]
+                }
+            ]
+        },
+        "funnel column": {
+            "labels": ["Applications Received", "Resume Shortlisted", "First Round Interview", "Technical Assessment", "Final Interview", "Job Offers Extended", "Job Offers Accepted"],
+            "data": [
+                {
+                    "title": "Job Application Process",
+                    "data": [5000, 2500, 1200, 600, 300, 150, 100]
                 }
             ]
         },
@@ -2099,7 +2182,9 @@ function jsChartBuilderPopulateInputData_SeriesContainer(data_panel) {
     data_set_grid_header.setAttributeNode( data_set_grid_header_class );
     data_set_grid_container.appendChild( data_set_grid_header );
 
-    var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid_container, preview_series_container);
+    for (var tt = 0; tt < 5; tt++) {
+        var add_series_data_set = jsChartBuilderPopulateInputData_SeriesContainer_DataSet(data_set_grid_container, preview_series_container);
+    }
 
     // add more data set button
     var more_data_set_button = document.createElement("div");
@@ -4487,6 +4572,12 @@ function jsChartBuilderPopulatePreviewChart(preview_panel, chart_type, template_
     // overwrite the categorical data for population pyramids
     if (chart_type == "population pyramid") {
         BUILDER_DEFAULTS.data.categorical = BUILDER_DEFAULTS.data["population pyramid"];
+    } else if (chart_type == "funnel bar") {
+        BUILDER_DEFAULTS.data.categorical = BUILDER_DEFAULTS.data["funnel bar"];
+    } else if (chart_type == "funnel column") {
+        BUILDER_DEFAULTS.data.categorical = BUILDER_DEFAULTS.data["funnel column"];
+    } else {
+        BUILDER_DEFAULTS.data.categorical = BUILDER_DEFAULTS.data["categorical copy"];
     }
 
     for (var tt = (preview_panel.children.length-1); tt >= 0; tt--) {
@@ -5200,7 +5291,11 @@ function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, t
         } else {
             directive_value = t_directive_value;
         }
-        directive_textbox.value = directive_value;
+        if (ivalue != "color_palette") {
+            directive_textbox.value = directive_value.toString();
+        } else {
+            directive_textbox.value = directive_value.toString().replaceAll(",", ";");
+        }
         style_directives_content_panel.appendChild( directive_textbox );
 
         prev_cat = sub_cat;
@@ -5420,12 +5515,61 @@ function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, t
 
     return true;
 }
+// toggle the small help panel
+function jsChartBuilderToggleSmallHelpPanel(parent_elem) {
+
+    if (parent_elem.children.length == 0) {
+
+        var help_panel = document.createElement("div");
+        var help_panel_class = document.createAttribute("class");
+        help_panel_class.value = "js-chart-builder-help-panel";
+        help_panel.setAttributeNode( help_panel_class );
+        parent_elem.appendChild( help_panel );
+
+        // header label
+        var help_panel_label = document.createElement("div");
+        var help_panel_label_class = document.createAttribute("class");
+        help_panel_label_class.value = "js-chart-builder-help-header-label";
+        help_panel_label.setAttributeNode( help_panel_label_class );
+        help_panel_label.innerText = parent_elem.nextElementSibling.innerText.substring(0, (parent_elem.nextElementSibling.innerText.length - 1));
+        help_panel.appendChild( help_panel_label );
+
+        // help content container
+        var help_panel_content_container = document.createElement("div");
+        var help_panel_content_container_class = document.createAttribute("class");
+        help_panel_content_container_class.value = "js-chart-builder-help-header-content-container";
+        help_panel_content_container.setAttributeNode( help_panel_content_container_class );
+        help_panel.appendChild( help_panel_content_container );
+
+        // help content
+        var help_panel_content = document.createElement("div");
+        var help_panel_content_class = document.createAttribute("class");
+        help_panel_content_class.value = "js-chart-builder-help-header-content";
+        help_panel_content.setAttributeNode( help_panel_content_class );
+        help_panel_content.innerHTML = IDEFAULT_CHART_ATTRIBUTES[ parent_elem.nextElementSibling.innerText.substring(0, (parent_elem.nextElementSibling.innerText.length-1)) ].description;
+        help_panel_content_container.appendChild( help_panel_content );
+
+    } else {
+        for (var tt = (parent_elem.children.length-1); tt >= 0; tt--) {
+            parent_elem.children[tt].remove();
+        }
+    }
+
+    return true;
+}
 // populate the chart attributes content panel
 function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, chart_type) {
 
     for (var tt = (chart_attributes_content_panel.children.length-1); tt >= 0; tt--) {
         chart_attributes_content_panel.children[tt].remove();
     }
+
+    // headers
+    var heading_label = document.createElement("div");
+    var heading_label_class = document.createAttribute("class");
+    heading_label_class.value = "js-chart-builder-directives-heading";
+    heading_label.setAttributeNode( heading_label_class );
+    chart_attributes_content_panel.appendChild( heading_label );
 
     // headers
     var heading_label = document.createElement("div");
@@ -5458,6 +5602,61 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
             // label
             // description
             // options
+
+            // add help icon
+            var help_icon = document.createElement("div");
+            help_icon.setAttribute("title", "Explain this chart attribute");
+            help_icon.setAttribute("style", "width: 15px; height: 15px; line-height: 15px; margin: 12.5px 0px 0px 0px; border: 0.5px solid black; border-radius: 50%; text-align: center; cursor: pointer;");
+            help_icon.addEventListener("click", function () {
+
+                if (this.children.length == 0) {
+
+                    var help_panel = document.createElement("div");
+                    var help_panel_class = document.createAttribute("class");
+                    help_panel_class.value = "js-chart-builder-help-panel";
+                    help_panel.setAttributeNode( help_panel_class );
+                    this.appendChild( help_panel );
+            
+                    // header label
+                    var help_panel_label = document.createElement("div");
+                    var help_panel_label_class = document.createAttribute("class");
+                    help_panel_label_class.value = "js-chart-builder-help-header-label";
+                    help_panel_label.setAttributeNode( help_panel_label_class );
+                    help_panel_label.innerText = this.nextElementSibling.innerText.substring(0, (this.nextElementSibling.innerText.length - 1));
+                    help_panel.appendChild( help_panel_label );
+            
+                    // help content container
+                    var help_panel_content_container = document.createElement("div");
+                    var help_panel_content_container_class = document.createAttribute("class");
+                    help_panel_content_container_class.value = "js-chart-builder-help-header-content-container";
+                    help_panel_content_container.setAttributeNode( help_panel_content_container_class );
+                    help_panel.appendChild( help_panel_content_container );
+            
+                    // help content
+                    var help_panel_content = document.createElement("div");
+                    var help_panel_content_class = document.createAttribute("class");
+                    help_panel_content_class.value = "js-chart-builder-help-header-content";
+                    help_panel_content.setAttributeNode( help_panel_content_class );
+                    help_panel_content.innerHTML = IDEFAULT_CHART_ATTRIBUTES[ this.nextElementSibling.innerText.substring(0, (this.nextElementSibling.innerText.length-1)) ].description;
+                    help_panel_content_container.appendChild( help_panel_content );
+            
+                } else {
+                    for (var tt = (this.children.length-1); tt >= 0; tt--) {
+                        this.children[tt].remove();
+                    }
+                }
+
+                if (chart_attributes_content_panel.children.length > 0) {
+                    for (var tt = (chart_attributes_content_panel.getElementsByClassName("js-chart-builder-help-panel").length - 1); tt >= 0; tt--) {
+                        chart_attributes_content_panel.getElementsByClassName("js-chart-builder-help-panel")[tt].remove();
+                    }
+
+                    var pop_help = jsChartBuilderToggleSmallHelpPanel(this);
+                }
+
+            }, false);
+            help_icon.innerText = "?";
+            chart_attributes_content_panel.appendChild( help_icon );
 
             // add label
             var option_label = document.createElement("div");
@@ -5509,9 +5708,6 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
                     var option_textbox_disabled = document.createAttribute("disabled");
                     option_textbox_disabled.value = "disabled";
                     option_textbox.setAttributeNode( option_textbox_disabled );
-                    var option_textbox_style = document.createAttribute("style");
-                    option_textbox_style.value = "width: calc(100% - 20px);";
-                    option_textbox.setAttributeNode( option_textbox_style );
                     option_textbox.addEventListener("change", function () {
                         var preview_chart = document.getElementById("js-chart-builder-preview");
                         if (preview_chart.getAttribute(ivalue) != this.value) {
@@ -5533,7 +5729,7 @@ function jsChartBuilderPopulateChartAttributes(chart_attributes_content_panel, c
                     option_dropdown_disabled.value = "disabled";
                     option_dropdown.setAttributeNode( option_dropdown_disabled );
                     var option_dropdown_style = document.createAttribute("style");
-                    option_dropdown_style.value = "width: calc(100% - 10px);";
+                    option_dropdown_style.value = "width: 100%;";
                     option_dropdown.setAttributeNode( option_dropdown_style );
                     option_dropdown.addEventListener("change", function () {
                         var preview_chart = document.getElementById("js-chart-builder-preview");
@@ -5776,6 +5972,852 @@ function jsChartBuilderClose() {
         return false;
     }
 }
+// generate and return the main help content - overview
+function jsChartBuilderOpenMainHelpOverview(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Overview";
+
+    return "<h1 style=\"margin: 0px 0px 10px 0px;\">Overview</h1>\
+<p>Welcome to <span style=\"font-style: italic;\">js-chart-builder</span>! Let's take a quick tour.</p>\
+<p><span style=\"font-style: italic;\">js-chart-builder</span> lets you quickly build prototype charts using <span style=\"font-style: italic;\">js-charts</span>. You can <strong>export</strong> the chart using the <strong>export button</strong>, and then easily copy the chart onto your HTML website.</p>\
+<p><span style=\"font-style: italic;\">js-charts</span> uses JavaScript (js) and Cascading Style Sheets (css) - that is present in all modern  browsers - to build simple but highly customisable charts.</p>\
+<p><span style=\"font-style: italic;\">js-chart-builder</span> consists of <strong>four</strong> components:\
+<h2>Chart Attributes</h2>\
+<p><strong>Chart attributes</strong> specify what type of chart it is, and how a chart behaves.</p>\
+<h2>Style Directives</h2>\
+<p>The way that a chart looks is determined by pre-defined <strong>style templates</strong>. Every aspect of the style template can be customised using <strong>style directives</strong>. The <strong>style directives</strong> section allows you to customise every component of your chart.</p>\
+<h2>Input Data</h2>\
+<p>The <strong>input data</strong> section allows you to specify one or more data sets for your chart.</p>\
+<h2>Preview Chart</h2>\
+<p>Every change that you make is reflected on the <strong>preview chart</strong>.\
+</p>\
+";
+}
+// generate and return the main help content - chart attributes
+function jsChartBuilderOpenMainHelpChartAttributes(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Chart Attributes";
+
+    var return_chart_attributes = "<h1 style=\"margin: 0px 0px 10px 0px;\">Chart Attributes</h1>\
+<p>You can specify the type of chart to render, and how a chart behaves using <strong>chart attributes</strong>.\
+<p>Visit <a href=\"" + menu_conf.docs.link + "\" title=\"Open in a new window\" target=\"_blank\">" + menu_conf.docs.text + "</a> for detailed information on every <strong>chart attribute</strong>.</p>\
+";
+
+    var grid_container = document.createElement("div");
+    var grid_container_class = document.createAttribute("class");
+    grid_container_class.value = "js-chart-builder-chart-attr-grid-container";
+    grid_container.setAttributeNode( grid_container_class );
+
+    for (const [ikey, ivalue] of Object.entries( IDEFAULT_CHART_ATTRIBUTES )) {
+        if (ikey != "class") {
+
+            var grid_cell = document.createElement("div");
+            var grid_cell_class = document.createAttribute("class");
+            grid_cell_class.value = "js-chart-builder-chart-attr-grid-cell";
+            grid_cell.setAttributeNode( grid_cell_class );
+            grid_cell.innerHTML = "<div style=\"text-align: center;\"><a href=\"https://js-charts.com/docs/chart-attributes/" + ikey + "\" target=\"_blank\">" + ikey + "</a></div><div style=\"margin: 5px 0px 0px 0px; font-size: 12px;\">" + ivalue.description + "</div>";
+            grid_container.appendChild( grid_cell );
+
+        }
+    }
+
+    return_chart_attributes += grid_container.outerHTML;
+
+return return_chart_attributes;
+}
+// generate and return the main help content - style templates
+function jsChartBuilderOpenMainHelpStyleTemplates(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Style Templates";
+
+    var return_style_templates = "<h1 style=\"margin: 0px 0px 10px 0px;\">Style Templates</h1>\
+";
+
+    return return_style_templates;
+}
+// generate and return the main help content - chart attributes
+function jsChartBuilderOpenMainHelpStyleDirectives(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Style Directives";
+
+    var return_style_directives = "<h1 style=\"margin: 0px 0px 10px 0px;\">Style Directives</h1>\
+<p>The way that a chart looks is determined by pre-defined <strong>style templates</strong>. Every aspect of the style template can be customised using <strong>style directives</strong>. The style directives section allows you to customise every component of your chart.</p>\
+<p>Visit <a href=\"" + menu_conf.docs.link + "\" title=\"Open in a new window\" target=\"_blank\">" + menu_conf.docs.text + "</a> for detailed information on every <strong>style directive</strong>.</p>\
+<div style=\"display: grid; grid-template-columns: 20% 30% 50%; grid-auto-rows: auto;\">\
+    <div style=\"text-align: center; border-radius: 5px 0px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Category</div>\
+    <div style=\"text-align: center; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Example</div>\
+    <div style=\"text-align: center; border-radius: 0px 5px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Description</div>\
+\
+    <!-- js-canvas-* -->\
+    <div style=\"font-size: 16px; margin: 10px 0px 0px 0px;\"><a href=\"https://js-charts.com/docs/style-directives/js-canvas\" target=\"_blank\" title=\"Open in a new window\">js-canvas-*</a></div>\
+    <div style=\"margin: 10px 0px 0px 0px;\"><img src=\"/js-canvas-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-canvas-*</strong> style template elements are used to style the chart canvas area. The chart canvas area is the area of the cart excluding the following elements:</p>\
+        <li>Chart title</li>\
+        <li>Control buttons</li>\
+        <li>Legend</li>\
+        <li>Footer</li>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-chart-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-chart\" target=\"_blank\" title=\"Open in a new window\">js-chart-*</a></div>\
+    <div><img src=\"/js-chart-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>You can use the <strong>js-chart-*</strong> style template directives to set default style directives for your chart.Style directives set with the chart style directives are inherited by all other style directives.</p>\
+        <p>Default style directives can be set for the <strong>font-family</strong>, <strong>font-size</strong>, <strong>font-weight</strong>, <strong>bg-color</strong>, <strong>text-color</strong>, <strong>border</strong>, <strong>border-radius</strong>, <strong>box-shadow</strong> and <strong>opacity</strong>.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-color-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-color\" target=\"_blank\" title=\"Open in a new window\">js-color-*</a></div>\
+    <div><img src=\"/js-color-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-color-*</strong> style template directives are used to control the colors that are available to be used on a chart.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-control-button-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-control-button\" target=\"_blank\" title=\"Open in a new window\">js-control-button-*</a></div>\
+    <div><img src=\"/js-control-button-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-control-button-*</strong> style template directives are used to style the control buttons on a chart. The control buttons are rendered on the left of the chart container.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-datalabel-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-datalabel\" target=\"_blank\" title=\"Open in a new window\">js-datalabel-*</a></div>\
+    <div><img src=\"/js-datalabel-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-datalabel-*</strong> style template elements are used to style the data labels on a chart. Data labels are rendered in proximity of the data points on the chart, or in the section of the chart that represents the data.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-footer-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-footer\" target=\"_blank\" title=\"Open in a new window\">js-footer-*</a></div>\
+    <div><img src=\"/js-footer-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-footer-*</strong> style template directives are used to style a chart's footer area. The chart footer is rendered on the bottom of the chart container.</p>\
+        <p>The footer can be used to display any static text to the end user. This is useful if you want to include a copyright notice, or if you want to include instructions or special notes to the end user regarding the chart.</p>\
+        <p>The footer text will be truncated if the text cannot fit into the available space. If the footer text is truncated, an ellipsis (…) will be added to the end of the truncated footer text.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-grid-line-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-grid-line\" target=\"_blank\" title=\"Open in a new window\">js-grid-line-*</a></div>\
+    <div><img src=\"/js-grid-line-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-grid-line-*</strong> style directives are used to style a chart’s grid lines.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-legend-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-legend\" target=\"_blank\" title=\"Open in a new window\">js-legend-*</a></div>\
+    <div><img src=\"/js-legend-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-legend-*</strong> style directives are used to style a chart’s legend. The legend can be rendered to the right or bottom of the chart.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-marker-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-marker\" target=\"_blank\" title=\"Open in a new window\">js-marker-*</a></div>\
+    <div><img src=\"/js-marker-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-marker-*</strong> style template elements are used to style markers on the following charts:\
+            <li>Scatter chart</li>\
+            <li>Line chart</li>\
+            <li>Stacked line chart</li>\
+            <li>100% Stacked line chart</li>\
+        </p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-not-defined-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-not-defined\" target=\"_blank\" title=\"Open in a new window\">js-not-defined-*</a></div>\
+    <div><img src=\"/js-not-defined-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-not-defined-*</strong> style template directive controls how “missing” or “not defined” values are displayed on certain charts.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-options-menu-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-options-menu\" target=\"_blank\" title=\"Open in a new window\">js-options-menu-*</a></div>\
+    <div><img src=\"/js-options-menu-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-options-menu-*</strong> style template directives are used to style the chart options menu.</p>\
+        <p>The chart options menu allows the end-user to make adjustments to the chart, e.g. swapping the axis to display the data differently.</p>\
+        <p>The options menu title area can be styled separately from the options menu elements.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-scale-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-scale\" target=\"_blank\" title=\"Open in a new window\">js-scale-*</a></div>\
+    <div><img src=\"/js-scale-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-scale-*</strong> style template directives are used to style the chart scales and scale labels.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-title-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-title\" target=\"_blank\" title=\"Open in a new window\">js-title-*</a></div>\
+    <div><img src=\"/js-title-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-title-*</strong> style template directives are used customise the look of the chart title.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-value-bar-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-value-bar\" target=\"_blank\" value-bar=\"Open in a new window\">js-value-bar-*</a></div>\
+    <div><img src=\"/js-value-bar-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-value-bar-*</strong> style template directives are used to style the value bar elements on a chart. Value bar elements usually refer to block-shaped elements that represent data or data points on a chart.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-value-line-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-value-line\" target=\"_blank\" value-line=\"Open in a new window\">js-value-line-*</a></div>\
+    <div><img src=\"/js-value-line-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-value-line-*</strong> style template directives are used to style the value line elements on a chart. Value line elements refer to line-shaped elements that represent data or data points on a chart.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- js-zero-line-* -->\
+    <div style=\"font-size: 16px;\"><a href=\"https://js-charts.com/docs/style-directives/js-zero-line\" target=\"_blank\" zero-line=\"Open in a new window\">js-zero-line-*</a></div>\
+    <div><img src=\"/js-zero-line-example.jpg\" width=\"250\" height=\"150\" /></div>\
+    <div style=\"margin: 0px 0px 0px 10px;\">\
+        <p>The <strong>js-zero-line-*</strong> style template directives are used to style a chart's zero lines (also called axis lines).</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 4; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+";
+
+return return_style_directives;
+}
+// generate and return the main help content - chart attributes
+function jsChartBuilderOpenMainHelpStyleDirectiveVariables(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Style Variables";
+
+    var return_style_variables = "<h1 style=\"margin: 0px 0px 10px 0px;\">Style Variables</h1>\
+<p>The following pre-defined <strong>style template</strong> & <strong>style directive variables</strong>. These pre-defined variables can be used on your own custom <strong>style directives</strong>.</p>\
+<p style=\"padding: 10px 15px 10px 15px; background-color: #ffffe6; color: black; border: 0.5px solid black; border-radius: 3px;\">Style variables must be enclosed in the CSS function <span style=\"background-color: #dcdcdc; font-family: Arial; font-size: 16px; padding: 3px;\">var()</span>.</p>\
+<div style=\"display: grid; grid-template-columns: 60% 40%; grid-auto-rows: auto; margin: 0px 100px 0px 100px;\">\
+    <div style=\"text-align: center; border-radius: 5px 0px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Variable</div>\
+    <div style=\"text-align: center; border-radius: 0px 5px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Value</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-xxsmall)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 9px;\">9px</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-xsmall)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 10px;\">10px</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-small)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 11px;\">11px</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-normal)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 12px;\">12px</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-large)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 14px;\">14px</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-xlarge)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 16px;\">16px</div>\
+\
+    <div style=\"padding: 10px;\">var(--js-chart-size-xxlarge)</div>\
+    <div style=\"padding: 10px; text-align: center; font-size: 20px;\">20px</div>\
+\
+</div>\
+<p>Additionally, the following variables can be used.</p>\
+<div style=\"display: grid; grid-template-columns: 40% 20% 40%; grid-auto-rows: auto; margin: 0px 0px 20px 0px;\">\
+    <div style=\"text-align: center; border-radius: 5px 0px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Variable</div>\
+    <div style=\"text-align: center; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Value</div>\
+    <div style=\"text-align: center; border-radius: 0px 5px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Description</div>\
+\
+    <div style=\"padding: 10px; text-wrap-mode: nowrap;\">var(--js-chart-common-base-title-height)</div>\
+    <div style=\"padding: 10px; text-align: center;\">30px</div>\
+    <div style=\"padding: 10px;\">When a chart title is defined, this variable is set to the height of the <strong>chart title area</strong>.</div>\
+\
+    <div style=\"padding: 10px; text-wrap-mode: nowrap;\">var(--js-chart-common-base-datatable-height)</div>\
+    <div style=\"padding: 10px; text-align: center;\">60px</div>\
+    <div style=\"padding: 10px;\">When a chart's data table is rendered, this variable is set to the height of the <strong>chart data table area</strong>.</div>\
+\
+    <div style=\"padding: 10px; text-wrap-mode: nowrap;\">var(--js-chart-common-base-footer-height)</div>\
+    <div style=\"padding: 10px; text-align: center;\">15px</div>\
+    <div style=\"padding: 10px;\">When a chart's footer is rendered, this variable is set to the height of the <strong>chart footer area</strong>.</div>\
+\
+    <div style=\"padding: 10px; text-wrap-mode: nowrap;\">var(--js-chart-common-control-panel-width)</div>\
+    <div style=\"padding: 10px; text-align: center;\">30px</div>\
+    <div style=\"padding: 10px;\">When a chart's control buttons are rendered, this variable is set to the width of the <strong>chart control button area</strong>.</div>\
+\
+    <div style=\"padding: 10px; text-wrap-mode: nowrap;\">var(--js-chart-common-legend-width)</div>\
+    <div style=\"padding: 10px; text-align: center;\">30px</div>\
+    <div style=\"padding: 10px;\">When a chart's legend is rendered on the side, this variable is set to the width of the <strong>chart legend area</strong>.</div>\
+\
+    <div style=\"padding: 10px; text-wrap-mode: nowrap;\">var(--js-chart-common-legend-height)</div>\
+    <div style=\"padding: 10px; text-align: center;\">30px</div>\
+    <div style=\"padding: 10px;\">When a chart's legend is rendered on the bottom, this variable is set to the height of the <strong>chart legend area</strong>.</div>\
+\
+</div>\
+";
+
+return return_style_variables;
+}
+// generate and return the main help content - chart attributes
+function jsChartBuilderOpenMainHelpInputData(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Input Data";
+
+    var return_input_data = "<h1 style=\"margin: 0px 0px 10px 0px;\">Input Data</h1>\
+<p><span style=\"font-style: italic;\">js-charts</span> supports the following input data types.</p>\
+<div style=\"display: grid; grid-template-columns: auto auto auto auto; grid-auto-rows: auto; margin: 0px 0px 20px 0px;\">\
+    <div style=\"text-align: center; border-radius: 5px 0px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Data Type</div>\
+    <div style=\"text-align: center; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Input Container(s)</div>\
+    <div style=\"text-align: center; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Used By</div>\
+    <div style=\"text-align: center; border-radius: 0px 5px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Description</div>\
+\
+    <!-- categorical -->\
+    <div style=\"font-weight: 600;\"><p>Categorical</p></div>\
+    <div style=\" text-align: center;\">\
+        <p><div class=\"js-code-block\">js-values</div></p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/bar/\" title=\"Open in a new window\" target=\"_blank\">Bar Chart</a></li>\
+            <li><a href=\"/docs/charts/column/\" title=\"Open in a new window\" target=\"_blank\">Column Chart</a></li>\
+            <li><a href=\"/docs/charts/doughnut/\" title=\"Open in a new window\" target=\"_blank\">Doughnut Chart</a></li>\
+            <li><a href=\"/docs/charts/funnel/\" title=\"Open in a new window\" target=\"_blank\">Funnel Chart</a></li>\
+            <li><a href=\"/docs/charts/heatmap/\" title=\"Open in a new window\" target=\"_blank\">Heatmap</a></li>\
+            <li><a href=\"/docs/charts/line/\" title=\"Open in a new window\" target=\"_blank\">Line Chart</a></li>\
+            <li><a href=\"/docs/charts/lollipop/\" title=\"Open in a new window\" target=\"_blank\">Lollipop Chart</a></li>\
+            <li><a href=\"/docs/charts/mekko/\" title=\"Open in a new window\" target=\"_blank\">Mekko Chart</a></li>\
+            <li><a href=\"/docs/charts/parallel-coordinates/\" title=\"Open in a new window\" target=\"_blank\">Parallel Coordinates Chart</a></li>\
+            <li><a href=\"/docs/charts/pie/\" title=\"Open in a new window\" target=\"_blank\">Pie Chart</a></li>\
+            <li><a href=\"/docs/charts/population-pyramid/\" title=\"Open in a new window\" target=\"_blank\">Population Pyramid</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>Categorical data consists of discrete values that represent different categories or groups. When visualizing categorical data, charts should emphasize comparisons between these groups rather than trends over time.</p>\
+        <p><span style=\"font-weight: 600;\">Example</span></p>\
+        <p><span class=\"js-code-block\">&lt;div class=\"js-values\" title=\"Name for data set\"&gt;1, 2, 3, 4, 5&lt;/div&gt;</span></p>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- series (continuous numerical data) -->\
+    <div style=\"font-weight: 600;\"><p>Series<div style=\"font-size: 12px; margin: 0px 0px 0px 10px;\">(Continuous Numerical Data)</div></p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\" style=\"margin-bottom: 5px;\">js-series</div>\
+            <div class=\"js-code-block\"><span style=\"margin: 0px 0px 0px 40px;\">js-values</span></div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/box-plot/\" title=\"Open in a new window\" target=\"_blank\">Box-and-Whisker Chart</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>A box-and-whisker chart (also known as a box plot) is used to visualize continuous numerical data, particularly when analyzing distributions and identifying outliers. The type of data used in a box plot has the following characteristics:\
+            <li><strong>Quantitative (Numerical) Data</strong> - The data must be numerical (e.g., test scores, temperatures, sales figures).</li>\
+            <li><strong>Univariate Data</strong> - A box plot typically represents a single variable at a time.</li>\
+            <li><strong>Continuous or Discrete Data</strong> - The values can be continuous (e.g., height, weight) or discrete (e.g., counts of defects in a manufacturing process).</li>\
+        </p>\
+        <p><span style=\"font-weight: 600;\">Example</span></p>\
+        <div class=\"js-code-block\">\
+            &lt;div class=\"js-series\" title=\"Name for data series\"&gt;\
+                <div style=\"margin: 0px 0px 0px 35px;\">&lt;div class=\"js-values\" title=\"Name for data set 1\"&gt;1, 2, 3, 4, 5&lt;/div&gt;</div>\
+                <div style=\"margin: 0px 0px 0px 35px;\">&lt;div class=\"js-values\" title=\"Name for data set 2\"&gt;2, 3, 4, 5, 6&lt;/div&gt;</div>\
+            &lt;/div&gt;\
+        </div>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- range -->\
+    <div style=\"font-weight: 600;\"><p>Range</p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\" style=\"margin: 0px 0px 5px 0px;\">js-low-values</div>\
+            <div class=\"js-code-block\">js-high-values</div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/span/\" title=\"Open in a new window\" target=\"_blank\">Span Chart</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>Span charts are used to visualize the range between two values, typically representing numerical ranges.</p>\
+        <p>Numerical range data is used to represent data ranges instead of time periods and requires a lower bound and upper bound for each category. Range data is useful for visualizing salary brackets, temperature variations, price fluctuations, and confidence intervals.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- cumulative -->\
+    <div style=\"font-weight: 600;\"><p>Cumulative</p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\">js-values</div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/waterfall/\" title=\"Open in a new window\" target=\"_blank\">Waterfall Chart</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>Cumulative data represents values that accumulate over time or across categories, meaning each data point is the sum of the previous values plus the new value. It is useful for showing trends in total growth or progression.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- frequency -->\
+    <div style=\"font-weight: 600;\"><p>Frequency</p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\">js-values</div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/histogram/\" title=\"Open in a new window\" target=\"_blank\">Histogram</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>A histogram is used to visualize continuous numerical data that can be divided into intervals or bins. The type of data that is used by a histogram is typically continuous, interval, ratio or quantitative data.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- points -->\
+    <div style=\"font-weight: 600;\"><p>Points</p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\" style=\"margin: 0px 0px 5px 0px;\">js-x-values</div>\
+            <div class=\"js-code-block\" style=\"margin: 0px 0px 5px 0px;\">js-y-values</div>\
+            <div class=\"js-code-block\">js-s-values</div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/bubble/\" title=\"Open in a new window\" target=\"_blank\">Bubble Chart</a></li>\
+            <li><a href=\"/docs/charts/scatter/\" title=\"Open in a new window\" target=\"_blank\">Scatter Chart</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>Scatter charts are used to visualize the relationship between two numerical variables.</p>\
+        <p>The data used typically includes continuous numerical data (quantitative data), paired data (bivariate data), independent & dependent variables or optional categorical data (color, shape, or size).</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- ohlc -->\
+    <div style=\"font-weight: 600;\"><p>OHLC<div style=\"font-size: 12px; margin: 0px 0px 0px 10px;\">(Open-High-Low-Close)</div></p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\" style=\"margin: 0px 0px 5px 0px;\">js-open</div>\
+            <div class=\"js-code-block\" style=\"margin: 0px 0px 5px 0px;\">js-high</div>\
+            <div class=\"js-code-block\" style=\"margin: 0px 0px 5px 0px;\">js-low</div>\
+            <div class=\"js-code-block\">js-close</div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/candlestick/\" title=\"Open in a new window\" target=\"_blank\">Candlestick Chart</a></li>\
+            <li><a href=\"/docs/charts/ohlc/\" title=\"Open in a new window\" target=\"_blank\">OHLC Chart</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>A candlestick chart is used to represent price movements of a financial asset over a specific time period. This type of data is commonly used in stock markets, forex trading, and cryptocurrency analysis to visualize price fluctuations and identify market trends.</p>\
+    </div>\
+    <div style=\"grid-column: 1 / 5; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- hierarchy -->\
+    <div style=\"font-weight: 600;\"><p>Hierarchical</p></div>\
+    <div style=\" text-align: center;\">\
+        <p>\
+            <div class=\"js-code-block\"><span style=\"font-style: italic;\">chartattribute</span>=\"json_css_is\"</div>\
+        </p>\
+    </div>\
+    <div>\
+        <p>\
+            <li><a href=\"/docs/charts/treemap/\" title=\"Open in a new window\" target=\"_blank\">Treemap Chart</a></li>\
+        </p>\
+    </div>\
+    <div>\
+        <p>A treemap is best suited for visualizing hierarchical (tree-like) data, categorical, and quantitative data, where the goal is to compare proportions and relationships within a structured dataset. Treemaps help make sense of large and complex data by visually organizing it into a compact, easily interpretable format.</p>\
+        <p>The type of data best suited for a treemap typically includes hierarchical data, quantitative data, categorical data, financial data, market data and data with multiple dimensions.</p>\
+    </div>\
+</div>\
+";
+
+return return_input_data;
+}
+// generate and return the main help content - preview chart
+function jsChartBuilderOpenMainHelpPreviewChart(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Preview Chart";
+
+    var return_preview_chart = "<h1 style=\"margin: 0px 0px 10px 0px;\">Preview Chart</h1>\
+        <p><span style=\"font-style: italic;\">js-chart-builder</span> will render a <strong>preview chart</strong> that is continually updated as you adjust the <strong>style template</strong>, <strong>chart attributes</strong> and <strong>style directives</strong>.</p>\
+            <p class=\"js-warning-panel\">The <strong>height</strong> and <strong>width</strong> chart attributes are currently limited to dimensions that are smaller than the <strong>preview chart container</strong>. A fix is planned to address this issue in the future.</p>\
+        </div>\
+        <p>The preview chart functions as a real chart would on your web site - accurately reflecting how a chart would render on your web site. The preview chart can be exported to be easity added to your website.</p>\
+        <p>A new preview chart is rendered when you select a new chart type from the <strong>chart type</strong> dropdown.</p>\
+        <p>You can use the customise the preview chart by changing the following chart elements:\
+            <li>Chart type</li>\
+            <li>Chart attributes</li>\
+            <li>Style template</li>\
+            <li>Style directives</li>\
+            <li>Input data</li>\
+        </p>\
+";
+
+    return return_preview_chart;
+}
+// generate and return the main help content - documentation
+function jsChartBuilderOpenMainHelpDocumentation(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - Documentation";
+
+    var return_docs = "<h1 style=\"margin: 0px 0px 10px 0px;\">Documentation</h1>\
+    <p><span style=\"font-style: italic;\">js-charts</span> has an extensive documentation library containing many examples and expert tips.</p>\
+    <div style=\"display: grid; grid-template-columns: 40% 60%; grid-auto-rows: auto;\">\
+        <div style=\"text-align: center; border-radius: 5px 0px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Link</div>\
+        <div style=\"text-align: center; border-radius: 0px 5px 0px 0px; padding: 10px; font-size: 14px; font-weight: 400; background-color: cadetblue; color: white;\">Description</div>\
+\
+    <!-- root / index / toc -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/\" target=\"_blank\" title=\"Open in a new window\">/docs/</a></div>\
+        <div style=\"padding: 10px;\">Documentation root with <strong>table of contents</strong>.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- chart types -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/charts/\" target=\"_blank\" title=\"Open in a new window\">/docs/charts/</a></div>\
+        <div style=\"padding: 10px;\">List of supported chart types.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- chart attributes -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/chart-attributes/\" target=\"_blank\" title=\"Open in a new window\">/docs/chart-attributes/</a></div>\
+        <div style=\"padding: 10px;\">Chart attributes reference.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- style templates -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/style-templates/\" target=\"_blank\" title=\"Open in a new window\">/docs/style-templates/</a></div>\
+        <div style=\"padding: 10px;\">Style template reference.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- style directives -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/style-directives/\" target=\"_blank\" title=\"Open in a new window\">/docs/style-directives/</a></div>\
+        <div style=\"padding: 10px;\">Style directives reference.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- color palettes -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/color-palettes/\" target=\"_blank\" title=\"Open in a new window\">/docs/color-palettes/</a></div>\
+        <div style=\"padding: 10px;\">Color palette reference.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- user guide -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/user-guide/\" target=\"_blank\" title=\"Open in a new window\">/docs/user-guide/</a></div>\
+        <div style=\"padding: 10px;\">User Guide.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- implementtion guide -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/implmentation-guide/\" target=\"_blank\" title=\"Open in a new window\">/docs/implmentation-guide/</a></div>\
+        <div style=\"padding: 10px;\">Implementation Guide.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- examples -->\
+        <div style=\"padding: 10px;\"><a href=\"/docs/examples/\" target=\"_blank\" title=\"Open in a new window\">/docs/examples/</a></div>\
+        <div style=\"padding: 10px;\">Extensive <strong>examples</strong> page featuring tutorials and <strong>industry-specific</strong> examples.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- source -->\
+        <div style=\"padding: 10px;\"><a href=\"https://github.com/wrathtafarian/js-charts\" target=\"_blank\" title=\"Open in a new window\">https://github.com/wrathtafarian/js-charts</a></div>\
+        <div style=\"padding: 10px;\">Github repository.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- security -->\
+        <div style=\"padding: 10px;\"><a href=\"/security/\" target=\"_blank\" title=\"Open in a new window\">/security/</a></div>\
+        <div style=\"padding: 10px;\"><strong>Security & Privacy</strong>.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- terms of service -->\
+        <div style=\"padding: 10px;\"><a href=\"/terms-of-service/\" target=\"_blank\" title=\"Open in a new window\">/terms-of-service/</a></div>\
+        <div style=\"padding: 10px;\">Terms of service.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+\
+    <!-- change log -->\
+        <div style=\"padding: 10px;\"><a href=\"/change-log/\" target=\"_blank\" title=\"Open in a new window\">/change-log/</a></div>\
+        <div style=\"padding: 10px;\">Change log.</div>\
+        <div style=\"grid-column: 1 / 3; height: 0.5px; background-color: #bbbbbb; margin: 10px 0px 10px 0px;\"></div>\
+    </div>\
+";
+
+    return return_docs;
+}
+// generate and return the main help content - about
+function jsChartBuilderOpenMainHelpAbout(menu_conf) {
+
+    document.getElementsByClassName("js-chart-builder-main-help-header-title")[0].innerText = "Help - About";
+
+    var return_about = "<h1 style=\"margin: 0px 0px 10px 0px;\">About <span style=\"font-style: italic;\">js-charts</span></h1>\
+    <p><span style=\"font-style: italic;\">js-chart</span> and <span style=\"font-style: italic;\">js-chart-builder</span> are released under the <strong>GNU General Public License (GPL)</strong> open source license.</p>\
+    <p><span style=\"font-style: italic;\">js-chart-builder</span> lets you quickly build prototype charts using <span style=\"font-style: italic;\">js-charts</span>. You can export the chart using the export button, and then easily copy the chart onto your HTML website.</p>\
+    <p><span style=\"font-style: italic;\">js-chart</span> and <span style=\"font-style: italic;\">js-chart-builder</span> uses JavaScript (js) and Cascading Style Sheets (css) - that is present in all modern browsers - to build simple but highly customisable charts.</p>\
+    <p>\
+        <div class=\"js-warning-panel\">Latest stable version: <strong>" + IDEFAULT_CHART_ATTRIBUTES.version.default + "</strong></div>\
+    </p>\
+    <p>Copyright " + new Date().getFullYear() + " Wrathcom Ltd. All rights reserved.</p>\
+\
+";
+
+return return_about;
+}
+// navigate the main help menu
+function jsChartBuilderNavigateMainHelp(menu_container, menu_conf) {
+
+    if (menu_container.className != "js-chart-builder-main-menu-link-active") {
+        // inactivate all
+        var active_links = document.getElementsByClassName("js-chart-builder-main-menu-link-active");
+        for (var tt = 0; tt < active_links.length; tt++) {
+            active_links[tt].className = "js-chart-builder-main-menu-link";
+        }
+
+        // activte this
+        menu_container.className = "js-chart-builder-main-menu-link-active";
+
+        // switch main help content
+        document.getElementById("js-chart-builder-main-help-right-inner-panel").innerHTML = window[ menu_conf.renderContent ]( menu_conf );
+    }
+
+    return true;
+}
+// close the main help panel
+function jsChartBuilderCloseMainHelp(builder_panel) {
+
+    var main_help_panel = document.getElementById("js-chart-builder-main-help-panel");
+    if (main_help_panel) {
+        document.getElementById("js-chart-builder-main-help-panel").remove();
+    }
+
+    return true;
+}
+// open the main help panel
+function jsChartBuilderOpenMainHelp(builder_panel) {
+
+    if (document.getElementsByClassName("js-chart-builder-help-panel").length > 0) {
+        for (var tt = (document.getElementsByClassName("js-chart-builder-help-panel").length - 1); tt >= 0; tt--) {
+            document.getElementsByClassName("js-chart-builder-help-panel")[tt].remove();
+        }
+    }
+
+    // main help panel
+    var help_panel = document.createElement("div");
+    help_panel.id = "js-chart-builder-main-help-panel";
+    var help_panel_class = document.createAttribute("class");
+    help_panel_class.value = "js-chart-builder-main-help-panel";
+    help_panel.setAttributeNode( help_panel_class );
+    builder_panel.appendChild( help_panel );
+
+    // header
+    var help_header_container = document.createElement("div");
+    var help_header_container_class = document.createAttribute("class");
+    help_header_container_class.value = "js-chart-builder-main-help-header-container";
+    help_header_container.setAttributeNode( help_header_container_class );
+    help_panel.appendChild( help_header_container );
+
+    // header close
+    var help_header_close = document.createElement("div");
+    var help_header_close_class = document.createAttribute("class");
+    help_header_close_class.value = "js-chart-builder-main-help-header-close";
+    help_header_close.setAttributeNode( help_header_close_class );
+    var help_header_close_title = document.createAttribute("title");
+    help_header_close_title.value = "Close the help panel";
+    help_header_close.setAttributeNode( help_header_close_title );
+    help_header_close.addEventListener("mouseover", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 37%)";
+    }, false);
+    help_header_close.addEventListener("mouseout", function () {
+        this.style.backgroundColor = "hsl(348, 83%, 47%)";
+    }, false);
+    help_header_close.addEventListener("mousedown", function () {
+        this.style.fontWeight = 400;
+    }, false);
+    help_header_close.addEventListener("mouseup", function () {
+        this.style.fontWeight = 600;
+    }, false);
+    help_header_close.addEventListener("click", function () {
+        
+        var close_main_help = jsChartBuilderCloseMainHelp();
+
+    }, false);
+    help_header_close.innerText = "X";
+    help_header_container.appendChild( help_header_close );
+
+    // header title
+    var help_header_title = document.createElement("div");
+    var help_header_title_class = document.createAttribute("class");
+    help_header_title_class.value = "js-chart-builder-main-help-header-title";
+    help_header_title.setAttributeNode( help_header_title_class );
+    help_header_title.innerText = "Help";
+    help_header_container.appendChild( help_header_title );
+
+    // main content container
+    var main_conent_container = document.createElement("div");
+    var main_conent_container_class = document.createAttribute("class");
+    main_conent_container_class.value = "js-chart-builder-main-content-container";
+    main_conent_container.setAttributeNode( main_conent_container_class );
+    help_panel.appendChild( main_conent_container );
+
+    // main content container - left panel
+    var main_left_panel = document.createElement("div");
+    main_left_panel.id = "js-chart-builder-main-help-left-panel";
+    var main_left_panel_class = document.createAttribute("class");
+    main_left_panel_class.value = "js-chart-builder-main-left-panel";
+    main_left_panel.setAttributeNode( main_left_panel_class );
+    main_conent_container.appendChild( main_left_panel );
+
+    // main content container - right panel
+    var main_right_panel = document.createElement("div");
+    main_right_panel.id = "js-chart-builder-main-help-right-panel";
+    var main_right_panel_class = document.createAttribute("class");
+    main_right_panel_class.value = "js-chart-builder-main-right-panel";
+    main_right_panel.setAttributeNode( main_right_panel_class );
+    main_conent_container.appendChild( main_right_panel );
+
+    // main content container - right panel inner
+    var main_right_inner_panel = document.createElement("div");
+    main_right_inner_panel.id = "js-chart-builder-main-help-right-inner-panel";
+    var main_right_inner_panel_class = document.createAttribute("class");
+    main_right_inner_panel_class.value = "js-chart-builder-main-right-inner-panel";
+    main_right_inner_panel.setAttributeNode( main_right_inner_panel_class );
+    main_right_panel.appendChild( main_right_inner_panel );
+
+    // define the manu items
+    var help_menu_items = [
+        {
+            "key": "overview",
+            "innerHTML": "Overview",
+            "title": "Overview",
+            "id": "js-chart-builder-menu-link-overview",
+            "renderContent": "jsChartBuilderOpenMainHelpOverview",
+            "docs": {
+                "text": "Documentation",
+                "link": "https://js-charts.com/docs"
+            },
+            "active": true
+        },
+        {
+            "key": "chart-attributes",
+            "innerHTML": "Chart Attributes",
+            "title": "Chart Attributes",
+            "id": "js-chart-builder-menu-link-chart-attributes",
+            "renderContent": "jsChartBuilderOpenMainHelpChartAttributes",
+            "docs": {
+                "text": "Documentation - Chart Attributes",
+                "link": "https://js-charts.com/docs/chart-attributes"
+            },
+            "active": false,
+        },
+        {
+            "key": "style-templates",
+            "innerHTML": "Style Templates",
+            "title": "Style Templates",
+            "id": "js-chart-builder-menu-link-style-templates",
+            "renderContent": "jsChartBuilderOpenMainHelpStyleTemplates",
+            "docs": {
+                "text": "Documentation - Style Templates",
+                "link": "https://js-charts.com/docs/style-templates"
+            },
+            "active": false
+        },
+        {
+            "key": "style-directives",
+            "innerHTML": "<span style=\"padding-left: 40px;\">Directives</span>",
+            "title": "Style Directives",
+            "id": "js-chart-builder-menu-link-style-directives",
+            "renderContent": "jsChartBuilderOpenMainHelpStyleDirectives",
+            "docs": {
+                "text": "Documentation - Style Directives",
+                "link": "https://js-charts.com/docs/style-directives"
+            },
+            "active": false
+        },
+        {
+            "key": "style-directives-variables",
+            "innerHTML": "<span style=\"padding-left: 40px;\">Variables</span>",
+            "title": "Style Variables",
+            "id": "js-chart-builder-menu-link-style-directive-variables",
+            "renderContent": "jsChartBuilderOpenMainHelpStyleDirectiveVariables",
+            "docs": {
+                "text": "Documentation - Style Directives",
+                "link": "https://js-charts.com/docs/style-directive-variables"
+            },
+            "active": false
+        },
+        {
+            "key": "input-data",
+            "innerHTML": "Input Data",
+            "title": "Input Data",
+            "id": "js-chart-builder-menu-link-input-data",
+            "renderContent": "jsChartBuilderOpenMainHelpInputData",
+            "docs": {
+                "text": "Documentation - Input Data",
+                "link": "https://js-charts.com/docs/input-data"
+            },
+            "active": false
+        },
+        {
+            "key": "preview-chart",
+            "innerHTML": "Preview Chart",
+            "title": "Preview Chart",
+            "id": "js-chart-builder-menu-link-preview-chart",
+            "renderContent": "jsChartBuilderOpenMainHelpPreviewChart",
+            "active": false
+        },
+        {
+            "key": "documentation",
+            "innerHTML": "Documentation",
+            "title": "Documentation",
+            "id": "js-chart-builder-menu-link-documentation",
+            "renderContent": "jsChartBuilderOpenMainHelpDocumentation",
+            "active": false
+        },
+        {
+            "key": "about",
+            "innerHTML": "About",
+            "title": "About",
+            "id": "js-chart-builder-menu-link-about",
+            "renderContent": "jsChartBuilderOpenMainHelpAbout",
+            "active": false
+        }
+    ]
+
+    for (const [ikey, ivalue] of Object.entries(help_menu_items)) {
+
+        // main content container - left panel - menu item
+        var menu_panel_link = document.createElement("div");
+        menu_panel_link.id = ivalue.id;
+        var menu_panel_link_class = document.createAttribute("class");
+        if (ivalue.active) {
+            menu_panel_link_class.value = "js-chart-builder-main-menu-link-active";
+            menu_panel_link.setAttributeNode( menu_panel_link_class );
+        } else {
+            menu_panel_link_class.value = "js-chart-builder-main-menu-link";
+            menu_panel_link.setAttributeNode( menu_panel_link_class );
+        }
+        var menu_panel_link_title = document.createAttribute("title");
+        menu_panel_link_title.value = ivalue.title;
+        menu_panel_link.setAttributeNode( menu_panel_link_title );
+        menu_panel_link.addEventListener("click", function () {
+
+            var navigate_help = jsChartBuilderNavigateMainHelp(this, ivalue);
+
+        }, false);
+        menu_panel_link.innerHTML = ivalue.innerHTML;
+        main_left_panel.appendChild( menu_panel_link );
+
+    }
+
+    // populate the overview content
+    document.getElementById("js-chart-builder-main-help-right-inner-panel").innerHTML = window[ help_menu_items[0].renderContent ]( help_menu_items[0] );
+
+    return true;
+}
 // open the builder main window
 function jsChartBuilderOpen() {
 
@@ -5786,12 +6828,27 @@ function jsChartBuilderOpen() {
     builder_panel.setAttributeNode( builder_panel_class );
     document.body.appendChild( builder_panel );
 
+    // main top container
+    var main_top_panel = document.createElement("div");
+    var main_top_panel_class = document.createAttribute("class");
+    main_top_panel_class.value = "js-chart-builder-main-top-panel";
+    main_top_panel.setAttributeNode( main_top_panel_class );
+    builder_panel.appendChild( main_top_panel );
+
+    // footer container
+    var footer_panel = document.createElement("div");
+    var footer_panel_class = document.createAttribute("class");
+    footer_panel_class.value = "js-chart-builder-footer-panel";
+    footer_panel.setAttributeNode( footer_panel_class );
+    footer_panel.innerHTML = (new Date().getFullYear()) + " &copy; Wrathcom Ltd";
+    builder_panel.appendChild( footer_panel );
+
     // main left column
     var left_column_panel = document.createElement("div");
     var left_column_panel_class = document.createAttribute("class");
     left_column_panel_class.value = "js-chart-builder-left-column-panel";
     left_column_panel.setAttributeNode( left_column_panel_class );
-    builder_panel.appendChild( left_column_panel );
+    main_top_panel.appendChild( left_column_panel );
 
     // heading panel
     var heading_panel = document.createElement("div");
@@ -5916,6 +6973,25 @@ function jsChartBuilderOpen() {
     button_elem.addEventListener("mouseup", function () {
         this.style.fontWeight = 400;
     }, false);
+    button_elem.addEventListener("click", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+        var export_save = "";
+
+        for (const [ikey, ivalue] of Object.entries(preview_chart.children)) {
+            var child_name = ivalue.getAttribute("class").substring(3).replaceAll("-", "_");
+            if (["name", "description"].indexOf( child_name ) == -1) {
+                if (typeof IDEFAULT_DESIGN_TEMPLATES[0][ child_name ] != "undefined") {
+                    export_save += ivalue.outerHTML;
+                }
+            }
+        }
+
+        navigator.clipboard.writeText(export_save );
+
+        var pop_msg = jsChartBuilderPopMessage("Export copied to clipboard.")
+
+    }, false);
     button_panel.appendChild( button_elem );
 
     // add export data only button
@@ -5932,6 +7008,23 @@ function jsChartBuilderOpen() {
     }, false);
     button_elem.addEventListener("mouseup", function () {
         this.style.fontWeight = 400;
+    }, false);
+    button_elem.addEventListener("click", function () {
+
+        var preview_chart = document.getElementById("js-chart-builder-preview");
+        var export_save = "";
+
+        for (const [ikey, ivalue] of Object.entries(preview_chart.children)) {
+            var child_name = ivalue.getAttribute("class").substring(3).replaceAll("-", "_");
+            if ((typeof IDEFAULT_DESIGN_TEMPLATES[0][ child_name ] == "undefined") && (child_name != "chart_common_base_container")) {
+                export_save += ivalue.outerHTML;
+            }
+        }
+
+        navigator.clipboard.writeText(export_save );
+
+        var pop_msg = jsChartBuilderPopMessage("Export copied to clipboard.")
+
     }, false);
     button_panel.appendChild( button_elem );
 
@@ -5993,6 +7086,11 @@ function jsChartBuilderOpen() {
     }, false);
     button_elem.addEventListener("mouseout", function () {
         this.style.backgroundColor = "hsl(207, 44%, 49%)";
+    }, false);
+    button_elem.addEventListener("click", function () {
+
+        var open_main_help = jsChartBuilderOpenMainHelp(builder_panel);
+
     }, false);
     button_panel.appendChild( button_elem );
 
@@ -6202,7 +7300,7 @@ function jsChartBuilderOpen() {
     var right_column_panel_class = document.createAttribute("class");
     right_column_panel_class.value = "js-chart-builder-right-column-panel";
     right_column_panel.setAttributeNode( right_column_panel_class );
-    builder_panel.appendChild( right_column_panel );
+    main_top_panel.appendChild( right_column_panel );
 
     // preview panel
     var preview_panel = document.createElement("div");
