@@ -262,8 +262,6 @@ function jsChartHistogramDrawLevel0Containers(base_level2_inner_panel, i_chart, 
     x_axis_legend_container.setAttributeNode( x_axis_legend_container_class );
     level1_inner_panel.appendChild( x_axis_legend_container );
 
-    console.log("C >> " + i_chart.chart_counter + " > " + parseFloat(i_chart.i_labels[0]) );
-
     if (!isNaN(parseFloat(i_chart.i_labels[0]))) {
         for (var tt = 1; tt < i_chart.i_labels.length; tt++) {
 
