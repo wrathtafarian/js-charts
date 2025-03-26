@@ -35,6 +35,48 @@ js-charts support many options and customizations. See our __wiki__ page for mor
 
 js-chart-builder is a stand-alone JS library that can be used to easily and quickly prototype chart code for websites, or for one-time use in presentations or documentation.
 
+## Security & Privacy
+All files can be hosted on your own web server, or locally. Once the file has been downloaded by the browser, no data is exchanged between the server and client.
+
 ## Supported Charts
 _js_charts_ currently supports **18 chart types** featuring **37 unique charts**.
 
+| Chart Type                      | Chart Type                         |
+|--------------------------------:|------------------------------------|
+| Bar Chart                       | Column Chart                       |
+| Stacked Bar Chart               | Stacjed Column Chart               |
+| 100% Stacked Bar Chart          | 100% Stacked Column Chart          |
+| OHLC Chart                      | Candlestick Charts                 |
+| Scatter Chart                   | Bubble Chart                       |
+| Horizontal Boxplot              | Vertical Boxplot                   |
+| Lollipop Bar Chart              | Lollipop Column Chart              |
+| Stacked Lollipop Bar Chart      | Stacked Lollipop Column Chart      |
+| 100% Stacked Lollipop Bar Chart | 100% Stacked Lollipop Column Chart |
+| Pie Chart                       | Line Chart                         |
+| Doughnut Chart                  | Stacked Line Chart                 |
+| Stacked Doughnut Chart          | 100% Stacked Line Chart            |
+| Waterfall Bar Chart             | Watarfall Column Chart             |
+| Span Bar Chart                  | Span Column Chart                  |
+| Marimekko Bar Chart             | Marimekko Column Chart             |
+| Treemap                         | Parallel Coordinates Chart         |
+| Funnel Bar Chart                | Funnel Column Chart                |
+| Heatmap Chart                   | Histogram Chart                    |
+| Population Pyramid Chart        |                                    |
+
+## Contributing
+I welcome contributions! If you’d like to help improve this project:
+1. Open an issue with your idea or bug report.
+1. Wait for approval before starting any work.
+1. Fork the repository (only after approval).
+1. Create a new branch.
+1. Submit a pull request with a clear description of your changes.
+
+Note: Forking this project without prior consent is not permitted. __I reserve the right to reject unauthorized forks or clones__. For collaboration, please open an issue or contact me first.
+
+##  License
+This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
+
+## Contact
+
+Created and maintained by wrathtafarian
+    Email: wrathtafarian@hotmail.com
