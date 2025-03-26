@@ -4,7 +4,7 @@ js-charts is a free, low code charting and graphing solution. Input data is prov
 - No coding skill is required to create useful charts. Input data is provided as simple comma-separated strings inside HTML Div elements.
 - Cross platform and cross browser compatible.
 - Only uses JS and CSS - supported by all modern browsers.
-- Easy implementation on static and complex and dynamic websites.
+- Easy implementation on static, or complex and dynamic websites.
 - All chart elements are fully customizable and provide an array of user interactions.
 - Using js-chart-builder, charts can quickly and easily be prototyped for use on static websites, or for one-time use in presentations or documentation.
 
