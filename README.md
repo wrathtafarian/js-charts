@@ -29,4 +29,12 @@ To create your first chart, copy the example code below and alter to fit your pu
 </div>
 ```
 
-js-charts support many options and customizations.
+js-charts support many options and customizations. See our __wiki__ page for more information and detailed implementation instructions.
+
+## js-chart-builder
+
+js-chart-builder is a stand-alone JS library that can be used to easily and quickly prototype chart code for websites, or for one-time use in presentations or documentation.
+
+## Supported Charts
+_js_charts_ currently supports **18 chart types** featuring **37 unique charts**.
+
