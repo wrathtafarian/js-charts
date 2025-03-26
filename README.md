@@ -1,4 +1,7 @@
 # js-charts
+
+![js-charts logo](./images/logo/js-charts-logo-medium-384x384.png)
+
 js-charts is a free, low code charting and graphing solution. Input data is provided as HTML elements that are rendered in the browser using only JavaScript and CSS.
 
 - No coding skill is required to create useful charts. Input data is provided as simple comma-separated strings inside HTML Div elements.
@@ -43,9 +46,9 @@ _js_charts_ currently supports **18 chart types** featuring **37 unique charts**
 
 | Chart Type                      | Chart Type                         |
 |--------------------------------:|------------------------------------|
-| Bar Chart                       | Column Chart                       |
-| Stacked Bar Chart               | Stacjed Column Chart               |
-| 100% Stacked Bar Chart          | 100% Stacked Column Chart          |
+| ![js-charts logo](./images/icons/bar.png) Bar Chart                       | Column Chart                       |
+| ![js-charts logo](./images/icons/bar.png) Stacked Bar Chart               | Stacjed Column Chart               |
+| ![js-charts logo](./images/icons/bar.png) 100% Stacked Bar Chart          | 100% Stacked Column Chart          |
 | OHLC Chart                      | Candlestick Charts                 |
 | Scatter Chart                   | Bubble Chart                       |
 | Horizontal Boxplot              | Vertical Boxplot                   |
