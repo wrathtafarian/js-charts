@@ -779,6 +779,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "legend", "options", "title", "value"],
         "type_options": {
             "startangle": "0deg",
             "sum_groups": true
@@ -798,6 +799,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "legend", "options", "title", "value"],
         "type_options": {
             "startangle": "0deg",
             "sum_groups": true
@@ -817,6 +819,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "legend", "options", "title", "value"],
         "type_options": {
             "startangle": "0deg",
             "sum_groups": true
@@ -836,6 +839,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -853,6 +857,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -870,6 +875,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -885,6 +891,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -900,6 +907,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -915,6 +923,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -930,6 +939,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -945,6 +955,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -960,6 +971,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -977,6 +989,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -994,6 +1007,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1009,6 +1023,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1024,6 +1039,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1039,6 +1055,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1054,6 +1071,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1069,6 +1087,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1086,6 +1105,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1103,6 +1123,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1120,6 +1141,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": true,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1137,6 +1159,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1154,6 +1177,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1171,6 +1195,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative", "sequential", "diverging"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1188,6 +1213,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1205,6 +1231,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1222,6 +1249,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1237,6 +1265,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1255,6 +1284,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": false,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1271,6 +1301,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1289,6 +1320,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
         }
     },
@@ -1306,6 +1338,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1322,6 +1355,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1338,6 +1372,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1354,6 +1389,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_beta": true
         }
@@ -1372,6 +1408,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "requires_zero_baseline": false,
         "allow_multiseries": true,
         "allowed_palettes": ["qualitative", "sequential", "discrete"],
+        "allowed_style_directive_groups": ["bin", "canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "grid", "legend", "marker", "not", "options", "scale", "title", "value", "zero"],
         "type_options": {
             "enable_debug": true,
             "enable_beta": true

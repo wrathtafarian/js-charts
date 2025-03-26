@@ -1,7 +1,7 @@
 :root {
     --js-chart-builder-heading-panel-height: 40px;
     --js-chart-builder-button-panel-height: 30px;
-    --js-chart-builder-dropdown-panel-height: 30px;
+    --js-chart-builder-dropdown-panel-height: 50px;
     --js-chart-builder-tabs-panel-height: 30px;
     --js-chart-builder-preview-panel-height: 400px;
     --js-chart-builder-preview-panel-width: 400px;
@@ -158,7 +158,9 @@
 .js-chart-builder-dropdown-select {
     flex: 1 1 0px;
     font-size: 14px;
+    font-weight: 500;
     margin: 0px 2.5px 0px 2.5px;
+    height: var(--js-chart-builder-dropdown-panel-height);
 }
 .js-chart-builder-tabs-panel {
     flex: 1 1 auto;

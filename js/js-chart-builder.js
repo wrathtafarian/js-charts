@@ -12,10 +12,12 @@ const BUILDER_DEFAULTS = {
     "chart_attributes": {
         "100% stacked bar": {
             "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
             "sortdata": "on row avg desc"
         },
         "100% stacked column": {
             "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
             "sortdata": "on column avg asc"
         },
         "100% stacked line": {
@@ -25,10 +27,12 @@ const BUILDER_DEFAULTS = {
         },
         "100% stacked lollipop bar": {
             "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
             "sortdata": "on row avg desc"
         },
         "100% stacked lollipop column": {
-            "title": "Sales Revenue (2022 - 2024)"
+            "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom"
         },
         "bar": {
             "title": "Sales Revenue (2022 - 2023)",
@@ -118,17 +122,21 @@ const BUILDER_DEFAULTS = {
             "title": "Relationship between temperature (Celsius) and ice cream sales ($)"
         },
         "span bar": {
-            "title": "Estimated worth of famous paintings"
+            "title": "Estimated worth of famous paintings",
+            "showlegend": "bottom"
         },
         "span column": {
-            "title": "Estimated worth of famous paintings"
+            "title": "Estimated worth of famous paintings",
+            "showlegend": "bottom"
         },
         "stacked bar": {
             "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
             "sortdata": "on row avg desc"
         },
         "stacked column": {
             "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
             "sortdata": "on column avg asc"
         },
         "stacked doughnut": {
@@ -143,10 +151,12 @@ const BUILDER_DEFAULTS = {
         },
         "stacked lollipop bar": {
             "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
             "sortdata": "on row avg desc"
         },
         "stacked lollipop column": {
-            "title": "Sales Revenue (2022 - 2024)"
+            "title": "Sales Revenue (2022 - 2024)",
+            "showlegend": "bottom",
         },
         "treemap": {
             "title": "Jimmy's Motor Spares (Stock Levels - Jan 2024)",
@@ -5187,118 +5197,122 @@ function jsChartBuilderPopulateStyleDirectives(style_directives_content_panel, t
     var prev_group = "";
     for (const [ikey, ivalue] of Object.entries(directive_list)) {
         var sub_cat = ivalue.substring(0, ivalue.indexOf("_"));
-        if (prev_group != sub_cat) {
-            directive_groups[ sub_cat] = 1;
-        } else {
-            directive_groups[ sub_cat]++;
+        if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ]["allowed_style_directive_groups"].indexOf( sub_cat ) > -1) {
+            if (prev_group != sub_cat) {
+                directive_groups[ sub_cat] = 1;
+            } else {
+                directive_groups[ sub_cat]++;
+            }
+            prev_group = sub_cat;
         }
-        prev_group = sub_cat;
     }
 
     var prev_cat = "";
     for (const [ikey, ivalue] of Object.entries(directive_list)) {
         var sub_cat = ivalue.substring(0, ivalue.indexOf("_"));
+        if (IDEFAULT_CHART_TYPE_OPTIONS[ chart_type ]["allowed_style_directive_groups"].indexOf( sub_cat ) > -1) {
 
-        if (prev_cat != sub_cat) {
+            if (prev_cat != sub_cat) {
 
-            var group_label = document.createElement("div");
-            var group_label_style = document.createAttribute("style");
-            group_label_style.value = "grid-row: span " + directive_groups[ sub_cat ] + "; writing-mode: vertical-lr; line-height: 30px; text-align: left; font-size: 16px; font-weight: 600; background-color: CadetBlue; color: White; padding: 5px 0px 0px 0px; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; border: 0.5px solid white;";
-            group_label.setAttributeNode( group_label_style );
-            group_label.innerText = sub_cat;
-            style_directives_content_panel.appendChild( group_label );
+                var group_label = document.createElement("div");
+                var group_label_style = document.createAttribute("style");
+                group_label_style.value = "grid-row: span " + directive_groups[ sub_cat ] + "; writing-mode: vertical-lr; line-height: 30px; text-align: left; font-size: 16px; font-weight: 600; background-color: CadetBlue; color: White; padding: 5px 0px 0px 0px; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; border: 0.5px solid white;";
+                group_label.setAttributeNode( group_label_style );
+                group_label.innerText = sub_cat;
+                style_directives_content_panel.appendChild( group_label );
 
-        }
-
-        // directive label
-        var directive_label = document.createElement("div");
-        var directive_label_class = document.createAttribute("class");
-        directive_label_class.value = "js-chart-builder-style-directive-name";
-        directive_label.setAttributeNode( directive_label_class );
-        directive_label.innerText = ivalue;
-        style_directives_content_panel.appendChild( directive_label );
-
-        // directive checkbox
-        var directive_checkbox = document.createElement("input");
-        var directive_checkbox_type = document.createAttribute("type");
-        directive_checkbox_type.value = "CHECKBOX";
-        directive_checkbox.setAttributeNode( directive_checkbox_type );
-        directive_checkbox.addEventListener("change", function () {
-
-            if (this.nextElementSibling.disabled) {
-                this.nextElementSibling.disabled = false;
-            } else {
-                this.nextElementSibling.disabled = true;
             }
 
-            this.nextElementSibling.select();
+            // directive label
+            var directive_label = document.createElement("div");
+            var directive_label_class = document.createAttribute("class");
+            directive_label_class.value = "js-chart-builder-style-directive-name";
+            directive_label.setAttributeNode( directive_label_class );
+            directive_label.innerText = ivalue;
+            style_directives_content_panel.appendChild( directive_label );
 
-        }, false);
-        style_directives_content_panel.appendChild( directive_checkbox );
+            // directive checkbox
+            var directive_checkbox = document.createElement("input");
+            var directive_checkbox_type = document.createAttribute("type");
+            directive_checkbox_type.value = "CHECKBOX";
+            directive_checkbox.setAttributeNode( directive_checkbox_type );
+            directive_checkbox.addEventListener("change", function () {
 
-        // directive textbox
-        var directive_textbox = document.createElement("input");
-        var directive_textbox_type = document.createAttribute("type");
-        directive_textbox_type.value = "TEXT";
-        directive_textbox.setAttributeNode( directive_textbox_type );
-        var directive_textbox_disabled = document.createAttribute("disabled");
-        directive_textbox_disabled.value = "disabled";
-        directive_textbox.setAttributeNode( directive_textbox_disabled );
-        directive_textbox.addEventListener("change", function () {
+                if (this.nextElementSibling.disabled) {
+                    this.nextElementSibling.disabled = false;
+                } else {
+                    this.nextElementSibling.disabled = true;
+                }
 
-            var preview_chart = document.getElementById("js-chart-builder-preview");
+                this.nextElementSibling.select();
 
-            var directive_lookup_name = "js-" + this.previousElementSibling.previousElementSibling.innerText.replaceAll("_", "-");
-            var directive_elems = preview_chart.getElementsByClassName( directive_lookup_name );
+            }, false);
+            style_directives_content_panel.appendChild( directive_checkbox );
 
-            if (directive_elems.length == 0) {
+            // directive textbox
+            var directive_textbox = document.createElement("input");
+            var directive_textbox_type = document.createAttribute("type");
+            directive_textbox_type.value = "TEXT";
+            directive_textbox.setAttributeNode( directive_textbox_type );
+            var directive_textbox_disabled = document.createAttribute("disabled");
+            directive_textbox_disabled.value = "disabled";
+            directive_textbox.setAttributeNode( directive_textbox_disabled );
+            directive_textbox.addEventListener("change", function () {
 
-                var new_directive = document.createElement("div");
-                var new_directive_class = document.createAttribute("class");
-                new_directive_class.value = directive_lookup_name;
-                new_directive.setAttributeNode( new_directive_class );
-                new_directive.innerText = this.value;
-                preview_chart.appendChild( new_directive );
+                var preview_chart = document.getElementById("js-chart-builder-preview");
 
-            } else {
-                directive_elems[0].innerText = this.value;
-            }
+                var directive_lookup_name = "js-" + this.previousElementSibling.previousElementSibling.innerText.replaceAll("_", "-");
+                var directive_elems = preview_chart.getElementsByClassName( directive_lookup_name );
 
-            var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+                if (directive_elems.length == 0) {
 
-            var pop_msg = jsChartBuilderPopMessage("Style directive updated.");
-        }, false);
+                    var new_directive = document.createElement("div");
+                    var new_directive_class = document.createAttribute("class");
+                    new_directive_class.value = directive_lookup_name;
+                    new_directive.setAttributeNode( new_directive_class );
+                    new_directive.innerText = this.value;
+                    preview_chart.appendChild( new_directive );
 
-        if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ] != "undefined") {
-            if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ][ ivalue ] != "undefined") {
-                var t_directive_value = BUILDER_DEFAULTS.style_template_directives[ chart_type ][ ivalue];
+                } else {
+                    directive_elems[0].innerText = this.value;
+                }
+
+                var init_chart = setTimeout(initChart, 100, null, "js-chart-builder-preview");
+
+                var pop_msg = jsChartBuilderPopMessage("Style directive updated.");
+            }, false);
+
+            if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ] != "undefined") {
+                if (typeof BUILDER_DEFAULTS.style_template_directives[ chart_type ][ ivalue ] != "undefined") {
+                    var t_directive_value = BUILDER_DEFAULTS.style_template_directives[ chart_type ][ ivalue];
+                } else {
+                    var t_directive_value = directive_textbox.value = this_template[ ivalue ];
+                }
             } else {
                 var t_directive_value = directive_textbox.value = this_template[ ivalue ];
             }
-        } else {
-            var t_directive_value = directive_textbox.value = this_template[ ivalue ];
-        }
 
-        var directive_value;
-        var preview_chart = document.getElementById("js-chart-builder-preview");
-        if ((typeof preview_chart != "undefined") && (preview_chart != null)) {
-            var preview_chart_directive_name = "js-" + ivalue.replaceAll("_", "-");
-            if (preview_chart.getElementsByClassName( preview_chart_directive_name ).length > 0) {
-                directive_value = preview_chart.getElementsByClassName( preview_chart_directive_name )[0].innerText;
+            var directive_value;
+            var preview_chart = document.getElementById("js-chart-builder-preview");
+            if ((typeof preview_chart != "undefined") && (preview_chart != null)) {
+                var preview_chart_directive_name = "js-" + ivalue.replaceAll("_", "-");
+                if (preview_chart.getElementsByClassName( preview_chart_directive_name ).length > 0) {
+                    directive_value = preview_chart.getElementsByClassName( preview_chart_directive_name )[0].innerText;
+                } else {
+                    directive_value = t_directive_value;
+                }
             } else {
                 directive_value = t_directive_value;
             }
-        } else {
-            directive_value = t_directive_value;
-        }
-        if (ivalue != "color_palette") {
-            directive_textbox.value = directive_value.toString();
-        } else {
-            directive_textbox.value = directive_value.toString().replaceAll(",", ";");
-        }
-        style_directives_content_panel.appendChild( directive_textbox );
+            if (ivalue != "color_palette") {
+                directive_textbox.value = directive_value.toString();
+            } else {
+                directive_textbox.value = directive_value.toString().replaceAll(",", ";");
+            }
+            style_directives_content_panel.appendChild( directive_textbox );
 
-        prev_cat = sub_cat;
+            prev_cat = sub_cat;
+        }
     }
 
     // document.getElementById("js-chart-builder-search-input").select();
