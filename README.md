@@ -9,6 +9,7 @@ js-charts is a free, low code charting and graphing solution. Input data is prov
 - Only uses JS and CSS - supported by all modern browsers.
 - Easy implementation on static, or complex and dynamic websites.
 - All chart elements are fully customizable and provide an array of user interactions.
+- No external dependancies.
 - Using js-chart-builder, charts can quickly and easily be prototyped for use on static websites, or for one-time use in presentations or documentation.
 
 ## Usage
@@ -75,6 +76,8 @@ I welcome contributions! If you’d like to help improve this project:
 1. Submit a pull request with a clear description of your changes.
 
 Note: Forking this project without prior consent is not permitted. __I reserve the right to reject unauthorized forks or clones__. For collaboration, please open an issue or contact me first.
+
+__The project is in need of testers. If you want to contribute to testing, please contact the moderator who can guide you how best to assist__.
 
 ##  License
 This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
