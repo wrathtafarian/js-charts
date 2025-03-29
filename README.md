@@ -2,45 +2,30 @@
 
 ![js-charts logo](./images/logo/js-charts-logo-medium-384x384.png)
 
+js-charts is for ***anyone*** who wishes to add high-quality charts to their website, presentation or documentation **without having to write any code**.
+
 js-charts is a free, low code charting and graphing solution. Input data is provided as HTML elements that are rendered in the browser using only JavaScript and CSS.
 
-- No coding skill is required to create useful charts. Input data is provided as simple comma-separated strings inside HTML Div elements.
+- No coding skill is required to create useful and beautiful charts.
 - Cross platform and cross browser compatible.
 - Only uses JS and CSS - supported by all modern browsers.
 - Easy implementation on static, or complex and dynamic websites.
 - All chart elements are fully customizable and provide an array of user interactions.
 - No external dependancies.
-- Using js-chart-builder, charts can quickly and easily be prototyped for use on static websites, or for one-time use in presentations or documentation.
+- ***[js-chart-builder](https://github.com/wrathtafarian/js-chart-builder)*** lets you quickly and easily prototype charts for use on static websites, or for one-time use in presentations or documentation.
+- Visit ***[js-chart-examples](https://github.com/wrathtafarian/js-chart-examples)*** to see all of the cool things that can be done with **js-charts**.
 
-## Usage
-Copy the following two files onto your web server or local harddrive – these files contain the functions and style elements that are common across all charts.
-```
-js/js-chart-common.js
-css/js-chart-common.css
-```
+## 🔒 Security / Privacy
 
-Copy the chart specific files to your web server or local harddrive – these files contain the functions and style elements that are specific to chart types. The example below is used by pie, doughnut and stacked doughnut charts.
-```
-js/js-chart-pie.js
-css/js-chart-pie.css
-```
+💡 **js-charts** is executed in the browser of the end-user. ***NO DATA*** is shared with the **js-charts** server.
 
-To create your first chart, copy the example code below and alter to fit your purpose. Paste the code onto your web page where you want the chart to be rendered.
-```
-<div class="js-chart" type="pie" title="Sales Revenue">
-    <div class="js-labels">Furniture, Groceries, Electronics, Toys, Clothing</div>
-    <div class="js-values" title="2022">464, 142, 152, 156, 229</div>
-</div>
-```
+### Vulnerbility / Privacy Breach
 
-js-charts support many options and customizations. See our __wiki__ page for more information and detailed implementation instructions.
+If you’ve discovered a potential security vulnerability or breach of privacy:
 
-## js-chart-builder
-
-js-chart-builder is a stand-alone JS library that can be used to easily and quickly prototype chart code for websites, or for one-time use in presentations or documentation.
-
-## Security & Privacy
-All files can be hosted on your own web server, or locally. Once the file has been downloaded by the browser, no data is exchanged between the server and client.
+- ***Do not open a public issue.***
+- Please email us directly at: **jsopencharts@gmail.com**
+- 🕵️ We take the security and privacy of all of our users very seriously and will respond as quickly as we can.
 
 ## Supported Charts
 _js_charts_ currently supports **18 chart types** featuring **37 unique charts**.
@@ -77,10 +62,12 @@ I welcome contributions! If you’d like to help improve this project:
 
 Note: Forking this project without prior consent is not permitted. __I reserve the right to reject unauthorized forks or clones__. For collaboration, please open an issue or contact me first.
 
-__The project is in need of testers. If you want to contribute to testing, please contact the moderator who can guide you how best to assist__.
+### ⚠️ The project is in need of testers
+
+If you want to contribute to testing, please contact the moderator who can guide you how best to assist.
 
 ##  License
-This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See the [LICENSE](./LICENSE) page for details.
 
 ## Contact
 

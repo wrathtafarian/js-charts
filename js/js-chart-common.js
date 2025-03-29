@@ -781,6 +781,7 @@ const IDEFAULT_CHART_TYPE_OPTIONS = {
         "allowed_palettes": ["qualitative"],
         "allowed_style_directive_groups": ["canvas", "chart", "color", "control", "datalabel", "datatable", "footer", "legend", "options", "title", "value"],
         "type_options": {
+            "enable_debug": true,
             "startangle": "0deg",
             "sum_groups": true
         }
