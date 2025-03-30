@@ -6,18 +6,44 @@
 
 - [📊 Bar Charts](#bar-charts)
 
-## 📊 Bar Charts
+---
+
+## 📊 Bar Chart
 
 A bar chart is a visual representation of categorical data where individual bars represent the frequency, count, or other measures of each category. The categories are displayed along the x-axis, and the height or length of the bars, which are plotted on the y-axis (for vertical bar charts) or x-axis (for horizontal bar charts), corresponds to the value or measure of each category. Bar charts are particularly useful for comparing discrete data across categories, making it easy to observe differences between them.
 
-**Usage**: 🔁 Patterns ⚖️ Comparison
 
-**Also known as**: Clustered bar chart; Bar graph;
 
-**Variants**:
+## 📊 Column Chart
 
-- Bar Chart
-- Stacked Bar Chart
-- 100% Stacked Bar Chart
+## 🍭 Lollipop Bar Chart
 
-Read more about bar charts on the [📊 Bar Charts](Bar-Charts) page.
+## 🍭 Lollipop Column Chart
+
+## 📈 Line Chart
+
+## 🍩 Pie & Doughnut Chart
+
+## 🎯 Scatter & Bubble Chart
+
+## 💲 Stock Chart
+
+## 📦 Box-and-Whisker Plot (Box Plot)
+
+## 📏 Span Chart
+
+## 🔻 Funnel Chart
+
+## 🌊 Waterfall Chart
+
+## 🗂️ Treemap
+
+## 🌡️ Heatmap
+
+## 📊 Marimekko Chart
+
+## ⏳ Histogram
+
+## 📉 Parallel Coordinates Plot
+
+## 🧑‍🤝‍🧑 Population Pyramid

@@ -12,9 +12,6 @@ Welcome to the official wiki for the **js-charts** project! This space contains 
 - 🚀 [[Quick Start]]  
   Start using the project in minutes with minimal setup.
 
-- 🧰 [[Configuration Options]]  
-  Customize the project to fit your environment and use case.
-
 ---
 
 ## 📚 Documentation
@@ -27,6 +24,9 @@ Welcome to the official wiki for the **js-charts** project! This space contains 
 
 - 🛡️ [[Security Considerations]]  
   Tips and best practices for securing your deployment.
+
+- 🧰 [[Configuration Options]]  
+  Customize the project to fit your environment and use case.
 
 ---
 

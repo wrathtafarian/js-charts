@@ -1,8 +1,30 @@
 # 🧪 Testing & Debugging
 
-This page provides guidance on how to test and debug **`your-project-name`** effectively.
+This page provides guidance on how to test and debug **js-charts** effectively.
 
 > 💡 Whether you're writing new features or troubleshooting issues, these tools and commands will help ensure your project runs smoothly.
+
+---
+
+## 🔍 Debugging Tips
+
+Here are some tools and techniques to help debug common issues:
+
+### 📜 Enable Verbose Logging
+
+Most apps support a verbose or debug flag:
+
+```bash
+node app.js --debug
+# or
+python app.py --debug
+```
+
+Or set a debug environment variable:
+
+```bash
+export DEBUG=true
+```
 
 ---
 
@@ -39,28 +61,6 @@ pytest --lf --maxfail=1 --disable-warnings
 ```
 
 This helps speed up the dev/test cycle by rerunning only the most recent or failed tests.
-
----
-
-## 🔍 Debugging Tips
-
-Here are some tools and techniques to help debug common issues:
-
-### 📜 Enable Verbose Logging
-
-Most apps support a verbose or debug flag:
-
-```bash
-node app.js --debug
-# or
-python app.py --debug
-```
-
-Or set a debug environment variable:
-
-```bash
-export DEBUG=true
-```
 
 ---
 
