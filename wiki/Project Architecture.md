@@ -217,11 +217,15 @@ The following constants are pre-configured as part of the **common files** and a
 
 ---
 
-## 🔍 Additional Resources
+## 🔍 Additional Reading
 
-- [[Contributing Guide]
-- [[FAQ]]
+Refer to the following resources for additional reading material.
+
+- See the [🗂️ Chart Types](Chart-Types) page for a list of chart types that are supported by **js-charts**.
+- Read more about [🧰 Chart Attributes](Chart-Attributes) and how they change the behaviour of a chart.
+- Refer to the [🛠️ Style Templates](Style-Templates) page for a detailed list of style templates that are supported out-of-the-box.
+- Learn how to customize the look of a chart by using [🗨️ Style Directives](Style-Directives).
 
 ---
 
-Have a question about the architecture? [Open an issue](https://github.com/wrathtafarian/js-charts/issues) or reach out in Discussions!
+Have a question about the architecture? [Open an issue](https://github.com/wrathtafarian/js-charts/issues) or reach out in [Discussions](https://github.com/wrathtafarian/js-charts/discussions).
