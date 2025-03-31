@@ -29,7 +29,7 @@
  | [📘 showlegend](#-showlegend)
  | [🎮 showcontrols](#-showcontrols)
  | [🗂️ showdatatable](#️-showdatatable)
- | [️⃣ showgridlines](#️⃣-showgridlines)
+ | [#️⃣ showgridlines](#️⃣-showgridlines)
  | [➖ showzeroline](#-showzeroline)
  | [📈 showlines](#-showlines)
  | [🐱 showwhiskers](#-showwhiskers)

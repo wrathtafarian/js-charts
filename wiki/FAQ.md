@@ -16,6 +16,26 @@ This project is for anyone wishing to add high-quality charts to their website, 
 
 ---
 
+## ⚙️ Customization
+
+### 🦶 How do I change the *copyright text* displayed in a chart's footer?
+
+The copyright text that appears in a chart's footer can be customized in two ways:
+
+ 1. Change the value in the `IDEFAULT_DESIGN_TEMPLATES` constant in the `js/js-chart-common.js` file. The `IDEFAULT_DESIGN_TEMPLATES` constant is an *array* containing multiple style templates. Change the value of the `footer_inner_text` element in every style template in the array.
+ 2. The copyright text can also be adjusted on a chart-by-chart basis using the `js-footer-inner-text` style directive. Specify the new copyright text by including the `js-footer-inner-text` directive in the chart container. Refer to the [[Style Directives]] page for detailed instuctions on how to customize a chart using style directives.
+
+### 🎨 I cannot specify custom colors using the `js-color-palette` style directive. Why is my chart completely white, black or transparent?
+
+Due to certain color formats that use the comma character, the color palette list must always be separated by a ***semi-color character***. As demonstrated below, different color formats can be mixed inside one `js-color-palette` style directive container, but each color must be separated with a ***semi-colon character***.
+
+```
+<div class="js-color-palette">#ffa500; rgb(62, 88, 121); rgb(33, 53, 85, 0.5); hsl(199, 31%, 55%); hsla(182, 25%, 40%, 0.6); Brown</div>
+```
+
+Failing the use a ***semi-colon*** character as separator for the `js-color-palette` directive may result in either a complete black, white or transparent chart.
+
+
 ## ⚙️ Installation
 
 ### 👉 Are there any system requirements?

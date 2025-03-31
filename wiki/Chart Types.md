@@ -12,8 +12,6 @@
 
 A bar chart is a visual representation of categorical data where individual bars represent the frequency, count, or other measures of each category. The categories are displayed along the x-axis, and the height or length of the bars, which are plotted on the y-axis (for vertical bar charts) or x-axis (for horizontal bar charts), corresponds to the value or measure of each category. Bar charts are particularly useful for comparing discrete data across categories, making it easy to observe differences between them.
 
-
-
 ## 📊 Column Chart
 
 ## 🍭 Lollipop Bar Chart
