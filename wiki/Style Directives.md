@@ -36,7 +36,7 @@ A chart is constructed in the following order:
 
 The `js-bin-*` style directives are used to customize the bins on a **histogram**.
 
-Refer to the [[Style Directive Bin]] page for detailed information about the `js-bin-*` style directives.
+> 👉 Refer to the [[Style Directive Bin]] page for detailed information about the `js-bin-*` style directives.
 
 ## 🖼️ js-canvas-*
 
@@ -47,7 +47,7 @@ The `js-canvas-*` style directives are used to style the chart canvas. The canva
  - Legend container
  - Chart footer container
 
-Refer to the [[Style Directive Canvas]] page for detailed information about the `js-chart-*` style directives.
+> 👉 Refer to the [[Style Directive Canvas]] page for detailed information about the `js-chart-*` style directives.
 
 ## 📊 js-chart-*
 
@@ -61,7 +61,7 @@ The `js-chart-*` style directives are used to apply the default style elements a
  - Border & border radius
  - Box shadow
 
-Refer to the [[Style Directive Chart]] page for detailed information about the `js-chart-*` style directives.
+> 👉 Refer to the [[Style Directive Chart]] page for detailed information about the `js-chart-*` style directives.
 
 ## 🎨 js-color-*
 
@@ -72,6 +72,8 @@ The `js-color-*` style directives are used to control the colors that are availa
  - Diverging sequential
  - Diverging continuous
 
+> 👉 Refer to the [[Style Directive Color]] page for detailed information about the `js-color-*` style directives.
+
 ## 🖱️ js-control-button-*
 
 The `js-control-button-*` style directives are used to customize the control buttons on a chart. The control buttons are used to execute the functions below.
@@ -79,9 +81,15 @@ The `js-control-button-*` style directives are used to customize the control but
  - Send the chart to the printer.
  - Open the chart options menu.
 
+> 👉 Refer to the [[Style Directive Control Button]] page for detailed information about the `js-control-button-*` style directives.
+
 ## 🏷️ js-datalabel-*
 
-The `js-datalabel-*` style directives are used to customize the data labels on a chart.
+The `js-datalabel-*` style directives are used to customize the look of data labels on a chart.
+
+When enabled, data labels are rendered in close proximity to the corresponding data point on a chart.
+
+> 👉 Refer to the [[Style Directive Data Table]] page for detailed information about the `js-datalabel-*` style directives.
 
 ## 🗂️ js-datatable-*
 
@@ -89,25 +97,53 @@ The `js-datatable-*` style directives are used to customize the data table on a 
 
 When visible, the data table will be rendered at the bottom of the chart container.
 
+> 👉 Refer to the [[Style Directive Data Table]] page for detailed information about the `js-data-table-*` style directives.
+
 ## 🦶 js-footer-*
 
-The `js-footer-*` style directives are used to customize the footer area on a chart.
+The `js-footer-*` style template directives are used to customize a chart's footer area.
 
-The footer area is used to display the copyright notice at the bottom of a chart's container.
+The footer can be used to display any static text to the end user. This is useful if you want to include a copyright notice, or if you want to include instructions or special notes to the end user regarding the chart.
+
+The chart footer is rendered on the very bottom of the chart container.
+
+By default, a chart's footer area is rendered **15px** tall. To change this, edit the `--js-chart-common-base-footer-height` CSS variable defined in the `:root` section of `css/js-chart-common.css` file.
+
+The footer text will be truncated if the text cannot fit into the available space. If the footer text is truncated, an ellipsis (…) will be added to the end of the truncated footer text.
+
+> 👉 Refer to the [[Style Directive Footer]] page for detailed information about the `js-footer-*` style directives.
 
 ## #️⃣ js-grid-line-*
 
-The `js-grid-line-*` style directive is used to customize the grid lines on a chart.
+The `js-grid-line-*` style directives are used to customize the look of the grid lines on a chart.
 
-Gridlines are included in certain charts to make it easier for viewers to interpret the data accurately.
+> ⚠️ Warning: Depending on the **available space** and the **proximity** of the different gridlines on the chart, the browser may not render all gridlines. There is currently an open ticket to resolve this issue.
 
-> ⚠️ Warning: Depending on the available space and the proximity of the different gridlines on the chart, the browser may not render all gridlines. There is currently an open ticket to resolve this issue.
+Gridlines are included in certain charts to make it easier for viewers to interpret the data accurately. Grid lines are useful for the following reasons.
+
+ - **Reference Points** – Gridlines help users align data points with the axes, making it easier to estimate values.
+ - **Improved Readability** – They provide a structured background that prevents data points from floating in empty space, making patterns and trends clearer.
+ - **Comparability** – When comparing multiple points, gridlines make it easier to gauge relative differences between them.
+ - **Scale Awareness** – They reinforce the scale of the chart, helping viewers understand the increments and proportions being represented.
+
+**Lighter gridlines** are often preferred to avoid overwhelming the visualization.
+
+> 👉 Refer to the [[Style Directive Grid Line]] page for detailed information about the `js-grid-lines-*` style directives.
 
 ## 📘 js-legend-*
 
-The `js-legend-*` style templates are used to customize a chart's legend.
+The `js-legend-*` style directives are used to customize the look of a chart's legend.
 
-A chart's legend can be rendered on the left side, or to the bottom of a chart's main body.
+The legend on a chart serves as a key that helps users interpret the data by explaining what different colors, patterns, or symbols represent. It is essential in multi-series charts or any visualization that uses multiple categories. A legend on a chart is important because:
+
+ - **Clarifies Data Representation** – It ensures that viewers understand what each color, shape, or line style corresponds to in the dataset.
+ - **Enhances Readability** – Without a legend, users might struggle to differentiate between multiple data series or categories.
+ - **Saves Space** – Instead of labeling every data point, a legend allows for a cleaner chart by consolidating explanations in one place.
+ - **Improves Comparisons** – A well-placed legend makes it easier to compare different data sets within the same visualization.
+
+You should consider including a legend on a chart when the chart includes multiple categories, series, or data groups, or when colors, patterns, or markers are not self-explanatory. Legends can also help clarify the chart when direct labelling on the chart would clutter the visualization.
+
+> 👉 Refer to the [[Style Directive Legend]] page for detailed information about the `js-legend-*` style directives.
 
 ## 📍 js-marker-*
 
