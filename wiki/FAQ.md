@@ -35,6 +35,12 @@ Due to certain color formats that use the comma character, the color palette lis
 
 Failing the use a ***semi-colon*** character as separator for the `js-color-palette` directive may result in either a complete black, white or transparent chart.
 
+---
+
+🏷️ Data Labels
+
+### 🏷️ How do I prepend or append text to the data label values?
+
 
 ## ⚙️ Installation
 

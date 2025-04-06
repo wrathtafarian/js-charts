@@ -2,6 +2,8 @@
 
 The `js-chart-*` style directives are used to apply the default style elements across the chart. Default style directives can be set for the following elements.
 
+## 📚 Table of Contents
+
  - [🔤 js-chart-font-family](#-js-chart-font-family)
  - [🅰️ js-chart-font-size](#🅰️-js-chart-font-size)
  - [🅱️ js-chart-font-weight](#🅱️-js-chart-font-weight)
@@ -15,7 +17,7 @@ The `js-chart-*` style directives are used to apply the default style elements a
 
 ## 🔤 js-chart-font-family
 
-The `js-chart-font-family` property specifies a prioritized list of one or more font family names and/or generic family names to be used on a chart.
+The `js-chart-font-family` style directive specifies a prioritized list of one or more font family names and/or generic family names to be used on a chart.
 
 The example below sets a list of font family names to be used across a chart:
 
@@ -27,7 +29,7 @@ The default font family for the chart style directive is `"Open Sans", sans-seri
 
 ## 🅰️ js-chart-font-size
 
-The `js-chart-font-size` property sets the size of the `js-chart-font-family` directive. A positive length value or positive percentage value can be specified for this property.
+The `js-chart-font-size` style directive sets the size of the `js-chart-font-family` directive. A positive length value or positive percentage value can be specified for this style directive.
 
 **Length value**: For most font-relative units (such as em and ex), the font size is relative to the parent element's font size. For font-relative units that are root-based (such as rem), the font size is relative to the size of the font used by the <html> (root) element.
 
@@ -45,7 +47,7 @@ The default value of the `js-chart-font-size` directive is **14px**.
 
 ## 🅱️ js-chart-font-weight
 
-The `js-chart-font-weight` property sets the weight (or boldness) of the `js-chart-font-family` directive. The weights available depend on the font-family that is currently set. Typically, the font weight is specified as a number value between 1 and 1000, both values included. Higher numbers represent weights that are bolder than (or as bold as) lower numbers.
+The `js-chart-font-weight` style directive sets the weight (or boldness) of the `js-chart-font-family` directive. The weights available depend on the font-family that is currently set. Typically, the font weight is specified as a number value between 1 and 1000, both values included. Higher numbers represent weights that are bolder than (or as bold as) lower numbers.
 
 ```
 <div class="js-chart-font-weight">600</div>
@@ -55,7 +57,7 @@ The default value of the `js-chart-font-weight` directive is **200**.
 
 ## 🎨 js-chart-bg-color
 
-The `js-chart-bg-color` property sets the background color of the chart's container.
+The `js-chart-bg-color` style directive sets the background color of the chart's container.
 
 By default, a chart's style template sets the value of the `js-chart-bg-color` directive.
 
@@ -63,15 +65,15 @@ Refer to the [[Color]] page for detailed instructions on how to define on a char
 
 ## 🎨 js-chart-text-color
 
-The `js-chart-text-color` property sets the foreground color value of a chart’s text and text decorations.
+The `js-chart-text-color` style directive sets the foreground color value of a chart’s text and text decorations.
 
 Refer to the [[Color]] page for detailed instructions on how to define on a chart.
 
 ## 🔲 js-chart-border
 
-The `js-chart-border` property sets a chart’s border.
+The `js-chart-border` style directive sets a chart’s border.
 
-The property is specified as border width, style, and color values, for example:
+The style directive is specified as border width, style, and color values, for example:
 
 ```
 <div class="js-chart-border">0.5px solid #333333</div>
@@ -83,17 +85,17 @@ You can also hide the border completely.
 <div class="js-chart-border">none</div>
 ```
 
-> 💡 If you hide the border using this property, the **showborder** chart attribute will have no effect.
+> 💡 If you hide the border using this style directive, the **showborder** chart attribute will have no effect.
 
 By default, a chart will be rendered with a very light grey (`#eeeeee`) solid border that is 0.5px wide.
 
 ## ⤵️ js-chart-border-radius
 
-The `js-chart-border-radius` property rounds the corners of an chart's outer border edge.
+The `js-chart-border-radius` style directive rounds the corners of a chart's outer border edge.
 
 You can set a **single radius** to make *circular* corners, or **two radii** to make *elliptical* corners.
 
-The border-radius property is specified as **one**, **two**, **three**, or **four** length or percentage values (this is used to set a single radius for the corners), *optionally* followed by `/` and **one**, **two**, **three**, or **four** length or percentage values (this is used to set an additional radius, so you can have elliptical corners).
+The border-radius style directive is specified as **one**, **two**, **three**, or **four** length or percentage values (this is used to set a single radius for the corners), *optionally* followed by `/` and **one**, **two**, **three**, or **four** length or percentage values (this is used to set an additional radius, so you can have elliptical corners).
 
 By default, a chart will be rendered with rounded corners with a radius of **10px**.
 

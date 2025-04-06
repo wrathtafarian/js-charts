@@ -53,9 +53,8 @@ The `type` attribute sets the name of the chart that you want to display. This a
 
 ## 🕒 version
 
-The `version` attribute is **optional** and defines the specific version of the chart that you have implemented. This attribute will always default to the **latest stable** version available.
+`Reserved for future use.`
 
-> 💡 You cannot control the version of the source code using this attribute. You can only specify what version of the chart has been implemented on the client-side.<br><br>If a change is made to the source code that changes the chart behaviour, we will try and use this version to implement backward compatibility into the code.<br><br>This field may be ignored if the version:<br>- Is no longer supported.<br>- Contains bugs that affect the security and/or privacy of the client.
 
 ## 📋 template
 
@@ -500,13 +499,13 @@ Markers can further be customized by using the **js-marker-*** style directives.
  - **js-marker-box-shadow** - Set the box-shadow effect around the marker, e.g. **3px 3px 5px #333333**.
  - **js-marker-opacity** - Set the opcity of the marker, e.g. **1.0** renderd the marker fully opaque, or **0.5** renders the marker 50% opaque.
 
- ### Emojis 🔥 😂 ❤️ 👍 🚀 😎 📊 🌈
+ ### Emojis
 
 ***Supported by scatter charts only***: You can set emojis to use as markers on the chart.
 
 > 💡 To use **emojis** as markers, set the:<br>- chart attribute **markertype** to **emoji**<br>- style directive **js-marker-emoji** to an emoji unique identifier in **Unicode code point notation** (*see below*).
 
-The **js-marker-emoji** style directives sets a list of emojis to be used as chart markers. Emojis defined in the list are assigned to represent each data set in a round robin rotation. Use a **comma character as separator** for multiple data sets.
+The **js-marker-emoji** style directive sets a list of emojis to be used as chart markers. Emojis defined in the list are assigned to represent each data set in a round robin rotation. Use a **comma character as separator** for multiple data sets.
 
 Each emoji in the list is specified in **Unicode code point notation**.
 
