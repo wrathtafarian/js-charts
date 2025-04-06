@@ -2,6 +2,8 @@
 
 The `js-chart-*` style directives are used to apply the default style elements across the chart. Default style directives can be set for the following elements.
 
+## 📚 Table of Contents
+
  - [🔤 js-chart-font-family](#-js-chart-font-family)
  - [🅰️ js-chart-font-size](#🅰️-js-chart-font-size)
  - [🅱️ js-chart-font-weight](#🅱️-js-chart-font-weight)

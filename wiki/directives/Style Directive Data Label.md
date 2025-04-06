@@ -12,6 +12,22 @@ The visibility of data labels on a chart is controlled by the `showlabels` chart
 
 Refer to the [[Chart Attributes]] page for a detailed description of the `showlabels` chart attribute.
 
+## 📚 Table of Contents
+
+ - [➡️ js-datalabel-append](#️-js-datalabel-append)
+ - [⬅️ js-datalabel-prepend](#️-js-datalabel-prepend)
+ - [↔️ js-datalabel-width](#️-js-datalabel-width)
+ - [↕️ js-datalabel-height](#️-js-datalabel-height)
+ - [🔤 js-datalabel-font-family](#-js-datalabel-font-family)
+ - [🅰️ js-datalabel-font-size](#🅰️-js-datalabel-font-size)
+ - [🅱️ js-datalabel-font-weight](#🅱️-js-datalabel-font-weight)
+ - [🎨 js-datalabel-bg-color](#-js-datalabel-bg-color)
+ - [🎨 js-datalabel-text-color](#-js-datalabel-text-color)
+ - [🔲 js-datalabel-border](#-js-datalabel-border)
+ - [⤵️ js-datalabel-border-radius](#️-js-datalabel-border-radius)
+ - [⬛ js-datalabel-box-shadow](#-js-datalabel-box-shadow)
+ - [⬜ js-datalabel-opacity](#-js-datalabel-opacity)
+
 ## ➡️ js-datalabel-append
 
 The `js-datalabel-append` style directive allows you automatically append pre-defined text to each data label on a chart.

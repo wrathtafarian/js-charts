@@ -21,6 +21,11 @@ Grid lines can be completely hidden on a chart using the `showgridlines` chart a
 
 Refer to the [[Chart Attributes]] page for detailed information about the `showgridlines` chart attribute.
 
+## 📚 Table of Contents
+
+ - [🎨 js-grid-line-color](#-js-grid-line-color)
+ - [➖ js-grid-line-thickness](#-js-grid-line-thickness)
+
 ## 🎨 js-grid-line-color
 
 The `js-grid-line-color` style directive sets the color of the grid lines on a chart.

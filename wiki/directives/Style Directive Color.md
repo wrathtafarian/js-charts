@@ -2,6 +2,11 @@
 
 The `js-color-*` style directives are used to set the colors that are available to use on a chart.
 
+## 📚 Table of Contents
+
+ - [🎨 js-color-palette](#-js-color-palette)
+   - [Palette Type](#palette-type)
+
 ## 🎨 js-color-palette
 
 The `js-color-palette` style directive sets a list of colors that are available to be used by a chart.

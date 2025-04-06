@@ -9,6 +9,17 @@ The control buttons allows the end-user to:
 
 > 💡 The visibility of the control buttons on a chart can be controlled using the `showcontrols` chart attribute. Refer to the [[Chart Attributes]] page for detailed information about the `showcontrols` chart attribute.
 
+## 📚 Table of Contents
+ - [🔤 js-control-button-font-family](#-js-control-button-font-family)
+ - [🅰️ js-control-button-font-size](#🅰️-js-control-button-font-size)
+ - [🅱️ js-control-button-font-weight](#🅱️-js-control-button-font-weight)
+ - [🎨 js-control-button-bg-color](#-js-control-button-bg-color)
+ - [🎨 js-control-button-text-color](#-js-control-button-text-color)
+ - [🔲 js-control-button-border](#-js-control-button-border)
+ - [⤵️ js-control-button-border-radius](#️-js-control-button-border-radius)
+ - [⬛ js-control-button-box-shadow](#-js-control-button-box-shadow)
+ - [⬜ js-control-button-opacity](#-js-control-button-opacity)
+
 ## 🔤 js-control-button-font-family
 
 The `js-control-button-font-family` style directive specifies a prioritized list of one or more font family names and/or generic family names to be used on a chart's control buttons.

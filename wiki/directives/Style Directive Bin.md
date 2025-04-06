@@ -1,8 +1,12 @@
 # 🗑️ js-bin-* Style Directives
 
-The `js-bin-*` style directives are used to customize the bins on a **histogram**.
+The `js-bin-*` style directives are used to customize the bins on a ***histogram***.
 
-## js-bin-size
+## 📚 Table of Contents
+
+ - [🗑️ js-bin-size](#️-js-bin-size)
+
+## 🗑️ js-bin-size
 
 The `js-bin-size` style directive sets the bin size to be used on a histogram chart.
 

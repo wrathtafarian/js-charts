@@ -14,6 +14,20 @@ The data table is displayed in the data table area, located at the bottom of the
 
 If the data table exceeds the data table area, scrollbars will automatically be added to the data table area.
 
+## 📚 Table of Contents
+
+ - [↕️ js-datatable-height](#️-js-datatable-height)
+ - [↔️ js-datatable-width](#️-js-datatable-width)
+ - [🔤 js-datatable-font-family](#-js-datatable-font-family)
+ - [🅰️ js-datatable-font-size](#🅰️-js-datatable-font-size)
+ - [🅱️ js-datatable-font-weight](#🅱️-js-datatable-font-weight)
+ - [🎨 js-datatable-bg-color](#-js-datatable-bg-color)
+ - [🎨 js-datatable-text-color](#-js-datatable-text-color)
+ - [🔲 js-datatable-border](#-js-datatable-border)
+ - [⤵️ js-datatable-border-radius](#️-js-datatable-border-radius)
+ - [⬛ js-datatable-box-shadow](#-js-datatable-box-shadow)
+ - [⬜ js-datatable-scrollbar-color](#️-js-datatable-scrollbar-color)
+
 ## ↕️ js-datatable-height
 
 The `js-datatable-height` style directive defines the height of the data table within the chart container.

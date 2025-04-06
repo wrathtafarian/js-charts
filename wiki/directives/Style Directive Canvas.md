@@ -7,6 +7,13 @@ The `js-canvas-*` style directives are used to style the chart canvas. The canva
  - Legend container
  - Chart footer container
 
+## 📚 Table of Contents
+
+ - [📦 js-canvas-box-shadow](#-js-canvas-box-shadow)
+ - [🎨 j-canvas-scrollbar-color](#-js-canvas-scrollbar-color)
+ - [🎨 js-canvas-bg-color](#-js-canvas-bg-color)
+
+
 ## 📦 js-canvas-box-shadow
 
 The `js-canvas-box-shadow` style directive adds shadow effects around a chart canvas' area frames. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.

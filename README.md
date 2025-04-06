@@ -2,30 +2,60 @@
 
 ![js-charts logo](./images/logo/js-charts-logo-medium-384x384.png)
 
-js-charts is for ***anyone*** who wishes to add high-quality charts to their website, presentation or documentation **without having to write any code**.
+js-charts is for ***anyone*** with ***no*** **programming experience** who wishes to add high-quality charts to their website, presentation or documentation.
 
-js-charts is a free, low code charting and graphing solution. Input data is provided as HTML elements that are rendered in the browser using only JavaScript and CSS.
+js-charts is a free, almost no-code charting and graphing solution. Charts and input data are defined as HTML containers, which are parsed and rendered as a printable chart.
 
-- No coding skill is required to create useful and beautiful charts.
+- **No coding skill** is required to create charts that are both functional and beautiful.
 - Cross platform and cross browser compatible.
-- Only uses JS and CSS - supported by all modern browsers.
+- Only uses JS and CSS - **supported by all modern browsers**.
 - Easy implementation on static, or complex and dynamic websites.
-- All chart elements are fully customizable and provide an array of user interactions.
+- All chart elements are **fully customizable** and provide an array of user interactions.
 - No external dependancies.
+- Always **privacy** and **security** focused.
 - ***[js-chart-builder](https://github.com/wrathtafarian/js-chart-builder)*** lets you quickly and easily prototype charts for use on static websites, or for one-time use in presentations or documentation.
 - Visit ***[js-chart-examples](https://github.com/wrathtafarian/js-chart-examples)*** to see all of the cool things that can be done with **js-charts**.
 
-## 🔒 Security / Privacy
+## 🔒 Security and Privacy
 
-💡 **js-charts** is executed in the browser of the end-user. ***NO DATA*** is shared with the **js-charts** server.
+This project is built with a strong focus on security and privacy.
 
-### Vulnerbility / Privacy Breach
+The codebase consists solely of JavaScript and Cascading Style Sheet (CSS) files used to execute and render charts. These files are purely frontend assets and **do not** collect, track, or transmit any data—either to the project server or to any third parties.
 
-If you’ve discovered a potential security vulnerability or breach of privacy:
+### Hosting and Delivery
 
-- ***Do not open a public issue.***
-- Please email us directly at: **jsopencharts@gmail.com**
-- 🕵️ We take the security and privacy of all of our users very seriously and will respond as quickly as we can.
+You have the option to:
+
+ - **Self-host** the JavaScript and CSS files within your own infrastructure, or
+ - **Link directly** to the files hosted on the project's official website.
+
+If you choose to use the hosted version, all resources are served securely over **TLS 1.2 or higher**, ensuring the integrity and confidentiality of the connection between your site and the project server.
+
+### No Data Collection
+
+This project:
+
+ - Does **not** use cookies
+ - Does **not** include analytics
+ - Does **not** make outbound requests or track usage
+
+It is fully suitable for privacy-conscious environments, and can be safely embedded in systems with strict data handling policies.
+
+### Reporting Vulnerabilities
+
+We take security and privacy **very seriously**. If you discover any vulnerabilities, bugs, or concerns, please contact the project moderator directly via email at jsopencharts@gmail.com
+
+👉 *Please do not open a public issue to report security-related concerns.*
+
+We appreciate responsible disclosure and aim to address reports promptly and professionally.
+
+### Staying Up to Date
+
+For security best practices:
+
+ - Ensure you’re always using the latest version of the project files.
+ - Subscribe to release notifications (if applicable) for patch updates
+
 
 ## Supported Charts
 _js_charts_ currently supports **18 chart types** featuring **37 unique charts**.

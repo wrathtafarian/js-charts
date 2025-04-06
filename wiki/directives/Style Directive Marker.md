@@ -20,6 +20,16 @@ The **color** of each marker is assigned from the list of colors provided by the
 
 Refer to the [[Chart Attributes]] page for detailed information about the `showmarkers` chart attribute.
 
+## 📚 Table of Contents
+
+ - [↔️ js-marker-width](#️-js-marker-width)
+ - [↔️ js-marker-height](#️-js-marker-height)
+ - [🔲 js-marker-border](#-js-marker-border)
+ - [⤵️ js-marker-border-radius](#️-js-marker-border-radius)
+ - [⬛ js-marker-box-shadow](#-js-marker-box-shadow)
+ - [⬜ js-marker-opacity](#-js-marker-opacity)
+ - [😂 js-marker-emoji](#-js-marker-emoji)
+
 ## ↔️ js-marker-width
 
 The `js-marker-width` style directive sets the width of each individual marker on a chart.

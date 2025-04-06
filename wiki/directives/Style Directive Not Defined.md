@@ -4,6 +4,11 @@ The `js-not-defined-*` style directives allow you to control how values are visu
 
 > 💡 The `js-not-defined-*` style directives only change the block or cell background color and foreground color. Any labels that are applied to the cell are still styled using the `js-datalabel-*` style directives.
 
+## 📚 Table of Contents
+
+ - [🎨 js-not-defined-bg-color](#-js-not-defined-bg-color)
+ - [🎨 js-not-defined-text-color](#-js-not-defined-text-color)
+
 ## 🎨 js-not-defined-bg-color
 
 The `js-not-defined-bg-color` style directive sets the background color of blocks or cells that will visualize any data that is *missing* or *not defined*.

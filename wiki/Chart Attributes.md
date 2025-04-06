@@ -53,9 +53,8 @@ The `type` attribute sets the name of the chart that you want to display. This a
 
 ## 🕒 version
 
-The `version` attribute is **optional** and defines the specific version of the chart that you have implemented. This attribute will always default to the **latest stable** version available.
+`Reserved for future use.`
 
-> 💡 You cannot control the version of the source code using this attribute. You can only specify what version of the chart has been implemented on the client-side.<br><br>If a change is made to the source code that changes the chart behaviour, we will try and use this version to implement backward compatibility into the code.<br><br>This field may be ignored if the version:<br>- Is no longer supported.<br>- Contains bugs that affect the security and/or privacy of the client.
 
 ## 📋 template
 

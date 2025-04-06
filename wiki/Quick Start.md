@@ -4,16 +4,12 @@ This guide will help you get up and running with **js-charts** in just a few min
 
 The easiest approach is to clone the repository and then open one of the examples `.htm` pages.
 
----
-
 ## 🧱 Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/wrathtafarian/js-charts.git
 cd js-charts
 ```
-
----
 
 ## 🚀 Step 2: Run the Project
 
@@ -31,13 +27,9 @@ Refer to the following pages for more information to customize your chart.
 1. *Chart attributes* control the chart **type** and how the chart **functions** - [[Chart Attributes Reference]].
 2. *Style directives* change the way that a chart **looks** - [[Style Directives Reference]].
 
----
-
 ## ✅ You're Ready!
 
 Your project should now be up and running. Start building, exploring, or contributing!
-
----
 
 ## 📚 Next Steps
 

@@ -15,6 +15,18 @@ The legend on a chart serves as a key that helps users interpret the data by exp
 
 You should consider including a legend on a chart when the chart includes multiple categories, series, or data groups, or when colors, patterns, or markers are not self-explanatory. Legends can also help clarify the chart when direct labelling on the chart would clutter the visualization.
 
+## 📚 Table of Contents
+
+ - [🔤 js-legend-font-family](#-js-legend-font-family)
+ - [🅰️ js-legend-font-size](#🅰️-js-legend-font-size)
+ - [🅱️ js-legend-font-weight](#🅱️-js-legend-font-weight)
+ - [🎨 js-legend-bg-color](#-js-legend-bg-color)
+ - [🎨 js-legend-text-color](#-js-legend-text-color)
+ - [🔲 js-legend-border](#-js-legend-border)
+ - [⤵️ js-legend-border-radius](#️-js-legend-border-radius)
+ - [⬛ js-legend-box-shadow](#-js-legend-box-shadow)
+ - [⬜ js-legend-opacity](#-js-legend-opacity)
+
 ## 🔤 js-legend-font-family
 
 The `js-legend-font-family` style directive specifies a prioritized list of one or more font family names and/or generic family names to be used on a chart's legend.

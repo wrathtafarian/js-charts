@@ -10,8 +10,15 @@ By default, a chart's footer area is rendered **15px** tall. To change this, edi
 
 The footer text will be truncated if the text cannot fit into the available space. If the footer text is truncated, an ellipsis (…) will be added to the end of the truncated footer text.
 
-## 🔤 js-footer-font-family
+## 📚 Table of Contents
 
+ - [🔤 js-footer-font-family](#-js-footer-font-family)
+ - [🅰️ js-footer-font-size](#🅰️-js-footer-font-size)
+ - [🅱️ js-footer-font-weight](#🅱️-js-footer-font-weight)
+ - [🎨 js-footer-bg-color](#-js-footer-bg-color)
+ - [🎨 js-footer-text-color](#-js-footer-text-color)
+
+## 🔤 js-footer-font-family
 The `js-footer-font-family` style directive specifies a prioritized list of one or more font family names and/or generic family names to be used in a chart's footer.
 
 The example below sets a list of font family names to be used in a chart's footer.
