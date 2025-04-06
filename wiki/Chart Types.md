@@ -22,7 +22,7 @@
  1. [🎯 Scatter Plots](#-scatter-plots)
  1. [📏 Span Charts](#-span-charts)
  1. [💲 Stock Charts](#-stock-charts)
- 1. [🗂️ Treemaps](#️-treemaps)
+ 1. [🌲 Treemaps](#️-treemaps)
  1. [🌊 Waterfall Charts](#-waterfall-charts)
 
 ## 📊 Bar Charts

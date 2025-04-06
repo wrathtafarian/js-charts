@@ -5,29 +5,88 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <link href="css/js-chart-common.css" rel="stylesheet">
-        <link href="css/js-chart-mosaic.css" rel="stylesheet">
-        <script type="text/javascript" src="js/js-chart-common.js"></script>
-        <script type="text/javascript" src="js/js-chart-mosaic.js"></script>
+        <link href="../css/js-chart-common.css" rel="stylesheet">
+        <link href="../css/js-chart-mosaic.css" rel="stylesheet">
+        <script type="text/javascript" src="../js/js-chart-common.js"></script>
+        <script type="text/javascript" src="../js/js-chart-mosaic.js"></script>
         <script type="application/json" id="json-data1">
             {
-                "title": "Hierarchical parent data",
+                "title": "Eddie's Motor Spares",
                 "nodes": [
                     {
-                        "title": "Group A",
+                        "title": "Engine",
                         "nodes": [
-                            {"title": "Item A.1", "value": 300},
-                            {"title": "Item A.2", "value": 350},
-                            {"title": "Item A.3", "value": 390}
+                            {
+                                "title": "Filters",
+                                "nodes": [
+                                    { "title": "Oil Filter - Toyota Corolla", "value": 45 },
+                                    { "title": "Air Filter - Honda Civic", "value": 30 }
+                                ]
+                            },
+                            {
+                                "title": "Belts",
+                                "nodes": [
+                                    { "title": "Timing Belt - Ford Focus", "value": 20 },
+                                    { "title": "Serpentine Belt - VW Golf", "value": 25 }
+                                ]
+                            }
                         ]
                     },
                     {
-                        "title": "Group B",
+                        "title": "Brakes",
                         "nodes": [
-                            {"title": "Item B.1", "value": 245},
-                            {"title": "Item B.2", "value": 295},
-                            {"title": "Item B.3", "value": 315},
-                            {"title": "Item B.3", "value": 450}
+                            {
+                                "title": "Pads",
+                                "nodes": [
+                                    { "title": "Brake Pads - Toyota Hilux", "value": 60 },
+                                    { "title": "Brake Pads - Nissan Qashqai", "value": 50 }
+                                ]
+                            },
+                            {
+                                "title": "Discs",
+                                "nodes": [
+                                    { "title": "Brake Disc - BMW 3 Series", "value": 15 },
+                                    { "title": "Brake Disc - Audi A4", "value": 10 }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Suspension",
+                        "nodes": [
+                            {
+                                "title": "Shocks",
+                                "nodes": [
+                                    { "title": "Shock Absorber - Subaru Forester", "value": 18 },
+                                    { "title": "Shock Absorber - Mazda CX-5", "value": 20 }
+                                ]
+                            },
+                            {
+                                "title": "Springs",
+                                "nodes": [
+                                    { "title": "Coil Spring - Toyota Camry", "value": 12 },
+                                    { "title": "Leaf Spring - Isuzu D-Max", "value": 10 }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Electrical",
+                        "nodes": [
+                            {
+                                "title": "Batteries",
+                                "nodes": [
+                                    { "title": "Car Battery - 12V 60Ah", "value": 40 },
+                                    { "title": "Car Battery - 12V 70Ah", "value": 35 }
+                                ]
+                            },
+                            {
+                                "title": "Spark Plugs",
+                                "nodes": [
+                                    { "title": "Spark Plug - NGK BKR6E", "value": 100 },
+                                    { "title": "Spark Plug - Bosch FR78X", "value": 85 }
+                                ]
+                            }
                         ]
                     }
                 ]
