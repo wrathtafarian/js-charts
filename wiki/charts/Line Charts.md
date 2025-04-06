@@ -1,39 +1,44 @@
-# 📊 Bar Charts
+# 📈 Line Charts
 
-**Bar charts** can be simple or grouped, depending on the nature of the data. A simple bar chart displays one set of data, with each bar representing a single category. A grouped bar chart shows multiple data series side by side for each category, allowing for comparisons between different groups. Bar charts are widely used in various fields, including business, education, and social sciences, to compare frequencies, percentages, or other measures across categories.
+A **line chart** is a type of chart that displays data points connected by straight lines, making it ideal for showing trends over time or continuous data. The x-axis typically represents time or another continuous variable, while the y-axis shows the values or measurements associated with those time points. Line charts are especially useful for tracking changes in data over a specific period and for comparing multiple variables or datasets, as each dataset can be represented by a different line.
 
- - **Usage**: 🧵 Patterns 🔍 Comparison
+ - **Usage**: 🔍 Comparison ⏱️ Date-Over-Time 🧵 Pattern
  - **Types**:
-   - **Clustered Bar Chart** compares individual values across categories.
-   - **Stacked Bar Chart** compares both the total value and the breakdown of categories.
-   - **100% Stacked Bar Chart** focuses on the percentage contribution of each sub-category, normalizing each bar to 100%.
+   - **Line Chart** - A standard line chart shows trends over time (or another continuous variable) using lines to connect data points. If there are multiple series, each one is plotted independently, meaning the y-values are absolute and not influenced by the other series. <ins>Example</ins>: Tracking sales revenue for three products separately over time.
+   - **Stacked Line Chart** - This is an extension of the line chart where multiple series are stacked on top of each other. Instead of plotting each series separately, the second series starts where the first one ends, the third series starts where the second one ends, and so on. The topmost line represents the total value at each point. This chart shows the cumulative effect of different categories but can make it harder to compare individual trends. <ins>Example</ins>: Tracking total revenue over time, broken down into contributions from three products.
+   - **100% Stacked Line Chart** - Similar to a stacked line chart, but each point is normalized to 100%. This means that instead of showing absolute values, each point represents the percentage contribution of each series at that time. Useful for showing how proportions change over time, regardless of total values. <ins>Example</ins>: Showing what percentage of total sales each product contributes over time, even if overall sales are increasing or decreasing.
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **bar charts**.
+Line charts are commonly used in various fields, such as finance, economics, and science, to visualize trends like stock prices, temperature changes, or sales figures. By connecting data points, line charts provide a clear view of the overall direction of the data, making it easier to identify patterns, fluctuations, or anomalies. The continuous nature of the lines helps emphasize the relationship between data points, making it an effective tool for analyzing temporal or sequential data.
+
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/line%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **line charts**.
 
 ## ⚙️ Chart Attributes
 
-Bar charts accept the following chart attributes.
+Line charts accept the following chart attributes.
 
 [🧱 class](../Chart%20Attributes.md#-class)
 [🗂️ type](../Chart%20Attributes.md#-type)
 [🕒 version](../Chart%20Attributes.md#-version)
 [📋 template](../Chart%20Attributes.md#-template)
-[↔️ width](../Chart%20Attributes.md#-weidth)
+[↔️ width](../Chart%20Attributes.md#-width)
 [↕️ height](../Chart%20Attributes.md#-height)
 [📄 title](../Chart%20Attributes.md#-title)
-[🔽 sortdata](../Chart%20Attributes.md#-sortdata)
 [📄 ytitle](../Chart%20Attributes.md#-ytitle)
 [📄 xtitle](../Chart%20Attributes.md#-xtitle)
 [📏 scalemin](../Chart%20Attributes.md#-scalemin)
 [📏 scalemax](../Chart%20Attributes.md#-scalemax)
 [🔄 swapaxis](../Chart%20Attributes.md#-swapaxis)
+[🔽 sortdata](../Chart%20Attributes.md#-sortdata)
+[🚫 limitdata](../Chart%20Attributes.md#-limitdata)
 [🔲 showborder](../Chart%20Attributes.md#-showborder)
 [🏷️ showlabels](../Chart%20Attributes.md#-showlabels)
 [📘 showlegend](../Chart%20Attributes.md#-showlegend)
 [🎮 showcontrols](../Chart%20Attributes.md#-showcontrols)
+[🗂️ showdatatable](../Chart%20Attributes.md#-showdatatable)
 [#️⃣ showgridlines](../Chart%20Attributes.md#-showgridlines)
 [➖ showzeroline](../Chart%20Attributes.md#-showzeroline)
-[🗂️ showdatatable](../Chart%20Attributes.md#-showdatatable)
+[📈 showlines](../Chart%20Attributes.md#-showlines)
+[📍 showmarkers](../Chart%20Attributes.md#-showmarkers)
 [📲 showwidget](../Chart%20Attributes.md#-showwidget)
 
 ## 🧱 Input Data
@@ -86,7 +91,7 @@ Every chart is customized (or styled) using one of the supported **style templat
 
 **Style directives** are used to override the customization applied by the style template to each chart.
 
-Bar charts support the following style directives.
+Line charts support the following style directives.
 
 [🖼️ js-canvas-*](../directives/Style%20Directive%20Canvas.md)
 [📊 js-chart-*](../directives/Style%20Directive%20Canvas.md)
@@ -100,32 +105,24 @@ Bar charts support the following style directives.
 [🎮 js-options-menu-*](../directives/Style%20Directive%20Options%20Menu.md)
 [📏 js-scale-*](../directives/Style%20Directive%20Scale.md)
 [📄 js-title-*](../directives/Style%20Directive%20Title.md)
-[🧱 js-value-bar-*](../directives/Style%20Directive%20Value%20Bar.md)
+[📈 js-value-line-*](../directives/Style%20Directive%20Value%20Line.md)
 [➖ js-zero-line-*](../directives/Style%20Directive%20Zero%20Line.md)
 
 > 💡 See the [👀 js-chart-examples](https://github.com/wrathtafarian/js-chart-examples) repo for many detailed examples of how to use the **style directives** to customize a chart.
 
 ## 👀 Examples
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/line%20charts.md) repo for many detailed examples of how to use different types of **line charts**.
 
-### Example: Clustered Bar Chart: Monthly Revenue Comparison
+### Example: Clustered Line Chart: Water Consumption
 
-The example below renders a **clustered bar chart**, showing **Quarterly Sales** of **three product lines** (e.g., in a retail business).
+The example below renders a **clustered line chart**, showing **Quarterly Water Consumption** for a fictional municipality.
 
 ```
-<div class="js-chart" type="100% stacked bar" template="darkweb" title="Quarterly Sales by Product Line" ytitle="Product Lines" xtitle="Sales (USD)">
-	<div class="js-labels">Q1, Q2, Q3, Q4</div>
-
-	<div class="js-values" title="Clothing (USD)">15000, 17500, 14000, 19000</div>
-	<div class="js-values" title="Accessories (USD)">8000, 9200, 10500, 11000</div>
-	<div class="js-values" title="Home Decor (USD)">6500, 7000, 6800, 7400</div>
-
-	<div class="js-color-palette">Orange; SteelBlue; CadetBlue</div>
-	<div class="js-datalabel-font-size">14px</div>
-	<div class="js-datalabel-font-weight">600</div>
-	<div class="js-datalabel-text-color">white</div>
-	<div class="js-value-bar-series-margin">10px</div>
+<div class="js-chart" type="line" title="Water Consumption: Q1 & Q2" xtitle="Expenses" ytitle="Euro (EUR)">
+    <div class="js-labels">Jan, Feb, Mar, Apr, May, Jun</div>
+    <div class="js-values" title="Head office">4523.264, 4795.741, 4605.028, 4722.249, 4850.031, 4991.461</div>
+    <div class="js-values" title="Branch office">3522.358, 3398.41, 3396.393, 3443.617, 3515.19, 3207.277</div>
 </div>
 ```
 
@@ -138,13 +135,3 @@ The `js-labels` input container sets the labels that anchor each cluster on the 
 ##### Data Series: 📋 js-values
 
 There are three `js-values` input containers. Each container represents one data series (or data set) on the chart. In the example, each container represents one product line.
-
-##### Customization: 🖌️ Style Directives
-
- - The `js-color-palette` style directive sets a list of three colors to be used on the chart. Each color is assigned to a data series (or data set) in a round robin rotation assignment.
- - The `js-datalabel-font-size` sets a font-size of `14px` for all data labels on the chart.
- - The `js-datalabel-font-weight` sets a font-weight of `600` for all data labels on the chart.
- - The `js-datalabel-text-color` sets a foreground color of `white` for all data labels on the chart.
- - The `js-value-bar-series-margin` sets a gap of `10px` between each bar on the chart.
-
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.

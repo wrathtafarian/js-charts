@@ -7,7 +7,28 @@ An input container is defined as a HTML container.
  - The input container **type** is defined using the **class** attribute.
  - The **inner text** of the container is parsed as the input **values** of the container.
 
-Each input container serves a different purpose.
+```
+<div class=" TYPE "> VALUES </div>
+```
+
+## Table of Contents
+
+ - [Category](#category)
+   - [🏷️ js-labels](#️-js-labels)
+ - [Data](#data)
+   - [Categorical: 📋 js-values](#categorical--js-values)
+   - [Cumulative: 📋 js-values](#cumulative--js-values)
+   - [Frequency: 📋 js-values (Continuous Numerical Data / Bins)](#frequency--js-values-continuous-numerical-data--bins)
+     - [auto](#auto)
+     - [boundary](#boundary)
+     - [summary](#summary)
+     - [category](#category)
+   - [Hierarchical: 🌲 Class Attribute **jsondata**](#hierarchical--class-attribute-jsondata)
+   - [Points (Quantitative Data): 🎯 js-x-points, 🎯 js-y-points & 🎈 js-s-points](#points-quantitative-data--js-x-points-js-y-points--js-s-points)
+   - [Series (Continuous Numerical Data): 📁 js-series](#series-continuous-numerical-data--js-series)
+   - [Span (or Range): ⬇️ js-low-values & ⬆️ js-high-values](#span-or-range-️-js-low-values--️-js-high-values)
+   - [Stock (Open-High-Low-Close): 💲 js-open, 💲 js-high, 💲 js-low & 💲 js-close](#stock-open-high-low-close--js-open--js-high--js-low---js-close)
+
 
 ## Category
 
@@ -82,7 +103,7 @@ You can set a name or short description for the `js-values` input container usin
 
 ### Frequency: 📋 js-values (Continuous Numerical Data / Bins)
 
-Data for a [⏳ Histograms](charts/Histograms.md) can be set in 4 different ways.
+Data for [⏳ Histograms](charts/Histograms.md) can be set in 4 different ways.
 
 💡 The end-user will be able to adjust the **interval** (or **bin size**) on the chart no matter the input method chosen.
 
@@ -141,9 +162,132 @@ The data for a  chart can be set as already "binned" data, each defined as categ
 
 ---
 
-### Points (Quantitative Data): 🎯 js-x-points, js-y-points & js-s-points
+### Hierarchical: 🌲 Class Attribute **jsondata**
 
-The `js-x-points`, `js-y-points` and `js-s-points` input containers can be used to visualize the relationship between multiple paired data points (or values).
+> ⚠️ Hierarchical data must be provided to a chart as **JSON data**. This is accomplished by using the **jsondata** *chart attribute*.
+
+Treemaps are best suited for visualizing hierarchical (tree-like) data, categorical, and quantitative data, where the goal is to compare proportions and relationships within a structured dataset. Treemaps help make sense of large and complex data by visually organizing it into a compact, easily interpretable format.
+
+Since treemaps visualize hierarchical data, the input data must be provided in a **JSON** (JavaScript Object Notation) format.
+
+The treemap’s hierarchical data must take on the format of multiple nested objects.
+
+```
+{
+    "title": "node parent title",
+    "nodes": [
+        {"title": "node child title", "value": 100}
+    ]
+}
+```
+
+The hierarchical data used in the example below defines the stock levels of a fictional motor parts shop.
+
+```
+{
+	"title": "Eddie's Motor Spares",
+	"nodes": [
+		{
+			"title": "Engine",
+			"nodes": [
+				{
+					"title": "Filters",
+					"nodes": [
+						{ "title": "Oil Filter - Toyota Corolla", "value": 45 },
+						{ "title": "Air Filter - Honda Civic", "value": 30 }
+					]
+				},
+				{
+					"title": "Belts",
+					"nodes": [
+						{ "title": "Timing Belt - Ford Focus", "value": 20 },
+						{ "title": "Serpentine Belt - VW Golf", "value": 25 }
+					]
+				}
+			]
+		},
+		{
+			"title": "Brakes",
+			"nodes": [
+				{
+					"title": "Pads",
+					"nodes": [
+						{ "title": "Brake Pads - Toyota Hilux", "value": 60 },
+						{ "title": "Brake Pads - Nissan Qashqai", "value": 50 }
+					]
+				},
+				{
+					"title": "Discs",
+					"nodes": [
+						{ "title": "Brake Disc - BMW 3 Series", "value": 15 },
+						{ "title": "Brake Disc - Audi A4", "value": 10 }
+					]
+				}
+			]
+		},
+		{
+			"title": "Suspension",
+			"nodes": [
+				{
+					"title": "Shocks",
+					"nodes": [
+						{ "title": "Shock Absorber - Subaru Forester", "value": 18 },
+						{ "title": "Shock Absorber - Mazda CX-5", "value": 20 }
+					]
+				},
+				{
+					"title": "Springs",
+					"nodes": [
+						{ "title": "Coil Spring - Toyota Camry", "value": 12 },
+						{ "title": "Leaf Spring - Isuzu D-Max", "value": 10 }
+					]
+				}
+			]
+		},
+		{
+			"title": "Electrical",
+			"nodes": [
+				{
+					"title": "Batteries",
+					"nodes": [
+						{ "title": "Car Battery - 12V 60Ah", "value": 40 },
+						{ "title": "Car Battery - 12V 70Ah", "value": 35 }
+					]
+				},
+				{
+					"title": "Spark Plugs",
+					"nodes": [
+						{ "title": "Spark Plug - NGK BKR6E", "value": 100 },
+						{ "title": "Spark Plug - Bosch FR78X", "value": 85 }
+					]
+				}
+			]
+		}
+	]
+}
+```
+
+---
+
+### Points (Quantitative Data): 🎯 js-x-points, 🎯 js-y-points & 🎈 js-s-points
+
+Scatter charts (or scatter plots) are used to display relationships between two numerical variables. Each point on the chart represents an individual data value, with its position determined by the values of the two variables—one plotted along the x-axis and the other along the y-axis. Scatter plots use the following input containers:
+
+ - `js-x-points' sets a **comma-separated list of numeric values** that define the *x-points* to visualize on a chart.
+ - `js-y-points' sets a **comma-separated list of numeric values** that define the *y-points* to visualize on a chart.
+
+Bubble charts (or bubble plots) are used to visualize relationships between three numerical variables: two determining the bubble’s position on the x and y axes, and the third controlling the bubble’s size.
+
+ - `js-x-points' sets a **comma-separated list of numeric values** that define the *x-points* to visualize on a chart.
+ - `js-y-points' sets a **comma-separated list of numeric values** that define the *y-points* to visualize on a chart.
+ - `js-s-points' sets a **comma-separated list of numeric values** that define the *point's value* to visualize on a chart.
+
+
+```
+<div class="js-x-points">1, 1, 5, 6, 0, 2, 3, 8, 6, 0</div>
+<div class="js-y-points">3, 4, 5, 1, 1, 0, 9, 5, 6, 3</div>
+<div class="js-s-points">6, 20, 6, 0, 22, 2, 16, 3, 24, 6</div>
+```
 
 ---
 
@@ -209,10 +353,20 @@ The example below defines a **span** (or **range**) of data points that represen
 > 💡 The `js-low-values` and `js-high-values` input containers are supported by [📏 Span Charts](charts/Span%20Charts.md).
 
 
-js-open
-js-high
-js-low
-js-close
+### Stock (Open-High-Low-Close): 💲 js-open, 💲 js-high, 💲 js-low & 💲 js-close
 
+The `js-open`, `js-high`, `js-low` and `js-close` input containers are used by **candlestick** and **open-high-low-close (OHLC)** charts to visualize asset price and market movements.
 
-chartattribute=”json_data_id”
+ - `js-open` - The price at which the asset started trading at the beginning of the time period.
+ - `js-high` - The highest price reached during the time period.
+ - `js-low` - Low Price – The lowest price reached during the time period.
+ - `js-close` - The price at which the asset finished trading at the end of the time period.
+
+The input containers above all accept a **comma-separated list of numeric values**.
+
+```
+<div class="js-open">100, 102, 105, 103, 108, 110, 107, 109, 112, 115</div>
+<div class="js-high">105, 107, 108, 106, 112, 113, 110, 114, 117, 120</div>
+<div class="js-low">98, 100, 103, 101, 106, 108, 104, 106, 109, 113</div>
+<div class="js-close">102, 105, 104, 106, 110, 109, 108, 112, 116, 118</div>
+```

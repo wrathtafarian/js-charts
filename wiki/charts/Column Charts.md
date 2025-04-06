@@ -1,18 +1,19 @@
-# 📊 Bar Charts
+# 📊 Column Charts
 
-**Bar charts** can be simple or grouped, depending on the nature of the data. A simple bar chart displays one set of data, with each bar representing a single category. A grouped bar chart shows multiple data series side by side for each category, allowing for comparisons between different groups. Bar charts are widely used in various fields, including business, education, and social sciences, to compare frequencies, percentages, or other measures across categories.
+A **column chart** is a type of bar chart that displays data using vertical bars, where the height of each bar represents a value. It is commonly used to compare discrete categories or track changes over time. The x-axis represents categories, while the y-axis represents numerical values. Column charts are useful for visualizing trends, making comparisons, and identifying patterns such as increases, decreases, or outliers within a dataset.
 
- - **Usage**: 🧵 Patterns 🔍 Comparison
+ - **Usage**: 🧵 Pattern 🔍 Comparison
+
  - **Types**:
-   - **Clustered Bar Chart** compares individual values across categories.
-   - **Stacked Bar Chart** compares both the total value and the breakdown of categories.
-   - **100% Stacked Bar Chart** focuses on the percentage contribution of each sub-category, normalizing each bar to 100%.
+   - **Clustered Column Chart** compares individual values across categories.
+   - **Stacked Column Chart** compares both the total value and the breakdown of categories.
+   - **100% Stacked Column Chart** focuses on the percentage contribution of each sub-category, normalizing each column to 100%.
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/column%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **column charts**.
 
 ## ⚙️ Chart Attributes
 
-Bar charts accept the following chart attributes.
+Column charts accept the following chart attributes.
 
 [🧱 class](../Chart%20Attributes.md#-class)
 [🗂️ type](../Chart%20Attributes.md#-type)
@@ -86,7 +87,7 @@ Every chart is customized (or styled) using one of the supported **style templat
 
 **Style directives** are used to override the customization applied by the style template to each chart.
 
-Bar charts support the following style directives.
+Column charts support the following style directives.
 
 [🖼️ js-canvas-*](../directives/Style%20Directive%20Canvas.md)
 [📊 js-chart-*](../directives/Style%20Directive%20Canvas.md)
@@ -107,14 +108,14 @@ Bar charts support the following style directives.
 
 ## 👀 Examples
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/column%20charts.md) repo for many detailed examples of how to use different types of **column charts**.
 
-### Example: Clustered Bar Chart: Monthly Revenue Comparison
+### Example: Clustered Column Chart: Monthly Revenue Comparison
 
-The example below renders a **clustered bar chart**, showing **Quarterly Sales** of **three product lines** (e.g., in a retail business).
+The example below renders a **clustered column chart**, showing **Quarterly Sales** of **three product lines** (e.g., in a retail business).
 
 ```
-<div class="js-chart" type="100% stacked bar" template="darkweb" title="Quarterly Sales by Product Line" ytitle="Product Lines" xtitle="Sales (USD)">
+<div class="js-chart" type="100% stacked column" template="darkweb" title="Quarterly Sales by Product Line" ytitle="Product Lines" xtitle="Sales (USD)">
 	<div class="js-labels">Q1, Q2, Q3, Q4</div>
 
 	<div class="js-values" title="Clothing (USD)">15000, 17500, 14000, 19000</div>
@@ -145,6 +146,6 @@ There are three `js-values` input containers. Each container represents one data
  - The `js-datalabel-font-size` sets a font-size of `14px` for all data labels on the chart.
  - The `js-datalabel-font-weight` sets a font-weight of `600` for all data labels on the chart.
  - The `js-datalabel-text-color` sets a foreground color of `white` for all data labels on the chart.
- - The `js-value-bar-series-margin` sets a gap of `10px` between each bar on the chart.
+ - The `js-value-bar-series-margin` sets a gap of `10px` between each column on the chart.
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/column%20charts.md) repo for many detailed examples of how to use different types of **column charts**.

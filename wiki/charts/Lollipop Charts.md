@@ -1,39 +1,47 @@
-# 📊 Bar Charts
+# 🍭 Lollipop Charts
 
-**Bar charts** can be simple or grouped, depending on the nature of the data. A simple bar chart displays one set of data, with each bar representing a single category. A grouped bar chart shows multiple data series side by side for each category, allowing for comparisons between different groups. Bar charts are widely used in various fields, including business, education, and social sciences, to compare frequencies, percentages, or other measures across categories.
+A **lollipop chart** is a variation of a bar chart that uses a thin line with a circular marker at the end to represent data points. It is particularly useful for comparing discrete categories while maintaining a clean and visually appealing design. Lollipop charts work well when you want to emphasize the actual values while reducing visual clutter, making them a good alternative to traditional bar charts when space or aesthetics are a concern.
 
  - **Usage**: 🧵 Patterns 🔍 Comparison
  - **Types**:
-   - **Clustered Bar Chart** compares individual values across categories.
-   - **Stacked Bar Chart** compares both the total value and the breakdown of categories.
-   - **100% Stacked Bar Chart** focuses on the percentage contribution of each sub-category, normalizing each bar to 100%.
+   - **Clustered Lollipop Bar Chart** compares individual values across categories (horizontal lollipops).
+   - **Stacked Lollipop Bar Chart** compares both the total value and the breakdown of categories (horizontal lollipops).
+   - **100% Stacked Lollipop Bar Chart** focuses on the percentage contribution of each sub-category, normalizing each bar to 100% (horizontal lollipops).
+   - **Clustered Lollipop Column Chart** compares individual values across categories (vertical lollipops).
+   - **Stacked Lollipop Column Chart** compares both the total value and the breakdown of categories (vertical lollipops).
+   - **100% Stacked Lollipop Column Chart** focuses on the percentage contribution of each sub-category, normalizing each bar to 100% (vertical lollipops).
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **bar charts**.
+These charts are best used for ranking or highlighting differences between values, especially when dealing with moderate-sized datasets. They are most effective when paired with sorted data, as the clear separation between markers helps viewers quickly interpret patterns and trends. However, for very large datasets, a bar chart might be preferable due to better readability.
+
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/lollipop%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **lollipop charts**.
 
 ## ⚙️ Chart Attributes
 
-Bar charts accept the following chart attributes.
+Lollipop charts accept the following chart attributes.
 
 [🧱 class](../Chart%20Attributes.md#-class)
 [🗂️ type](../Chart%20Attributes.md#-type)
 [🕒 version](../Chart%20Attributes.md#-version)
 [📋 template](../Chart%20Attributes.md#-template)
-[↔️ width](../Chart%20Attributes.md#-weidth)
+[↔️ width](../Chart%20Attributes.md#-width)
 [↕️ height](../Chart%20Attributes.md#-height)
 [📄 title](../Chart%20Attributes.md#-title)
-[🔽 sortdata](../Chart%20Attributes.md#-sortdata)
 [📄 ytitle](../Chart%20Attributes.md#-ytitle)
 [📄 xtitle](../Chart%20Attributes.md#-xtitle)
 [📏 scalemin](../Chart%20Attributes.md#-scalemin)
 [📏 scalemax](../Chart%20Attributes.md#-scalemax)
 [🔄 swapaxis](../Chart%20Attributes.md#-swapaxis)
+[🔽 sortdata](../Chart%20Attributes.md#-sortdata)
+[🚫 limitdata](../Chart%20Attributes.md#-limitdata)
 [🔲 showborder](../Chart%20Attributes.md#-showborder)
 [🏷️ showlabels](../Chart%20Attributes.md#-showlabels)
 [📘 showlegend](../Chart%20Attributes.md#-showlegend)
 [🎮 showcontrols](../Chart%20Attributes.md#-showcontrols)
+[🗂️ showdatatable](../Chart%20Attributes.md#-showdatatable)
 [#️⃣ showgridlines](../Chart%20Attributes.md#-showgridlines)
 [➖ showzeroline](../Chart%20Attributes.md#-showzeroline)
-[🗂️ showdatatable](../Chart%20Attributes.md#-showdatatable)
+[📈 showlines](../Chart%20Attributes.md#-showlines)
+[📍 showmarkers](../Chart%20Attributes.md#-showmarkers)
 [📲 showwidget](../Chart%20Attributes.md#-showwidget)
 
 ## 🧱 Input Data
@@ -86,46 +94,47 @@ Every chart is customized (or styled) using one of the supported **style templat
 
 **Style directives** are used to override the customization applied by the style template to each chart.
 
-Bar charts support the following style directives.
+Lollipop charts support the following style directives.
 
 [🖼️ js-canvas-*](../directives/Style%20Directive%20Canvas.md)
-[📊 js-chart-*](../directives/Style%20Directive%20Canvas.md)
+[📊 js-chart-*](../directives/Style%20Directive%20Chart.md)
 [🎨 js-color-*](../directives/Style%20Directive%20Color.md)
-[🖱️ js-control-button-*](../directives/Style%20Directive%20Control%20Button.md)
+[🖱️ js-control-button-*](../directives/Style%20Directive%20Control%20Buttons.md)
 [🏷️ js-datalabel-*](../directives/Style%20Directive%20Data%20Label.md)
 [🗂️ js-datatable-*](../directives/Style%20Directive%20Data%20Table.md)
 [🦶 js-footer-*](../directives/Style%20Directive%20Footer.md)
 #[️⃣ js-grid-line-*](../directives/Style%20Directive%20Grid%20Line.md)
 [📘 js-legend-*](../directives/Style%20Directive%20Legend.md)
+[📍 js-marker-*](../directives/Style%20Directive%20Marker.md)
 [🎮 js-options-menu-*](../directives/Style%20Directive%20Options%20Menu.md)
 [📏 js-scale-*](../directives/Style%20Directive%20Scale.md)
 [📄 js-title-*](../directives/Style%20Directive%20Title.md)
-[🧱 js-value-bar-*](../directives/Style%20Directive%20Value%20Bar.md)
+[📈 js-value-line-*](../directives/Style%20Directive%20Value%20Line.md)
 [➖ js-zero-line-*](../directives/Style%20Directive%20Zero%20Line.md)
 
 > 💡 See the [👀 js-chart-examples](https://github.com/wrathtafarian/js-chart-examples) repo for many detailed examples of how to use the **style directives** to customize a chart.
 
 ## 👀 Examples
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/lollipop%20charts.md) repo for many detailed examples of how to use different types of **lollipop charts**.
 
-### Example: Clustered Bar Chart: Monthly Revenue Comparison
+### Example: Lollipop Column Chart: Monthly Revenue Comparison
 
-The example below renders a **clustered bar chart**, showing **Quarterly Sales** of **three product lines** (e.g., in a retail business).
+The example below renders a **clustered bar chart**, showing **Player Hit Points** for a fictional player tournament.
 
 ```
-<div class="js-chart" type="100% stacked bar" template="darkweb" title="Quarterly Sales by Product Line" ytitle="Product Lines" xtitle="Sales (USD)">
-	<div class="js-labels">Q1, Q2, Q3, Q4</div>
+<div class="js-chart" type="stacked lollipop bar" title="Player Hit points" ytitle="y-axis title" xtitle="x-axis title">
+    <div class="js-labels">Player 1, Player 2, Player 4, Player 9, Player 14, Player 18, Player 21, Player 22, Player 24, Player 26</div>
+    <div class="js-values" title="1P">7, 4, 7, 12, 4, 16, 20, 19, 3, 12</div>
+    <div class="js-values" title="2P">24, 19, 10, 2, 4, 0, 18, 5, 17, 1</div>
+    <div class="js-values" title="3P">0, 3, 8, 1, 13, 0, 3, 9, 4, 12</div>
+    <div class="js-values" title="4P">8, 1, 4, 11, 21, 7, 2, 18, 10, 21</div>
+    <div class="js-values" title="5P">10, 13, 4, 15, 18, 14, 18, 0, 1, 21</div>
+    <div class="js-values" title="6P">19, 5, 12, 8, 10, 14, 2, 3, 1, 24</div>
+    <div class="js-values" title="7P">0, 21, 15, 22, 16, 7, 0, 3, 4, 3</div>
 
-	<div class="js-values" title="Clothing (USD)">15000, 17500, 14000, 19000</div>
-	<div class="js-values" title="Accessories (USD)">8000, 9200, 10500, 11000</div>
-	<div class="js-values" title="Home Decor (USD)">6500, 7000, 6800, 7400</div>
-
-	<div class="js-color-palette">Orange; SteelBlue; CadetBlue</div>
-	<div class="js-datalabel-font-size">14px</div>
-	<div class="js-datalabel-font-weight">600</div>
-	<div class="js-datalabel-text-color">white</div>
-	<div class="js-value-bar-series-margin">10px</div>
+    <div class="js-datalabel-width">25px</div>
+    <div class="js-datalabel-font-size">9px</div>
 </div>
 ```
 
@@ -141,10 +150,7 @@ There are three `js-values` input containers. Each container represents one data
 
 ##### Customization: 🖌️ Style Directives
 
- - The `js-color-palette` style directive sets a list of three colors to be used on the chart. Each color is assigned to a data series (or data set) in a round robin rotation assignment.
- - The `js-datalabel-font-size` sets a font-size of `14px` for all data labels on the chart.
- - The `js-datalabel-font-weight` sets a font-weight of `600` for all data labels on the chart.
- - The `js-datalabel-text-color` sets a foreground color of `white` for all data labels on the chart.
- - The `js-value-bar-series-margin` sets a gap of `10px` between each bar on the chart.
+ - The `js-datalabel-width` style directive sets the width of data labels on the chart. Each label will be rendered **25px** wide.
+ - The `js-datalabel-font-size` sets a font-size of `9px` for all data labels on the chart.
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/lollipop%20charts.md) repo for many detailed examples of how to use different types of **lollipop charts**.

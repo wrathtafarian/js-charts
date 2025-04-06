@@ -1,39 +1,45 @@
-# 📊 Bar Charts
+# 📊 Marimekko (Mekko) Charts
 
-**Bar charts** can be simple or grouped, depending on the nature of the data. A simple bar chart displays one set of data, with each bar representing a single category. A grouped bar chart shows multiple data series side by side for each category, allowing for comparisons between different groups. Bar charts are widely used in various fields, including business, education, and social sciences, to compare frequencies, percentages, or other measures across categories.
+A **Marimekko chart**, (or **Mekko chart**), is a type of data visualization that displays categorical data along two dimensions. It combines elements of both a bar chart and a stacked bar chart, where the width of each column represents the relative proportion of a category within the data set, and the height of each section within the column represents a subcategory’s contribution. This creates a "mosaic" of blocks, making it easier to compare both the total size of categories and the distribution of subcategories within them.
 
- - **Usage**: 🧵 Patterns 🔍 Comparison
+ - **Usage**: 🔍 Comparison 🥧 Part-To-A-Whole ⚖️ Proportions 🆚 Relationship
  - **Types**:
-   - **Clustered Bar Chart** compares individual values across categories.
-   - **Stacked Bar Chart** compares both the total value and the breakdown of categories.
-   - **100% Stacked Bar Chart** focuses on the percentage contribution of each sub-category, normalizing each bar to 100%.
+   - **Marimekko Chart** (or **Mekko Chart**) - A Marimekko chart is a combination of a 100% stacked bar chart and a variable-width column chart.
+     - It is used to visualize both **relative proportions** and **absolute values across categories**.
+     - The **height** of each segment represents a **percentage within a category** (similar to a 100% stacked bar chart).
+     - The **width** of each column represents the **size (weight) of that category** in the dataset.
+     - The **total width** of all columns represents the **total dataset**.
+   - **100% Stacked Marimekko Chart** (or **100% Stacked Mekko Chart**) - This is a variation on the normal Mekko chart.
+     - A 100% stacked Mekko chart is similar to a Mekko chart, but the **bars** and **columns** are **both normalized to a total of 100%**.
+     - This charts makes it easier to **compare proportions across categories** but removes the representation of total category size.
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/mekko%20charts.md) repo for many detailed examples of how to use and customize (style) different types of **mekko charts**.
 
 ## ⚙️ Chart Attributes
 
-Bar charts accept the following chart attributes.
+Mekko charts accept the following chart attributes.
 
 [🧱 class](../Chart%20Attributes.md#-class)
 [🗂️ type](../Chart%20Attributes.md#-type)
 [🕒 version](../Chart%20Attributes.md#-version)
 [📋 template](../Chart%20Attributes.md#-template)
-[↔️ width](../Chart%20Attributes.md#-weidth)
+[↔️ width](../Chart%20Attributes.md#-width)
 [↕️ height](../Chart%20Attributes.md#-height)
 [📄 title](../Chart%20Attributes.md#-title)
-[🔽 sortdata](../Chart%20Attributes.md#-sortdata)
 [📄 ytitle](../Chart%20Attributes.md#-ytitle)
 [📄 xtitle](../Chart%20Attributes.md#-xtitle)
 [📏 scalemin](../Chart%20Attributes.md#-scalemin)
 [📏 scalemax](../Chart%20Attributes.md#-scalemax)
 [🔄 swapaxis](../Chart%20Attributes.md#-swapaxis)
+[🔽 sortdata](../Chart%20Attributes.md#-sortdata)
+[🚫 limitdata](../Chart%20Attributes.md#-limitdata)
 [🔲 showborder](../Chart%20Attributes.md#-showborder)
 [🏷️ showlabels](../Chart%20Attributes.md#-showlabels)
 [📘 showlegend](../Chart%20Attributes.md#-showlegend)
 [🎮 showcontrols](../Chart%20Attributes.md#-showcontrols)
+[🗂️ showdatatable](../Chart%20Attributes.md#-showdatatable)
 [#️⃣ showgridlines](../Chart%20Attributes.md#-showgridlines)
 [➖ showzeroline](../Chart%20Attributes.md#-showzeroline)
-[🗂️ showdatatable](../Chart%20Attributes.md#-showdatatable)
 [📲 showwidget](../Chart%20Attributes.md#-showwidget)
 
 ## 🧱 Input Data
@@ -86,7 +92,7 @@ Every chart is customized (or styled) using one of the supported **style templat
 
 **Style directives** are used to override the customization applied by the style template to each chart.
 
-Bar charts support the following style directives.
+Mekko charts support the following style directives.
 
 [🖼️ js-canvas-*](../directives/Style%20Directive%20Canvas.md)
 [📊 js-chart-*](../directives/Style%20Directive%20Canvas.md)
@@ -107,25 +113,21 @@ Bar charts support the following style directives.
 
 ## 👀 Examples
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/mekko%20charts.md) repo for many detailed examples of how to use different types of **mekko charts**.
 
-### Example: Clustered Bar Chart: Monthly Revenue Comparison
+### Example: Mekko Chart: Export Volume for Country
 
-The example below renders a **clustered bar chart**, showing **Quarterly Sales** of **three product lines** (e.g., in a retail business).
+The example below renders a **marimekko chart**, showing **Export Volume per Country** for a fuctional imports/export company.
 
 ```
-<div class="js-chart" type="100% stacked bar" template="darkweb" title="Quarterly Sales by Product Line" ytitle="Product Lines" xtitle="Sales (USD)">
-	<div class="js-labels">Q1, Q2, Q3, Q4</div>
+<div class="js-chart" type="marimekko" title="Export volume per country" ytitle="Volume in Million Litres" xtitle="Country name" showcontrols="off">
+    <div class="js-labels">Australia, India, Germany, South Africa</div>
 
-	<div class="js-values" title="Clothing (USD)">15000, 17500, 14000, 19000</div>
-	<div class="js-values" title="Accessories (USD)">8000, 9200, 10500, 11000</div>
-	<div class="js-values" title="Home Decor (USD)">6500, 7000, 6800, 7400</div>
+    <div class="js-values" title="Group 1">170, 280, 220, 95</div>
+    <div class="js-values" title="Group 2">85, 95, 102, 50</div>
+    <div class="js-values" title="Group 3">80, 20, 30, 280</div>
 
-	<div class="js-color-palette">Orange; SteelBlue; CadetBlue</div>
-	<div class="js-datalabel-font-size">14px</div>
-	<div class="js-datalabel-font-weight">600</div>
-	<div class="js-datalabel-text-color">white</div>
-	<div class="js-value-bar-series-margin">10px</div>
+    <div class="js-value-bar-data-margin">2px</div>
 </div>
 ```
 
@@ -141,10 +143,6 @@ There are three `js-values` input containers. Each container represents one data
 
 ##### Customization: 🖌️ Style Directives
 
- - The `js-color-palette` style directive sets a list of three colors to be used on the chart. Each color is assigned to a data series (or data set) in a round robin rotation assignment.
- - The `js-datalabel-font-size` sets a font-size of `14px` for all data labels on the chart.
- - The `js-datalabel-font-weight` sets a font-weight of `600` for all data labels on the chart.
- - The `js-datalabel-text-color` sets a foreground color of `white` for all data labels on the chart.
- - The `js-value-bar-series-margin` sets a gap of `10px` between each bar on the chart.
+ - The `js-value-bar-data-margin` sets a gap of `2px` between each bar on the chart.
 
-> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/bar%20charts.md) repo for many detailed examples of how to use different types of **bar charts**.
+> 💡 See the [js-chart-examples](https://github.com/wrathtafarian/js-chart-examples/charts/mekko%20charts.md) repo for many detailed examples of how to use different types of **mekko charts**.
