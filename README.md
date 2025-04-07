@@ -62,25 +62,25 @@ _js_charts_ currently supports **18 chart types** featuring **37 unique charts**
 
 | Chart Type                      | Chart Type                         |
 |--------------------------------:|------------------------------------|
-| [Bar Chart](/wiki/charts/Bar%20Charts.md) | [Column Chart](/wiki/charts/Column%20Charts.md) |
-| Stacked Bar Chart               | Stacjed Column Chart               |
-| 100% Stacked Bar Chart          | 100% Stacked Column Chart          |
-| OHLC Chart                      | Candlestick Charts                 |
-| Scatter Chart                   | Bubble Chart                       |
-| Horizontal Boxplot              | Vertical Boxplot                   |
-| Lollipop Bar Chart              | Lollipop Column Chart              |
-| Stacked Lollipop Bar Chart      | Stacked Lollipop Column Chart      |
-| 100% Stacked Lollipop Bar Chart | 100% Stacked Lollipop Column Chart |
-| Pie Chart                       | Line Chart                         |
-| Doughnut Chart                  | Stacked Line Chart                 |
-| Stacked Doughnut Chart          | 100% Stacked Line Chart            |
-| Waterfall Bar Chart             | Watarfall Column Chart             |
-| Span Bar Chart                  | Span Column Chart                  |
-| Marimekko Bar Chart             | Marimekko Column Chart             |
-| Treemap                         | Parallel Coordinates Chart         |
-| Funnel Bar Chart                | Funnel Column Chart                |
-| Heatmap Chart                   | Histogram Chart                    |
-| Population Pyramid Chart        |                                    |
+| [Bar Chart](/wiki/charts/Bar%20Charts.md)                               | [Column Chart](/wiki/charts/Column%20Charts.md) |
+| [Stacked Bar Chart](/wiki/charts/Bar%20Charts.md)                       | [Stacked Column Chart](/wiki/charts/Column%20Charts.md) |
+| [100% Stacked Bar Chart](/wiki/charts/Bar%20Charts.md)                  | [100% Stacked Column Chart](/wiki/charts/Column%20Charts.md) |
+| [OHLC Chart](/wiki/charts/Open-High-Low-Close%20Charts.md)              | [Candlestick Charts](/wiki/charts/Candlestick%20Charts.md) |
+| [Scatter Plot](/wiki/charts/Scatter%20Plot.md)                          | [Bubble Chart](/wiki/charts/Bubble%20Charts.md) |
+| [Horizontal Boxplot](/wiki/charts/Box%20Plot.md)                        | [Vertical Boxplot](/wiki/charts/Box%20Plot.md) |
+| [Lollipop Bar Chart](/wiki/charts/Lollipop%20Charts.md)                 | [Lollipop Column Chart](/wiki/charts/Lollipop%20Charts.md) |
+| [Stacked Lollipop Bar Chart](/wiki/charts/Lollipop%20Charts.md)         | [Stacked Lollipop Column Chart](/wiki/charts/Lollipop%20Charts.md) |
+| [100% Stacked Lollipop Bar Chart](/wiki/charts/Lollipop%20Charts.md)    | [100% Stacked Lollipop Column Chart](/wiki/charts/Lollipop%20Charts.md) |
+| [Pie Chart](/wiki/charts/Pie%20and%20Doughnut%20Charts.md)              | [Line Chart](/wiki/charts/Line%20Charts.md) |
+| [Doughnut Chart](/wiki/charts/Pie%20and%20Doughnut%20Charts.md)         | [Stacked Line Chart](/wiki/charts/Line%20Charts.md) |
+| [Stacked Doughnut Chart](/wiki/charts/Pie%20and%20Doughnut%20Charts.md) | [100% Stacked Line Chart](/wiki/charts/Line%20Charts.md) |
+| [Waterfall Bar Chart](/wiki/charts/Waterfall%20Chart.md)                | [Watarfall Column Chart](/wiki/charts/Waterfall%20Chart.md) |
+| [Span Bar Chart](/wiki/charts/Span%20Chart.md)                          | [Span Column Chart](/wiki/charts/Span%20Chart.md) |
+| [Marimekko Bar Chart](/wiki/charts/Mekko%20Charts.md)                   | [Marimekko Column Chart](/wiki/charts/Mekko%20Charts.md) |
+| [Treemap](/wiki/charts/Treemaps.md)                                     | [Parallel Coordinates Chart](/wiki/charts/Parallel%20Coordinates%20Charts.md) |
+| [Funnel Bar Chart](/wiki/charts/Funnel%20Charts.md)                     | [Funnel Column Chart](/wiki/charts/Funnel%20Charts.md) |
+| [Heatmap Chart](/wiki/charts/Heatmaps.md)                               | [Histogram Chart](/wiki/charts/Histograms.md) |
+| [Population Pyramid Chart](/wiki/charts/Population%20Pyramid.md)        |                                    |
 
 ## Contributing
 I welcome contributions! If you’d like to help improve this project:
