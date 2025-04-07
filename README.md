@@ -62,24 +62,25 @@ _js_charts_ currently supports **18 chart types** featuring **37 unique charts**
 
 | Chart Type                      | Chart Type                         |
 |--------------------------------:|------------------------------------|
-| [Bar Chart](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Bar-Charts)                               | [Column Chart](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Column-Charts) |
-| [Stacked Bar Chart](/wiki/charts/Bar%20Charts.md)                       | [Stacked Column Chart](/wiki/charts/Column%20Charts.md) |
-| [100% Stacked Bar Chart](/wiki/charts/Bar%20Charts.md)                  | [100% Stacked Column Chart](/wiki/charts/Column%20Charts.md) |
-| [OHLC Chart](/wiki/charts/Open-High-Low-Close%20Charts.md)              | [Candlestick Charts](/wiki/charts/Candlestick%20Charts.md) |
-| [Scatter Plot](/wiki/charts/Scatter%20Plot.md)                          | [Bubble Chart](/wiki/charts/Bubble%20Charts.md) |
-| [Horizontal Boxplot](/wiki/charts/Box%20Plot.md)                        | [Vertical Boxplot](/wiki/charts/Box%20Plot.md) |
-| [Lollipop Bar Chart](/wiki/charts/Lollipop%20Charts.md)                 | [Lollipop Column Chart](/wiki/charts/Lollipop%20Charts.md) |
-| [Stacked Lollipop Bar Chart](/wiki/charts/Lollipop%20Charts.md)         | [Stacked Lollipop Column Chart](/wiki/charts/Lollipop%20Charts.md) |
-| [100% Stacked Lollipop Bar Chart](/wiki/charts/Lollipop%20Charts.md)    | [100% Stacked Lollipop Column Chart](/wiki/charts/Lollipop%20Charts.md) |
-| [Pie Chart](/wiki/charts/Pie%20and%20Doughnut%20Charts.md)              | [Line Chart](/wiki/charts/Line%20Charts.md) |
-| [Doughnut Chart](/wiki/charts/Pie%20and%20Doughnut%20Charts.md)         | [Stacked Line Chart](/wiki/charts/Line%20Charts.md) |
-| [Stacked Doughnut Chart](/wiki/charts/Pie%20and%20Doughnut%20Charts.md) | [100% Stacked Line Chart](/wiki/charts/Line%20Charts.md) |
-| [Waterfall Bar Chart](/wiki/charts/Waterfall%20Chart.md)                | [Watarfall Column Chart](/wiki/charts/Waterfall%20Chart.md) |
-| [Span Bar Chart](/wiki/charts/Span%20Chart.md)                          | [Span Column Chart](/wiki/charts/Span%20Chart.md) |
-| [Marimekko Bar Chart](/wiki/charts/Mekko%20Charts.md)                   | [Marimekko Column Chart](/wiki/charts/Mekko%20Charts.md) |
-| [Treemap](/wiki/charts/Treemaps.md)                                     | [Parallel Coordinates Chart](/wiki/charts/Parallel%20Coordinates%20Charts.md) |
-| [Funnel Bar Chart](/wiki/charts/Funnel%20Charts.md)                     | [Funnel Column Chart](/wiki/charts/Funnel%20Charts.md) |
-| [Heatmap Chart](/wiki/charts/Heatmaps.md)                               | [Histogram Chart](/wiki/charts/Histograms.md) |
+| [Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Bar-Charts) | [Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Column-Charts) |
+| [Stacked Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Bar-Charts) | [Stacked Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Column-Charts) |
+| [100% Stacked Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Bar-Charts) | [100% Stacked Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Column-Charts) |
+| [Candlestick Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Candlestick-Charts) | [Open-High-Low-Close (OHLC) Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Open‐High‐Low‐Close-Charts) |
+| [Scatter Plots](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Scatter-Plots) | [Bubble Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Bubble-Charts) |
+| [Horizontal Box Plots](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Box-Plots) | [Vertical Box Plots](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Box-Plots) |
+| [Lollipop Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Lollipop-Charts) | [Lollipop Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Lollipop-Charts) |
+| [Stacked Lollipop Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Lollipop-Charts) | [Stacked Lollipop Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Lollipop-Charts) |
+| [100% Stacked Lollipop Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Lollipop-Charts) | [100% Stacked Lollipop Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Lollipop-Charts) |
+| [Pie Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Pie-and-Doughnut-Charts) | [Line Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Line-Charts) |
+| [Doughnut Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Pie-and-Doughnut-Charts) | [Stacked Line Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Line-Charts) |
+| [Stacked Doughnut Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Pie-and-Doughnut-Charts) | [100% Stacked Line Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Line-Charts) |
+| [Waterfall Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Waterfall-Charts) | [Waterfall Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Waterfall-Charts) |
+| [Span Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Span-Charts) | [Span Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Span-Charts) |
+| [Marimekko Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Mekko-Charts) | [100% Stacked Marimekko Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Mekko-Charts) |
+| [Treemaps](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Treemaps) | [Parallel Coordinates Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Parallel-Coordinates-Charts) |
+| [Funnel Bar Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Funnel-Charts) | [Funnel Column Charts](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Funnel-Charts) |
+| [Heatmaps](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Heatmaps) | [Histograms](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Histograms) |
+| [Population Pyramids](https://github.com/wrathtafarian/js-charts/wiki/Chart-Types-Population-Pyramids) |  |
 | [Population Pyramid Chart](/wiki/charts/Population%20Pyramid.md)        |                                    |
 
 ## Contributing
