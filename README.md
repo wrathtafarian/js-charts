@@ -62,7 +62,7 @@ _js_charts_ currently supports **18 chart types** featuring **37 unique charts**
 
 | Chart Type                      | Chart Type                         |
 |--------------------------------:|------------------------------------|
-| Bar Chart                       | Column Chart                       |
+| [Bar Chart](/wiki/charts/Bar%20Charts.md) | [Column Chart](/wiki/charts/Column%20Charts.md) |
 | Stacked Bar Chart               | Stacjed Column Chart               |
 | 100% Stacked Bar Chart          | 100% Stacked Column Chart          |
 | OHLC Chart                      | Candlestick Charts                 |

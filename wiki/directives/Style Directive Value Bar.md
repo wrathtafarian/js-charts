@@ -125,7 +125,7 @@ The below example specifies a minimum height of **10px** for value bars on a cha
 <div class="js-value-bar-min-height">10px</div>
 ```
 
-## ↕️ js-value-bar-min-width
+## ↔️ js-value-bar-min-width
 
 The `js-value-bar-min-width` style directive lets you set the minimum width for value bar elements on a chart.
 
