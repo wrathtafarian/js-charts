@@ -26,7 +26,7 @@ The codebase consists solely of JavaScript and Cascading Style Sheet (CSS) files
 
 You have the option to:
 
- - **Self-host** the JavaScript and CSS files within your own infrastructure, or
+ - ⚠️ **Self-hosting is disabled until 11 April 2025** - **Self-host** the JavaScript and CSS files within your own infrastructure, or
  - **Link directly** to the files hosted on the project's official website.
 
 If you choose to use the hosted version, all resources are served securely over **TLS 1.2 or higher**, ensuring the integrity and confidentiality of the connection between your site and the project server.
