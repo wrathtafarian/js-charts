@@ -5238,11 +5238,25 @@ function jsChartCommonBuildDesignObject( design_template ) {
 
     return new_design_object;
 }
+// split the style directive js-color-palette by comma or semicolon character.
+// comma characters that are escaped with a double \\ are not split, e.g. hsl(0\\, 100%\\, 50%) will remain hsl(0\\, 100%\\, 50%), but
+// the string "hsl(0\\, 100%\\, 50%), hsl(0\\, 100%\\, 50%)" will be split into "hsl(0\\, 100%\\, 50%)" and "hsl(0\\, 100%\\, 50%)"
+function jsChartCommonSplitColorPalette(input, unescape = false) {
+    const parts = input.split(/(?<!\\)[,;]\s*/);
+    
+    if (unescape) {
+        return parts.map(part => part.replace(/\\([,;])/g, '$1'));
+    }
+
+    return parts;
+}
 // categorical -- discrete
 function jsChartCommonParseCategoricalPalette( this_design_element, is_discrete_palette ) {
 
+    // Related to issue #35 - add escape character support to the js-color-palette variable
     // split the element inner text
-    var split_palette = this_design_element.split(";");
+    // var split_palette = this_design_element.split(";");
+    var split_palette = jsChartCommonSplitColorPalette( this_design_element, true );
     var return_palette = [];
     var return_categories = [];
     for (var tt = 0; tt < split_palette.length; tt++) {
@@ -5262,7 +5276,9 @@ function jsChartCommonParseCategoricalPalette( this_design_element, is_discrete_
 }
 function jsChartCommonParseDivergingPalette( this_design_element, is_discrete_palette ) {
 
-    var split_palette = this_design_element.split(";");
+    // Related to issue #35 - add escape character support to the js-color-palette variable
+    // var split_palette = this_design_element.split(";");
+    var split_palette = jsChartCommonSplitColorPalette( this_design_element, true );
     var return_palette = [];
     var return_positions = [];
     var position_type = "absolute";
@@ -5335,7 +5351,9 @@ function jsChartCommonParseDivergingPalette( this_design_element, is_discrete_pa
 //    - When the variable assigned to be colored is numeric or has inherently ordered values, then it can be depicted with a sequential palette.
 function jsChartCommonParseSequentialPalette( this_design_element, is_discrete_palette ) {
 
-    var split_palette = this_design_element.split(";");
+    // Related to issue #35 - add escape character support to the js-color-palette variable
+    // var split_palette = this_design_element.split(";");
+    var split_palette = jsChartCommonSplitColorPalette( this_design_element, true );
     var return_palette = [];
     var return_positions = [];
     var position_type = "absolute";
@@ -5409,7 +5427,9 @@ function jsChartCommonParseSequentialPalette( this_design_element, is_discrete_p
 function jsChartCommonParseQualitativePalette( this_design_element ) {
 
     // split the element inner text
-    var split_palette = this_design_element.split(";");
+    // Related to issue #35 - add escape character support to the js-color-palette variable
+    // var split_palette = this_design_element.split(";");
+    var split_palette = jsChartCommonSplitColorPalette( this_design_element, true );
     var return_palette = [];
     for (var tt = 0; tt < split_palette.length; tt++) {
         if (split_palette[tt].trim().length > 0) {
