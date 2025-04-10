@@ -1583,6 +1583,7 @@ function jsChartCommonFormatChartAmount( amount , callout_prepend = "" , callout
     return ( this_callout_prepend + amount + this_callout_append);
 }
 // handle the options menu text value update
+/*
 function jsChartCommonEventUpdateOptionsMenuValue(source, ikey, ivalue, new_value, i_chart) {
 
     // ikey -> option_name, e.g. width
@@ -1624,16 +1625,21 @@ function jsChartCommonDrawOptionsMenuDropdownControl(source, options_menu_conten
     select_control_title.value = option_label;
     select_control.setAttributeNode( select_control_title );
 
-    for (var tt = 0; tt < dropdown_options.length; tt++) {
-        var dropdown_option_control = document.createElement("option");
-        dropdown_option_control.value = dropdown_options[tt];
-        dropdown_option_control.innerHTML = dropdown_options[tt] + " - " + dropdown_values[tt];
-        if (dropdown_options[tt] == input_value) {
-            var selected_attribute = document.createAttribute("selected");
-            selected_attribute.value = "selected";
-            dropdown_option_control.setAttributeNode( selected_attribute );
+    if (typeof dropdown_options !== "undefined") {
+        for (var tt = 0; tt < dropdown_options.length; tt++) {
+            console.log( dropdown_options[tt] );
+            var dropdown_option_control = document.createElement("option");
+            dropdown_option_control.value = dropdown_options[tt];
+            // #36 make the menu pretty again
+            // dropdown_option_control.innerHTML = dropdown_options[tt] + " - " + dropdown_values[tt];
+            dropdown_option_control.innerHTML = dropdown_options[tt];
+            if (dropdown_options[tt] == input_value) {
+                var selected_attribute = document.createAttribute("selected");
+                selected_attribute.value = "selected";
+                dropdown_option_control.setAttributeNode( selected_attribute );
+            }
+            select_control.appendChild( dropdown_option_control );
         }
-        select_control.appendChild( dropdown_option_control );
     }
 
     select_control.addEventListener("change", function () {
@@ -1697,32 +1703,7 @@ function jsChartCommonDrawOptionsMenuCheckboxControl(source, options_menu_conten
 // draw the menu option control - text
 function jsChartCommonDrawOptionsMenuTextControl(source, options_menu_content_container, ikey, default_value, input_value, i_chart, option_label, option_description ) {
 
-    /*
-    // draw options menu text control
-    var text_control = document.createElement("input");
-    var text_control_title = document.createAttribute("title");
-    text_control_title.value = option_label;
-    text_control.setAttributeNode( text_control_title );
-    var text_control_type = document.createAttribute("type");
-    text_control_type.value = "TEXT";
-    text_control.setAttributeNode( text_control_type );
-    var text_control_value = document.createAttribute("value");
-    if (typeof input_value !== "undefined") {
-        text_control_value.value = input_value;
-    } else {
-        text_control_value.value = default_value;
-    }
-    text_control.setAttributeNode( text_control_value );
-    var text_control_maxlen = document.createAttribute("maxlen");
-    text_control_maxlen.value = 255;
-    text_control.setAttributeNode( text_control_maxlen );
-    text_control.addEventListener("change", function () {
-        var update_menu_option_value = jsChartCommonEventUpdateOptionsMenuValue(source, ikey, text_control_value.value, this.value, i_chart);
-    }, false);
-    options_menu_content_container.appendChild( text_control );
-    */
-
-    // create container for the description + control
+// create container for the description + control
     var control_container = document.createElement("div");
     var control_container_class = document.createAttribute("class");
     control_container_class.value = "js-chart-common-menu-option-text-container";
@@ -1731,7 +1712,9 @@ function jsChartCommonDrawOptionsMenuTextControl(source, options_menu_content_co
     control_container_title.value = option_label;
     control_container.setAttributeNode( control_container_title );
     if (option_description.trim().length > 0) {
-        control_container.innerText = option_description;
+        // #36 - Make the options menu pretty again :)
+        // control_container.innerText = option_description;
+        control_container.innerHTML = option_description;
     }
     options_menu_content_container.appendChild( control_container );
 
@@ -1774,7 +1757,9 @@ function jsChartCommonDrawOptionsMenuLabel(options_menu_content_container, ilabe
     var options_menu_label_container_title = document.createAttribute("title");
     options_menu_label_container_title.value = ilabel;
     options_menu_label_container.setAttributeNode( options_menu_label_container_title );
-    options_menu_label_container.innerText = ilabel;
+    // #36 - Make the options menu pretty again :)
+    //options_menu_label_container.innerText = ilabel;
+    options_menu_label_container.innerHTML = ilabel;
     options_menu_content_container.appendChild( options_menu_label_container );
 
     return true;
@@ -1963,7 +1948,11 @@ function jsChartCommonDrawOptionsMenu(source, i_chart) {
                             break;
                     }
 
-                    var draw_options_menu_text_control = jsChartCommonDrawOptionsMenuDropdownControl(source, options_menu_content_container, IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt], IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].default, i_chart.i_options[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ], i_chart, dropdown_options, dropdown_values, IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].label, IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].description );
+                    //console.log( IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].label );
+                    //console.log( IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ] );
+                    console.log (typeof IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt]]["options"] );
+
+                    var draw_options_menu_text_control = jsChartCommonDrawOptionsMenuDropdownControl(source, options_menu_content_container, IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt], IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].default, i_chart.i_options[ IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ], i_chart, IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt]]["options"], dropdown_values, IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].label, IDEFAULT_CHART_ATTRIBUTES[  IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.i_options.type ].supported_options[tt] ].description );
                     break;
                 
                 default:
@@ -1992,6 +1981,7 @@ function jsChartCommonEventToggleOptionsMenu(source, i_chart) {
 
     return true;
 }
+*/
 // draw the legend inner categorical content
 function jsChartCommonDrawLegendInnerCumulative( legend_container, i_data, i_labels, i_titles, i_options, i_design, legend_labels) {
 
@@ -3344,6 +3334,12 @@ function jsChartCommonTogglePollingContainer(toggle_container, this_chart) {
 // draw the controls  (check of showcontrols already done)
 function jsChartCommonDrawControlsContainer(level0_inner_panel, i_chart) {
 
+    return true;
+}
+// draw the controls  (check of showcontrols already done)
+/*
+function jsChartCommonDrawControlsContainer(level0_inner_panel, i_chart) {
+
     // add the control panel container
     var control_panel_container = document.createElement("div");
     var control_panel_container_class = document.createAttribute("class");
@@ -3414,6 +3410,7 @@ function jsChartCommonDrawControlsContainer(level0_inner_panel, i_chart) {
 
     return true;
 }
+*/
 // draw the common base containers
 function jsChartCommonDrawBaseContainers(this_chart, i_chart, default_showlegend_baheviour, default_showdatatable_baheviour, default_showcontrols_baheviour, chart_data_type, legend_labels, palette_type) {
 
