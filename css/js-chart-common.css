@@ -10,7 +10,7 @@
     --js-chart-common-base-title-height: 30px;
     --js-chart-common-base-datatable-height: 60px;
     --js-chart-common-base-footer-height: 15px;
-    --js-chart-common-control-panel-width: 30px;
+    --js-chart-common-control-panel-width: 25px;
     --js-chart-common-legend-width: 30px;
     --js-chart-common-legend-height: 30px;
     --js-chart-common-loading-width: 80px;
@@ -192,6 +192,13 @@ input:checked + .js-chart-common-slider:before {
     flex-direction: row;
     margin: 0px 3px 0px 0px;
 }
+/*
+.js-chart-common-control-panel-container {
+    flex: 0 0 auto;
+    width: var(--js-chart-common-control-panel-width);
+    margin: 10px 0px 0px 0px;
+}
+*/
 .js-chart-common-control-panel-container {
     flex: 0 0 auto;
     width: var(--js-chart-common-control-panel-width);
@@ -286,6 +293,58 @@ input:checked + .js-chart-common-slider:before {
 .js-chart-common-legend-sequential-inner-panel {
     flex: 1 1 auto;
 }
+.js-chart-common-options-menu-container {
+    position: absolute;
+    z-index: 300;
+    width: calc(100% - 40px);
+    height: calc(100% - 20px);
+    top: 10px;
+    left: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.js-chart-common-options-menu-title {
+    flex: 1 1 auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+.js-chart-common-options-menu-content {
+    flex: 1 1 auto;
+    height: calc(100% - 40px);
+    margin: 5px 0px 5px 5px;
+    display: grid;
+    grid-template-columns: 150px 30px calc(100% - 180px);
+    grid-auto-rows: 30px;
+    line-height: 30px;
+    row-gap: 12px;
+    column-gap: 5px;
+}
+.js-chart-common-help-icon-context {
+    position: absolute;
+    top: 100%;  /* Position below the parent */
+    left: 50%;
+    width: 300px;
+    height: 150px;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 6px 10px; 
+    border-radius: 4px;
+    white-space: wrap;
+    z-index: 400;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    /* pointer-events: none;Ensures it doesn't block mouse events */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    text-align: left;
+}
+/*
 .js-chart-common-button {
     writing-mode: vertical-lr;
     text-align: center;
@@ -329,7 +388,7 @@ input:checked + .js-chart-common-slider:before {
     flex: 1 1 auto;
     width: calc(100% - 45px);
 }
-.js-chart-common-options-menu-title-close-button-container {
+s.js-chart-common-options-menu-title-close-button-container {
     flex: 1 1 auto;
     width: 45px;
 }
@@ -364,6 +423,7 @@ input:checked + .js-chart-common-slider:before {
     font-size: var(--js-chart-size-normal);
     text-align: left;
 }
+*/
 .js-chart-common-menu-option-text-container {
     padding: 0px 0px 15px 0px;
     text-align: left;
