@@ -447,8 +447,8 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "title_border_radius": "10px 10px 0px 0px",
         "title_box_shadow": "none",
         "control_button_font_family": "\"Open Sans\", sans-serif",
-        "control_button_font_size": "10px",
-        "control_button_font_weight": 300,
+        "control_button_font_size": "12px",
+        "control_button_font_weight": 400,
         "control_button_bg_color": "#3E5879",
         "control_button_text_color": "White",
         "control_button_border": "0.5px solid #dddddd",
@@ -611,10 +611,10 @@ const IDEFAULT_DESIGN_TEMPLATES = [
         "title_border_radius": "10px 10px 0px 0px",
         "title_box_shadow": "none",
         "control_button_font_family": "\"Open Sans\", sans-serif",
-        "control_button_font_size": "10px",
-        "control_button_font_weight": 300,
-        "control_button_bg_color": "#606060",
-        "control_button_text_color": "#eeeeee",
+        "control_button_font_size": "12px",
+        "control_button_font_weight": 400,
+        "control_button_bg_color": "#bbbbbb",
+        "control_button_text_color": "#000000",
         "control_button_border": "0.5px solid #555555",
         "control_button_border_radius": "0px 5px 5px 0px",
         "control_button_box_shadow": "2px 2px 2px #444444",
@@ -1496,6 +1496,14 @@ function roundNumber(num, decimal_places) {
     }
     return Math.round((num + Number.EPSILON) * multipler) / multipler;
 }
+// used for testing - opens all or random number of example URLs
+function jsChartCommonOpenExampleURLs(urls) {
+    urls.forEach((url, index) => {
+        setTimeout(() => {
+            window.open(url, '_blank');
+        }, index * 1000); // 1000 ms delay between each
+    });
+}
 // standardize the color name / decimal / hex / hls / hlsa colors
 function jsChartCommonStandardizeColor(str){
     var ctx = document.createElement('canvas').getContext('2d');
@@ -1982,6 +1990,189 @@ function jsChartCommonEventToggleOptionsMenu(source, i_chart) {
     return true;
 }
 */
+// event: open options menu
+function jsChartCommonEventToggleOptionsMenu(source, i_chart) {
+
+    var options_menu = source.getElementsByClassName("js-chart-common-options-menu-container");
+
+    // redraw the container
+    if (options_menu.length == 0) {
+
+        // render the options menu container
+        var options_menu_container = document.createElement("div");
+        var options_menu_container_class = document.createAttribute("class");
+        options_menu_container_class.value = "js-chart-common-options-menu-container";
+        options_menu_container.setAttributeNode( options_menu_container_class );
+        var options_menu_container_style = document.createAttribute("style");
+        options_menu_container_style.value = "font-family: " + i_chart.i_design.options_menu_font_family + "; font-size: " + i_chart.i_design.options_menu_font_size + "; font-weight: " + i_chart.i_design.options_menu_font_weight + "; background-color: " + i_chart.i_design.options_menu_bg_color + "; color: " + i_chart.i_design.options_menu_text_color + "; border: " + i_chart.i_design.options_menu_border + "; border-radius: " + i_chart.i_design.options_menu_border_radius + "; box-shadow: " + i_chart.i_design.options_menu_box_shadow + "; opacity: " + i_chart.i_design.options_menu_opacity + ";";
+        options_menu_container.setAttributeNode( options_menu_container_style );
+        source.getElementsByClassName("js-chart-common-base-container")[0].appendChild( options_menu_container );
+
+        // render options menu title container
+        var options_menu_title_container = document.createElement("div");
+        var options_menu_title_container_class = document.createAttribute("class");
+        options_menu_title_container_class.value = "js-chart-common-options-menu-title";
+        options_menu_title_container.setAttributeNode( options_menu_title_container_class );
+        var options_menu_title_container_style = document.createAttribute("style");
+        options_menu_title_container_style.value = "font-family: " + i_chart.i_design.options_menu_title_font_family + "; font-size: " + i_chart.i_design.options_menu_title_font_size + "; font-weight: " + i_chart.i_design.options_menu_title_font_weight + "; background-color: " + i_chart.i_design.options_menu_title_bg_color + "; color: " + i_chart.i_design.options_menu_title_text_color + "; border: " + i_chart.i_design.options_menu_title_border + "; border-radius: " + i_chart.i_design.options_menu_title_border_radius + "; box-shadow: " + i_chart.i_design.options_menu_title_box_shadow + "; opacity: " + i_chart.i_design.options_menu_title_opacity + ";";
+        options_menu_title_container.setAttributeNode( options_menu_title_container_style );
+        options_menu_container.appendChild( options_menu_title_container );
+
+        // render options menu title label
+        var options_menu_title_label = document.createElement("div");
+        var options_menu_title_label_style = document.createAttribute("style");
+        options_menu_title_label_style.value = "flex: 1 1 auto; width: calc(100% - 30px);";
+        options_menu_title_label.setAttributeNode( options_menu_title_label_style );
+        options_menu_title_label.innerText = "Settings Menu";
+        options_menu_title_container.appendChild( options_menu_title_label );
+
+        // render options menu title close button
+        var options_menu_title_close = document.createElement("div");
+        var options_menu_title_close_style = document.createAttribute("style");
+        options_menu_title_close_style.value = "flex: 1 1 auto; text-align: center; margin: 5px 5px 0px 0px; width: 30px; height: 30px; line-height: 30px; font-size: 20px; font-weight: 600; border: " + i_chart.i_design.options_menu_title_border + "; border-radius: 5px; cursor: pointer;";
+        options_menu_title_close.setAttributeNode( options_menu_title_close_style );
+        options_menu_title_close.innerText = "X";
+        options_menu_title_close.addEventListener("click", function () {
+
+            var close_options_menu = jsChartCommonEventToggleOptionsMenu(source, i_chart);
+
+        }, false);
+        options_menu_title_container.appendChild( options_menu_title_close );
+
+        /*
+        // render options menu title container
+        var options_menu_title_container = document.createElement("div");
+        var options_menu_title_container_class = document.createAttribute("class");
+        options_menu_title_container_class.value = "js-chart-common-options-menu-title";
+        options_menu_title_container.setAttributeNode( options_menu_title_container_class );
+        var options_menu_title_container_style = document.createAttribute("style");
+        options_menu_title_container_style.value = "font-family: " + i_chart.i_design.options_menu_title_font_family + "; font-size: " + i_chart.i_design.options_menu_title_font_size + "; font-weight: " + i_chart.i_design.options_menu_title_font_weight + "; background-color: " + i_chart.i_design.options_menu_title_bg_color + "; color: " + i_chart.i_design.options_menu_title_text_color + "; border: " + i_chart.i_design.options_menu_title_border + "; border-radius: " + i_chart.i_design.options_menu_title_border_radius + "; box-shadow: " + i_chart.i_design.options_menu_title_box_shadow + "; opacity: " + i_chart.i_design.options_menu_title_opacity + ";";
+        options_menu_title_container.setAttributeNode( options_menu_title_container_style );
+        options_menu_title_container.innerText = "Options Menu";
+        options_menu_container.appendChild( options_menu_title_container );
+        */
+
+        // render options menu content container
+        var options_menu_content_container = document.createElement("div");
+        var options_menu_content_container_class = document.createAttribute("class");
+        options_menu_content_container_class.value = "js-chart-common-options-menu-content";
+        options_menu_content_container.setAttributeNode( options_menu_content_container_class );
+        var options_menu_content_container_style = document.createAttribute("style");
+        options_menu_content_container_style.value = "overflow-y: auto; overflow-x: hidden; scrollbar-color: " + i_chart.i_design.options_menu_scrollbar_color + ";";
+        options_menu_content_container.setAttributeNode( options_menu_content_container_style );
+        options_menu_container.appendChild( options_menu_content_container );
+
+        for (const [ikey, ivalue] of Object.entries(IDEFAULT_CHART_ATTRIBUTES)) {
+            if (["class", "version", "jsondata", "template", "type", "width", "height"].indexOf( ikey ) == -1) {
+                if (IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ]["supported_options"].indexOf( ikey ) > -1) {
+
+                    // title label
+                    var control_title_label = document.createElement("div");
+                    var control_title_label_style = document.createAttribute("style");
+                    control_title_label_style.value = "text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis;";
+                    control_title_label.setAttributeNode( control_title_label_style );
+                    control_title_label.innerText = ivalue.label;
+                    options_menu_content_container.appendChild( control_title_label );
+
+                    // help icon
+                    var control_title_help = document.createElement("div");
+                    var control_title_help_style = document.createAttribute("style");
+                    control_title_help_style.value = "position: relative;   display: inline-block; width: 30px; line-height: 30px; height: 30px; text-align: center; cursor: pointer; border-radius: 3px; border: 0.5px solid " + i_chart.i_design.options_menu_text_color + ";";
+                    control_title_help.setAttributeNode( control_title_help_style );
+                    var control_title_help_title = document.createAttribute("title");
+                    control_title_help_title.value = "Show help";
+                    control_title_help.setAttributeNode( control_title_help_title );
+                    control_title_help.innerText = "?";
+                    control_title_help.addEventListener("click", function () {
+
+                        if (this.children.length == 0) {
+                            var help_panel = document.createElement("div");
+                            var help_panel_class = document.createAttribute("class");
+                            help_panel_class.value = "js-chart-common-help-icon-context";
+                            help_panel.setAttributeNode( help_panel_class );
+                            var help_panel_style = document.createAttribute("style");
+                            help_panel_style.value = "background-color: " + i_chart.i_design.options_menu_title_bg_color + "; color: " + i_chart.i_design.options_menu_title_text_color + "; border: " + i_chart.i_design.options_menu_title_border + ";";
+                            help_panel.setAttributeNode( help_panel_style );
+                            help_panel.innerHTML = IDEFAULT_CHART_ATTRIBUTES[ ikey ]["description"];
+                            this.appendChild( help_panel );
+                        } else {
+                            this.children[0].remove();
+                        }
+
+                    }, false);
+                    options_menu_content_container.appendChild( control_title_help );
+
+                    // control
+                    switch (ivalue.control) {
+                        // dropdown
+                        case "dropdown":
+                            var control_title_dropdown_control = document.createElement("select");
+                            control_title_dropdown_control.id = ikey;
+                            var control_title_dropdown_control_style = document.createAttribute("style");
+                            control_title_dropdown_control_style.value = "border: 0.5px solid #dcdcdc;";
+                            control_title_dropdown_control.setAttributeNode( control_title_dropdown_control_style );
+
+                            for (const [hkey, hvalue] of Object.entries(ivalue.options)) {
+
+                                var control_title_dropdown_option = document.createElement("option");
+                                control_title_dropdown_option.value = hvalue;
+                                control_title_dropdown_option.innerHTML = hvalue;
+                                control_title_dropdown_control.appendChild( control_title_dropdown_option );
+
+                                if (hvalue == i_chart.i_options[ ikey ] ) {
+
+                                    var control_title_dropdown_option_selected = document.createAttribute("selected");
+                                    control_title_dropdown_option_selected.value = "selected";
+                                    control_title_dropdown_option.setAttributeNode( control_title_dropdown_option_selected );
+                                }
+                            }
+
+                            control_title_dropdown_control.addEventListener("change", function () {
+                                source.setAttribute(this.id, this.value );
+                                var init_chart = setTimeout(initChart, 100, i_chart.chart_counter, null, null, true);
+                            }, false);
+                            options_menu_content_container.appendChild( control_title_dropdown_control );
+
+                            break;
+                        // text is the default
+                        default:
+                            var control_title_text_control = document.createElement("input");
+                            control_title_text_control.id = ikey;
+                            var control_title_text_control_style = document.createAttribute("style");
+                            control_title_text_control_style.value = "width: calc(100% - 30px); border-radius: 5px; padding: 5px; border: 0.5px solid #dcdcdc;";
+                            control_title_text_control.setAttributeNode( control_title_text_control_style );
+                            control_title_text_control.value = i_chart.i_options[ ikey ];
+                            control_title_text_control.addEventListener("change", function () {
+                                source.setAttribute(this.id, this.value );
+                                var init_chart = setTimeout(initChart, 100, i_chart.chart_counter, null, null, true);
+                            }, false);
+                            options_menu_content_container.appendChild( control_title_text_control );
+
+                            break;
+                    }
+
+                    // desc
+                    /*
+
+                    var control_desc = document.createElement("div");
+                    var control_desc_style = document.createAttribute("style");
+                    control_desc_style.value = "grid-column: 1 / 3; height: auto; text-align: right; line-spacing: 0px;"
+                    control_desc.setAttributeNode( control_desc_style );
+                    control_desc.innerHTML = ivalue.description;
+                    options_menu_content_container.appendChild( control_desc );
+                    */
+
+                }
+            }
+        }
+
+    // remove the container
+    } else {
+        options_menu[0].remove();
+    }
+
+    return true;
+}
 // draw the legend inner categorical content
 function jsChartCommonDrawLegendInnerCumulative( legend_container, i_data, i_labels, i_titles, i_options, i_design, legend_labels) {
 
@@ -3334,6 +3525,74 @@ function jsChartCommonTogglePollingContainer(toggle_container, this_chart) {
 // draw the controls  (check of showcontrols already done)
 function jsChartCommonDrawControlsContainer(level0_inner_panel, i_chart) {
 
+    // add the control panel container
+    var control_panel_container = document.createElement("div");
+    var control_panel_container_class = document.createAttribute("class");
+    control_panel_container_class.value = "js-chart-common-control-panel-container";
+    control_panel_container.setAttributeNode( control_panel_container_class );
+    level0_inner_panel.appendChild( control_panel_container );
+
+    // auto | on | off | print_only
+
+    if ((i_chart.i_options.showcontrols != "print_only") && (i_chart.i_options.showcontrols != false)) {
+
+        // add settings button
+        var settings_button = document.createElement("div");
+        var settings_button_style = document.createAttribute("style");
+        settings_button_style.value = "height: var(--js-chart-common-control-panel-width); width: var(--js-chart-common-control-panel-width); line-height: var(--js-chart-common-control-panel-width); text-align: center; cursor: pointer; font-family: " + i_chart.i_design.control_button_font_family + "; font-size: " + i_chart.i_design.control_button_font_size + "; font-weight: " + i_chart.i_design.control_button_font_weight + "; background-color: " + i_chart.i_design.control_button_bg_color + "; color: " + i_chart.i_design.control_button_text_color + "; border: " + i_chart.i_design.control_button_border + "; border-radius: " + i_chart.i_design.control_button_border_radius + "; box-shadow: " + i_chart.i_design.control_button_box_shadow + "; opacity: " + i_chart.i_design.control_button_opacity + ";";
+        settings_button.setAttributeNode( settings_button_style );
+        var settings_button_title = document.createAttribute("title");
+        settings_button_title.value = "Open Settings";
+        settings_button.setAttributeNode( settings_button_title );
+        settings_button.innerHTML = "&vellip;";
+        settings_button.addEventListener("click", function () {
+
+            var open_options_menu = jsChartCommonEventToggleOptionsMenu(this.parentElement.parentElement.parentElement.parentElement, i_chart);
+
+        }, false);
+        control_panel_container.appendChild( settings_button );
+
+    }
+
+    // add print button
+    var print_button = document.createElement("div");
+    var print_button_style = document.createAttribute("style");
+    print_button_style.value = "padding: 10px 0px; writing-mode: vertical-lr; width: var(--js-chart-common-control-panel-width); line-height: var(--js-chart-common-control-panel-width); text-align: center; cursor: pointer; font-family: " + i_chart.i_design.control_button_font_family + "; font-size: " + i_chart.i_design.control_button_font_size + "; font-weight: " + i_chart.i_design.control_button_font_weight + "; background-color: " + i_chart.i_design.control_button_bg_color + "; color: " + i_chart.i_design.control_button_text_color + "; border: " + i_chart.i_design.control_button_border + "; border-radius: " + i_chart.i_design.control_button_border_radius + "; box-shadow: " + i_chart.i_design.control_button_box_shadow + "; opacity: " + i_chart.i_design.control_button_opacity + ";";
+    print_button.setAttributeNode( print_button_style );
+    var print_button_title = document.createAttribute("title");
+    print_button_title.value = "Print";
+    print_button.setAttributeNode( print_button_title );
+    print_button.innerHTML = "Print";
+    print_button.addEventListener("click", function () {
+
+        var open_options_menu = jsChartPrintChart( this.parentElement.parentElement.parentElement.parentElement );
+
+    }, false);
+    control_panel_container.appendChild( print_button );
+
+    // draw the bin options for a histogram chart
+    switch (i_chart.type) {
+        // histogram
+        case "histogram":
+            var draw_menu_option_bins = jsChartCommonDrawControlsBinOptions(control_panel_container, i_chart);
+            break;
+
+        // bubble
+        case "bubble":
+            var draw_menu_option_bubble_size = jsChartCommonDrawControlsBubbleOptions(control_panel_container, i_chart);
+            break;
+    }
+
+    // debug container
+    if ((typeof IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].type_options.enable_debug !== "undefined") && (IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].type_options.enable_debug)) {
+        var draw_menu_option_debug = jsChartCommonDrawControlsDebugOptions(control_panel_container, i_chart);
+    }
+
+    // beta label
+    if ((typeof IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].type_options.enable_beta !== "undefined") && (IDEFAULT_CHART_TYPE_OPTIONS[ i_chart.type ].type_options.enable_beta)) {
+        var draw_menu_option_debug = jsChartCommonDrawControlsBetaOptions(control_panel_container, i_chart);
+    }
+
     return true;
 }
 // draw the controls  (check of showcontrols already done)
@@ -3877,8 +4136,8 @@ function jsChartPrintChart(print_chart) {
     var print_window = window.open("", "PRINT", "height=auto,width=auto");
 
     print_window.document.write("<html><head><title>Print Chart</title>");
-    print_window.document.write("<link href=\"css/js-chart-common.css\" rel=\"stylesheet\" type=\"text/css\">");
-    print_window.document.write("<link href=\"css/js-chart-" + IDEFAULT_CHART_TYPE_OPTIONS[ print_chart.getAttribute("type") ]["chart_group"] + ".css\" rel=\"stylesheet\" type=\"text/css\">");
+    print_window.document.write("<link href=\"../css/js-chart-common.css\" rel=\"stylesheet\" type=\"text/css\">");
+    print_window.document.write("<link href=\"../css/js-chart-" + IDEFAULT_CHART_TYPE_OPTIONS[ print_chart.getAttribute("type") ]["chart_group"] + ".css\" rel=\"stylesheet\" type=\"text/css\">");
     //print_window.document.write("</style>");
     print_window.document.write("<style type=\"text/css\">");
 
