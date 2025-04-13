@@ -46,7 +46,25 @@ opacity: " + i_design.marker_opacity + ";";
 
         var data_label = document.createElement("div");
         var data_label_style = document.createAttribute("style");
-        data_label_style.value = "position: absolute; text-align: center; width: " + i_design.datalabel_width + "; height: " + i_design.datalabel_height + "; line-height: " + i_design.datalabel_height + "; left: calc(50% - (" + i_design.datalabel_width + " / 2)); top: calc(50% - (" + i_design.datalabel_height + " / 2)); font-family: " + i_design.datalabel_font_family + "; font-size: " + i_design.datalabel_font_size + "; font-weight: " + i_design.datalabel_font_weight + "; background-color: " + i_design.datalabel_bg_color + "; color: " + i_design.datalabel_text_color + "; border: " + i_design.datalabel_border + "; border-radius: " + i_design.datalabel_border_radius + "; box-shadow: " + i_design.datalabel_box_shadow + "; opacity: " + i_design.datalabel_opacity + ";";
+        data_label_style.value = "position: absolute; \
+text-align: center; \
+width: " + i_design.datalabel_width + "; \
+height: " + i_design.datalabel_height + "; \
+line-height: " + i_design.datalabel_height + "; \
+left: calc(50% - (" + i_design.datalabel_width + " / 2)); \
+top: calc(50% - (" + i_design.datalabel_height + " / 2)); \
+font-family: " + i_design.datalabel_font_family + "; \
+font-size: " + i_design.datalabel_font_size + "; \
+font-weight: " + i_design.datalabel_font_weight + "; \
+background-color: " + i_design.datalabel_bg_color + "; \
+color: " + i_design.datalabel_text_color + "; \
+border: " + i_design.datalabel_border + "; \
+border-radius: " + i_design.datalabel_border_radius + "; \
+box-shadow: " + i_design.datalabel_box_shadow + "; \
+opacity: " + i_design.datalabel_opacity + "; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis;";
         data_label.setAttributeNode( data_label_style );
         //data_label.innerText = roundNumber(x_point_value, 2) + ";" + roundNumber(y_point_value, 2);
         data_label.innerText = roundNumber(s_point_value, 2);
@@ -84,7 +102,25 @@ opacity: " + i_design.marker_opacity + ";";
 
         var data_label = document.createElement("div");
         var data_label_style = document.createAttribute("style");
-        data_label_style.value = "position: absolute; width: " + i_design.datalabel_width + "; height: " + i_design.datalabel_height + "; line-height: " + i_design.datalabel_height + "; left: calc(50 - (" + i_design.datalabel_width + " / 2)); top: calc(50% - (" + i_design.datalabel_height + " / 2)); font-family: " + i_design.datalabel_font_family + "; font-size: " + i_design.datalabel_font_size + "; font-weight: " + i_design.datalabel_font_weight + "; background-color: " + i_design.datalabel_bg_color + "; color: " + i_design.datalabel_text_color + "; border: " + i_design.datalabel_border + "; border-radius: " + i_design.datalabel_border_radius + "; box-shadow: " + i_design.datalabel_box_shadow + "; opacity: " + i_design.datalabel_opacity + ";";
+        data_label_style.value = "position: absolute; \
+width: " + i_design.datalabel_width + "; \
+height: " + i_design.datalabel_height + "; \
+line-height: " + i_design.datalabel_height + "; \
+left: calc(50% - (" + i_design.datalabel_width + " / 2)); \
+top: calc(50% - (" + i_design.datalabel_height + " / 2)); \
+font-family: " + i_design.datalabel_font_family + "; \
+font-size: " + i_design.datalabel_font_size + "; \
+font-weight: " + i_design.datalabel_font_weight + "; \
+background-color: " + i_design.datalabel_bg_color + "; \
+color: " + i_design.datalabel_text_color + "; \
+border: " + i_design.datalabel_border + "; \
+border-radius: " + i_design.datalabel_border_radius + "; \
+box-shadow: " + i_design.datalabel_box_shadow + "; \
+opacity: " + i_design.datalabel_opacity + "; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+text-align: center;";
         data_label.setAttributeNode( data_label_style );
         data_label.innerText = roundNumber(x_point_value, 2) + ";" + roundNumber(y_point_value, 2);
         marker.appendChild( data_label );
