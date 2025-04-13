@@ -12,6 +12,7 @@ js-charts is a free, almost no-code charting and graphing solution. Charts and i
 - Easy implementation on static, or complex and dynamic websites.
 - All chart elements are **fully customizable** and provide an array of user interactions.
 - No external dependancies.
+- **Low memory footprint**.
 - Always **privacy** and **security** focused.
 - ***[js-chart-builder](https://github.com/wrathtafarian/js-chart-builder)*** lets you quickly and easily prototype charts for use on static websites, or for one-time use in presentations or documentation.
 - Visit ***[js-chart-examples](https://github.com/wrathtafarian/js-chart-examples)*** to see all of the cool things that can be done with **js-charts**.
