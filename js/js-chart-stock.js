@@ -75,7 +75,25 @@ function jsChartOHLCDrawCandlestickBars(level2_inner_panel, i_chart, min_scale_v
 
             var open_dl = document.createElement("div");
             var open_dl_style = document.createAttribute("style");
-            open_dl_style.value = "position: absolute; width: " + open_dl_width + "; height: " + open_dl_height + "; left: " + open_dl_left + "; top: " + open_dl_top + "; text-align: center; line-height: " + open_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            open_dl_style.value = "position: absolute; \
+width: " + open_dl_width + "; \
+height: " + open_dl_height + "; \
+left: " + open_dl_left + "; \
+top: " + open_dl_top + "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+line-height: " + open_dl_height + "; \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
             open_dl.setAttributeNode( open_dl_style );
             var open_dl_title = document.createAttribute("title");
             open_dl_title.value = "Open: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].open[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -89,7 +107,7 @@ function jsChartOHLCDrawCandlestickBars(level2_inner_panel, i_chart, min_scale_v
 
             var high_dl = document.createElement("div");
             var high_dl_style = document.createAttribute("style");
-            high_dl_style.value = "position: absolute; width: " + high_dl_width + "; height: " + high_dl_height + "; left: " + high_dl_left + "; top: " + high_dl_top + "; text-align: center; line-height: " + high_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            high_dl_style.value = "position: absolute; width: " + high_dl_width + "; height: " + high_dl_height + "; left: " + high_dl_left + "; top: " + high_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + high_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             high_dl.setAttributeNode( high_dl_style );
             var high_dl_title = document.createAttribute("title");
             high_dl_title.value = "high: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].high[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -103,7 +121,7 @@ function jsChartOHLCDrawCandlestickBars(level2_inner_panel, i_chart, min_scale_v
 
             var low_dl = document.createElement("div");
             var low_dl_style = document.createAttribute("style");
-            low_dl_style.value = "position: absolute; width: " + low_dl_width + "; height: " + low_dl_height + "; left: " + low_dl_left + "; top: " + low_dl_top + "; text-align: center; line-height: " + low_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            low_dl_style.value = "position: absolute; width: " + low_dl_width + "; height: " + low_dl_height + "; left: " + low_dl_left + "; top: " + low_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + low_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             low_dl.setAttributeNode( low_dl_style );
             var low_dl_title = document.createAttribute("title");
             low_dl_title.value = "low: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].low[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -117,7 +135,7 @@ function jsChartOHLCDrawCandlestickBars(level2_inner_panel, i_chart, min_scale_v
 
             var close_dl = document.createElement("div");
             var close_dl_style = document.createAttribute("style");
-            close_dl_style.value = "position: absolute; width: " + close_dl_width + "; height: " + close_dl_height + "; left: " + close_dl_left + "; top: " + close_dl_top + "; text-align: center; line-height: " + close_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            close_dl_style.value = "position: absolute; width: " + close_dl_width + "; height: " + close_dl_height + "; left: " + close_dl_left + "; top: " + close_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + close_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             close_dl.setAttributeNode( close_dl_style );
             var close_dl_title = document.createAttribute("title");
             close_dl_title.value = "close: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].close[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -215,7 +233,7 @@ function jsChartOHLCDrawOHLCBars(level2_inner_panel, i_chart, min_scale_value, m
 
             var open_dl = document.createElement("div");
             var open_dl_style = document.createAttribute("style");
-            open_dl_style.value = "position: absolute; width: " + open_dl_width + "; height: " + open_dl_height + "; left: " + open_dl_left + "; top: " + open_dl_top + "; text-align: center; line-height: " + open_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            open_dl_style.value = "position: absolute; width: " + open_dl_width + "; height: " + open_dl_height + "; left: " + open_dl_left + "; top: " + open_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + open_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             open_dl.setAttributeNode( open_dl_style );
             var open_dl_title = document.createAttribute("title");
             open_dl_title.value = "Open: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].open[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -231,7 +249,7 @@ function jsChartOHLCDrawOHLCBars(level2_inner_panel, i_chart, min_scale_value, m
 
             var high_dl = document.createElement("div");
             var high_dl_style = document.createAttribute("style");
-            high_dl_style.value = "position: absolute; width: " + high_dl_width + "; height: " + high_dl_height + "; left: " + high_dl_left + "; top: " + high_dl_top + "; text-align: center; line-height: " + high_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            high_dl_style.value = "position: absolute; width: " + high_dl_width + "; height: " + high_dl_height + "; left: " + high_dl_left + "; top: " + high_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + high_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             high_dl.setAttributeNode( high_dl_style );
             var high_dl_title = document.createAttribute("title");
             high_dl_title.value = "high: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].high[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -247,7 +265,7 @@ function jsChartOHLCDrawOHLCBars(level2_inner_panel, i_chart, min_scale_value, m
 
             var low_dl = document.createElement("div");
             var low_dl_style = document.createAttribute("style");
-            low_dl_style.value = "position: absolute; width: " + low_dl_width + "; height: " + low_dl_height + "; left: " + low_dl_left + "; top: " + low_dl_top + "; text-align: center; line-height: " + low_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            low_dl_style.value = "position: absolute; width: " + low_dl_width + "; height: " + low_dl_height + "; left: " + low_dl_left + "; top: " + low_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + low_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             low_dl.setAttributeNode( low_dl_style );
             var low_dl_title = document.createAttribute("title");
             low_dl_title.value = "low: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].low[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -263,7 +281,7 @@ function jsChartOHLCDrawOHLCBars(level2_inner_panel, i_chart, min_scale_value, m
 
             var close_dl = document.createElement("div");
             var close_dl_style = document.createAttribute("style");
-            close_dl_style.value = "position: absolute; width: " + close_dl_width + "; height: " + close_dl_height + "; left: " + close_dl_left + "; top: " + close_dl_top + "; text-align: center; line-height: " + close_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+            close_dl_style.value = "position: absolute; width: " + close_dl_width + "; height: " + close_dl_height + "; left: " + close_dl_left + "; top: " + close_dl_top + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: " + close_dl_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; font-size: " + i_chart.i_design.datalabel_font_size + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
             close_dl.setAttributeNode( close_dl_style );
             var close_dl_title = document.createAttribute("title");
             close_dl_title.value = "close: " + jsChartCommonFormatChartAmount(i_chart.i_data[0].close[v], i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);

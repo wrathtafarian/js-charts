@@ -128,7 +128,7 @@ function jsChartBarDrawLevel2RelativeStackedLollipopValueBars(level2_inner_panel
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; top: calc(50% - (" + temp_diameter + " / 2)); left: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ n_series_index[v][tt] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; top: calc(50% - (" + temp_diameter + " / 2)); left: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ n_series_index[v][tt] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
                     data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -189,7 +189,7 @@ function jsChartBarDrawLevel2RelativeStackedLollipopValueBars(level2_inner_panel
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; top: calc(50% - (" + temp_diameter + " / 2)); right: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ p_series_index[v][tt] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; top: calc(50% - (" + temp_diameter + " / 2)); right: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ p_series_index[v][tt] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -323,7 +323,7 @@ function jsChartBarDrawLevel2StackedLollipopValueBars(level2_inner_panel, i_char
                 data_label_class.value = "js-chart-bar-data-label-container";
                 data_label.setAttributeNode( data_label_class );
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; top: calc(50% - (" + temp_diameter + " / 2)); left: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ n_series[v][s] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; top: calc(50% - (" + temp_diameter + " / 2)); left: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ n_series[v][s] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "absolute") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(n_group[v][s], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -385,7 +385,7 @@ function jsChartBarDrawLevel2StackedLollipopValueBars(level2_inner_panel, i_char
                 data_label_class.value = "js-chart-bar-data-label-container";
                 data_label.setAttributeNode( data_label_class );
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; top: calc(50% - (" + temp_diameter + " / 2)); right: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ p_series[v][s] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; top: calc(50% - (" + temp_diameter + " / 2)); right: calc(0px - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ p_series[v][s] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "absolute") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(p_group[v][s], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -511,7 +511,7 @@ function jsChartBarDrawLevel2LollipopValueBars(level2_inner_panel, i_chart, min_
                 data_label_class.value = "js-chart-bar-data-label-container";
                 data_label.setAttributeNode( data_label_class );
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter + "; text-align: center; top: calc(50% - (" + temp_diameter + " / 2)); " + x_data_label + " font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[color_index] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter + "; text-align: center; text-wrap-mode: nowrap; overflow: hidden; text-overflow: ellipsis; top: calc(50% - (" + temp_diameter + " / 2)); " + x_data_label + " font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[color_index] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(i_chart.i_data[s][v], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
                 value_bar_block.appendChild( data_label );
@@ -659,7 +659,26 @@ function jsChartBarDrawLevel2RelativeStackedValueBars(level2_inner_panel, i_char
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -700,7 +719,26 @@ function jsChartBarDrawLevel2RelativeStackedValueBars(level2_inner_panel, i_char
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -811,7 +849,26 @@ function jsChartBarDrawLevel2StackedValueBars(level2_inner_panel, i_chart, min_s
                 data_label_class.value = "js-chart-bar-data-label-container";
                 data_label.setAttributeNode( data_label_class );
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "absolute") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(n_group[v][s], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -853,7 +910,26 @@ function jsChartBarDrawLevel2StackedValueBars(level2_inner_panel, i_chart, min_s
                 data_label_class.value = "js-chart-bar-data-label-container";
                 data_label.setAttributeNode( data_label_class );
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "absolute") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(p_group[v][s], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -942,7 +1018,25 @@ function jsChartBarDrawLevel2SeriesValueBars(level2_inner_panel, i_chart, min_sc
                 data_label_class.value = "js-chart-bar-data-label-container";
                 data_label.setAttributeNode( data_label_class );
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(i_chart.i_data[s][v], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
                 value_bar_block.appendChild( data_label );

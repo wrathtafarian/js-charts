@@ -69,7 +69,24 @@ function jsChartHistogramDrawValueContainers(level2_inner_panel, i_chart, min_sc
                     datalabel_container_class.value = "js-chart-histogram-data-label-container";
                     datalabel_container.setAttributeNode( datalabel_container_class );
                     var datalabel_container_style = document.createAttribute("style");
-                    datalabel_container_style.value = "position: absolute; left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); " + datalabel_vertical + "; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height + "; line-height: " + i_chart.i_design.datalabel_height + "; text-align: center; font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                    datalabel_container_style.value = "position: absolute; \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); " + datalabel_vertical + "; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height + "; \
+line-height: " + i_chart.i_design.datalabel_height + "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                     datalabel_container.setAttributeNode( datalabel_container_style );
                     datalabel_container.innerText = jsChartCommonFormatChartAmount(roundNumber(i_chart.i_data.values[v], num_of_decimals_to_use), i_chart.i_design.datalabel_append, i_chart.i_design.datalabel_prepend);
                     value_column.appendChild( datalabel_container );

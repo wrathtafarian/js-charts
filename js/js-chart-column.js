@@ -123,7 +123,26 @@ function jsChartColumnDrawRelativeStackedLollipopValueContainers(level2_inner_pa
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; top: calc(0px - (" + temp_diameter + " / 2)); left: calc(50% - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ p_series_index[v][tt] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + temp_diameter + "; \
+height: " + temp_diameter+ "; \
+line-height: " + temp_diameter+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(0px - (" + temp_diameter + " / 2)); \
+left: calc(50% - (" + temp_diameter + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.color_palette[ p_series_index[v][tt] ] + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: 50%; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -177,7 +196,26 @@ function jsChartColumnDrawRelativeStackedLollipopValueContainers(level2_inner_pa
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + temp_diameter + "; height: " + temp_diameter+ "; line-height: " + temp_diameter+ "; text-align: center; bottom: calc(0px - (" + temp_diameter + " / 2)); left: calc(50% - (" + temp_diameter + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.color_palette[ n_series_index[v][tt] ] + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: 50%; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + temp_diameter + "; \
+height: " + temp_diameter+ "; \
+line-height: " + temp_diameter+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+bottom: calc(0px - (" + temp_diameter + " / 2)); \
+left: calc(50% - (" + temp_diameter + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.color_palette[ n_series_index[v][tt] ] + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: 50%; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -323,6 +361,9 @@ width: " + temp_diameter + "; \
 height: " + temp_diameter + "; \
 line-height: " + temp_diameter + "; \
 text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
 top: calc(0px - (" + temp_diameter + " / 2)); \
 left: calc(50% - (" + temp_diameter + " / 2)); \
 font-family: " + i_chart.i_design.datalabel_font_family + "; \
@@ -400,6 +441,9 @@ width: " + temp_diameter + "; \
 height: " + temp_diameter + "; \
 line-height: " + temp_diameter + "; \
 text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
 bottom: calc(0px - (" + temp_diameter + " / 2)); \
 left: calc(50% - (" + temp_diameter + " / 2)); \
 font-family: " + i_chart.i_design.datalabel_font_family + "; \
@@ -530,6 +574,9 @@ function jsChartColumnDrawLollipopContainers(level2_inner_panel, i_chart, min_sc
             var lollipop_pop_container_style = document.createAttribute("style");
             lollipop_pop_container_style.value = "position: absolute; \
 text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
 width: " + temp_diameter + "; \
 height: " + temp_diameter + "; \
 line-height: " + temp_diameter + "; \
@@ -613,7 +660,26 @@ function jsChartColumnDrawRangeContainers(level2_inner_panel, i_chart, min_scale
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100 \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(range_diff, num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
                 value_bar_block.appendChild( data_label );
@@ -749,7 +815,26 @@ function jsChartColumnDrawRelativeStackedValueContainers(level2_inner_panel, i_c
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -789,7 +874,26 @@ function jsChartColumnDrawRelativeStackedValueContainers(level2_inner_panel, i_c
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 if ((i_chart.i_options.showlabels == "relative") || (i_chart.i_options.showlabels == "auto")) {
                     data_label.innerText = roundNumber(series_perc, num_of_decimals_to_use) + "%";
@@ -898,7 +1002,26 @@ function jsChartColumnDrawStackedValueContainers(level2_inner_panel, i_chart, mi
 
                     var data_label = document.createElement("div");
                     var data_label_style = document.createAttribute("style");
-                    data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                    data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                     data_label.setAttributeNode( data_label_style );
                     if ((i_chart.i_options.showlabels == "absolute") || (i_chart.i_options.showlabels == "auto")) {
                         data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(p_group[v][s], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -934,7 +1057,26 @@ function jsChartColumnDrawStackedValueContainers(level2_inner_panel, i_chart, mi
 
                     var data_label = document.createElement("div");
                     var data_label_style = document.createAttribute("style");
-                    data_label_style.value = "z-index: 100; position: absolute; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height+ "; line-height: " + i_chart.i_design.datalabel_height+ "; text-align: center; top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                    data_label_style.value = "z-index: 100; \
+position: absolute; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height+ "; \
+line-height: " + i_chart.i_design.datalabel_height+ "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                     data_label.setAttributeNode( data_label_style );
                     if ((i_chart.i_options.showlabels == "absolute") || (i_chart.i_options.showlabels == "auto")) {
                         data_label.innerText = jsChartCommonFormatChartAmount(roundNumber(n_group[v][s], num_of_decimals_to_use), i_chart.i_design.datalabel_prepend, i_chart.i_design.datalabel_append);
@@ -1034,7 +1176,24 @@ function jsChartColumnDrawValueContainers(level2_inner_panel, i_chart, min_scale
                     datalabel_container_class.value = "js-chart-column-data-label-container";
                     datalabel_container.setAttributeNode( datalabel_container_class );
                     var datalabel_container_style = document.createAttribute("style");
-                    datalabel_container_style.value = "position: absolute; left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); " + datalabel_vertical + "; width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height + "; line-height: " + i_chart.i_design.datalabel_height + "; text-align: center; font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                    datalabel_container_style.value = "position: absolute; \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); " + datalabel_vertical + "; \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height + "; \
+line-height: " + i_chart.i_design.datalabel_height + "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                     datalabel_container.setAttributeNode( datalabel_container_style );
                     datalabel_container.innerText = jsChartCommonFormatChartAmount(roundNumber(i_chart.i_data[s][v], num_of_decimals_to_use), i_chart.i_design.datalabel_append, i_chart.i_design.datalabel_prepend);
                     value_column.appendChild( datalabel_container );

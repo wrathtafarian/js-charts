@@ -269,7 +269,25 @@ function jsChartHeatmapDrawValueGrid(level2_inner_panel, i_chart) {
 
                 var data_label = document.createElement("div");
                 var data_label_style = document.createAttribute("style");
-                data_label_style.value = "position: absolute; left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); width: " + i_chart.i_design.datalabel_width + "; height: " + i_chart.i_design.datalabel_height + "; line-height: " + i_chart.i_design.datalabel_height + "; font-family: " + i_chart.i_design.datalabel_font_family + "; font-size: " + i_chart.i_design.datalabel_font_size + "; font-weight: " + i_chart.i_design.datalabel_font_weight + "; background-color: " + i_chart.i_design.datalabel_bg_color + "; color: " + i_chart.i_design.datalabel_text_color + "; border: " + i_chart.i_design.datalabel_border + "; border-radius: " + i_chart.i_design.datalabel_border_radius + "; box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; opacity: " + i_chart.i_design.datalabel_opacity + ";";
+                data_label_style.value = "position: absolute; \
+left: calc(50% - (" + i_chart.i_design.datalabel_width + " / 2)); \
+top: calc(50% - (" + i_chart.i_design.datalabel_height + " / 2)); \
+width: " + i_chart.i_design.datalabel_width + "; \
+height: " + i_chart.i_design.datalabel_height + "; \
+text-align: center; \
+text-wrap-mode: nowrap; \
+overflow: hidden; \
+text-overflow: ellipsis; \
+line-height: " + i_chart.i_design.datalabel_height + "; \
+font-family: " + i_chart.i_design.datalabel_font_family + "; \
+font-size: " + i_chart.i_design.datalabel_font_size + "; \
+font-weight: " + i_chart.i_design.datalabel_font_weight + "; \
+background-color: " + i_chart.i_design.datalabel_bg_color + "; \
+color: " + i_chart.i_design.datalabel_text_color + "; \
+border: " + i_chart.i_design.datalabel_border + "; \
+border-radius: " + i_chart.i_design.datalabel_border_radius + "; \
+box-shadow: " + i_chart.i_design.datalabel_box_shadow + "; \
+opacity: " + i_chart.i_design.datalabel_opacity + ";";
                 data_label.setAttributeNode( data_label_style );
                 var data_label_title = document.createAttribute("title");
                 data_label_title.value = cell_attributes["title"];
