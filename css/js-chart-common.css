@@ -276,10 +276,18 @@ input:checked + .js-chart-common-slider:before {
 .js-chart-common-legend-block {
     flex: 1 1 auto;
 }
+/*
 .js-chart-common-legend-color-block {
     flex: 0 0 auto;
     width: var(--js-chart-common-legend-width);
     height: var(--js-chart-common-legend-height);
+    border-radius: 2px;
+}
+*/
+.js-chart-common-legend-color-block {
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
     border-radius: 2px;
 }
 .js-chart-common-legend-label-block {
